@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>জনপ্রিয় শিল্পীবৃন্দ | সাইমুম শিল্পীগোষ্ঠী</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Bengali:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+    
+    
+    
+    
+    <style>
+        .artist-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 35px;
+            margin-top: 40px;
+        }
+
+        .artist-card {
+            background: #ffffff;
+            border-radius: 20px;
+            overflow: hidden;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            position: relative;
+            border: 1px solid rgba(0,0,0,0.04);
+            cursor: pointer;
+            padding-bottom: 25px;
+        }
+
+        .artist-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 45px rgba(0,0,0,0.1);
+            border-color: rgba(249, 115, 22, 0.2);
+        }
+
+        /* The colored banner at the top of the card */
+        .card-header-bg {
+            height: 110px;
+            background: linear-gradient(135deg, #fff3e0, var(--primary-light));
+            position: relative;
+            transition: all 0.4s ease;
+            overflow: hidden;
+        }
+        
+        /* Add a subtle pattern/overlay to the banner */
+        .card-header-bg::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-image: radial-gradient(var(--primary-color) 1px, transparent 1px);
+            background-size: 10px 10px;
+            opacity: 0.15;
+        }
+
+        .artist-card:hover .card-header-bg {
+            background: linear-gradient(135deg, var(--primary-light), var(--primary-color));
+        }
+
+        .artist-card:hover .card-header-bg::after {
+            opacity: 0.25;
+            background-image: radial-gradient(white 1px, transparent 1px);
+        }
+
+        .artist-img-wrapper {
+            width: 140px;
+            height: 140px;
+            margin: -70px auto 20px; /* Overlaps exactly half of the banner */
+            position: relative;
+            z-index: 2;
+            background: white; /* Creates a clean border gap */
+            padding: 5px;
+            border-radius: 50%;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+            transition: transform 0.5s ease;
+        }
+
+        .artist-card:hover .artist-img-wrapper {
+            transform: translateY(-5px);
+        }
+
+        .artist-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        /* Badge overlapping the bottom of the image */
+        .artist-badge {
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--text-main);
+            color: white;
+            font-size: 12px;
+            padding: 5px 16px;
+            border-radius: 20px;
+            font-weight: 600;
+            white-space: nowrap;
+            border: 3px solid white;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+            transition: background 0.3s ease;
+        }
+
+        .artist-card:hover .artist-badge {
+            background: var(--primary-color);
+        }
+
+        .artist-info {
+            padding: 0 20px;
+        }
+
+        .artist-name {
+            font-size: 21px;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 8px;
+            transition: color 0.3s ease;
+        }
+
+        .artist-card:hover .artist-name {
+            color: var(--primary-color);
+        }
+
+        .artist-bio {
+            color: var(--text-light);
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            padding: 0 10px;
+        }
+
+        .artist-social {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            padding-top: 15px;
+            border-top: 1px solid rgba(0,0,0,0.05);
+            margin: 0 20px;
+        }
+
+        .artist-social a {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: var(--bg-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #64748b;
+            transition: all 0.3s ease;
+            font-size: 15px;
+        }
+
+        .artist-social a:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(249, 115, 22, 0.25);
+        }
+
+        /* Category Filter */
+        .artist-filters {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 50px;
+        }
+
+        .filter-btn {
+            padding: 10px 24px;
+            border-radius: 30px;
+            background: white;
+            border: 1px solid #e2e8f0;
+            color: #475569;
+            font-weight: 600;
+            font-size: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+        }
+
+        .filter-btn:hover {
+            border-color: #cbd5e1;
+            color: var(--text-main);
+        }
+
+        .filter-btn.active {
+            background: var(--text-main);
+            color: white;
+            border-color: var(--text-main);
+            box-shadow: 0 6px 15px rgba(15, 23, 42, 0.2);
+        }
+    </style>
+
+
+
+
+</head>
+<body>
+    <!-- Top Ecosystem Bar -->
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <div class="ecosystem-links">
+                <a href="#"><i class="fa-solid fa-play"></i> সাইমুম স্ট্রিম</a>
+                <a href="#"><i class="fa-solid fa-graduation-cap"></i> সাইমুম একাডেমি</a>
+                <a href="#"><i class="fa-solid fa-bag-shopping"></i> সাইমুম শপ</a>
+                <a href="#"><i class="fa-solid fa-hand-holding-heart"></i> অনুদান / বাইতুল মাল</a>
+            </div>
+            <div class="top-bar-right">
+                <div class="language-switcher">
+                    <span><img src="https://flagcdn.com/w20/bd.png" alt="BD Flag" class="flag-icon"> বাংলা</span> <i class="fa-solid fa-chevron-down"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <header class="main-header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon"><i class="fa-solid fa-fire-flame-curved"></i></div>
+                <div class="logo-text">সাইমুম<span>.org</span></div>
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#" class="active">হোম</a></li>
+                    <li class="has-dropdown">
+                        <a href="#">পরিচিতি <i class="fa-solid fa-chevron-down"></i></a>
+                                                                                                                        <ul class="dropdown">
+                            <li><a href="about.html">আমাদের সম্পর্কে</a></li>
+                            <li><a href="founders.html">প্রতিষ্ঠাতা সদস্যবৃন্দ</a></li>
+                            <li><a href="directors.html">পরিচালকবৃন্দ</a></li>
+                            <li><a href="management.html">পরিচালনা পর্ষদ</a></li>
+                            <li><a href="artists.html">জনপ্রিয় শিল্পীবৃন্দ</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="#">বিভাগসমূহ <i class="fa-solid fa-chevron-down"></i></a>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="#">প্রকাশনা <i class="fa-solid fa-chevron-down"></i></a>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="#">গ্যালারি <i class="fa-solid fa-chevron-down"></i></a>
+                    </li>
+                    <li><a href="#">ব্লগ</a></li>
+                    <li class="has-dropdown">
+                        <a href="#">কার্যক্রম <i class="fa-solid fa-chevron-down"></i></a>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="#">প্রোগ্রাম ও প্রদর্শনী <i class="fa-solid fa-chevron-down"></i></a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="#" class="btn btn-primary"><i class="fa-solid fa-user"></i> লগইন</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-header" style="background-image: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.9)), url('https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80'); padding: 120px 0 80px; text-align: center; color: white;">
+        <div class="container">
+            <p style="font-size: 16px; font-weight: 600; opacity: 0.9; margin-bottom: 10px; color: var(--primary-light); text-transform: uppercase; letter-spacing: 2px;">আমাদের পরিবার</p>
+            <h1 style="font-size: 48px; margin-bottom: 16px; font-weight: 700;">জনপ্রিয় শিল্পীবৃন্দ</h1>
+            <p style="font-size: 18px; opacity: 0.9; max-width: 600px; margin: 0 auto; line-height: 1.6;">সাইমুমের অহংকার, যারা তাদের সুমধুর কণ্ঠ ও প্রতিভার মাধ্যমে ইসলামী সংস্কৃতিকে ছড়িয়ে দিচ্ছেন।</p>
+        </div>
+    </section>
+
+    <section class="section-padding bg-light" style="padding-top: 50px;">
+        <div class="container">
+            
+            <!-- Filters -->
+            <div class="artist-filters">
+                <button class="filter-btn active">সকল শিল্পী</button>
+                <button class="filter-btn">সংগীত শিল্পী</button>
+                <button class="filter-btn">ক্বারী</button>
+                <button class="filter-btn">আবৃত্তিকার</button>
+                <button class="filter-btn">অভিনেতা</button>
+            </div>
+
+                                                            <!-- Artist Grid -->
+            <div class="artist-grid">
+                
+                <!-- Artist 1 -->
+                <div class="artist-card">
+                    <div class="card-header-bg"></div>
+                    <div class="artist-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1500648767791?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="শরীফুল ইসলাম">
+                        <div class="artist-badge">সংগীত শিল্পী</div>
+                    </div>
+                    <div class="artist-info">
+                        <h4 class="artist-name">শরীফুল ইসলাম</h4>
+                        <p class="artist-bio">তার সুমধুর কণ্ঠ ও অনবদ্য গায়কী দিয়ে তিনি শ্রোতাদের হৃদয় জয় করেছেন।</p>
+                    </div>
+                    <div class="artist-social">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <!-- Artist 2 -->
+                <div class="artist-card">
+                    <div class="card-header-bg"></div>
+                    <div class="artist-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1472099645785?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="আহমাদ আব্দুল্লাহ">
+                        <div class="artist-badge">ক্বারী</div>
+                    </div>
+                    <div class="artist-info">
+                        <h4 class="artist-name">আহমাদ আব্দুল্লাহ</h4>
+                        <p class="artist-bio">আন্তর্জাতিক মানের তিলাওয়াত দিয়ে তিনি সাইমুমের কুরআন বিভাগে অনবদ্য অবদান রাখছেন।</p>
+                    </div>
+                    <div class="artist-social">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <!-- Artist 3 -->
+                <div class="artist-card">
+                    <div class="card-header-bg"></div>
+                    <div class="artist-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="জুবায়ের আহমেদ">
+                        <div class="artist-badge">আবৃত্তিকার</div>
+                    </div>
+                    <div class="artist-info">
+                        <h4 class="artist-name">জুবায়ের আহমেদ</h4>
+                        <p class="artist-bio">দৃপ্ত কণ্ঠ ও আবেগময়ী পরিবেশনার মাধ্যমে তিনি দর্শকদের মুগ্ধ করে রাখেন।</p>
+                    </div>
+                    <div class="artist-social">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <!-- Artist 4 -->
+                <div class="artist-card">
+                    <div class="card-header-bg"></div>
+                    <div class="artist-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="তারেক মনোয়ার">
+                        <div class="artist-badge">সংগীত শিল্পী</div>
+                    </div>
+                    <div class="artist-info">
+                        <h4 class="artist-name">তারেক মনোয়ার</h4>
+                        <p class="artist-bio">তার অসাধারণ সৃষ্টিশীলতা ও গায়কী সাইমুমের সাংস্কৃতিক ভাণ্ডারকে সমৃদ্ধ করেছে।</p>
+                    </div>
+                    <div class="artist-social">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-spotify"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Artist 5 -->
+                <div class="artist-card">
+                    <div class="card-header-bg"></div>
+                    <div class="artist-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="হাসান মাহমুদ">
+                        <div class="artist-badge">অভিনেতা</div>
+                    </div>
+                    <div class="artist-info">
+                        <h4 class="artist-name">হাসান মাহমুদ</h4>
+                        <p class="artist-bio">সাইমুম থিয়েটারের বিভিন্ন প্রোডাকশনে তার জীবন্ত অভিনয় ব্যাপক প্রশংসিত হয়েছে।</p>
+                    </div>
+                    <div class="artist-social">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <!-- Artist 6 -->
+                <div class="artist-card">
+                    <div class="card-header-bg"></div>
+                    <div class="artist-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1500648775195?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="সাঈদ বিন আনোয়ার">
+                        <div class="artist-badge">সংগীত শিল্পী</div>
+                    </div>
+                    <div class="artist-info">
+                        <h4 class="artist-name">সাঈদ বিন আনোয়ার</h4>
+                        <p class="artist-bio">ইসলামী সংগীত জগতে তিনি তার সুমিষ্ট সুরের জন্য সমাদৃত।</p>
+                    </div>
+                    <div class="artist-social">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    </div>
+                </div>
+
+                <!-- Artist 7 -->
+                <div class="artist-card">
+                    <div class="card-header-bg"></div>
+                    <div class="artist-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1500648772727?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="কামরুল ইসলাম">
+                        <div class="artist-badge">আবৃত্তিকার</div>
+                    </div>
+                    <div class="artist-info">
+                        <h4 class="artist-name">কামরুল ইসলাম</h4>
+                        <p class="artist-bio">কবিতা ও ইসলামী দর্শনের অনবদ্য সংমিশ্রণ ঘটিয়েছেন তার আবৃত্তিতে।</p>
+                    </div>
+                    <div class="artist-social">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <!-- Artist 8 -->
+                <div class="artist-card">
+                    <div class="card-header-bg"></div>
+                    <div class="artist-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1500648773961?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="মুমিনুর রহমান">
+                        <div class="artist-badge">ক্বারী</div>
+                    </div>
+                    <div class="artist-info">
+                        <h4 class="artist-name">মুমিনুর রহমান</h4>
+                        <p class="artist-bio">সুললিত কণ্ঠে কুরআন তিলাওয়াতের মাধ্যমে তিনি শ্রোতাদের আত্মিক তৃপ্তি দেন।</p>
+                    </div>
+                    <div class="artist-social">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+
+            </div>
+            
+            <!-- Load More Button -->
+            <div style="text-align: center; margin-top: 50px;">
+                <button class="btn btn-primary" style="padding: 12px 35px; font-size: 16px; font-weight: 600; box-shadow: 0 10px 20px rgba(249, 115, 22, 0.2);"><i class="fa-solid fa-spinner"></i> আরও শিল্পী দেখুন</button>
+            </div>
+
+        </div>
+    </section>
+    <!-- Master Footer -->
+    <footer class="master-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Brand Section -->
+                <div class="footer-brand">
+                    <a href="index.html" class="logo" style="color: white; margin-bottom: 20px; display: inline-flex;">
+                        <div class="logo-icon"><i class="fa-solid fa-fire-flame-curved"></i></div>
+                        <div class="logo-text">সাইমুম<span>.org</span></div>
+                    </a>
+                    <p>সুস্থ সংস্কৃতির বিকাশ এবং মানবতার কল্যাণে ১৯৭৮ সাল থেকে নিরলসভাবে কাজ করে যাচ্ছে সাইমুম শিল্পীগোষ্ঠী।</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div class="footer-links">
+                    <h3>গুরুত্বপূর্ণ লিংক</h3>
+                    <ul>
+                        <li><a href="about.html"><i class="fa-solid fa-angle-right"></i> আমাদের সম্পর্কে</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> সাইমুম স্ট্রিম</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> সাইমুম একাডেমি</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> সাইমুম শপ</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> অনুদান / বাইতুল মাল</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Departments -->
+                <div class="footer-links">
+                    <h3>শাখা সমূহ</h3>
+                    <ul>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> সংগীত বিভাগ</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> থিয়েটার ও মঞ্চনাটক</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> ক্বিরাত বিভাগ</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> সাহিত্য ও প্রকাশনা</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Info -->
+                <div class="footer-contact">
+                    <h3>যোগাযোগ</h3>
+                    <ul>
+                        <li>
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>মিজান টাওয়ার, মগবাজার, ঢাকা, বাংলাদেশ</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-phone"></i>
+                            <span>+৮৮০ ১২৩৪-৫৬৭৮৯০</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>info@saimum.org</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container text-center">
+                <p>&copy; ২০২৬ সাইমুম শিল্পীগোষ্ঠী. সর্বস্বত্ব সংরক্ষিত।</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

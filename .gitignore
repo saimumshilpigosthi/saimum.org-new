@@ -1,0 +1,5 @@
+*.py
+scratch/
+.gemini/
+task.md
+implementation_plan.md

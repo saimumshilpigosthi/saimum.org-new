@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>প্রতিষ্ঠাতা সদস্যবৃন্দ | সাইমুম শিল্পীগোষ্ঠী</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Bengali:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+<style>
+    .founder-card {
+        cursor: pointer; 
+        background: white; 
+        border-radius: 20px; 
+        overflow: hidden; 
+        box-shadow: 0 10px 30px rgba(0,0,0,0.06); 
+        transition: all 0.4s ease; 
+        position: relative; 
+        display: flex; 
+        flex-direction: column;
+    }
+    .founder-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(249, 115, 22, 0.15);
+    }
+    .founder-card .img-overlay {
+        position: absolute;
+        inset: 0;
+        background: rgba(15, 23, 42, 0.6);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: all 0.4s ease;
+    }
+    .founder-card:hover .img-overlay {
+        opacity: 1;
+    }
+    .founder-card .overlay-icon {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: translateY(30px);
+        transition: all 0.4s ease;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+    .founder-card:hover .overlay-icon {
+        transform: translateY(0);
+    }
+    .founder-card .overlay-icon i {
+        font-size: 22px;
+        color: var(--primary-color);
+    }
+</style>
+</head>
+<body>
+    <!-- Top Ecosystem Bar -->
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <div class="ecosystem-links">
+                <a href="#"><i class="fa-solid fa-play"></i> সাইমুম স্ট্রিম</a>
+                <a href="#"><i class="fa-solid fa-graduation-cap"></i> সাইমুম একাডেমি</a>
+                <a href="#"><i class="fa-solid fa-bag-shopping"></i> সাইমুম শপ</a>
+                <a href="#"><i class="fa-solid fa-hand-holding-heart"></i> অনুদান / বাইতুল মাল</a>
+            </div>
+            <div class="top-bar-right">
+                <div class="language-switcher">
+                    <span><img src="https://flagcdn.com/w20/bd.png" alt="BD Flag" class="flag-icon"> বাংলা</span> <i class="fa-solid fa-chevron-down"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <header class="main-header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon"><i class="fa-solid fa-fire-flame-curved"></i></div>
+                <div class="logo-text">সাইমুম<span>.org</span></div>
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#" class="active">হোম</a></li>
+                    <li class="has-dropdown">
+                        <a href="#">পরিচিতি <i class="fa-solid fa-chevron-down"></i></a>
+                                                                                                <ul class="dropdown">
+                            <li><a href="about.html">আমাদের সম্পর্কে</a></li>
+                            <li><a href="founders.html">প্রতিষ্ঠাতা সদস্যবৃন্দ</a></li>
+                            <li><a href="directors.html">পরিচালকবৃন্দ</a></li>
+                            <li><a href="management.html">পরিচালনা পর্ষদ</a></li>
+                            <li><a href="artists.html">জনপ্রিয় শিল্পীবৃন্দ</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="#">বিভাগসমূহ <i class="fa-solid fa-chevron-down"></i></a>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="#">প্রকাশনা <i class="fa-solid fa-chevron-down"></i></a>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="#">গ্যালারি <i class="fa-solid fa-chevron-down"></i></a>
+                    </li>
+                    <li><a href="#">ব্লগ</a></li>
+                    <li class="has-dropdown">
+                        <a href="#">কার্যক্রম <i class="fa-solid fa-chevron-down"></i></a>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="#">প্রোগ্রাম ও প্রদর্শনী <i class="fa-solid fa-chevron-down"></i></a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="#" class="btn btn-primary"><i class="fa-solid fa-user"></i> লগইন</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-header" style="background-image: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.9)), url('https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80'); padding: 120px 0 80px; text-align: center; color: white;">
+        <div class="container">
+            <h1 style="font-size: 48px; margin-bottom: 16px;">প্রতিষ্ঠাতা সদস্যবৃন্দ</h1>
+            <p style="font-size: 18px; opacity: 0.9;">যাঁদের হাত ধরে সাইমুমের পথচলা শুরু</p>
+        </div>
+    </section>
+
+<section class="section-padding bg-light">
+        <div class="container">
+            <div class="founder-profile" onclick="window.location.href='directors/motiur-rahman-mallick.html';" style="cursor: pointer; max-width: 1000px; margin: 0 auto; background: white; border-radius: var(--radius-lg); box-shadow: var(--shadow-md); overflow: hidden; display: flex; flex-wrap: wrap; transition: all 0.4s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='var(--shadow-lg)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='var(--shadow-md)';">
+                <div style="flex: 1; min-width: 300px; background-image: url('https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'); background-size: cover; background-position: center; min-height: 400px;"></div>
+                <div style="flex: 1.5; padding: 50px; display: flex; flex-direction: column; justify-content: center;">
+                    <h3 style="font-size: 32px; color: var(--text-main); margin-bottom: 10px;">মতিউর রহমান মল্লিক</h3>
+                    <p style="color: var(--primary-color); font-weight: 600; margin-bottom: 24px; font-size: 18px;">প্রতিষ্ঠাতা পরিচালক, সাইমুম শিল্পীগোষ্ঠী</p>
+                    <p style="color: var(--text-light); line-height: 1.8; margin-bottom: 20px; font-size: 16px;">প্রখ্যাত গীতিকার, সুরকার ও কবি মতিউর রহমান মল্লিক ১৯৭৮ সালের ১ জানুয়ারি সাইমুম শিল্পীগোষ্ঠী প্রতিষ্ঠা করেন। তিনি ছিলেন একাধারে একজন স্বপ্নদ্রষ্টা এবং সাংস্কৃতিক বিপ্লবের অগ্রপথিক। অপসংস্কৃতির আগ্রাসন রোধ এবং সুস্থ সংস্কৃতি বিকাশের মাধ্যমে সমাজ পরিবর্তনের যে বীজ তিনি বপন করেছিলেন, আজ তা মহীরুহে পরিণত হয়েছে।</p>
+                    <p style="color: var(--text-light); line-height: 1.8; margin-bottom: 30px; font-size: 16px;">তার লেখা শত শত ইসলামী গান আজও বাংলাদেশের মানুষের হৃদয়ে বেঁচে আছে এবং নতুন প্রজন্মকে অনুপ্রেরণা জোগাচ্ছে।</p>
+                    <div style="display: flex; gap: 15px;">
+                        <a onclick="event.stopPropagation();" href="https://bn.wikipedia.org/wiki/মতিউর_রহমান_মল্লিক" target="_blank" style="width: 45px; height: 45px; border-radius: 50%; background: var(--bg-light); display: flex; align-items: center; justify-content: center; color: var(--text-main); transition: var(--transition); border: 1px solid rgba(0,0,0,0.05); font-size: 18px;" onmouseover="this.style.background='var(--primary-color)'; this.style.color='white';" onmouseout="this.style.background='var(--bg-light)'; this.style.color='var(--text-main)';"><i class="fa-brands fa-wikipedia-w"></i></a>
+                        <a onclick="event.stopPropagation();" href="#" target="_blank" style="width: 45px; height: 45px; border-radius: 50%; background: var(--bg-light); display: flex; align-items: center; justify-content: center; color: var(--text-main); transition: var(--transition); border: 1px solid rgba(0,0,0,0.05); font-size: 18px;" onmouseover="this.style.background='var(--primary-color)'; this.style.color='white';" onmouseout="this.style.background='var(--bg-light)'; this.style.color='var(--text-main)';"><i class="fa-solid fa-globe"></i></a>
+                        <a onclick="event.stopPropagation();" href="#" target="_blank" style="width: 45px; height: 45px; border-radius: 50%; background: var(--bg-light); display: flex; align-items: center; justify-content: center; color: var(--text-main); transition: var(--transition); border: 1px solid rgba(0,0,0,0.05); font-size: 18px;" onmouseover="this.style.background='var(--primary-color)'; this.style.color='white';" onmouseout="this.style.background='var(--bg-light)'; this.style.color='var(--text-main)';"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a onclick="event.stopPropagation();" href="#" target="_blank" style="width: 45px; height: 45px; border-radius: 50%; background: var(--bg-light); display: flex; align-items: center; justify-content: center; color: var(--text-main); transition: var(--transition); border: 1px solid rgba(0,0,0,0.05); font-size: 18px;" onmouseover="this.style.background='var(--primary-color)'; this.style.color='white';" onmouseout="this.style.background='var(--bg-light)'; this.style.color='var(--text-main)';"><i class="fa-brands fa-youtube"></i></a>
+                        <a onclick="event.stopPropagation();" href="#" target="_blank" style="width: 45px; height: 45px; border-radius: 50%; background: var(--bg-light); display: flex; align-items: center; justify-content: center; color: var(--text-main); transition: var(--transition); border: 1px solid rgba(0,0,0,0.05); font-size: 18px;" onmouseover="this.style.background='var(--primary-color)'; this.style.color='white';" onmouseout="this.style.background='var(--bg-light)'; this.style.color='var(--text-main)';"><i class="fa-brands fa-spotify"></i></a>
+                    </div>
+                </div>
+            </div>
+        
+        <!-- Founding Members Section -->
+        <div style="margin-top: 80px;">
+            <div class="section-header text-center mb-5">
+                <span class="section-subtitle">প্রতিষ্ঠাকালীন সদস্য</span>
+                <h2 style="font-size: 36px; color: var(--text-main); font-weight: 700;">প্রতিষ্ঠাতা সদস্যবৃন্দ</h2>
+                <div class="header-line mx-auto"></div>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; margin: 0 auto; max-width: 1100px;">
+                <!-- Member 1 -->
+                <div class="founder-card" onclick="window.location.href='founders/tafazzal-hossain-khan.html';">
+                    <div style="width: 100%; height: 350px; background-image: url('https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'); background-size: cover; background-position: top center; position: relative;">
+                        <div class="img-overlay"></div>
+                    </div>
+                    <div style="padding: 30px 20px; text-align: center; flex: 1; display: flex; flex-direction: column; justify-content: center; position: relative; z-index: 2; background: white; margin-top: -20px; border-radius: 20px 20px 0 0;">
+                        <h4 style="font-size: 22px; color: var(--text-main); margin-bottom: 8px; font-weight: 700;">তাফাজ্জল হোসাইন খান</h4>
+                        <div style="color: var(--primary-color); font-size: 14px; font-weight: 600; margin-bottom: 12px;">প্রতিষ্ঠাতা সদস্য</div>
+                        <p style="color: var(--text-light); font-size: 15px; line-height: 1.6; margin: 0;">সাইমুমের প্রতিষ্ঠাকালীন পথচলায় সঙ্গীতের মাধ্যমে তাঁর অবদান ছিল অবিস্মরণীয়।</p>
+                        
+                    </div>
+                </div>
+
+                <!-- Member 2 -->
+                <div class="founder-card" onclick="window.location.href='founders/muhammad-abul-kashem.html';">
+                    <div style="width: 100%; height: 350px; background-image: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'); background-size: cover; background-position: top center; position: relative;">
+                        <div class="img-overlay"></div>
+                    </div>
+                    <div style="padding: 30px 20px; text-align: center; flex: 1; display: flex; flex-direction: column; justify-content: center; position: relative; z-index: 2; background: white; margin-top: -20px; border-radius: 20px 20px 0 0;">
+                        <h4 style="font-size: 22px; color: var(--text-main); margin-bottom: 8px; font-weight: 700;">মুহাম্মদ আবুল কাশেম</h4>
+                        <div style="color: #3b82f6; font-size: 14px; font-weight: 600; margin-bottom: 12px;">প্রতিষ্ঠাতা সদস্য</div>
+                        <p style="color: var(--text-light); font-size: 15px; line-height: 1.6; margin: 0;">তাঁর সুমধুর কণ্ঠ ও পরিবেশনা সাইমুমকে প্রাথমিক দিনগুলোতে সমৃদ্ধ করেছিল।</p>
+                        
+                    </div>
+                </div>
+
+                <!-- Member 3 -->
+                <div class="founder-card" onclick="window.location.href='founders/hasan-aktar.html';">
+                    <div style="width: 100%; height: 350px; background-image: url('https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'); background-size: cover; background-position: top center; position: relative;">
+                        <div class="img-overlay"></div>
+                    </div>
+                    <div style="padding: 30px 20px; text-align: center; flex: 1; display: flex; flex-direction: column; justify-content: center; position: relative; z-index: 2; background: white; margin-top: -20px; border-radius: 20px 20px 0 0;">
+                        <h4 style="font-size: 22px; color: var(--text-main); margin-bottom: 8px; font-weight: 700;">হাসান আকতার</h4>
+                        <div style="color: #10b981; font-size: 14px; font-weight: 600; margin-bottom: 12px;">প্রতিষ্ঠাতা সদস্য</div>
+                        <p style="color: var(--text-light); font-size: 15px; line-height: 1.6; margin: 0;">সাহিত্য ও লেখনীর মাধ্যমে সাইমুমের আদর্শ প্রচারে তিনি গুরুত্বপূর্ণ ভূমিকা রেখেছিলেন।</p>
+                        
+                    </div>
+                </div>
+
+                <!-- Member 4 -->
+                <div class="founder-card" onclick="window.location.href='founders/aziz-md-saifullah.html';">
+                    <div style="width: 100%; height: 350px; background-image: url('https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'); background-size: cover; background-position: top center; position: relative;">
+                        <div class="img-overlay"></div>
+                    </div>
+                    <div style="padding: 30px 20px; text-align: center; flex: 1; display: flex; flex-direction: column; justify-content: center; position: relative; z-index: 2; background: white; margin-top: -20px; border-radius: 20px 20px 0 0;">
+                        <h4 style="font-size: 22px; color: var(--text-main); margin-bottom: 8px; font-weight: 700;">আজিজ মো. সাইফুল্লাহ</h4>
+                        <div style="color: #8b5cf6; font-size: 14px; font-weight: 600; margin-bottom: 12px;">প্রতিষ্ঠাতা সদস্য</div>
+                        <p style="color: var(--text-light); font-size: 15px; line-height: 1.6; margin: 0;">তাঁর শৈল্পিক পরিবেশনা এবং সৃজনশীলতা সাইমুমের কাজকে আরও বেগবান করেছিল।</p>
+                        
+                    </div>
+                </div>
+
+                <!-- Member 5 -->
+                <div class="founder-card" onclick="window.location.href='founders/shahidullah-masud.html';">
+                    <div style="width: 100%; height: 350px; background-image: url('https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'); background-size: cover; background-position: top center; position: relative;">
+                        <div class="img-overlay"></div>
+                    </div>
+                    <div style="padding: 30px 20px; text-align: center; flex: 1; display: flex; flex-direction: column; justify-content: center; position: relative; z-index: 2; background: white; margin-top: -20px; border-radius: 20px 20px 0 0;">
+                        <h4 style="font-size: 22px; color: var(--text-main); margin-bottom: 8px; font-weight: 700;">শহীদুল্লাহ মাসুদ</h4>
+                        <div style="color: #0f172a; font-size: 14px; font-weight: 600; margin-bottom: 12px;">প্রতিষ্ঠাতা সদস্য</div>
+                        <p style="color: var(--text-light); font-size: 15px; line-height: 1.6; margin: 0;">সাংগঠনিক দক্ষতা ও দূরদর্শিতার মাধ্যমে সাইমুমকে এগিয়ে নিতে তিনি অগ্রণী ভূমিকা পালন করেন।</p>
+                        
+                    </div>
+                </div>
+
+                <!-- Member 6 -->
+                <div class="founder-card" onclick="window.location.href='founders/sabina-mallick.html';">
+                    <div style="width: 100%; height: 350px; background-image: url('https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'); background-size: cover; background-position: top center; position: relative;">
+                        <div class="img-overlay"></div>
+                    </div>
+                    <div style="padding: 30px 20px; text-align: center; flex: 1; display: flex; flex-direction: column; justify-content: center; position: relative; z-index: 2; background: white; margin-top: -20px; border-radius: 20px 20px 0 0;">
+                        <h4 style="font-size: 22px; color: var(--text-main); margin-bottom: 8px; font-weight: 700;">সাবিনা মল্লিক</h4>
+                        <div style="color: #ec4899; font-size: 14px; font-weight: 600; margin-bottom: 12px;">প্রতিষ্ঠাতা সদস্য</div>
+                        <p style="color: var(--text-light); font-size: 15px; line-height: 1.6; margin: 0;">তাঁর সৃজনশীল লেখনী এবং নেপথ্যের অনুপ্রেরণা সাইমুমের যাত্রাকে অনেক বেশি প্রাণবন্ত করেছে।</p>
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 60px; padding: 30px 20px; background: white; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.03); border: 1px solid rgba(0,0,0,0.05); max-width: 900px; margin-left: auto; margin-right: auto; position: relative; overflow: hidden;">
+                <div style="position: absolute; top: -15px; left: -15px; font-size: 100px; color: rgba(249,115,22,0.05); transform: rotate(-15deg);"><i class="fa-solid fa-quote-left"></i></div>
+                <p style="color: var(--text-main); font-size: 18px; line-height: 1.8; margin: 0; position: relative; z-index: 1;">উপদেষ্টা হিসেবে <strong style="color: var(--primary-color);">মীর কাসেম আলী</strong> পরামর্শ দিয়ে সহযোগিতা করেছিলেন এবং সরকারের সাবেক সচিব <strong style="color: var(--primary-color);">মিয়া মোহাম্মদ আইয়ুব</strong> সংগঠনটির জন্য <span style="font-weight: 700; font-size: 22px; display: inline-block; margin: 0 5px; color: #10b981;">'সাইমুম'</span> নামটি প্রস্তাব করেছিলেন।</p>
+                        
+                    </div>
+        </div>
+    
+        </div>
+    </section>
+    <!-- Master Footer -->
+    <footer class="master-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Brand Section -->
+                <div class="footer-brand">
+                    <a href="index.html" class="logo" style="color: white; margin-bottom: 20px; display: inline-flex;">
+                        <div class="logo-icon"><i class="fa-solid fa-fire-flame-curved"></i></div>
+                        <div class="logo-text">সাইমুম<span>.org</span></div>
+                    </a>
+                    <p>সুস্থ সংস্কৃতির বিকাশ এবং মানবতার কল্যাণে ১৯৭৮ সাল থেকে নিরলসভাবে কাজ করে যাচ্ছে সাইমুম শিল্পীগোষ্ঠী।</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div class="footer-links">
+                    <h3>গুরুত্বপূর্ণ লিংক</h3>
+                    <ul>
+                        <li><a href="about.html"><i class="fa-solid fa-angle-right"></i> আমাদের সম্পর্কে</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> সাইমুম স্ট্রিম</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> সাইমুম একাডেমি</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> সাইমুম শপ</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> অনুদান / বাইতুল মাল</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Departments -->
+                <div class="footer-links">
+                    <h3>শাখা সমূহ</h3>
+                    <ul>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> সংগীত বিভাগ</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> থিয়েটার ও মঞ্চনাটক</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> ক্বিরাত বিভাগ</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> সাহিত্য ও প্রকাশনা</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Info -->
+                <div class="footer-contact">
+                    <h3>যোগাযোগ</h3>
+                    <ul>
+                        <li>
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>মিজান টাওয়ার, মগবাজার, ঢাকা, বাংলাদেশ</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-phone"></i>
+                            <span>+৮৮০ ১২৩৪-৫৬৭৮৯০</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>info@saimum.org</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container text-center">
+                <p>&copy; ২০২৬ সাইমুম শিল্পীগোষ্ঠী. সর্বস্বত্ব সংরক্ষিত।</p>
+                        
+                    </div>
+        </div>
+    </footer>
+</body>
+</html>

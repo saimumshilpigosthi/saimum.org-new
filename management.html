@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>পরিচালনা পর্ষদ | সাইমুম শিল্পীগোষ্ঠী</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Bengali:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+
+        .management-top-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            max-width: 850px;
+            margin: 0 auto 50px auto;
+        }
+        
+        .management-sub-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        /* Responsive adjustments for top grid */
+        @media (max-width: 768px) {
+            .management-top-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* Slight variation in card design for management to differentiate */
+        .management-card {
+            border-top: 4px solid var(--primary-color);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+            border-radius: 12px;
+        }
+        .management-card .dir-img-box {
+            height: 280px;
+        }
+
+        .director-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 35px;
+            margin-top: 0;
+        }
+
+        .director-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            border: 1px solid rgba(0,0,0,0.03);
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .director-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+        }
+
+        .dir-img-box {
+            height: 250px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .dir-img-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .director-card:hover .dir-img-box img {
+            transform: scale(1.05);
+        }
+
+        .dir-badge {
+            position: absolute;
+            bottom: 15px;
+            left: 15px;
+            background: rgba(255,255,255,0.95);
+            color: var(--primary-color);
+            padding: 6px 14px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 700;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .dir-content {
+            padding: 25px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .dir-name {
+            font-size: 22px;
+            color: var(--text-main);
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .dir-tenure {
+            font-size: 14px;
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .dir-bio {
+            font-size: 15px;
+            color: var(--text-light);
+            line-height: 1.7;
+            margin-bottom: 20px;
+            flex: 1;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .dir-footer {
+            border-top: 1px solid rgba(0,0,0,0.06);
+            padding-top: 15px;
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+        }
+
+        .dir-social {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: var(--bg-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-light);
+            transition: all 0.3s ease;
+            font-size: 14px;
+        }
+
+        .dir-social:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        
+            .hl-img-wrap {
+                height: 350px;
+                position: static;
+            }
+            .hl-img {
+                position: static;
+            }
+            .hl-content {
+                padding: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Ecosystem Bar -->
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <div class="ecosystem-links">
+                <a href="#"><i class="fa-solid fa-play"></i> সাইমুম স্ট্রিম</a>
+                <a href="#"><i class="fa-solid fa-graduation-cap"></i> সাইমুম একাডেমি</a>
+                <a href="#"><i class="fa-solid fa-bag-shopping"></i> সাইমুম শপ</a>
+                <a href="#"><i class="fa-solid fa-hand-holding-heart"></i> অনুদান / বাইতুল মাল</a>
+            </div>
+            <div class="top-bar-right">
+                <div class="language-switcher">
+                    <span><img src="https://flagcdn.com/w20/bd.png" alt="BD Flag" class="flag-icon"> বাংলা</span> <i class="fa-solid fa-chevron-down"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <header class="main-header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon"><i class="fa-solid fa-fire-flame-curved"></i></div>
+                <div class="logo-text">সাইমুম<span>.org</span></div>
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#" class="active">হোম</a></li>
+                    <li class="has-dropdown">
+                        <a href="#">পরিচিতি <i class="fa-solid fa-chevron-down"></i></a>
+                                                                                                                        <ul class="dropdown">
+                            <li><a href="about.html">আমাদের সম্পর্কে</a></li>
+                            <li><a href="founders.html">প্রতিষ্ঠাতা সদস্যবৃন্দ</a></li>
+                            <li><a href="directors.html">পরিচালকবৃন্দ</a></li>
+                            <li><a href="management.html">পরিচালনা পর্ষদ</a></li>
+                            <li><a href="artists.html">জনপ্রিয় শিল্পীবৃন্দ</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="#">বিভাগসমূহ <i class="fa-solid fa-chevron-down"></i></a>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="#">প্রকাশনা <i class="fa-solid fa-chevron-down"></i></a>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="#">গ্যালারি <i class="fa-solid fa-chevron-down"></i></a>
+                    </li>
+                    <li><a href="#">ব্লগ</a></li>
+                    <li class="has-dropdown">
+                        <a href="#">কার্যক্রম <i class="fa-solid fa-chevron-down"></i></a>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="#">প্রোগ্রাম ও প্রদর্শনী <i class="fa-solid fa-chevron-down"></i></a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="#" class="btn btn-primary"><i class="fa-solid fa-user"></i> লগইন</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-header" style="background-image: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.9)), url('https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80'); padding: 120px 0 80px; text-align: center; color: white;">
+        <div class="container">
+            <p style="font-size: 16px; font-weight: 600; opacity: 0.9; margin-bottom: 10px; color: var(--primary-light); text-transform: uppercase; letter-spacing: 2px;">আমাদের নেতৃত্ব</p>
+            <h1 style="font-size: 48px; margin-bottom: 16px; font-weight: 700;">পরিচালনা পর্ষদ</h1>
+            <p style="font-size: 18px; opacity: 0.9; max-width: 600px; margin: 0 auto; line-height: 1.6;">বর্তমান পরিচালনা পর্ষদ, যাঁদের দক্ষ নেতৃত্বে সাইমুম শিল্পীগোষ্ঠী নিজস্ব স্বকীয়তায় এগিয়ে যাচ্ছে।</p>
+        </div>
+    </section>
+
+    
+    <section class="section-padding bg-light" style="padding-top: 50px;">
+        <div class="container">
+            
+                        <!-- Top Line: Director and Assistant Director (2 Cards) -->
+            <div class="management-top-grid">
+                
+                <!-- Director -->
+                <div class="director-card management-card">
+                    <div class="dir-img-box">
+                        <img src="Images/Direcotrs/30.jpg" alt="হাফেজ নিয়ামুল হোসাইন">
+                        <div class="dir-badge" style="background: var(--primary-color); color: white;">পরিচালক</div>
+                    </div>
+                    <div class="dir-content">
+                        <h4 class="dir-name">হাফেজ নিয়ামুল হোসাইন</h4>
+                        <p class="dir-bio">সাইমুমের সার্বিক কার্যক্রম তত্ত্বাবধান এবং আগামী দিনের ভিশন বাস্তবায়নে তিনি নেতৃত্ব দিচ্ছেন।</p>
+                        <div class="dir-footer">
+                            <a href="#" class="dir-social"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" class="dir-social"><i class="fa-solid fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Assistant Director -->
+                <div class="director-card management-card">
+                    <div class="dir-img-box">
+                        <img src="Images/Direcotrs/1.jpg" alt="শিল্পী মোরশেদুল ইসলাম">
+                        <div class="dir-badge" style="background: #334155; color: white;">সহকারী পরিচালক</div>
+                    </div>
+                    <div class="dir-content">
+                        <h4 class="dir-name">শিল্পী মোরশেদুল ইসলাম</h4>
+                        <p class="dir-bio">সংগঠনের বিভিন্ন সাংস্কৃতিক ও প্রশাসনিক কার্যক্রমে তিনি পরিচালকের সাথে নিবিড়ভাবে কাজ করছেন।</p>
+                        <div class="dir-footer">
+                            <a href="#" class="dir-social"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" class="dir-social"><i class="fa-solid fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            
+                        <!-- Section Divider -->
+            <div style="text-align: center; margin-bottom: 40px; position: relative;">
+                <h3 style="display: inline-block; background: var(--bg-light); padding: 0 20px; position: relative; z-index: 2; color: #475569; font-size: 20px;">সম্পাদকীয় পরিষদ</h3>
+                <div style="position: absolute; top: 50%; left: 0; right: 0; height: 1px; background: #cbd5e1; z-index: 1;"></div>
+            </div>
+
+                        <!-- Sub Grid: 3 or 4 cards per row -->
+            <div class="management-sub-grid">
+                <!-- Member 1 -->
+                <div class="director-card management-card">
+                    <div class="dir-img-box" style="height: 240px;">
+                        <img src="Images/Direcotrs/2.jpg" alt="শিল্পী হাসান আল বান্নাহ">
+                        <div class="dir-badge">সাহিত্য ও গবেষণা সম্পাদক</div>
+                    </div>
+                    <div class="dir-content">
+                        <h4 class="dir-name">শিল্পী হাসান আল বান্নাহ</h4>
+                        <p class="dir-bio">সাইমুম শিল্পীগোষ্ঠীর সাহিত্য ও গবেষণা সম্পাদক হিসেবে তিনি অত্যন্ত নিষ্ঠার সাথে দায়িত্ব পালন করছেন।</p>
+                        <div class="dir-footer">
+                            <a href="#" class="dir-social"><i class="fa-brands fa-facebook-f"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Member 2 -->
+                <div class="director-card management-card">
+                    <div class="dir-img-box" style="height: 240px;">
+                        <img src="Images/Direcotrs/3.jpg" alt="সাইফুল মামুন">
+                        <div class="dir-badge">অফিস ও মিডিয়া সম্পাদক</div>
+                    </div>
+                    <div class="dir-content">
+                        <h4 class="dir-name">সাইফুল মামুন</h4>
+                        <p class="dir-bio">সাইমুম শিল্পীগোষ্ঠীর অফিস ও মিডিয়া সম্পাদক হিসেবে তিনি অত্যন্ত নিষ্ঠার সাথে দায়িত্ব পালন করছেন।</p>
+                        <div class="dir-footer">
+                            <a href="#" class="dir-social"><i class="fa-brands fa-facebook-f"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Member 3 -->
+                <div class="director-card management-card">
+                    <div class="dir-img-box" style="height: 240px;">
+                        <img src="Images/Direcotrs/4.jpg" alt="তৌহিদ আলম মন্ডল">
+                        <div class="dir-badge">অর্থ সম্পাদক</div>
+                    </div>
+                    <div class="dir-content">
+                        <h4 class="dir-name">তৌহিদ আলম মন্ডল</h4>
+                        <p class="dir-bio">সাইমুম শিল্পীগোষ্ঠীর অর্থ সম্পাদক হিসেবে তিনি অত্যন্ত নিষ্ঠার সাথে দায়িত্ব পালন করছেন।</p>
+                        <div class="dir-footer">
+                            <a href="#" class="dir-social"><i class="fa-brands fa-facebook-f"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Member 4 -->
+                <div class="director-card management-card">
+                    <div class="dir-img-box" style="height: 240px;">
+                        <img src="Images/Direcotrs/5.jpg" alt="নাজমুল বিন আশশাব">
+                        <div class="dir-badge">চলচ্চিত্র, শিল্প ও আইন সম্পাদক</div>
+                    </div>
+                    <div class="dir-content">
+                        <h4 class="dir-name">নাজমুল বিন আশশাব</h4>
+                        <p class="dir-bio">সাইমুম শিল্পীগোষ্ঠীর চলচ্চিত্র, শিল্প ও আইন সম্পাদক হিসেবে তিনি অত্যন্ত নিষ্ঠার সাথে দায়িত্ব পালন করছেন।</p>
+                        <div class="dir-footer">
+                            <a href="#" class="dir-social"><i class="fa-brands fa-facebook-f"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Member 5 -->
+                <div class="director-card management-card">
+                    <div class="dir-img-box" style="height: 240px;">
+                        <img src="Images/Direcotrs/6.jpg" alt="আল মাহমুদ">
+                        <div class="dir-badge">মানব সম্পদ উন্নয়ন ও পাঠাগার সম্পাদক</div>
+                    </div>
+                    <div class="dir-content">
+                        <h4 class="dir-name">আল মাহমুদ</h4>
+                        <p class="dir-bio">সাইমুম শিল্পীগোষ্ঠীর মানব সম্পদ উন্নয়ন ও পাঠাগার সম্পাদক হিসেবে তিনি অত্যন্ত নিষ্ঠার সাথে দায়িত্ব পালন করছেন।</p>
+                        <div class="dir-footer">
+                            <a href="#" class="dir-social"><i class="fa-brands fa-facebook-f"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Member 6 -->
+                <div class="director-card management-card">
+                    <div class="dir-img-box" style="height: 240px;">
+                        <img src="Images/Direcotrs/7.jpg" alt="ইয়াসিন আরাফাত">
+                        <div class="dir-badge">প্রকাশনা সম্পাদক</div>
+                    </div>
+                    <div class="dir-content">
+                        <h4 class="dir-name">ইয়াসিন আরাফাত</h4>
+                        <p class="dir-bio">সাইমুম শিল্পীগোষ্ঠীর প্রকাশনা সম্পাদক হিসেবে তিনি অত্যন্ত নিষ্ঠার সাথে দায়িত্ব পালন করছেন।</p>
+                        <div class="dir-footer">
+                            <a href="#" class="dir-social"><i class="fa-brands fa-facebook-f"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Member 7 -->
+                <div class="director-card management-card">
+                    <div class="dir-img-box" style="height: 240px;">
+                        <img src="Images/Direcotrs/8.jpg" alt="কে এম সাব্বির">
+                        <div class="dir-badge">আইটি ও প্রচার সম্পাদক</div>
+                    </div>
+                    <div class="dir-content">
+                        <h4 class="dir-name">কে এম সাব্বির</h4>
+                        <p class="dir-bio">সাইমুম শিল্পীগোষ্ঠীর আইটি ও প্রচার সম্পাদক হিসেবে তিনি অত্যন্ত নিষ্ঠার সাথে দায়িত্ব পালন করছেন।</p>
+                        <div class="dir-footer">
+                            <a href="#" class="dir-social"><i class="fa-brands fa-facebook-f"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Master Footer -->
+    <footer class="master-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Brand Section -->
+                <div class="footer-brand">
+                    <a href="index.html" class="logo" style="color: white; margin-bottom: 20px; display: inline-flex;">
+                        <div class="logo-icon"><i class="fa-solid fa-fire-flame-curved"></i></div>
+                        <div class="logo-text">সাইমুম<span>.org</span></div>
+                    </a>
+                    <p>সুস্থ সংস্কৃতির বিকাশ এবং মানবতার কল্যাণে ১৯৭৮ সাল থেকে নিরলসভাবে কাজ করে যাচ্ছে সাইমুম শিল্পীগোষ্ঠী।</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div class="footer-links">
+                    <h3>গুরুত্বপূর্ণ লিংক</h3>
+                    <ul>
+                        <li><a href="about.html"><i class="fa-solid fa-angle-right"></i> আমাদের সম্পর্কে</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> সাইমুম স্ট্রিম</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> সাইমুম একাডেমি</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> সাইমুম শপ</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> অনুদান / বাইতুল মাল</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Departments -->
+                <div class="footer-links">
+                    <h3>শাখা সমূহ</h3>
+                    <ul>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> সংগীত বিভাগ</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> থিয়েটার ও মঞ্চনাটক</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> ক্বিরাত বিভাগ</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> সাহিত্য ও প্রকাশনা</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Info -->
+                <div class="footer-contact">
+                    <h3>যোগাযোগ</h3>
+                    <ul>
+                        <li>
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>মিজান টাওয়ার, মগবাজার, ঢাকা, বাংলাদেশ</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-phone"></i>
+                            <span>+৮৮০ ১২৩৪-৫৬৭৮৯০</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>info@saimum.org</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container text-center">
+                <p>&copy; ২০২৬ সাইমুম শিল্পীগোষ্ঠী. সর্বস্বত্ব সংরক্ষিত।</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

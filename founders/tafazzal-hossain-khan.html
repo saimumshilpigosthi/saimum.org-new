@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>তাফাজ্জল হোসাইন খান | সাইমুম শিল্পীগোষ্ঠী</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Bengali:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .wiki-layout {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            align-items: flex-start;
+        }
+        
+        .wiki-main {
+            flex: 1;
+            min-width: 60%;
+        }
+        
+        .wiki-sidebar {
+            width: 350px;
+            position: sticky;
+            top: 100px;
+        }
+        
+        .infobox {
+            background: white;
+            border: 1px solid rgba(0,0,0,0.08);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .infobox-header {
+            background: var(--bg-light);
+            text-align: center;
+            padding: 20px;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+        
+        .infobox-img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+        }
+        
+        .infobox-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--text-main);
+            margin: 15px 0 5px;
+        }
+        
+        .infobox-subtitle {
+            font-size: 14px;
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+        
+        .infobox-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .infobox-table th, .infobox-table td {
+            padding: 12px 20px;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            font-size: 15px;
+        }
+        
+        .infobox-table th {
+            width: 40%;
+            color: var(--text-light);
+            font-weight: 500;
+            text-align: left;
+            background: rgba(0,0,0,0.01);
+        }
+        
+        .infobox-table td {
+            color: var(--text-main);
+            font-weight: 600;
+        }
+        
+        .toc-box {
+            background: var(--bg-light);
+            border: 1px solid rgba(0,0,0,0.05);
+            border-radius: var(--radius-md);
+            padding: 25px;
+            margin-bottom: 40px;
+            display: inline-block;
+            min-width: 300px;
+        }
+        
+        .toc-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .toc-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .toc-list li {
+            margin-bottom: 10px;
+        }
+        
+        .toc-list a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: color 0.3s ease;
+        }
+        
+        .toc-list a:hover {
+            color: var(--secondary-color);
+            text-decoration: underline;
+        }
+        
+        .wiki-section {
+            margin-bottom: 50px;
+        }
+        
+        .wiki-section h2 {
+            font-size: 28px;
+            color: var(--text-main);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--primary-light);
+            position: relative;
+        }
+        
+        .wiki-section h2::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 60px;
+            height: 2px;
+            background: var(--primary-color);
+        }
+        
+        .wiki-section p {
+            color: var(--text-light);
+            font-size: 17px;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+        
+        .works-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .works-list li {
+            padding: 12px 15px;
+            background: white;
+            border: 1px solid rgba(0,0,0,0.05);
+            margin-bottom: 10px;
+            border-radius: var(--radius-sm);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            transition: all 0.3s ease;
+        }
+        
+        .works-list li:hover {
+            transform: translateX(5px);
+            border-color: var(--primary-light);
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .works-list i {
+            color: var(--primary-color);
+            font-size: 20px;
+        }
+        
+        @media (max-width: 991px) {
+            .wiki-layout {
+                flex-direction: column-reverse;
+            }
+            .wiki-sidebar {
+                width: 100%;
+                position: static;
+                margin-bottom: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Ecosystem Bar -->
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <div class="ecosystem-links">
+                <a href="#"><i class="fa-solid fa-play"></i> সাইমুম স্ট্রিম</a>
+                <a href="#"><i class="fa-solid fa-graduation-cap"></i> সাইমুম একাডেমি</a>
+                <a href="#"><i class="fa-solid fa-bag-shopping"></i> সাইমুম শপ</a>
+                <a href="#"><i class="fa-solid fa-hand-holding-heart"></i> অনুদান / বাইতুল মাল</a>
+            </div>
+            <div class="top-bar-right">
+                <div class="language-switcher">
+                    <span><img src="https://flagcdn.com/w20/bd.png" alt="BD Flag" class="flag-icon"> বাংলা</span> <i class="fa-solid fa-chevron-down"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <header class="main-header">
+        <div class="container header-container">
+            <a href="../index.html" class="logo">
+                <div class="logo-icon"><i class="fa-solid fa-fire-flame-curved"></i></div>
+                <div class="logo-text">সাইমুম<span>.org</span></div>
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="../index.html">হোম</a></li>
+                    <li class="has-dropdown">
+                        <a href="#" class="active">পরিচিতি <i class="fa-solid fa-chevron-down"></i></a>
+                        <ul class="dropdown">
+                            <li><a href="../about.html">আমাদের সম্পর্কে</a></li>
+                            <li><a href="../founders.html">প্রতিষ্ঠাতা সদস্যবৃন্দ</a></li>
+                            <li><a href="../directors.html">পরিচালকবৃন্দ</a></li>
+                            <li><a href="../management.html">পরিচালনা পর্ষদ</a></li>
+                            <li><a href="../artists.html">জনপ্রিয় শিল্পীবৃন্দ</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="#">বিভাগসমূহ <i class="fa-solid fa-chevron-down"></i></a>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="#">প্রকাশনা <i class="fa-solid fa-chevron-down"></i></a>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="#">গ্যালারি <i class="fa-solid fa-chevron-down"></i></a>
+                    </li>
+                    <li><a href="#">ব্লগ</a></li>
+                    <li class="has-dropdown">
+                        <a href="#">কার্যক্রম <i class="fa-solid fa-chevron-down"></i></a>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="#">প্রোগ্রাম ও প্রদর্শনী <i class="fa-solid fa-chevron-down"></i></a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="#" class="btn btn-primary"><i class="fa-solid fa-user"></i> লগইন</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-header" style="background-image: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.9)), url('https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80'); padding: 100px 0 60px; text-align: left; color: white;">
+        <div class="container">
+            <p style="font-size: 16px; opacity: 0.8; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 2px;">প্রতিষ্ঠাতা সদস্য প্রোফাইল</p>
+            <h1 style="font-size: 56px; margin-bottom: 0;">তাফাজ্জল হোসাইন খান</h1>
+        </div>
+    </section>
+
+    <section class="section-padding bg-light">
+        <div class="container">
+            <div class="wiki-layout">
+                
+                <!-- Main Content Area -->
+                <div class="wiki-main">
+                    
+                    <!-- Table of Contents -->
+                    <div class="toc-box">
+                        <div class="toc-title"><i class="fa-solid fa-list-ul"></i> সূচিপত্র</div>
+                        <ul class="toc-list">
+                            <li><a href="#intro">১. পরিচিতি</a></li>
+                            <li><a href="#early-life">২. প্রারম্ভিক জীবন</a></li>
+                            <li><a href="#career">৩. কর্মজীবন ও সাইমুম</a></li>
+                            <li><a href="#contributions">৪. অবদান ও রচনাসমূহ</a></li>
+                            <li><a href="#awards">৫. পুরস্কার ও স্বীকৃতি</a></li>
+                            <li><a href="#links">৬. বহিঃসংযোগ</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Sections -->
+                    <div id="intro" class="wiki-section">
+                        <h2>১. পরিচিতি</h2>
+                        <p><strong>তাফাজ্জল হোসাইন খান</strong> বাংলাদেশের অন্যতম শীর্ষস্থানীয় ইসলামী সাংস্কৃতিক ব্যক্তিত্ব এবং সাইমুম শিল্পীগোষ্ঠীর একজন প্রতিষ্ঠাতা সদস্য। ১৯৭৮ সালে কবি মতিউর রহমান মল্লিকের নেতৃত্বে যে কয়জন স্বপ্নদ্রষ্টা সাইমুমের ভিত্তিপ্রস্তর স্থাপন করেছিলেন, তিনি তাদের মধ্যে অন্যতম। তাঁর সুমধুর কণ্ঠ ও নিরলস পরিশ্রম সাইমুমকে প্রাথমিক দিনগুলোতে একটি শক্ত ভিত্তি প্রদান করেছিল।</p>
+                        <p>ইসলামী মূল্যবোধ ও সুস্থ সংস্কৃতির প্রসারে তিনি আজীবন কাজ করে গেছেন। সঙ্গীতে তাঁর বিশেষত্ব এবং নতুন প্রজন্মের শিল্পীদের গড়ে তোলায় তাঁর অবদান তাকে সাংস্কৃতিক অঙ্গনে এক অনন্য মর্যাদায় আসীন করেছে।</p>
+                    </div>
+
+                    <div id="early-life" class="wiki-section">
+                        <h2>২. প্রারম্ভিক জীবন</h2>
+                        <p>তিনি বাংলাদেশের এক ঐতিহ্যবাহী মুসলিম পরিবারে জন্মগ্রহণ করেন। ছোটবেলা থেকেই তিনি সাহিত্য ও সঙ্গীতের প্রতি প্রবল আগ্রহী ছিলেন। পারিবারিক ইসলামী মূল্যবোধ তাঁর শিল্পীসত্তায় গভীর প্রভাব ফেলে। স্কুল জীবনেই তিনি বিভিন্ন হামদ, নাত এবং দেশাত্মবোধক গানে নিজের মেধার স্বাক্ষর রাখেন।</p>
+                        <p>শিক্ষাজীবনে তিনি যেমন মেধাবী ছিলেন, তেমনি সাংস্কৃতিক অঙ্গনেও ছিলেন সমানভাবে সরব। তাঁর এই প্রারম্ভিক চর্চাই পরবর্তীতে তাঁকে একটি আদর্শ সাংস্কৃতিক সংগঠন প্রতিষ্ঠায় অনুপ্রাণিত করে।</p>
+                    </div>
+
+                    <div id="career" class="wiki-section">
+                        <h2>৩. কর্মজীবন ও সাইমুম</h2>
+                        <p>১৯৭৮ সালে যখন সাইমুম শিল্পীগোষ্ঠী প্রতিষ্ঠিত হয়, তখন তিনি প্রতিষ্ঠাতা সদস্য হিসেবে এতে যোগদান করেন। শুরুতে সাইমুমের কার্যক্রম ছিল অত্যন্ত সীমিত পরিসরে। তাফাজ্জল হোসাইন খান তাঁর অসাধারণ সাংগঠনিক দক্ষতা এবং কণ্ঠ মাধুর্য দিয়ে সংগঠনকে এগিয়ে নিয়ে যান। তিনি শুধু একজন শিল্পীই ছিলেন না, বরং নতুন শিল্পীদের জন্য একজন নিবেদিতপ্রাণ শিক্ষকও ছিলেন।</p>
+                        <p>তাঁর ঐকান্তিক প্রচেষ্টায় সাইমুম দেশের বিভিন্ন প্রান্তে তাদের অনুষ্ঠান ছড়িয়ে দিতে সক্ষম হয়। নব্বইয়ের দশকে ইসলামী সঙ্গীতের বিপ্লবে তিনি ছিলেন অন্যতম কান্ডারি।</p>
+                    </div>
+
+                    <div id="contributions" class="wiki-section">
+                        <h2>৪. অবদান ও রচনাসমূহ</h2>
+                        <p>সাইমুমের অসংখ্য কালজয়ী অ্যালবামে তাঁর কণ্ঠ রয়েছে। এর বাইরেও তিনি অনেক গীতি কবিতা এবং সুর রচনা করেছেন। তাঁর কিছু পরিচিত কাজ নিচে দেওয়া হলো:</p>
+                        <ul class="works-list">
+                            <li><i class="fa-solid fa-compact-disc"></i> <strong>অ্যালবাম:</strong> নতুন সূর্যোদয় (কণ্ঠশিল্পী)</li>
+                            <li><i class="fa-solid fa-music"></i> <strong>সুরারোপ:</strong> জাগো মুজাহিদ (অ্যালবামের ৩টি গান)</li>
+                            <li><i class="fa-solid fa-pen-nib"></i> <strong>গীতি রচনা:</strong> হে রাসুল তোমায় ভুলি কেমনে</li>
+                            <li><i class="fa-solid fa-microphone-lines"></i> <strong>প্রধান শিল্পী:</strong> সাইমুমের প্রথম লাইভ কনসার্ট সিরিজ (১৯৮০-১৯৮৫)</li>
+                        </ul>
+                    </div>
+
+                    <div id="awards" class="wiki-section">
+                        <h2>৫. পুরস্কার ও স্বীকৃতি</h2>
+                        <p>সুস্থ সংস্কৃতিতে অসামান্য অবদানের জন্য তিনি দেশ-বিদেশের বিভিন্ন সামাজিক ও সাংস্কৃতিক সংগঠন থেকে সম্মাননা লাভ করেছেন:</p>
+                        <ul class="works-list">
+                            <li><i class="fa-solid fa-award"></i> <strong>জাতীয় ইসলামী সংস্কৃতি সম্মাননা (২০১০)</strong></li>
+                            <li><i class="fa-solid fa-trophy"></i> <strong>শ্রেষ্ঠ কণ্ঠশিল্পী - সাইমুম অ্যাওয়ার্ড (২০০৫)</strong></li>
+                            <li><i class="fa-solid fa-medal"></i> <strong>আজীবন সম্মাননা - জাতীয় সাংস্কৃতিক ফোরাম</strong></li>
+                        </ul>
+                    </div>
+
+                    <div id="links" class="wiki-section">
+                        <h2>৬. বহিঃসংযোগ</h2>
+                        <p>তাঁর সম্পর্কিত আরও তথ্য জানতে নিচের লিঙ্কগুলোতে ভিজিট করতে পারেন:</p>
+                        <ul class="works-list">
+                            <li><a href="#" style="color: var(--text-main); text-decoration: none;"><i class="fa-brands fa-youtube" style="color: #ff0000;"></i> তাফাজ্জল হোসাইন খানের গানের প্লেলিস্ট (সাইমুম স্ট্রিম)</a></li>
+                            <li><a href="#" style="color: var(--text-main); text-decoration: none;"><i class="fa-solid fa-book-open" style="color: var(--primary-color);"></i> সাইমুম আর্কাইভ: প্রথম দিকের ইতিহাস</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <!-- Sidebar (Infobox) -->
+                <div class="wiki-sidebar">
+                    <div class="infobox">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="তাফাজ্জল হোসাইন খান" class="infobox-img">
+                        <div class="infobox-header">
+                            <h3 class="infobox-title">তাফাজ্জল হোসাইন খান</h3>
+                            <p class="infobox-subtitle">প্রতিষ্ঠাতা সদস্য, সাইমুম শিল্পীগোষ্ঠী</p>
+                        </div>
+                        <table class="infobox-table">
+                            <tbody>
+                                <tr>
+                                    <th>পুরো নাম</th>
+                                    <td>তাফাজ্জল হোসাইন খান</td>
+                                </tr>
+                                <tr>
+                                    <th>জন্ম</th>
+                                    <td>১২ জানুয়ারি, ১৯৫৮</td>
+                                </tr>
+                                <tr>
+                                    <th>জন্মস্থান</th>
+                                    <td>ঢাকা, বাংলাদেশ</td>
+                                </tr>
+                                <tr>
+                                    <th>পেশা</th>
+                                    <td>কণ্ঠশিল্পী, সুরকার</td>
+                                </tr>
+                                <tr>
+                                    <th>সক্রিয় সময়কাল</th>
+                                    <td>১৯৭৮ – বর্তমান</td>
+                                </tr>
+                                <tr>
+                                    <th>ভূমিকা/বিভাগ</th>
+                                    <td>সংগীত বিভাগ</td>
+                                </tr>
+                                <tr>
+                                    <th>পরিচিত কাজ</th>
+                                    <td>নতুন সূর্যোদয় (অ্যালবাম)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div style="padding: 15px 20px 25px; display: flex; gap: 12px; justify-content: center; background: rgba(0,0,0,0.01);">
+                            <a href="#" target="_blank" style="width: 38px; height: 38px; border-radius: 50%; background: white; display: flex; align-items: center; justify-content: center; color: var(--text-main); transition: all 0.3s ease; border: 1px solid rgba(0,0,0,0.08); box-shadow: 0 2px 5px rgba(0,0,0,0.02);" onmouseover="this.style.background='var(--primary-color)'; this.style.color='white'; this.style.borderColor='var(--primary-color)'; this.style.transform='translateY(-3px)';" onmouseout="this.style.background='white'; this.style.color='var(--text-main)'; this.style.borderColor='rgba(0,0,0,0.08)'; this.style.transform='translateY(0)';"><i class="fa-solid fa-globe"></i></a>
+                            <a href="#" target="_blank" style="width: 38px; height: 38px; border-radius: 50%; background: white; display: flex; align-items: center; justify-content: center; color: var(--text-main); transition: all 0.3s ease; border: 1px solid rgba(0,0,0,0.08); box-shadow: 0 2px 5px rgba(0,0,0,0.02);" onmouseover="this.style.background='var(--primary-color)'; this.style.color='white'; this.style.borderColor='var(--primary-color)'; this.style.transform='translateY(-3px)';" onmouseout="this.style.background='white'; this.style.color='var(--text-main)'; this.style.borderColor='rgba(0,0,0,0.08)'; this.style.transform='translateY(0)';"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" target="_blank" style="width: 38px; height: 38px; border-radius: 50%; background: white; display: flex; align-items: center; justify-content: center; color: var(--text-main); transition: all 0.3s ease; border: 1px solid rgba(0,0,0,0.08); box-shadow: 0 2px 5px rgba(0,0,0,0.02);" onmouseover="this.style.background='var(--primary-color)'; this.style.color='white'; this.style.borderColor='var(--primary-color)'; this.style.transform='translateY(-3px)';" onmouseout="this.style.background='white'; this.style.color='var(--text-main)'; this.style.borderColor='rgba(0,0,0,0.08)'; this.style.transform='translateY(0)';"><i class="fa-brands fa-youtube"></i></a>
+                            <a href="#" target="_blank" style="width: 38px; height: 38px; border-radius: 50%; background: white; display: flex; align-items: center; justify-content: center; color: var(--text-main); transition: all 0.3s ease; border: 1px solid rgba(0,0,0,0.08); box-shadow: 0 2px 5px rgba(0,0,0,0.02);" onmouseover="this.style.background='var(--primary-color)'; this.style.color='white'; this.style.borderColor='var(--primary-color)'; this.style.transform='translateY(-3px)';" onmouseout="this.style.background='white'; this.style.color='var(--text-main)'; this.style.borderColor='rgba(0,0,0,0.08)'; this.style.transform='translateY(0)';"><i class="fa-brands fa-spotify"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Master Footer -->
+    <footer class="master-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Brand Section -->
+                <div class="footer-brand">
+                    <a href="../index.html" class="logo" style="color: white; margin-bottom: 20px; display: inline-flex;">
+                        <div class="logo-icon"><i class="fa-solid fa-fire-flame-curved"></i></div>
+                        <div class="logo-text">সাইমুম<span>.org</span></div>
+                    </a>
+                    <p>সুস্থ সংস্কৃতির বিকাশ এবং মানবতার কল্যাণে ১৯৭৮ সাল থেকে নিরলসভাবে কাজ করে যাচ্ছে সাইমুম শিল্পীগোষ্ঠী।</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div class="footer-links">
+                    <h3>গুরুত্বপূর্ণ লিংক</h3>
+                    <ul>
+                        <li><a href="../about.html"><i class="fa-solid fa-angle-right"></i> আমাদের সম্পর্কে</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> সাইমুম স্ট্রিম</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> সাইমুম একাডেমি</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> সাইমুম শপ</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> অনুদান / বাইতুল মাল</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Departments -->
+                <div class="footer-links">
+                    <h3>শাখা সমূহ</h3>
+                    <ul>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> সংগীত বিভাগ</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> থিয়েটার ও মঞ্চনাটক</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> ক্বিরাত বিভাগ</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> সাহিত্য ও প্রকাশনা</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Info -->
+                <div class="footer-contact">
+                    <h3>যোগাযোগ</h3>
+                    <ul>
+                        <li>
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>মিজান টাওয়ার, মগবাজার, ঢাকা, বাংলাদেশ</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-phone"></i>
+                            <span>+৮৮০ ১২৩৪-৫৬৭৮৯০</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>info@saimum.org</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container text-center">
+                <p>&copy; ২০২৬ সাইমুম শিল্পীগোষ্ঠী. সর্বস্বত্ব সংরক্ষিত।</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
