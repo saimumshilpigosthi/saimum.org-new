@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="bn">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>পরিচালক | সাইমুম শিল্পীগোষ্ঠী</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Bengali:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Bengali:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 
@@ -20,9 +23,9 @@
             background: white;
             border-radius: 16px;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
             transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-            border: 1px solid rgba(0,0,0,0.03);
+            border: 1px solid rgba(0, 0, 0, 0.03);
             cursor: pointer;
             display: flex;
             flex-direction: column;
@@ -30,7 +33,7 @@
 
         .director-card:hover {
             transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
         }
 
         .dir-img-box {
@@ -54,13 +57,13 @@
             position: absolute;
             bottom: 15px;
             left: 15px;
-            background: rgba(255,255,255,0.95);
+            background: rgba(255, 255, 255, 0.95);
             color: var(--primary-color);
             padding: 6px 14px;
             border-radius: 8px;
             font-size: 13px;
             font-weight: 700;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         }
 
         .dir-content {
@@ -95,13 +98,14 @@
             flex: 1;
             display: -webkit-box;
             -webkit-line-clamp: 2;
+            line-clamp: 2;
             -webkit-box-orient: vertical;
             overflow: hidden;
             text-overflow: ellipsis;
         }
 
         .dir-footer {
-            border-top: 1px solid rgba(0,0,0,0.06);
+            border-top: 1px solid rgba(0, 0, 0, 0.06);
             padding-top: 15px;
             display: flex;
             justify-content: flex-end;
@@ -126,21 +130,25 @@
             color: white;
             transform: translateY(-2px);
         }
-        
-        
-            .hl-img-wrap {
-                height: 350px;
-                position: static;
-            }
-            .hl-img {
-                position: static;
-            }
-            .hl-content {
-                padding: 30px;
-            }
+
+
+        @media (max-width: 991px) {
+        .hl-img-wrap {
+            height: 350px;
+            position: static;
         }
+
+        .hl-img {
+            position: static;
+        }
+
+        .hl-content {
+            padding: 30px;
+        }
+    }
     </style>
 </head>
+
 <body>
     <!-- Top Ecosystem Bar -->
     <div class="top-bar">
@@ -149,11 +157,12 @@
                 <a href="#"><i class="fa-solid fa-play"></i> সাইমুম স্ট্রিম</a>
                 <a href="#"><i class="fa-solid fa-graduation-cap"></i> সাইমুম একাডেমি</a>
                 <a href="#"><i class="fa-solid fa-bag-shopping"></i> সাইমুম শপ</a>
-                <a href="#"><i class="fa-solid fa-hand-holding-heart"></i> অনুদান / বাইতুল মাল</a>
+                <a href="#"><i class="fa-solid fa-hand-holding-heart"></i> অনুদান </a>
             </div>
             <div class="top-bar-right">
                 <div class="language-switcher">
-                    <span><img src="https://flagcdn.com/w20/bd.png" alt="BD Flag" class="flag-icon"> বাংলা</span> <i class="fa-solid fa-chevron-down"></i>
+                    <span><img src="https://flagcdn.com/w20/bd.png" alt="BD Flag" class="flag-icon"> বাংলা</span> <i
+                        class="fa-solid fa-chevron-down"></i>
                 </div>
             </div>
         </div>
@@ -171,12 +180,12 @@
                     <li><a href="#" class="active">হোম</a></li>
                     <li class="has-dropdown">
                         <a href="#">পরিচিতি <i class="fa-solid fa-chevron-down"></i></a>
-                                                                                                                        <ul class="dropdown">
+                        <ul class="dropdown">
                             <li><a href="about.html">আমাদের সম্পর্কে</a></li>
                             <li><a href="founders.html">প্রতিষ্ঠাতা সদস্যবৃন্দ</a></li>
                             <li><a href="directors.html">পরিচালকবৃন্দ</a></li>
                             <li><a href="management.html">পরিচালনা পর্ষদ</a></li>
-                            <li><a href="artists.html">জনপ্রিয় শিল্পীবৃন্দ</a></li>
+                            <li><a href="artists.html">শিল্পী তালিকা</a></li>
                         </ul>
                     </li>
                     <li class="has-dropdown">
@@ -203,15 +212,20 @@
         </div>
     </header>
 
-    <section class="page-header" style="background-image: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.9)), url('https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80'); padding: 120px 0 80px; text-align: center; color: white;">
+    <section class="page-header"
+        style="background-image: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.9)), url('https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80'); padding: 120px 0 80px; text-align: center; color: white;">
         <div class="container">
-            <p style="font-size: 16px; font-weight: 600; opacity: 0.9; margin-bottom: 10px; color: var(--primary-light); text-transform: uppercase; letter-spacing: 2px;">আমাদের নেতৃত্ব</p>
+            <p
+                style="font-size: 16px; font-weight: 600; opacity: 0.9; margin-bottom: 10px; color: var(--primary-light); text-transform: uppercase; letter-spacing: 2px;">
+                আমাদের নেতৃত্ব</p>
             <h1 style="font-size: 48px; margin-bottom: 16px; font-weight: 700;">পরিচালকবৃন্দ (১৯৭৮ - বর্তমান)</h1>
-            <p style="font-size: 18px; opacity: 0.9; max-width: 600px; margin: 0 auto; line-height: 1.6;">প্রতিষ্ঠালগ্ন থেকে সাইমুম শিল্পীগোষ্ঠীকে এগিয়ে নেওয়ার ক্ষেত্রে যাঁরা যোগ্য নেতৃত্ব প্রদান করেছেন, তাঁদের সংক্ষিপ্ত পরিচিতি।</p>
+            <p style="font-size: 18px; opacity: 0.9; max-width: 600px; margin: 0 auto; line-height: 1.6;">প্রতিষ্ঠালগ্ন
+                থেকে সাইমুম শিল্পীগোষ্ঠীকে এগিয়ে নেওয়ার ক্ষেত্রে যাঁরা যোগ্য নেতৃত্ব প্রদান করেছেন, তাঁদের সংক্ষিপ্ত
+                পরিচিতি।</p>
         </div>
     </section>
 
-    
+
     <section class="section-padding bg-light" style="padding-top: 40px;">
         <div class="container">
             <!-- Grid for all past directors -->
@@ -224,11 +238,15 @@
                     </div>
                     <div class="dir-content">
                         <h4 class="dir-name">কবি মতিউর রহমান মল্লিক</h4>
-                        <div class="dir-tenure"><i class="fa-regular fa-calendar"></i> জানুয়ারি ১৯৭৮ – সেপ্টেম্বর ১৯৮১</div>
-                        <p class="dir-bio">সাইমুম শিল্পীগোষ্ঠীকে এগিয়ে নেওয়ার ক্ষেত্রে তিনি যোগ্য নেতৃত্ব প্রদান করেছেন এবং গুরুত্বপূর্ণ অবদান রেখেছেন।</p>
+                        <div class="dir-tenure"><i class="fa-regular fa-calendar"></i> জানুয়ারি ১৯৭৮ – সেপ্টেম্বর ১৯৮১
+                        </div>
+                        <p class="dir-bio">সাইমুম শিল্পীগোষ্ঠীকে এগিয়ে নেওয়ার ক্ষেত্রে তিনি যোগ্য নেতৃত্ব প্রদান
+                            করেছেন এবং গুরুত্বপূর্ণ অবদান রেখেছেন।</p>
                         <div class="dir-footer">
-                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i class="fa-brands fa-facebook-f"></i></a>
-                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i class="fa-solid fa-globe"></i></a>
+                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i
+                                    class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i
+                                    class="fa-solid fa-globe"></i></a>
                         </div>
                     </div>
                 </div>
@@ -240,11 +258,15 @@
                     </div>
                     <div class="dir-content">
                         <h4 class="dir-name">ডা. স. ম. রফিক</h4>
-                        <div class="dir-tenure"><i class="fa-regular fa-calendar"></i> অক্টোবর ১৯৮১ – সেপ্টেম্বর ১৯৮২</div>
-                        <p class="dir-bio">সাইমুম শিল্পীগোষ্ঠীকে এগিয়ে নেওয়ার ক্ষেত্রে তিনি যোগ্য নেতৃত্ব প্রদান করেছেন এবং গুরুত্বপূর্ণ অবদান রেখেছেন।</p>
+                        <div class="dir-tenure"><i class="fa-regular fa-calendar"></i> অক্টোবর ১৯৮১ – সেপ্টেম্বর ১৯৮২
+                        </div>
+                        <p class="dir-bio">সাইমুম শিল্পীগোষ্ঠীকে এগিয়ে নেওয়ার ক্ষেত্রে তিনি যোগ্য নেতৃত্ব প্রদান
+                            করেছেন এবং গুরুত্বপূর্ণ অবদান রেখেছেন।</p>
                         <div class="dir-footer">
-                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i class="fa-brands fa-facebook-f"></i></a>
-                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i class="fa-solid fa-globe"></i></a>
+                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i
+                                    class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i
+                                    class="fa-solid fa-globe"></i></a>
                         </div>
                     </div>
                 </div>
@@ -256,11 +278,15 @@
                     </div>
                     <div class="dir-content">
                         <h4 class="dir-name">কবি আসাদ বিন হাফিজ</h4>
-                        <div class="dir-tenure"><i class="fa-regular fa-calendar"></i> অক্টোবর ১৯৮২ – সেপ্টেম্বর ১৯৮৩</div>
-                        <p class="dir-bio">সাইমুম শিল্পীগোষ্ঠীকে এগিয়ে নেওয়ার ক্ষেত্রে তিনি যোগ্য নেতৃত্ব প্রদান করেছেন এবং গুরুত্বপূর্ণ অবদান রেখেছেন।</p>
+                        <div class="dir-tenure"><i class="fa-regular fa-calendar"></i> অক্টোবর ১৯৮২ – সেপ্টেম্বর ১৯৮৩
+                        </div>
+                        <p class="dir-bio">সাইমুম শিল্পীগোষ্ঠীকে এগিয়ে নেওয়ার ক্ষেত্রে তিনি যোগ্য নেতৃত্ব প্রদান
+                            করেছেন এবং গুরুত্বপূর্ণ অবদান রেখেছেন।</p>
                         <div class="dir-footer">
-                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i class="fa-brands fa-facebook-f"></i></a>
-                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i class="fa-solid fa-globe"></i></a>
+                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i
+                                    class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i
+                                    class="fa-solid fa-globe"></i></a>
                         </div>
                     </div>
                 </div>
@@ -272,11 +298,15 @@
                     </div>
                     <div class="dir-content">
                         <h4 class="dir-name">নোমান আযমী</h4>
-                        <div class="dir-tenure"><i class="fa-regular fa-calendar"></i> অক্টোবর ১৯৮৩ – সেপ্টেম্বর ১৯৮৪</div>
-                        <p class="dir-bio">সাইমুম শিল্পীগোষ্ঠীকে এগিয়ে নেওয়ার ক্ষেত্রে তিনি যোগ্য নেতৃত্ব প্রদান করেছেন এবং গুরুত্বপূর্ণ অবদান রেখেছেন।</p>
+                        <div class="dir-tenure"><i class="fa-regular fa-calendar"></i> অক্টোবর ১৯৮৩ – সেপ্টেম্বর ১৯৮৪
+                        </div>
+                        <p class="dir-bio">সাইমুম শিল্পীগোষ্ঠীকে এগিয়ে নেওয়ার ক্ষেত্রে তিনি যোগ্য নেতৃত্ব প্রদান
+                            করেছেন এবং গুরুত্বপূর্ণ অবদান রেখেছেন।</p>
                         <div class="dir-footer">
-                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i class="fa-brands fa-facebook-f"></i></a>
-                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i class="fa-solid fa-globe"></i></a>
+                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i
+                                    class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i
+                                    class="fa-solid fa-globe"></i></a>
                         </div>
                     </div>
                 </div>
@@ -288,11 +318,15 @@
                     </div>
                     <div class="dir-content">
                         <h4 class="dir-name">মাওঃ তারিক মুনাওয়ার</h4>
-                        <div class="dir-tenure"><i class="fa-regular fa-calendar"></i> অক্টোবর ১৯৮৪ – সেপ্টেম্বর ১৯৮৬</div>
-                        <p class="dir-bio">সাইমুম শিল্পীগোষ্ঠীকে এগিয়ে নেওয়ার ক্ষেত্রে তিনি যোগ্য নেতৃত্ব প্রদান করেছেন এবং গুরুত্বপূর্ণ অবদান রেখেছেন।</p>
+                        <div class="dir-tenure"><i class="fa-regular fa-calendar"></i> অক্টোবর ১৯৮৪ – সেপ্টেম্বর ১৯৮৬
+                        </div>
+                        <p class="dir-bio">সাইমুম শিল্পীগোষ্ঠীকে এগিয়ে নেওয়ার ক্ষেত্রে তিনি যোগ্য নেতৃত্ব প্রদান
+                            করেছেন এবং গুরুত্বপূর্ণ অবদান রেখেছেন।</p>
                         <div class="dir-footer">
-                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i class="fa-brands fa-facebook-f"></i></a>
-                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i class="fa-solid fa-globe"></i></a>
+                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i
+                                    class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i
+                                    class="fa-solid fa-globe"></i></a>
                         </div>
                     </div>
                 </div>
@@ -304,11 +338,15 @@
                     </div>
                     <div class="dir-content">
                         <h4 class="dir-name">অধ্যাপক সাইফুল্লাহ মানছুর</h4>
-                        <div class="dir-tenure"><i class="fa-regular fa-calendar"></i> অক্টোবর ১৯৮৬ – ডিসেম্বর ১৯৮৮</div>
-                        <p class="dir-bio">সাইমুম শিল্পীগোষ্ঠীকে এগিয়ে নেওয়ার ক্ষেত্রে তিনি যোগ্য নেতৃত্ব প্রদান করেছেন এবং গুরুত্বপূর্ণ অবদান রেখেছেন।</p>
+                        <div class="dir-tenure"><i class="fa-regular fa-calendar"></i> অক্টোবর ১৯৮৬ – ডিসেম্বর ১৯৮৮
+                        </div>
+                        <p class="dir-bio">সাইমুম শিল্পীগোষ্ঠীকে এগিয়ে নেওয়ার ক্ষেত্রে তিনি যোগ্য নেতৃত্ব প্রদান
+                            করেছেন এবং গুরুত্বপূর্ণ অবদান রেখেছেন।</p>
                         <div class="dir-footer">
-                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i class="fa-brands fa-facebook-f"></i></a>
-                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i class="fa-solid fa-globe"></i></a>
+                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i
+                                    class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i
+                                    class="fa-solid fa-globe"></i></a>
                         </div>
                     </div>
                 </div>
@@ -320,11 +358,15 @@
                     </div>
                     <div class="dir-content">
                         <h4 class="dir-name">ড. সালমান আল আযামী</h4>
-                        <div class="dir-tenure"><i class="fa-regular fa-calendar"></i> জানুয়ারি ১৯৮৮ – সেপ্টেম্বর ১৯৯০</div>
-                        <p class="dir-bio">সাইমুম শিল্পীগোষ্ঠীকে এগিয়ে নেওয়ার ক্ষেত্রে তিনি যোগ্য নেতৃত্ব প্রদান করেছেন এবং গুরুত্বপূর্ণ অবদান রেখেছেন।</p>
+                        <div class="dir-tenure"><i class="fa-regular fa-calendar"></i> জানুয়ারি ১৯৮৮ – সেপ্টেম্বর ১৯৯০
+                        </div>
+                        <p class="dir-bio">সাইমুম শিল্পীগোষ্ঠীকে এগিয়ে নেওয়ার ক্ষেত্রে তিনি যোগ্য নেতৃত্ব প্রদান
+                            করেছেন এবং গুরুত্বপূর্ণ অবদান রেখেছেন।</p>
                         <div class="dir-footer">
-                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i class="fa-brands fa-facebook-f"></i></a>
-                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i class="fa-solid fa-globe"></i></a>
+                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i
+                                    class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i
+                                    class="fa-solid fa-globe"></i></a>
                         </div>
                     </div>
                 </div>
@@ -337,10 +379,13 @@
                     <div class="dir-content">
                         <h4 class="dir-name">আকরাম মুজাহিদ</h4>
                         <div class="dir-tenure"><i class="fa-regular fa-calendar"></i> অক্টোবর ১৯৯০ – জুন ১৯৯১</div>
-                        <p class="dir-bio">সাইমুম শিল্পীগোষ্ঠীকে এগিয়ে নেওয়ার ক্ষেত্রে তিনি যোগ্য নেতৃত্ব প্রদান করেছেন এবং গুরুত্বপূর্ণ অবদান রেখেছেন।</p>
+                        <p class="dir-bio">সাইমুম শিল্পীগোষ্ঠীকে এগিয়ে নেওয়ার ক্ষেত্রে তিনি যোগ্য নেতৃত্ব প্রদান
+                            করেছেন এবং গুরুত্বপূর্ণ অবদান রেখেছেন।</p>
                         <div class="dir-footer">
-                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i class="fa-brands fa-facebook-f"></i></a>
-                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i class="fa-solid fa-globe"></i></a>
+                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i
+                                    class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i
+                                    class="fa-solid fa-globe"></i></a>
                         </div>
                     </div>
                 </div>
@@ -352,11 +397,15 @@
                     </div>
                     <div class="dir-content">
                         <h4 class="dir-name">মানজুর মোয়াজ্জাম</h4>
-                        <div class="dir-tenure"><i class="fa-regular fa-calendar"></i> জুলাই ১৯৯১ – সেপ্টেম্বর ১৯৯১</div>
-                        <p class="dir-bio">সাইমুম শিল্পীগোষ্ঠীকে এগিয়ে নেওয়ার ক্ষেত্রে তিনি যোগ্য নেতৃত্ব প্রদান করেছেন এবং গুরুত্বপূর্ণ অবদান রেখেছেন।</p>
+                        <div class="dir-tenure"><i class="fa-regular fa-calendar"></i> জুলাই ১৯৯১ – সেপ্টেম্বর ১৯৯১
+                        </div>
+                        <p class="dir-bio">সাইমুম শিল্পীগোষ্ঠীকে এগিয়ে নেওয়ার ক্ষেত্রে তিনি যোগ্য নেতৃত্ব প্রদান
+                            করেছেন এবং গুরুত্বপূর্ণ অবদান রেখেছেন।</p>
                         <div class="dir-footer">
-                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i class="fa-brands fa-facebook-f"></i></a>
-                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i class="fa-solid fa-globe"></i></a>
+                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i
+                                    class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i
+                                    class="fa-solid fa-globe"></i></a>
                         </div>
                     </div>
                 </div>
@@ -369,10 +418,13 @@
                     <div class="dir-content">
                         <h4 class="dir-name">নুরুল হুদা সাত্তারী</h4>
                         <div class="dir-tenure"><i class="fa-regular fa-calendar"></i> অক্টোবর ১৯৯১ – মে ১৯৯২</div>
-                        <p class="dir-bio">সাইমুম শিল্পীগোষ্ঠীকে এগিয়ে নেওয়ার ক্ষেত্রে তিনি যোগ্য নেতৃত্ব প্রদান করেছেন এবং গুরুত্বপূর্ণ অবদান রেখেছেন।</p>
+                        <p class="dir-bio">সাইমুম শিল্পীগোষ্ঠীকে এগিয়ে নেওয়ার ক্ষেত্রে তিনি যোগ্য নেতৃত্ব প্রদান
+                            করেছেন এবং গুরুত্বপূর্ণ অবদান রেখেছেন।</p>
                         <div class="dir-footer">
-                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i class="fa-brands fa-facebook-f"></i></a>
-                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i class="fa-solid fa-globe"></i></a>
+                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i
+                                    class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i
+                                    class="fa-solid fa-globe"></i></a>
                         </div>
                     </div>
                 </div>
@@ -384,11 +436,15 @@
                     </div>
                     <div class="dir-content">
                         <h4 class="dir-name">শরীফ বায়জীদ মাহমুদ</h4>
-                        <div class="dir-tenure"><i class="fa-regular fa-calendar"></i> অক্টোবর ১৯৯২ – ডিসেম্বর ১৯৯৪</div>
-                        <p class="dir-bio">সাইমুম শিল্পীগোষ্ঠীকে এগিয়ে নেওয়ার ক্ষেত্রে তিনি যোগ্য নেতৃত্ব প্রদান করেছেন এবং গুরুত্বপূর্ণ অবদান রেখেছেন।</p>
+                        <div class="dir-tenure"><i class="fa-regular fa-calendar"></i> অক্টোবর ১৯৯২ – ডিসেম্বর ১৯৯৪
+                        </div>
+                        <p class="dir-bio">সাইমুম শিল্পীগোষ্ঠীকে এগিয়ে নেওয়ার ক্ষেত্রে তিনি যোগ্য নেতৃত্ব প্রদান
+                            করেছেন এবং গুরুত্বপূর্ণ অবদান রেখেছেন।</p>
                         <div class="dir-footer">
-                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i class="fa-brands fa-facebook-f"></i></a>
-                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i class="fa-solid fa-globe"></i></a>
+                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i
+                                    class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i
+                                    class="fa-solid fa-globe"></i></a>
                         </div>
                     </div>
                 </div>
@@ -401,10 +457,13 @@
                     <div class="dir-content">
                         <h4 class="dir-name">হাসনাত আব্দুল কাদের</h4>
                         <div class="dir-tenure"><i class="fa-regular fa-calendar"></i> জানুয়ারি ১৯৯৫ – জুন ১৯৯৮</div>
-                        <p class="dir-bio">সাইমুম শিল্পীগোষ্ঠীকে এগিয়ে নেওয়ার ক্ষেত্রে তিনি যোগ্য নেতৃত্ব প্রদান করেছেন এবং গুরুত্বপূর্ণ অবদান রেখেছেন।</p>
+                        <p class="dir-bio">সাইমুম শিল্পীগোষ্ঠীকে এগিয়ে নেওয়ার ক্ষেত্রে তিনি যোগ্য নেতৃত্ব প্রদান
+                            করেছেন এবং গুরুত্বপূর্ণ অবদান রেখেছেন।</p>
                         <div class="dir-footer">
-                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i class="fa-brands fa-facebook-f"></i></a>
-                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i class="fa-solid fa-globe"></i></a>
+                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i
+                                    class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i
+                                    class="fa-solid fa-globe"></i></a>
                         </div>
                     </div>
                 </div>
@@ -417,10 +476,13 @@
                     <div class="dir-content">
                         <h4 class="dir-name">আমিনুল ইসলাম</h4>
                         <div class="dir-tenure"><i class="fa-regular fa-calendar"></i> জুলাই ১৯৯৮ – জুন ২০০২</div>
-                        <p class="dir-bio">সাইমুম শিল্পীগোষ্ঠীকে এগিয়ে নেওয়ার ক্ষেত্রে তিনি যোগ্য নেতৃত্ব প্রদান করেছেন এবং গুরুত্বপূর্ণ অবদান রেখেছেন।</p>
+                        <p class="dir-bio">সাইমুম শিল্পীগোষ্ঠীকে এগিয়ে নেওয়ার ক্ষেত্রে তিনি যোগ্য নেতৃত্ব প্রদান
+                            করেছেন এবং গুরুত্বপূর্ণ অবদান রেখেছেন।</p>
                         <div class="dir-footer">
-                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i class="fa-brands fa-facebook-f"></i></a>
-                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i class="fa-solid fa-globe"></i></a>
+                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i
+                                    class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i
+                                    class="fa-solid fa-globe"></i></a>
                         </div>
                     </div>
                 </div>
@@ -433,10 +495,13 @@
                     <div class="dir-content">
                         <h4 class="dir-name">লিটন হাফিজ চৌধুরী</h4>
                         <div class="dir-tenure"><i class="fa-regular fa-calendar"></i> জুন ২০০২ – জুলাই ২০০৩</div>
-                        <p class="dir-bio">সাইমুম শিল্পীগোষ্ঠীকে এগিয়ে নেওয়ার ক্ষেত্রে তিনি যোগ্য নেতৃত্ব প্রদান করেছেন এবং গুরুত্বপূর্ণ অবদান রেখেছেন।</p>
+                        <p class="dir-bio">সাইমুম শিল্পীগোষ্ঠীকে এগিয়ে নেওয়ার ক্ষেত্রে তিনি যোগ্য নেতৃত্ব প্রদান
+                            করেছেন এবং গুরুত্বপূর্ণ অবদান রেখেছেন।</p>
                         <div class="dir-footer">
-                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i class="fa-brands fa-facebook-f"></i></a>
-                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i class="fa-solid fa-globe"></i></a>
+                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i
+                                    class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i
+                                    class="fa-solid fa-globe"></i></a>
                         </div>
                     </div>
                 </div>
@@ -448,11 +513,15 @@
                     </div>
                     <div class="dir-content">
                         <h4 class="dir-name">মুস্তাগিছুর রহমান মুস্তাক</h4>
-                        <div class="dir-tenure"><i class="fa-regular fa-calendar"></i> জুলাই ২০০৩ – ফেব্রুয়ারি ২০০৫</div>
-                        <p class="dir-bio">সাইমুম শিল্পীগোষ্ঠীকে এগিয়ে নেওয়ার ক্ষেত্রে তিনি যোগ্য নেতৃত্ব প্রদান করেছেন এবং গুরুত্বপূর্ণ অবদান রেখেছেন।</p>
+                        <div class="dir-tenure"><i class="fa-regular fa-calendar"></i> জুলাই ২০০৩ – ফেব্রুয়ারি ২০০৫
+                        </div>
+                        <p class="dir-bio">সাইমুম শিল্পীগোষ্ঠীকে এগিয়ে নেওয়ার ক্ষেত্রে তিনি যোগ্য নেতৃত্ব প্রদান
+                            করেছেন এবং গুরুত্বপূর্ণ অবদান রেখেছেন।</p>
                         <div class="dir-footer">
-                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i class="fa-brands fa-facebook-f"></i></a>
-                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i class="fa-solid fa-globe"></i></a>
+                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i
+                                    class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i
+                                    class="fa-solid fa-globe"></i></a>
                         </div>
                     </div>
                 </div>
@@ -465,10 +534,13 @@
                     <div class="dir-content">
                         <h4 class="dir-name">জাফর সাদেক</h4>
                         <div class="dir-tenure"><i class="fa-regular fa-calendar"></i> মার্চ ২০০৫ – ডিসেম্বর ২০০৫</div>
-                        <p class="dir-bio">সাইমুম শিল্পীগোষ্ঠীকে এগিয়ে নেওয়ার ক্ষেত্রে তিনি যোগ্য নেতৃত্ব প্রদান করেছেন এবং গুরুত্বপূর্ণ অবদান রেখেছেন।</p>
+                        <p class="dir-bio">সাইমুম শিল্পীগোষ্ঠীকে এগিয়ে নেওয়ার ক্ষেত্রে তিনি যোগ্য নেতৃত্ব প্রদান
+                            করেছেন এবং গুরুত্বপূর্ণ অবদান রেখেছেন।</p>
                         <div class="dir-footer">
-                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i class="fa-brands fa-facebook-f"></i></a>
-                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i class="fa-solid fa-globe"></i></a>
+                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i
+                                    class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i
+                                    class="fa-solid fa-globe"></i></a>
                         </div>
                     </div>
                 </div>
@@ -481,10 +553,13 @@
                     <div class="dir-content">
                         <h4 class="dir-name">বদিউর রহমান সোহেল</h4>
                         <div class="dir-tenure"><i class="fa-regular fa-calendar"></i> জানুয়ারি ২০০৬ – জুলাই ২০০৭</div>
-                        <p class="dir-bio">সাইমুম শিল্পীগোষ্ঠীকে এগিয়ে নেওয়ার ক্ষেত্রে তিনি যোগ্য নেতৃত্ব প্রদান করেছেন এবং গুরুত্বপূর্ণ অবদান রেখেছেন।</p>
+                        <p class="dir-bio">সাইমুম শিল্পীগোষ্ঠীকে এগিয়ে নেওয়ার ক্ষেত্রে তিনি যোগ্য নেতৃত্ব প্রদান
+                            করেছেন এবং গুরুত্বপূর্ণ অবদান রেখেছেন।</p>
                         <div class="dir-footer">
-                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i class="fa-brands fa-facebook-f"></i></a>
-                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i class="fa-solid fa-globe"></i></a>
+                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i
+                                    class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i
+                                    class="fa-solid fa-globe"></i></a>
                         </div>
                     </div>
                 </div>
@@ -497,10 +572,13 @@
                     <div class="dir-content">
                         <h4 class="dir-name">আব্দুল্লাহিল কাফি</h4>
                         <div class="dir-tenure"><i class="fa-regular fa-calendar"></i> আগস্ট ২০০৭ – ডিসেম্বর ২০০৮</div>
-                        <p class="dir-bio">সাইমুম শিল্পীগোষ্ঠীকে এগিয়ে নেওয়ার ক্ষেত্রে তিনি যোগ্য নেতৃত্ব প্রদান করেছেন এবং গুরুত্বপূর্ণ অবদান রেখেছেন।</p>
+                        <p class="dir-bio">সাইমুম শিল্পীগোষ্ঠীকে এগিয়ে নেওয়ার ক্ষেত্রে তিনি যোগ্য নেতৃত্ব প্রদান
+                            করেছেন এবং গুরুত্বপূর্ণ অবদান রেখেছেন।</p>
                         <div class="dir-footer">
-                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i class="fa-brands fa-facebook-f"></i></a>
-                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i class="fa-solid fa-globe"></i></a>
+                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i
+                                    class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i
+                                    class="fa-solid fa-globe"></i></a>
                         </div>
                     </div>
                 </div>
@@ -512,11 +590,15 @@
                     </div>
                     <div class="dir-content">
                         <h4 class="dir-name">ইকবাল হোসাইন</h4>
-                        <div class="dir-tenure"><i class="fa-regular fa-calendar"></i> জানুয়ারি ২০০৯ – ডিসেম্বর ২০০৯</div>
-                        <p class="dir-bio">সাইমুম শিল্পীগোষ্ঠীকে এগিয়ে নেওয়ার ক্ষেত্রে তিনি যোগ্য নেতৃত্ব প্রদান করেছেন এবং গুরুত্বপূর্ণ অবদান রেখেছেন।</p>
+                        <div class="dir-tenure"><i class="fa-regular fa-calendar"></i> জানুয়ারি ২০০৯ – ডিসেম্বর ২০০৯
+                        </div>
+                        <p class="dir-bio">সাইমুম শিল্পীগোষ্ঠীকে এগিয়ে নেওয়ার ক্ষেত্রে তিনি যোগ্য নেতৃত্ব প্রদান
+                            করেছেন এবং গুরুত্বপূর্ণ অবদান রেখেছেন।</p>
                         <div class="dir-footer">
-                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i class="fa-brands fa-facebook-f"></i></a>
-                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i class="fa-solid fa-globe"></i></a>
+                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i
+                                    class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i
+                                    class="fa-solid fa-globe"></i></a>
                         </div>
                     </div>
                 </div>
@@ -528,11 +610,15 @@
                     </div>
                     <div class="dir-content">
                         <h4 class="dir-name">হুসনে মোবারক</h4>
-                        <div class="dir-tenure"><i class="fa-regular fa-calendar"></i> জানুয়ারি ২০১০ – ফেব্রুয়ারি ২০১২</div>
-                        <p class="dir-bio">সাইমুম শিল্পীগোষ্ঠীকে এগিয়ে নেওয়ার ক্ষেত্রে তিনি যোগ্য নেতৃত্ব প্রদান করেছেন এবং গুরুত্বপূর্ণ অবদান রেখেছেন।</p>
+                        <div class="dir-tenure"><i class="fa-regular fa-calendar"></i> জানুয়ারি ২০১০ – ফেব্রুয়ারি ২০১২
+                        </div>
+                        <p class="dir-bio">সাইমুম শিল্পীগোষ্ঠীকে এগিয়ে নেওয়ার ক্ষেত্রে তিনি যোগ্য নেতৃত্ব প্রদান
+                            করেছেন এবং গুরুত্বপূর্ণ অবদান রেখেছেন।</p>
                         <div class="dir-footer">
-                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i class="fa-brands fa-facebook-f"></i></a>
-                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i class="fa-solid fa-globe"></i></a>
+                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i
+                                    class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i
+                                    class="fa-solid fa-globe"></i></a>
                         </div>
                     </div>
                 </div>
@@ -545,10 +631,13 @@
                     <div class="dir-content">
                         <h4 class="dir-name">রবিউল ইসলাম ফয়সাল</h4>
                         <div class="dir-tenure"><i class="fa-regular fa-calendar"></i> জানুয়ারি ২০১২ – জুলাই ২০১২</div>
-                        <p class="dir-bio">সাইমুম শিল্পীগোষ্ঠীকে এগিয়ে নেওয়ার ক্ষেত্রে তিনি যোগ্য নেতৃত্ব প্রদান করেছেন এবং গুরুত্বপূর্ণ অবদান রেখেছেন।</p>
+                        <p class="dir-bio">সাইমুম শিল্পীগোষ্ঠীকে এগিয়ে নেওয়ার ক্ষেত্রে তিনি যোগ্য নেতৃত্ব প্রদান
+                            করেছেন এবং গুরুত্বপূর্ণ অবদান রেখেছেন।</p>
                         <div class="dir-footer">
-                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i class="fa-brands fa-facebook-f"></i></a>
-                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i class="fa-solid fa-globe"></i></a>
+                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i
+                                    class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i
+                                    class="fa-solid fa-globe"></i></a>
                         </div>
                     </div>
                 </div>
@@ -561,10 +650,13 @@
                     <div class="dir-content">
                         <h4 class="dir-name">জাহাঙ্গীর আলম</h4>
                         <div class="dir-tenure"><i class="fa-regular fa-calendar"></i> আগস্ট ২০১২ – আগস্ট ২০১৪</div>
-                        <p class="dir-bio">সাইমুম শিল্পীগোষ্ঠীকে এগিয়ে নেওয়ার ক্ষেত্রে তিনি যোগ্য নেতৃত্ব প্রদান করেছেন এবং গুরুত্বপূর্ণ অবদান রেখেছেন।</p>
+                        <p class="dir-bio">সাইমুম শিল্পীগোষ্ঠীকে এগিয়ে নেওয়ার ক্ষেত্রে তিনি যোগ্য নেতৃত্ব প্রদান
+                            করেছেন এবং গুরুত্বপূর্ণ অবদান রেখেছেন।</p>
                         <div class="dir-footer">
-                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i class="fa-brands fa-facebook-f"></i></a>
-                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i class="fa-solid fa-globe"></i></a>
+                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i
+                                    class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i
+                                    class="fa-solid fa-globe"></i></a>
                         </div>
                     </div>
                 </div>
@@ -576,11 +668,15 @@
                     </div>
                     <div class="dir-content">
                         <h4 class="dir-name">এ বি এম নোমান</h4>
-                        <div class="dir-tenure"><i class="fa-regular fa-calendar"></i> সেপ্টেম্বর ২০১৪ – সেপ্টেম্বর ২০১৫</div>
-                        <p class="dir-bio">সাইমুম শিল্পীগোষ্ঠীকে এগিয়ে নেওয়ার ক্ষেত্রে তিনি যোগ্য নেতৃত্ব প্রদান করেছেন এবং গুরুত্বপূর্ণ অবদান রেখেছেন।</p>
+                        <div class="dir-tenure"><i class="fa-regular fa-calendar"></i> সেপ্টেম্বর ২০১৪ – সেপ্টেম্বর ২০১৫
+                        </div>
+                        <p class="dir-bio">সাইমুম শিল্পীগোষ্ঠীকে এগিয়ে নেওয়ার ক্ষেত্রে তিনি যোগ্য নেতৃত্ব প্রদান
+                            করেছেন এবং গুরুত্বপূর্ণ অবদান রেখেছেন।</p>
                         <div class="dir-footer">
-                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i class="fa-brands fa-facebook-f"></i></a>
-                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i class="fa-solid fa-globe"></i></a>
+                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i
+                                    class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i
+                                    class="fa-solid fa-globe"></i></a>
                         </div>
                     </div>
                 </div>
@@ -592,11 +688,15 @@
                     </div>
                     <div class="dir-content">
                         <h4 class="dir-name">আবু রায়হান</h4>
-                        <div class="dir-tenure"><i class="fa-regular fa-calendar"></i> অক্টোবর ২০১৫ – ডিসেম্বর ২০১৬</div>
-                        <p class="dir-bio">সাইমুম শিল্পীগোষ্ঠীকে এগিয়ে নেওয়ার ক্ষেত্রে তিনি যোগ্য নেতৃত্ব প্রদান করেছেন এবং গুরুত্বপূর্ণ অবদান রেখেছেন।</p>
+                        <div class="dir-tenure"><i class="fa-regular fa-calendar"></i> অক্টোবর ২০১৫ – ডিসেম্বর ২০১৬
+                        </div>
+                        <p class="dir-bio">সাইমুম শিল্পীগোষ্ঠীকে এগিয়ে নেওয়ার ক্ষেত্রে তিনি যোগ্য নেতৃত্ব প্রদান
+                            করেছেন এবং গুরুত্বপূর্ণ অবদান রেখেছেন।</p>
                         <div class="dir-footer">
-                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i class="fa-brands fa-facebook-f"></i></a>
-                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i class="fa-solid fa-globe"></i></a>
+                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i
+                                    class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i
+                                    class="fa-solid fa-globe"></i></a>
                         </div>
                     </div>
                 </div>
@@ -609,10 +709,13 @@
                     <div class="dir-content">
                         <h4 class="dir-name">ইকবাল হাসান</h4>
                         <div class="dir-tenure"><i class="fa-regular fa-calendar"></i> জানুয়ারি ২০১৭ – জুলাই ২০১৮</div>
-                        <p class="dir-bio">সাইমুম শিল্পীগোষ্ঠীকে এগিয়ে নেওয়ার ক্ষেত্রে তিনি যোগ্য নেতৃত্ব প্রদান করেছেন এবং গুরুত্বপূর্ণ অবদান রেখেছেন।</p>
+                        <p class="dir-bio">সাইমুম শিল্পীগোষ্ঠীকে এগিয়ে নেওয়ার ক্ষেত্রে তিনি যোগ্য নেতৃত্ব প্রদান
+                            করেছেন এবং গুরুত্বপূর্ণ অবদান রেখেছেন।</p>
                         <div class="dir-footer">
-                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i class="fa-brands fa-facebook-f"></i></a>
-                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i class="fa-solid fa-globe"></i></a>
+                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i
+                                    class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i
+                                    class="fa-solid fa-globe"></i></a>
                         </div>
                     </div>
                 </div>
@@ -625,10 +728,13 @@
                     <div class="dir-content">
                         <h4 class="dir-name">মাহমুদুল হাসান</h4>
                         <div class="dir-tenure"><i class="fa-regular fa-calendar"></i> আগস্ট ২০১৮ – মার্চ ২০১৯</div>
-                        <p class="dir-bio">সাইমুম শিল্পীগোষ্ঠীকে এগিয়ে নেওয়ার ক্ষেত্রে তিনি যোগ্য নেতৃত্ব প্রদান করেছেন এবং গুরুত্বপূর্ণ অবদান রেখেছেন।</p>
+                        <p class="dir-bio">সাইমুম শিল্পীগোষ্ঠীকে এগিয়ে নেওয়ার ক্ষেত্রে তিনি যোগ্য নেতৃত্ব প্রদান
+                            করেছেন এবং গুরুত্বপূর্ণ অবদান রেখেছেন।</p>
                         <div class="dir-footer">
-                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i class="fa-brands fa-facebook-f"></i></a>
-                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i class="fa-solid fa-globe"></i></a>
+                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i
+                                    class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i
+                                    class="fa-solid fa-globe"></i></a>
                         </div>
                     </div>
                 </div>
@@ -641,10 +747,13 @@
                     <div class="dir-content">
                         <h4 class="dir-name">আব্দুল্লাহ আল নোমান</h4>
                         <div class="dir-tenure"><i class="fa-regular fa-calendar"></i> এপ্রিল ২০১৯ – জানুয়ারি ২০২২</div>
-                        <p class="dir-bio">সাইমুম শিল্পীগোষ্ঠীকে এগিয়ে নেওয়ার ক্ষেত্রে তিনি যোগ্য নেতৃত্ব প্রদান করেছেন এবং গুরুত্বপূর্ণ অবদান রেখেছেন।</p>
+                        <p class="dir-bio">সাইমুম শিল্পীগোষ্ঠীকে এগিয়ে নেওয়ার ক্ষেত্রে তিনি যোগ্য নেতৃত্ব প্রদান
+                            করেছেন এবং গুরুত্বপূর্ণ অবদান রেখেছেন।</p>
                         <div class="dir-footer">
-                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i class="fa-brands fa-facebook-f"></i></a>
-                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i class="fa-solid fa-globe"></i></a>
+                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i
+                                    class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i
+                                    class="fa-solid fa-globe"></i></a>
                         </div>
                     </div>
                 </div>
@@ -657,10 +766,13 @@
                     <div class="dir-content">
                         <h4 class="dir-name">আতিক তাশরীফ</h4>
                         <div class="dir-tenure"><i class="fa-regular fa-calendar"></i> জানুয়ারি ২০২২ – জুন ২০২৪</div>
-                        <p class="dir-bio">সাইমুম শিল্পীগোষ্ঠীকে এগিয়ে নেওয়ার ক্ষেত্রে তিনি যোগ্য নেতৃত্ব প্রদান করেছেন এবং গুরুত্বপূর্ণ অবদান রেখেছেন।</p>
+                        <p class="dir-bio">সাইমুম শিল্পীগোষ্ঠীকে এগিয়ে নেওয়ার ক্ষেত্রে তিনি যোগ্য নেতৃত্ব প্রদান
+                            করেছেন এবং গুরুত্বপূর্ণ অবদান রেখেছেন।</p>
                         <div class="dir-footer">
-                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i class="fa-brands fa-facebook-f"></i></a>
-                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i class="fa-solid fa-globe"></i></a>
+                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i
+                                    class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i
+                                    class="fa-solid fa-globe"></i></a>
                         </div>
                     </div>
                 </div>
@@ -673,10 +785,13 @@
                     <div class="dir-content">
                         <h4 class="dir-name">জাহিদুল ইসলাম</h4>
                         <div class="dir-tenure"><i class="fa-regular fa-calendar"></i> জুন ২০২৪ – ফেব্রুয়ারি ২০২৬</div>
-                        <p class="dir-bio">সাইমুম শিল্পীগোষ্ঠীকে এগিয়ে নেওয়ার ক্ষেত্রে তিনি যোগ্য নেতৃত্ব প্রদান করেছেন এবং গুরুত্বপূর্ণ অবদান রেখেছেন।</p>
+                        <p class="dir-bio">সাইমুম শিল্পীগোষ্ঠীকে এগিয়ে নেওয়ার ক্ষেত্রে তিনি যোগ্য নেতৃত্ব প্রদান
+                            করেছেন এবং গুরুত্বপূর্ণ অবদান রেখেছেন।</p>
                         <div class="dir-footer">
-                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i class="fa-brands fa-facebook-f"></i></a>
-                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i class="fa-solid fa-globe"></i></a>
+                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i
+                                    class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i
+                                    class="fa-solid fa-globe"></i></a>
                         </div>
                     </div>
                 </div>
@@ -684,15 +799,19 @@
                 <div class="director-card" onclick="window.location.href='directors/niamul-hossain.html';">
                     <div class="dir-img-box">
                         <img src="Images/Direcotrs/30.jpg" alt="নিয়ামুল হোসাইন">
-                        <div class="dir-badge" style="background: var(--primary-color); color: white;">৩০তম পরিচালক (বর্তমান)</div>
+                        <div class="dir-badge" style="background: var(--primary-color); color: white;">৩০তম পরিচালক
+                            (বর্তমান)</div>
                     </div>
                     <div class="dir-content">
                         <h4 class="dir-name">নিয়ামুল হোসাইন</h4>
                         <div class="dir-tenure"><i class="fa-regular fa-calendar"></i> মার্চ ২০২৬ – বর্তমান</div>
-                        <p class="dir-bio">সাইমুম শিল্পীগোষ্ঠীকে এগিয়ে নেওয়ার ক্ষেত্রে তিনি যোগ্য নেতৃত্ব প্রদান করেছেন এবং গুরুত্বপূর্ণ অবদান রেখেছেন।</p>
+                        <p class="dir-bio">সাইমুম শিল্পীগোষ্ঠীকে এগিয়ে নেওয়ার ক্ষেত্রে তিনি যোগ্য নেতৃত্ব প্রদান
+                            করেছেন এবং গুরুত্বপূর্ণ অবদান রেখেছেন।</p>
                         <div class="dir-footer">
-                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i class="fa-brands fa-facebook-f"></i></a>
-                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i class="fa-solid fa-globe"></i></a>
+                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i
+                                    class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" class="dir-social" onclick="event.stopPropagation();"><i
+                                    class="fa-solid fa-globe"></i></a>
                         </div>
                     </div>
                 </div>
@@ -710,7 +829,8 @@
                         <div class="logo-icon"><i class="fa-solid fa-fire-flame-curved"></i></div>
                         <div class="logo-text">সাইমুম<span>.org</span></div>
                     </a>
-                    <p>সুস্থ সংস্কৃতির বিকাশ এবং মানবতার কল্যাণে ১৯৭৮ সাল থেকে নিরলসভাবে কাজ করে যাচ্ছে সাইমুম শিল্পীগোষ্ঠী।</p>
+                    <p>সুস্থ সংস্কৃতির বিকাশ এবং মানবতার কল্যাণে ১৯৭৮ সাল থেকে নিরলসভাবে কাজ করে যাচ্ছে সাইমুম
+                        শিল্পীগোষ্ঠী।</p>
                     <div class="social-links">
                         <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
                         <a href="#"><i class="fa-brands fa-youtube"></i></a>
@@ -718,7 +838,7 @@
                         <a href="#"><i class="fa-brands fa-instagram"></i></a>
                     </div>
                 </div>
-                
+
                 <!-- Quick Links -->
                 <div class="footer-links">
                     <h3>গুরুত্বপূর্ণ লিংক</h3>
@@ -730,7 +850,7 @@
                         <li><a href="#"><i class="fa-solid fa-angle-right"></i> অনুদান / বাইতুল মাল</a></li>
                     </ul>
                 </div>
-                
+
                 <!-- Departments -->
                 <div class="footer-links">
                     <h3>শাখা সমূহ</h3>
@@ -741,7 +861,7 @@
                         <li><a href="#"><i class="fa-solid fa-angle-right"></i> সাহিত্য ও প্রকাশনা</a></li>
                     </ul>
                 </div>
-                
+
                 <!-- Contact Info -->
                 <div class="footer-contact">
                     <h3>যোগাযোগ</h3>
@@ -762,7 +882,7 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="footer-bottom">
             <div class="container text-center">
                 <p>&copy; ২০২৬ সাইমুম শিল্পীগোষ্ঠী. সর্বস্বত্ব সংরক্ষিত।</p>
@@ -770,4 +890,5 @@
         </div>
     </footer>
 </body>
+
 </html>
