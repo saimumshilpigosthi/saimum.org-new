@@ -253,31 +253,6 @@
             margin-top: 5px;
         }
 
-        .artist-social-links {
-            display: flex;
-            gap: 12px;
-            margin-top: 25px;
-        }
-        
-        .artist-social-links a {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background: var(--artist-light);
-            color: #64748b;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 16px;
-            transition: all 0.3s ease;
-        }
-        
-        .artist-social-links a:hover {
-            background: var(--artist-primary);
-            color: white;
-            transform: translateY(-3px);
-        }
-
         /* Sidebar Elements */
         .sidebar-card {
             background: white;
@@ -381,6 +356,48 @@
             transform: translateY(0);
             opacity: 1;
         }
+        
+        /* New Social Card Styles */
+        .social-link-item {
+            display: flex;
+            align-items: center;
+            padding: 12px 20px;
+            color: #475569;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            border-bottom: 1px solid rgba(0,0,0,0.04);
+            transition: all 0.3s ease;
+        }
+        
+        .social-link-item:last-child {
+            border-bottom: none;
+        }
+        
+        .social-link-item i {
+            width: 35px;
+            height: 35px;
+            background: var(--artist-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            transition: all 0.3s ease;
+            color: var(--artist-primary);
+        }
+        
+        .social-link-item:hover {
+            background: #f8fafc;
+            color: var(--artist-primary);
+            padding-left: 25px;
+        }
+        
+        .social-link-item:hover i {
+            background: var(--artist-primary);
+            color: white;
+            transform: scale(1.1);
+        }
 
         @media (max-width: 991px) {
             .artist-layout {
@@ -425,32 +442,40 @@
             </a>
             <nav class="main-nav">
                 <ul>
-                    <li><a href="../index.html">হোম</a></li>
                     <li class="has-dropdown">
-                        <a href="#" class="active">পরিচিতি <i class="fa-solid fa-chevron-down"></i></a>
+                        <a href="#" class="active">পরিচিতি</a>
                         <ul class="dropdown">
                             <li><a href="../about.html">আমাদের সম্পর্কে</a></li>
                             <li><a href="../founders.html">প্রতিষ্ঠাতা সদস্যবৃন্দ</a></li>
                             <li><a href="../directors.html">পরিচালকবৃন্দ</a></li>
                             <li><a href="../management.html">পরিচালনা পর্ষদ</a></li>
-                            <li><a href="../artists.html" class="active">জনপ্রিয় শিল্পীবৃন্দ</a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                    <li class="has-dropdown">
+                        <a href="#">সাংস্কৃতিক ব্যক্তিবর্গ</a>
+                        <ul class="dropdown">
+                            <li><a href="../lyricists.html">জনপ্রিয় গীতিকারবৃন্দ</a></li>
+                            <li><a href="../composers.html">জনপ্রিয় সুরকারবৃন্দ</a></li>
+                            <li><a href="../artists.html">জনপ্রিয় শিল্পীবৃন্দ</a></li>
                         </ul>
                     </li>
                     <li class="has-dropdown">
-                        <a href="#">বিভাগসমূহ <i class="fa-solid fa-chevron-down"></i></a>
+                        <a href="#">বিভাগসমূহ</a>
                     </li>
                     <li class="has-dropdown">
-                        <a href="#">প্রকাশনা <i class="fa-solid fa-chevron-down"></i></a>
+                        <a href="#">প্রকাশনা</a>
                     </li>
                     <li class="has-dropdown">
-                        <a href="#">গ্যালারি <i class="fa-solid fa-chevron-down"></i></a>
+                        <a href="#">গ্যালারি</a>
                     </li>
                     <li><a href="#">ব্লগ</a></li>
                     <li class="has-dropdown">
-                        <a href="#">কার্যক্রম <i class="fa-solid fa-chevron-down"></i></a>
+                        <a href="#">কার্যক্রম</a>
                     </li>
                     <li class="has-dropdown">
-                        <a href="#">প্রোগ্রাম ও প্রদর্শনী <i class="fa-solid fa-chevron-down"></i></a>
+                        <a href="#">প্রোগ্রাম ও প্রদর্শনী</a>
                     </li>
                 </ul>
             </nav>
@@ -491,67 +516,44 @@
                     <div class="section-heading">শিল্পী পরিচিতি</div>
                     <div class="bio-section">
                         <div class="bio-content">
-                            <p class="bio-text">শরীফুল ইসলাম সাইমুম শিল্পীগোষ্ঠীর অন্যতম প্রতিভাবান এবং জনপ্রিয় সংগীত শিল্পী। তাঁর সুমধুর কণ্ঠ, অনবদ্য পরিবেশনা এবং ইসলামী মূল্যবোধের প্রতি গভীর আবেগ তাঁকে লক্ষ লক্ষ শ্রোতার কাছে সুপরিচিত করেছে। সুস্থ সংস্কৃতির প্রসারে তিনি শুরু থেকেই নিরলসভাবে কাজ করে যাচ্ছেন।</p>
-                            <p class="bio-text" style="font-size: 15px; margin-top: 10px;">তাঁর কাজগুলো ব্যাপক জনপ্রিয়তা লাভ করে। বর্তমানে তিনি দেশ-বিদেশের বিভিন্ন স্টেজ শো এবং সাইমুমের নিজস্ব প্রজেক্টগুলোতে নিয়মিত পারফর্ম করছেন। তাঁর শিল্পকর্মের মাধ্যমে সমাজ পরিবর্তনের এক অসাধারণ আহ্বান লুকিয়ে থাকে।</p>
-                            
-                            <div class="artist-social-links">
-                                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                                <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                                <a href="#"><i class="fa-brands fa-youtube"></i></a>
-                                <a href="#"><i class="fa-brands fa-spotify"></i></a>
-                                <a href="#"><i class="fa-solid fa-link"></i></a>
-                            </div>
+                            <p class="bio-text">শরীফুল ইসলাম সাইমুম শিল্পীগোষ্ঠীর অন্যতম প্রতিভাবান এবং জনপ্রিয় সংগীত শিল্পী। তাঁর অসামান্য শিল্পকর্ম এবং ইসলামী মূল্যবোধের প্রতি গভীর আবেগ তাঁকে অসংখ্য মানুষের কাছে সুপরিচিত করেছে। সুস্থ সংস্কৃতির প্রসারে তিনি শুরু থেকেই নিরলসভাবে কাজ করে যাচ্ছেন।</p>
+                            <p class="bio-text" style="font-size: 15px; margin-top: 10px;">তাঁর কাজগুলো ব্যাপক জনপ্রিয়তা লাভ করে। বর্তমানে তিনি দেশ-বিদেশের বিভিন্ন স্টেজ শো এবং সাইমুমের নিজস্ব প্রজেক্টগুলোতে নিয়মিত অংশগ্রহণ করছেন। তাঁর শিল্পকর্মের মাধ্যমে সমাজ পরিবর্তনের এক অসাধারণ আহ্বান লুকিয়ে থাকে।</p>
                         </div>
                     </div>
 
-                    <!-- Tracklist -->
+                    <!-- Dynamic Tracklist/Works Section -->
                     <div class="section-heading" style="margin-top: 50px;">
                         জনপ্রিয় পরিবেশনা 
                     </div>
                     
                     <div class="track-list">
-                        <!-- Track 1 -->
+                        
                         <div class="track-item">
-                            <div class="track-num">১</div>
-                            <img src="https://images.unsplash.com/photo-1614113489855-66422ad300a4?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Album Cover" class="track-img">
+                            <div class="track-num">1</div>
+                            <img src="https://images.unsplash.com/photo-1614113489855-66422ad300a4?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Cover" class="track-img">
                             <div class="track-info">
-                                <div class="track-name">নতুন ভোর (Notun Bhor)</div>
+                                <div class="track-name">নতুন ভোর</div>
                                 <div class="track-album">অ্যালবাম: আলোর পথ</div>
                             </div>
                             <div class="track-duration">৪:৩০</div>
                         </div>
-                        
-                        <!-- Track 2 -->
                         <div class="track-item">
-                            <div class="track-num">২</div>
-                            <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Album Cover" class="track-img">
+                            <div class="track-num">2</div>
+                            <img src="https://images.unsplash.com/photo-1614113489855-66422ad300a4?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Cover" class="track-img">
                             <div class="track-info">
-                                <div class="track-name">মদীনার পথে (Madinar Pothe)</div>
+                                <div class="track-name">মদীনার পথে</div>
                                 <div class="track-album">অ্যালবাম: স্বপ্ন-সোপান</div>
                             </div>
                             <div class="track-duration">৫:১৫</div>
                         </div>
-
-                        <!-- Track 3 -->
                         <div class="track-item">
-                            <div class="track-num">৩</div>
-                            <img src="https://images.unsplash.com/photo-1614113489855-66422ad300a4?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Album Cover" class="track-img">
+                            <div class="track-num">3</div>
+                            <img src="https://images.unsplash.com/photo-1614113489855-66422ad300a4?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Cover" class="track-img">
                             <div class="track-info">
-                                <div class="track-name">জাগো মুজাহিদ (Jago Mujahid) - লাইভ</div>
-                                <div class="track-album">কনসার্ট: সাইমুম লাইভ ২০২৩</div>
+                                <div class="track-name">জাগো মুজাহিদ</div>
+                                <div class="track-album">লাইভ পারফরম্যান্স</div>
                             </div>
                             <div class="track-duration">৬:০০</div>
-                        </div>
-                        
-                        <!-- Track 4 -->
-                        <div class="track-item">
-                            <div class="track-num">৪</div>
-                            <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Album Cover" class="track-img">
-                            <div class="track-info">
-                                <div class="track-name">রহমতের বৃষ্টি (Rohmoter Brishti)</div>
-                                <div class="track-album">অ্যালবাম: আলোর পথ</div>
-                            </div>
-                            <div class="track-duration">৩:৪৫</div>
                         </div>
                     </div>
 
@@ -581,17 +583,38 @@
 
                 <!-- Right Column (Sidebar) -->
                 <div>
-                    <!-- Latest Release -->
+                    <!-- New Dedicated Social Card -->
+                    <div class="sidebar-card">
+                        <div style="padding: 20px 20px 10px; font-weight: 700; color: var(--artist-dark); border-bottom: 1px solid rgba(0,0,0,0.05); font-size: 18px;">
+                            সংযুক্ত হোন
+                        </div>
+                        <div>
+                            <a href="#" class="social-link-item">
+                                <i class="fa-brands fa-facebook-f"></i> অফিসিয়াল পেজ
+                            </a>
+                            <a href="#" class="social-link-item">
+                                <i class="fa-brands fa-youtube"></i> ইউটিউব চ্যানেল
+                            </a>
+                            <a href="#" class="social-link-item">
+                                <i class="fa-solid fa-globe"></i> ওয়েবসাইট/পোর্টফোলিও
+                            </a>
+                            <a href="#" class="social-link-item">
+                                <i class="fa-brands fa-instagram"></i> ইন্সটাগ্রাম প্রোফাইল
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Dynamic Latest Release -->
                     <div class="sidebar-card">
                         <img src="https://images.unsplash.com/photo-1614113489855-66422ad300a4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="New Release" class="release-img">
                         <div class="release-info">
                             <span class="release-badge">নতুন রিলিজ</span>
                             <h3 class="release-title">আলোর পথ (অ্যালবাম)</h3>
-                            <a href="#" class="btn btn-primary" style="width: 100%; text-align: center; border-radius: 30px;">এখনই শুনুন</a>
+                            <a href="#" class="btn btn-primary" style="width: 100%; text-align: center; border-radius: 30px;">বিস্তারিত দেখুন</a>
                         </div>
                     </div>
 
-                    <!-- Video / Media -->
+                    <!-- Dynamic Video / Media -->
                     <div class="sidebar-card" style="position: relative;">
                         <img src="https://images.unsplash.com/photo-1493225457124-a1a2a5f03914?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" style="width: 100%; height: 200px; object-fit: cover;">
                         <div style="position: absolute; top:0; left:0; right:0; bottom:0; background: rgba(0,0,0,0.4); display: flex; flex-direction: column; justify-content: center; align-items: center; color: white; padding: 20px; text-align: center;">
