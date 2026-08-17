@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>জনপ্রিয় শিল্পীবৃন্দ | সাইমুম শিল্পীগোষ্ঠী</title>
+    <title>জনপ্রিয় গীতিকারবৃন্দ | সাইমুম শিল্পীগোষ্ঠী</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Bengali:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
@@ -13,146 +13,116 @@
     
     
     <style>
-        .artist-grid {
+        .lyricist-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-            gap: 35px;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
             margin-top: 40px;
         }
 
-        .artist-card {
-            background: #ffffff;
-            border-radius: 20px;
+        .lyricist-card {
+            background: white;
+            border-radius: 16px;
             overflow: hidden;
-            text-align: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-            position: relative;
+            display: flex;
+            flex-direction: column;
             border: 1px solid rgba(0,0,0,0.04);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.02);
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
             cursor: pointer;
-            padding-bottom: 25px;
-        }
-
-        .artist-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 45px rgba(0,0,0,0.1);
-            border-color: rgba(249, 115, 22, 0.2);
-        }
-
-        /* The colored banner at the top of the card */
-        .card-header-bg {
-            height: 110px;
-            background: linear-gradient(135deg, #fff3e0, var(--primary-light));
-            position: relative;
-            transition: all 0.4s ease;
-            overflow: hidden;
         }
         
-        /* Add a subtle pattern/overlay to the banner */
-        .card-header-bg::after {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background-image: radial-gradient(var(--primary-color) 1px, transparent 1px);
-            background-size: 10px 10px;
-            opacity: 0.15;
+        .lyricist-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+            border-color: rgba(249, 115, 22, 0.2);
         }
-
-        .artist-card:hover .card-header-bg {
-            background: linear-gradient(135deg, var(--primary-light), var(--primary-color));
-        }
-
-        .artist-card:hover .card-header-bg::after {
-            opacity: 0.25;
-            background-image: radial-gradient(white 1px, transparent 1px);
-        }
-
-        .artist-img-wrapper {
-            width: 140px;
-            height: 140px;
-            margin: -70px auto 20px; /* Overlaps exactly half of the banner */
+        
+        .lyricist-img-box {
             position: relative;
-            z-index: 2;
-            background: white; /* Creates a clean border gap */
-            padding: 5px;
-            border-radius: 50%;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.06);
-            transition: transform 0.5s ease;
+            height: 280px;
+            overflow: hidden;
         }
 
-        .artist-card:hover .artist-img-wrapper {
-            transform: translateY(-5px);
-        }
-
-        .artist-img-wrapper img {
+        .lyricist-img {
             width: 100%;
             height: 100%;
-            border-radius: 50%;
             object-fit: cover;
+            transition: transform 0.6s ease;
         }
 
-        /* Badge overlapping the bottom of the image */
-        .artist-badge {
+        .lyricist-card:hover .lyricist-img {
+            transform: scale(1.05);
+        }
+        
+        /* Stylized Quote Overlay */
+        .lyricist-overlay {
             position: absolute;
-            bottom: -5px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: var(--text-main);
+            bottom: 0; left: 0; right: 0;
+            background: linear-gradient(to top, rgba(15,23,42,0.95), transparent);
+            padding: 30px 20px 20px;
             color: white;
-            font-size: 12px;
-            padding: 5px 16px;
-            border-radius: 20px;
-            font-weight: 600;
-            white-space: nowrap;
-            border: 3px solid white;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-            transition: background 0.3s ease;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.4s ease;
         }
 
-        .artist-card:hover .artist-badge {
-            background: var(--primary-color);
+        .lyricist-card:hover .lyricist-overlay {
+            opacity: 1;
+            transform: translateY(0);
         }
 
-        .artist-info {
-            padding: 0 20px;
-        }
-
-        .artist-name {
-            font-size: 21px;
-            font-weight: 700;
-            color: var(--text-main);
-            margin-bottom: 8px;
-            transition: color 0.3s ease;
-        }
-
-        .artist-card:hover .artist-name {
+        .lyricist-overlay i {
             color: var(--primary-color);
+            font-size: 24px;
+            margin-bottom: 10px;
         }
 
-        .artist-bio {
-            color: var(--text-light);
-            font-size: 14px;
+        .lyricist-overlay p {
+            font-size: 15px;
+            font-style: italic;
             line-height: 1.6;
-            margin-bottom: 20px;
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-            padding: 0 10px;
+            margin: 0;
+            font-family: 'Noto Sans Bengali', sans-serif;
         }
-
-        .artist-social {
+        
+        .lyricist-content {
+            padding: 25px;
+            flex: 1;
             display: flex;
-            justify-content: center;
-            gap: 12px;
-            padding-top: 15px;
+            flex-direction: column;
+        }
+        
+        .lyricist-name {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--text-main);
+            margin-bottom: 5px;
+            letter-spacing: -0.5px;
+        }
+        
+        .lyricist-role {
+            font-size: 14px;
+            color: var(--primary-color);
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 15px;
+        }
+        
+        
+        .lyricist-social {
+            margin-top: auto;
             border-top: 1px solid rgba(0,0,0,0.05);
-            margin: 0 20px;
+            padding-top: 15px;
+            display: flex;
+            gap: 10px;
         }
 
-        .artist-social a {
-            width: 36px;
-            height: 36px;
+        .lyricist-social a {
+            width: 34px;
+            height: 34px;
             border-radius: 50%;
             background: var(--bg-light);
             display: flex;
@@ -160,49 +130,16 @@
             justify-content: center;
             color: #64748b;
             transition: all 0.3s ease;
-            font-size: 15px;
+            font-size: 14px;
         }
 
-        .artist-social a:hover {
+        .lyricist-social a:hover {
             background: var(--primary-color);
             color: white;
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(249, 115, 22, 0.25);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(249, 115, 22, 0.2);
         }
 
-        /* Category Filter */
-        .artist-filters {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 12px;
-            margin-bottom: 50px;
-        }
-
-        .filter-btn {
-            padding: 10px 24px;
-            border-radius: 30px;
-            background: white;
-            border: 1px solid #e2e8f0;
-            color: #475569;
-            font-weight: 600;
-            font-size: 15px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
-        }
-
-        .filter-btn:hover {
-            border-color: #cbd5e1;
-            color: var(--text-main);
-        }
-
-        .filter-btn.active {
-            background: var(--text-main);
-            color: white;
-            border-color: var(--text-main);
-            box-shadow: 0 6px 15px rgba(15, 23, 42, 0.2);
-        }
     </style>
 
 
@@ -243,6 +180,7 @@
                             <li><a href="founders.html">প্রতিষ্ঠাতা সদস্যবৃন্দ</a></li>
                             <li><a href="directors.html">পরিচালকবৃন্দ</a></li>
                             <li><a href="management.html">পরিচালনা পর্ষদ</a></li>
+                            <li><a href="past-management.html">বিগত পরিচালনা পর্ষদ</a></li>
                             
                         </ul>
                     </li>
@@ -282,8 +220,8 @@
     <section class="page-header" style="background-image: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.9)), url('https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80'); padding: 120px 0 80px; text-align: center; color: white;">
         <div class="container">
             <p style="font-size: 16px; font-weight: 600; opacity: 0.9; margin-bottom: 10px; color: var(--primary-light); text-transform: uppercase; letter-spacing: 2px;">আমাদের পরিবার</p>
-            <h1 style="font-size: 48px; margin-bottom: 16px; font-weight: 700;">জনপ্রিয় শিল্পীবৃন্দ</h1>
-            <p style="font-size: 18px; opacity: 0.9; max-width: 600px; margin: 0 auto; line-height: 1.6;">সাইমুমের অহংকার, যারা তাদের সুমধুর কণ্ঠ ও প্রতিভার মাধ্যমে ইসলামী সংস্কৃতিকে ছড়িয়ে দিচ্ছেন।</p>
+            <h1 style="font-size: 48px; margin-bottom: 16px; font-weight: 700;">জনপ্রিয় গীতিকারবৃন্দ</h1>
+            <p style="font-size: 18px; opacity: 0.9; max-width: 600px; margin: 0 auto; line-height: 1.6;">যাঁদের কালজয়ী লেখা ও কবিতার শব্দমালায় সাইমুমের গানগুলো শ্রোতাদের হৃদয়ে গেঁথে আছে।</p>
         </div>
     </section>
 
@@ -291,157 +229,87 @@
         <div class="container">
             
             <!-- Filters -->
-            <div class="artist-filters">
-                <button class="filter-btn active">সকল শিল্পী</button>
-                <button class="filter-btn">সংগীত শিল্পী</button>
-                <button class="filter-btn">ক্বারী</button>
-                <button class="filter-btn">আবৃত্তিকার</button>
-                <button class="filter-btn">অভিনেতা</button>
-            </div>
-
-                                                            <!-- Artist Grid -->
-            <div class="artist-grid">
+            
+            <!-- Lyricist Grid -->
+            <div class="lyricist-grid">
                 
-                <!-- Artist 1 -->
-                <div class="artist-card" onclick="window.location.href='artists/shariful-islam.html';">
-
-                    <div class="card-header-bg"></div>
-                    <div class="artist-img-wrapper">
-                        <img src="https://images.unsplash.com/photo-1500648767791?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="শরীফুল ইসলাম">
-                        <div class="artist-badge">সংগীত শিল্পী</div>
+                <!-- Lyricist 1 -->
+                <div class="lyricist-card" onclick="window.location.href='lyricists/motiur-rahman.html';">
+                    <div class="lyricist-img-box">
+                        <img src="https://images.unsplash.com/photo-1544717302-de2939b7ef71?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="মতিউর রহমান মল্লিক">
+                        <div class="lyricist-overlay">
+                            <i class="fa-solid fa-quote-left"></i>
+                            <p>"পৃথিবী আমার আসল ঠিকানা নয়, মরণ একদিন মুছে দেবে সকল পরিচয়..."</p>
+                        </div>
                     </div>
-                    <div class="artist-info">
-                        <h4 class="artist-name">শরীফুল ইসলাম</h4>
-                        <p class="artist-bio">তার সুমধুর কণ্ঠ ও অনবদ্য গায়কী দিয়ে তিনি শ্রোতাদের হৃদয় জয় করেছেন।</p>
-                    </div>
-                    <div class="artist-social">
-                        <a href="#" onclick="event.stopPropagation();"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="#" onclick="event.stopPropagation();"><i class="fa-brands fa-youtube"></i></a>
-                    </div>
-                </div>
-
-                <!-- Artist 2 -->
-                <div class="artist-card" onclick="window.location.href='artists/ahmad-abdullah.html';">
-
-                    <div class="card-header-bg"></div>
-                    <div class="artist-img-wrapper">
-                        <img src="https://images.unsplash.com/photo-1472099645785?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="আহমাদ আব্দুল্লাহ">
-                        <div class="artist-badge">ক্বারী</div>
-                    </div>
-                    <div class="artist-info">
-                        <h4 class="artist-name">আহমাদ আব্দুল্লাহ</h4>
-                        <p class="artist-bio">আন্তর্জাতিক মানের তিলাওয়াত দিয়ে তিনি সাইমুমের কুরআন বিভাগে অনবদ্য অবদান রাখছেন।</p>
-                    </div>
-                    <div class="artist-social">
-                        <a href="#" onclick="event.stopPropagation();"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="#" onclick="event.stopPropagation();"><i class="fa-brands fa-instagram"></i></a>
+                    <div class="lyricist-content">
+                        <h4 class="lyricist-name">মতিউর রহমান মল্লিক</h4>
+                        <div class="lyricist-role"><i class="fa-solid fa-pen-nib"></i> প্রধান গীতিকার</div>
+                        <div class="lyricist-social">
+                            <a href="#" onclick="event.stopPropagation();"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" onclick="event.stopPropagation();"><i class="fa-brands fa-youtube"></i></a>
+                            <a href="#" onclick="event.stopPropagation();"><i class="fa-brands fa-instagram"></i></a>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Artist 3 -->
-                <div class="artist-card" onclick="window.location.href='artists/zubayer-ahmed.html';">
-
-                    <div class="card-header-bg"></div>
-                    <div class="artist-img-wrapper">
-                        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="জুবায়ের আহমেদ">
-                        <div class="artist-badge">আবৃত্তিকার</div>
+                <!-- Lyricist 2 -->
+                <div class="lyricist-card" onclick="window.location.href='lyricists/motiur-rahman.html';">
+                    <div class="lyricist-img-box">
+                        <img src="https://images.unsplash.com/photo-1472099645785?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="আবু তাহের">
+                        <div class="lyricist-overlay">
+                            <i class="fa-solid fa-quote-left"></i>
+                            <p>"শোন শোন ইয়া ইলাহী, আমার মোনাজাত..."</p>
+                        </div>
                     </div>
-                    <div class="artist-info">
-                        <h4 class="artist-name">জুবায়ের আহমেদ</h4>
-                        <p class="artist-bio">দৃপ্ত কণ্ঠ ও আবেগময়ী পরিবেশনার মাধ্যমে তিনি দর্শকদের মুগ্ধ করে রাখেন।</p>
-                    </div>
-                    <div class="artist-social">
-                        <a href="#" onclick="event.stopPropagation();"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="#" onclick="event.stopPropagation();"><i class="fa-brands fa-youtube"></i></a>
-                    </div>
-                </div>
-
-                <!-- Artist 4 -->
-                <div class="artist-card" onclick="window.location.href='artists/tarek-monowar.html';">
-
-                    <div class="card-header-bg"></div>
-                    <div class="artist-img-wrapper">
-                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="তারেক মনোয়ার">
-                        <div class="artist-badge">সংগীত শিল্পী</div>
-                    </div>
-                    <div class="artist-info">
-                        <h4 class="artist-name">তারেক মনোয়ার</h4>
-                        <p class="artist-bio">তার অসাধারণ সৃষ্টিশীলতা ও গায়কী সাইমুমের সাংস্কৃতিক ভাণ্ডারকে সমৃদ্ধ করেছে।</p>
-                    </div>
-                    <div class="artist-social">
-                        <a href="#" onclick="event.stopPropagation();"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="#" onclick="event.stopPropagation();"><i class="fa-brands fa-spotify"></i></a>
-                    </div>
-                </div>
-                
-                <!-- Artist 5 -->
-                <div class="artist-card" onclick="window.location.href='artists/hasan-mahmud.html';">
-
-                    <div class="card-header-bg"></div>
-                    <div class="artist-img-wrapper">
-                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="হাসান মাহমুদ">
-                        <div class="artist-badge">অভিনেতা</div>
-                    </div>
-                    <div class="artist-info">
-                        <h4 class="artist-name">হাসান মাহমুদ</h4>
-                        <p class="artist-bio">সাইমুম থিয়েটারের বিভিন্ন প্রোডাকশনে তার জীবন্ত অভিনয় ব্যাপক প্রশংসিত হয়েছে।</p>
-                    </div>
-                    <div class="artist-social">
-                        <a href="#" onclick="event.stopPropagation();"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="#" onclick="event.stopPropagation();"><i class="fa-brands fa-youtube"></i></a>
+                    <div class="lyricist-content">
+                        <h4 class="lyricist-name">আবু তাহের</h4>
+                        <div class="lyricist-role"><i class="fa-solid fa-pen-nib"></i> গীতিকার ও কবি</div>
+                        <div class="lyricist-social">
+                            <a href="#" onclick="event.stopPropagation();"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" onclick="event.stopPropagation();"><i class="fa-brands fa-youtube"></i></a>
+                            <a href="#" onclick="event.stopPropagation();"><i class="fa-brands fa-instagram"></i></a>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Artist 6 -->
-                <div class="artist-card" onclick="window.location.href='artists/sayeed-bin-anwar.html';">
-
-                    <div class="card-header-bg"></div>
-                    <div class="artist-img-wrapper">
-                        <img src="https://images.unsplash.com/photo-1500648775195?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="সাঈদ বিন আনোয়ার">
-                        <div class="artist-badge">সংগীত শিল্পী</div>
+                <!-- Lyricist 3 -->
+                <div class="lyricist-card" onclick="window.location.href='lyricists/motiur-rahman.html';">
+                    <div class="lyricist-img-box">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="আব্দুল লতিফ">
+                        <div class="lyricist-overlay">
+                            <i class="fa-solid fa-quote-left"></i>
+                            <p>"তোমার নামের জিকির করে, সকাল সন্ধ্যা বেলা..."</p>
+                        </div>
                     </div>
-                    <div class="artist-info">
-                        <h4 class="artist-name">সাঈদ বিন আনোয়ার</h4>
-                        <p class="artist-bio">ইসলামী সংগীত জগতে তিনি তার সুমিষ্ট সুরের জন্য সমাদৃত।</p>
-                    </div>
-                    <div class="artist-social">
-                        <a href="#" onclick="event.stopPropagation();"><i class="fa-brands fa-facebook-f"></i></a>
-                    </div>
-                </div>
-
-                <!-- Artist 7 -->
-                <div class="artist-card" onclick="window.location.href='artists/kamrul-islam.html';">
-
-                    <div class="card-header-bg"></div>
-                    <div class="artist-img-wrapper">
-                        <img src="https://images.unsplash.com/photo-1500648772727?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="কামরুল ইসলাম">
-                        <div class="artist-badge">আবৃত্তিকার</div>
-                    </div>
-                    <div class="artist-info">
-                        <h4 class="artist-name">কামরুল ইসলাম</h4>
-                        <p class="artist-bio">কবিতা ও ইসলামী দর্শনের অনবদ্য সংমিশ্রণ ঘটিয়েছেন তার আবৃত্তিতে।</p>
-                    </div>
-                    <div class="artist-social">
-                        <a href="#" onclick="event.stopPropagation();"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="#" onclick="event.stopPropagation();"><i class="fa-brands fa-instagram"></i></a>
+                    <div class="lyricist-content">
+                        <h4 class="lyricist-name">আব্দুল লতিফ</h4>
+                        <div class="lyricist-role"><i class="fa-solid fa-pen-nib"></i> গীতিকার</div>
+                        <div class="lyricist-social">
+                            <a href="#" onclick="event.stopPropagation();"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" onclick="event.stopPropagation();"><i class="fa-brands fa-youtube"></i></a>
+                            <a href="#" onclick="event.stopPropagation();"><i class="fa-brands fa-instagram"></i></a>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Artist 8 -->
-                <div class="artist-card" onclick="window.location.href='artists/muminur-rahman.html';">
-
-                    <div class="card-header-bg"></div>
-                    <div class="artist-img-wrapper">
-                        <img src="https://images.unsplash.com/photo-1500648773961?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="মুমিনুর রহমান">
-                        <div class="artist-badge">ক্বারী</div>
+                <!-- Lyricist 4 -->
+                <div class="lyricist-card" onclick="window.location.href='lyricists/motiur-rahman.html';">
+                    <div class="lyricist-img-box">
+                        <img src="https://images.unsplash.com/photo-1500648767791?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="তোফাজ্জল হোসেন">
+                        <div class="lyricist-overlay">
+                            <i class="fa-solid fa-quote-left"></i>
+                            <p>"আলোর পথে চলবো আমি, দীপ্ত শপথ নিয়ে..."</p>
+                        </div>
                     </div>
-                    <div class="artist-info">
-                        <h4 class="artist-name">মুমিনুর রহমান</h4>
-                        <p class="artist-bio">সুললিত কণ্ঠে কুরআন তিলাওয়াতের মাধ্যমে তিনি শ্রোতাদের আত্মিক তৃপ্তি দেন।</p>
-                    </div>
-                    <div class="artist-social">
-                        <a href="#" onclick="event.stopPropagation();"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="#" onclick="event.stopPropagation();"><i class="fa-brands fa-youtube"></i></a>
+                    <div class="lyricist-content">
+                        <h4 class="lyricist-name">তোফাজ্জল হোসেন</h4>
+                        <div class="lyricist-role"><i class="fa-solid fa-pen-nib"></i> গীতিকার</div>
+                        <div class="lyricist-social">
+                            <a href="#" onclick="event.stopPropagation();"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" onclick="event.stopPropagation();"><i class="fa-brands fa-youtube"></i></a>
+                            <a href="#" onclick="event.stopPropagation();"><i class="fa-brands fa-instagram"></i></a>
+                        </div>
                     </div>
                 </div>
 

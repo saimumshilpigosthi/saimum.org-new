@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>মতিউর রহমান মল্লিক - গীতিকার | সাইমুম শিল্পীগোষ্ঠী</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Bengali:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../styles.css">
+
+
+    <style>
+        
+        .profile-page-wrapper {
+            background-color: var(--bg-light);
+            min-height: 100vh;
+        }
+
+        .cover-section {
+            position: relative;
+            height: 400px;
+            width: 100%;
+            background-image: url('https://images.unsplash.com/photo-1472214103451-9374bd1c798e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .cover-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, rgba(15,23,42,0.2) 0%, rgba(15,23,42,0.95) 100%);
+        }
+
+        .profile-layout-grid {
+            display: flex;
+            gap: 40px;
+            margin-top: -140px;
+            position: relative;
+            z-index: 10;
+            padding-bottom: 80px;
+            align-items: flex-start;
+        }
+
+        .profile-sidebar {
+            width: 320px;
+            flex-shrink: 0;
+        }
+
+        .profile-portrait-wrapper {
+            background: white;
+            padding: 8px;
+            border-radius: 16px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+            margin-bottom: 25px;
+        }
+
+        .profile-portrait-wrapper img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 12px;
+            display: block;
+        }
+
+        .info-card {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+            border: 1px solid rgba(0,0,0,0.04);
+        }
+
+        .info-card h4 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            border-bottom: 2px dashed rgba(0,0,0,0.08);
+            padding-bottom: 15px;
+            color: var(--text-main);
+        }
+
+        .info-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .info-list li {
+            margin-bottom: 15px;
+            display: flex;
+            gap: 12px;
+            font-size: 15px;
+            color: var(--text-light);
+            line-height: 1.5;
+        }
+        
+        .info-list li i {
+            color: var(--primary-color);
+            margin-top: 3px;
+        }
+
+        .profile-main {
+            flex: 1;
+        }
+
+        .profile-title-area {
+            color: white;
+            margin-bottom: 70px; /* Pushes the bio text down below the cover photo */
+            padding-top: 10px;
+        }
+
+        .profile-title-area h1 {
+            font-size: 52px;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 10px;
+            letter-spacing: -1px;
+            text-shadow: 0 4px 20px rgba(0,0,0,0.6);
+        }
+
+        .profile-title-area .role {
+            font-size: 22px;
+            color: var(--primary-color);
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+        }
+        
+        .bio-text {
+            font-size: 17px;
+            line-height: 1.8;
+            color: var(--text-light);
+            margin-bottom: 40px;
+        }
+        
+        .bio-text p {
+            margin-bottom: 20px;
+        }
+
+        .famous-quote-card {
+            background: linear-gradient(135deg, var(--top-bar-bg), #1e293b);
+            border-radius: 16px;
+            padding: 40px;
+            color: white;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(15,23,42,0.15);
+            margin-bottom: 50px;
+        }
+
+        .famous-quote-card i.bg-icon {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 120px;
+            color: rgba(255,255,255,0.03);
+        }
+
+        .famous-quote-card p {
+            font-size: 24px;
+            font-style: italic;
+            font-family: 'Noto Sans Bengali', serif;
+            line-height: 1.8;
+            position: relative;
+            z-index: 2;
+            margin-bottom: 20px;
+        }
+
+        .famous-quote-card .quote-author {
+            font-size: 16px;
+            color: var(--primary-light);
+            font-weight: 600;
+        }
+
+        .section-title {
+            font-size: 26px;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        @media (max-width: 900px) {
+            .profile-layout-grid {
+                flex-direction: column;
+                align-items: center;
+            }
+            .profile-sidebar {
+                width: 100%;
+                max-width: 400px;
+            }
+            .profile-title-area {
+                text-align: center;
+                margin-bottom: 30px;
+            }
+            .profile-title-area .role {
+                justify-content: center;
+            }
+        }
+
+    
+        
+        
+        /* Premium Flexbox Tracklist */
+        .tracklist-section {
+            margin-top: 20px;
+        }
+
+        .tracklist-header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+            gap: 15px;
+            background: white;
+            padding: 25px 30px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+            border: 1px solid rgba(0,0,0,0.04);
+        }
+
+        .tracklist-search {
+            position: relative;
+            width: 100%;
+            max-width: 320px;
+        }
+
+        .tracklist-search input {
+            width: 100%;
+            padding: 12px 20px 12px 45px;
+            background: var(--bg-light);
+            border: 1px solid transparent;
+            border-radius: 30px;
+            font-size: 14px;
+            outline: none;
+            transition: all 0.3s ease;
+            font-family: inherit;
+        }
+
+        .tracklist-search input:focus {
+            background: white;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.1);
+        }
+
+        .tracklist-search i {
+            position: absolute;
+            left: 18px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-muted);
+        }
+
+        .tracklist-filters {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 25px;
+            overflow-x: auto;
+            padding-bottom: 5px;
+        }
+
+        .filter-pill {
+            padding: 8px 20px;
+            background: white;
+            color: var(--text-light);
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+            border: 1px solid rgba(0,0,0,0.06);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+        }
+
+        .filter-pill.active {
+            background: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+            box-shadow: 0 4px 15px rgba(249, 115, 22, 0.25);
+        }
+
+        .filter-pill:hover:not(.active) {
+            background: var(--bg-light);
+            color: var(--text-main);
+            transform: translateY(-1px);
+        }
+
+        .track-list-container {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .lyric-track-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: white;
+            border: 1px solid rgba(0,0,0,0.04);
+            border-radius: 12px;
+            padding: 16px 20px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .lyric-track-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+            border-color: rgba(249, 115, 22, 0.2);
+        }
+
+        .lyric-track-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: var(--primary-color);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .lyric-track-item:hover::before {
+            opacity: 1;
+        }
+
+        .track-left {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            flex: 1;
+        }
+
+        .track-icon-box {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, rgba(249, 115, 22, 0.1), rgba(249, 115, 22, 0.02));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-color);
+            font-size: 18px;
+            transition: all 0.3s ease;
+        }
+
+        .lyric-track-item:hover .track-icon-box {
+            background: var(--primary-color);
+            color: white;
+            box-shadow: 0 5px 15px rgba(249, 115, 22, 0.3);
+        }
+
+        .track-primary-info {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .track-title {
+            font-size: 17px;
+            font-weight: 700;
+            color: var(--text-main);
+            margin: 0;
+        }
+
+        .track-artist {
+            font-size: 13px;
+            color: var(--text-light);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .track-artist i {
+            font-size: 11px;
+            color: var(--text-muted);
+        }
+
+        .track-middle {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 0 30px;
+        }
+
+        .track-badge {
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .badge-popular { background: rgba(249, 115, 22, 0.1); color: var(--primary-color); }
+        .badge-desh { background: rgba(16, 185, 129, 0.1); color: #10b981; }
+        .badge-hamd { background: rgba(59, 130, 246, 0.1); color: #3b82f6; }
+        .badge-naat { background: rgba(139, 92, 246, 0.1); color: #8b5cf6; }
+
+        .track-year {
+            font-size: 13px;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        .track-right {
+            display: flex;
+            align-items: center;
+        }
+
+        .btn-read-lyrics {
+            padding: 10px 22px;
+            background: var(--bg-light);
+            color: var(--text-main);
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .lyric-track-item:hover .btn-read-lyrics {
+            background: var(--primary-color);
+            color: white;
+            box-shadow: 0 4px 15px rgba(249, 115, 22, 0.2);
+        }
+
+        @media (max-width: 900px) {
+            .lyric-track-item {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+            }
+            .track-middle {
+                padding: 0;
+                width: 100%;
+                justify-content: flex-start;
+            }
+            .track-right {
+                width: 100%;
+            }
+            .btn-read-lyrics {
+                width: 100%;
+                justify-content: center;
+            }
+            .tracklist-header-top {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .tracklist-search {
+                max-width: 100%;
+            }
+        }
+
+
+        .artist-socials {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 25px;
+            padding-top: 20px;
+            border-top: 2px dashed rgba(0,0,0,0.08);
+        }
+
+        .artist-socials a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--bg-light);
+            color: var(--text-muted);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .artist-socials a:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(249, 115, 22, 0.3);
+        }
+
+</style>
+</head>
+<body>
+    <!-- Top Ecosystem Bar -->
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <div class="ecosystem-links">
+                <a href="#"><i class="fa-solid fa-play"></i> সাইমুম স্ট্রিম</a>
+                <a href="#"><i class="fa-solid fa-graduation-cap"></i> সাইমুম একাডেমি</a>
+                <a href="#"><i class="fa-solid fa-bag-shopping"></i> সাইমুম শপ</a>
+                <a href="#"><i class="fa-solid fa-hand-holding-heart"></i> অনুদান / বাইতুল মাল</a>
+            </div>
+            <div class="top-bar-right">
+                <div class="language-switcher">
+                    <span><img src="https://flagcdn.com/w20/bd.png" alt="BD Flag" class="flag-icon"> বাংলা</span> <i class="fa-solid fa-chevron-down"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <header class="main-header">
+        <div class="container header-container">
+            <a href="../index.html" class="logo">
+                <div class="logo-icon"><i class="fa-solid fa-fire-flame-curved"></i></div>
+                <div class="logo-text">সাইমুম<span>.org</span></div>
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li class="has-dropdown">
+                        <a href="#">পরিচিতি</a>
+                                                                                                                        <ul class="dropdown">
+                            <li><a href="../about.html">আমাদের সম্পর্কে</a></li>
+                            <li><a href="../founders.html">প্রতিষ্ঠাতা সদস্যবৃন্দ</a></li>
+                            <li><a href="../directors.html">পরিচালকবৃন্দ</a></li>
+                            <li><a href="../management.html">পরিচালনা পর্ষদ</a></li>
+                            <li><a href="../past-management.html">বিগত পরিচালনা পর্ষদ</a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                    <li class="has-dropdown">
+                        <a href="#">সাংস্কৃতিক ব্যক্তিবর্গ</a>
+                        <ul class="dropdown">
+                            <li><a href="../lyricists.html">জনপ্রিয় গীতিকারবৃন্দ</a></li>
+                            <li><a href="../composers.html">জনপ্রিয় সুরকারবৃন্দ</a></li>
+                            <li><a href="../artists.html">জনপ্রিয় শিল্পীবৃন্দ</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="#">বিভাগসমূহ</a>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="#">প্রকাশনা</a>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="#">গ্যালারি</a>
+                    </li>
+                    <li><a href="#">ব্লগ</a></li>
+                    <li class="has-dropdown">
+                        <a href="#">কার্যক্রম</a>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="#">প্রোগ্রাম ও প্রদর্শনী</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="#" class="btn btn-primary"><i class="fa-solid fa-user"></i> লগইন</a>
+            </div>
+        </div>
+    </header>
+    <div class="profile-page-wrapper">
+        
+        <!-- Absolute Background Cover -->
+        <div class="cover-section">
+            <div class="cover-overlay"></div>
+        </div>
+
+        
+        <!-- Main Content -->
+        <div class="container">
+            <div class="profile-layout-grid">
+                
+                <!-- LEFT COLUMN: Portrait + Info Card -->
+                <div class="profile-sidebar">
+                    <div class="profile-portrait-wrapper">
+                        <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="মতিউর রহমান মল্লিক">
+                    </div>
+                    
+                    <div class="info-card">
+                        <h4>সংক্ষিপ্ত পরিচিতি</h4>
+                        <ul class="info-list">
+                            <li><i class="fa-solid fa-cake-candles"></i> <div><strong>জন্ম:</strong><br>১ মার্চ, ১৯৫০</div></li>
+                            <li><i class="fa-solid fa-location-dot"></i> <div><strong>জন্মস্থান:</strong><br>বাগেরহাট, বাংলাদেশ</div></li>
+                            <li><i class="fa-solid fa-award"></i> <div><strong>পুরস্কার:</strong><br>জাতীয় শিশু পুরস্কার</div></li>
+                        </ul>
+                        <div class="artist-socials">
+                            <a href="#" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                            <a href="#" title="Spotify"><i class="fa-brands fa-spotify"></i></a>
+                            <a href="#" title="Website"><i class="fa-solid fa-globe"></i></a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- RIGHT COLUMN: Name, Bio, Quotes, Songs -->
+                <div class="profile-main">
+                    
+                    <!-- Overlapping Title Area -->
+                    <div class="profile-title-area">
+                        <h1>মতিউর রহমান মল্লিক</h1>
+                        <div class="role"><i class="fa-solid fa-pen-nib"></i> প্রধান গীতিকার ও কবি</div>
+                    </div>
+
+                    <!-- Biography Text (Starts right below cover photo) -->
+                    <div class="bio-text">
+                        <p>মতিউর রহমান মল্লিক (১ মার্চ ১৯৫০ - ১২ আগস্ট ২০১০) বাংলাদেশের একজন প্রখ্যাত ইসলামী গীতিকার, সুরকার ও কবি। তিনি মূলত ইসলামী রেনেসাঁ এবং সুস্থ ধারার সাংস্কৃতিক আন্দোলনের অন্যতম পথিকৃৎ হিসেবে পরিচিত। তাঁর লেখা অসংখ্য গান, কবিতা এবং সাহিত্যকর্ম বাংলাদেশের আপামর জনসাধারণের কাছে ব্যাপকভাবে সমাদৃত হয়েছে। তিনি তাঁর কালজয়ী সৃষ্টির মাধ্যমে তরুণ প্রজন্মকে ইসলামী আদর্শ, দেশপ্রেম ও মানবতার পথে উদ্বুদ্ধ করেছেন।</p>
+                        
+                        <p>তিনি বাগেরহাট জেলার একটি ঐতিহ্যবাহী মুসলিম পরিবারে জন্মগ্রহণ করেন। ছোটবেলা থেকেই তাঁর সাহিত্যের প্রতি গভীর অনুরাগ ছিল। পরবর্তীতে তিনি ইসলামী সাংস্কৃতিক আন্দোলন "সাইমুম শিল্পীগোষ্ঠী" প্রতিষ্ঠায় গুরুত্বপূর্ণ ভূমিকা পালন করেন এবং আজীবন এর প্রধান পৃষ্ঠপোষক ও গীতিকার হিসেবে যুক্ত ছিলেন। তাঁর লেখা গানগুলোর সুর ও কথা এতই সাবলীল যে, তা সহজেই শ্রোতাদের হৃদয়ে গেঁথে যায়।</p>
+                        
+                        <div class="bio-quote" style="border-left: 4px solid var(--primary-color); padding-left: 20px; margin: 30px 0; font-style: italic; color: var(--text-main); font-size: 18px; background: white; padding: 20px; border-radius: 0 12px 12px 0; border: 1px solid rgba(0,0,0,0.05); box-shadow: 0 5px 15px rgba(0,0,0,0.02);">
+                            "আমি এমন একটি সমাজের স্বপ্ন দেখি, যেখানে প্রতিটি তরুণের কণ্ঠে অনুরণিত হবে সত্য ও সুন্দরের গান।" — মতিউর রহমান মল্লিক
+                        </div>
+
+                        <p>তাঁর লেখা "পৃথিবী আমার আসল ঠিকানা নয়", "তোরা আয় রে ছুটে আয়", "এই সুন্দর ফুল সুন্দর ফল" ইত্যাদি গানগুলো বাংলাদেশের সীমানা পেরিয়ে সারাবিশ্বের বাংলাভাষী মুসলিমদের কাছে অত্যন্ত জনপ্রিয়। তিনি শুধুমাত্র একজন গীতিকার ছিলেন না, বরং একাধারে একজন সুলেখক, সংগঠক এবং সাংস্কৃতিক অভিভাবক ছিলেন। তাঁর সাহিত্যকর্মে সমাজের অসংগতি, মানুষের প্রতি অবিচার এবং স্রষ্টার প্রতি শর্তহীন ভালোবাসার বিষয়টি বারবার ফুটে উঠেছে।</p>
+                        
+                        <p>দীর্ঘ সাহিত্যজীবনে তাঁর অসামান্য অবদানের স্বীকৃতিস্বরূপ তিনি 'জাতীয় শিশু পুরস্কার', 'সবুজ মিতালী সংঘ পুরস্কার' সহ অসংখ্য সম্মাননায় ভূষিত হয়েছেন। ২০১০ সালের ১২ আগস্ট তিনি ঢাকায় মৃত্যুবরণ করেন, কিন্তু তাঁর রেখে যাওয়া অমর সৃষ্টিগুলো আজও সাইমুমের মাধ্যমে বেঁচে আছে এবং কোটি কোটি মানুষের হৃদয়ে অনুপ্রেরণা যুগিয়ে যাচ্ছে।</p>
+                    </div>
+
+                    <!-- Famous Quote Card -->
+                    <div class="famous-quote-card">
+                        <i class="fa-solid fa-quote-right bg-icon"></i>
+                        <p>"পৃথিবী আমার আসল ঠিকানা নয়,<br>মরণ একদিন মুছে দেবে সকল পরিচয়..."</p>
+                        <div class="quote-author">— মতিউর রহমান মল্লিক</div>
+                    </div>
+
+                    
+                    <div class="tracklist-section">
+                        
+                        <!-- Header Box -->
+                        <div class="tracklist-header-top">
+                            <div>
+                                <h3 class="section-title" style="margin-bottom: 5px; font-size: 24px;"><i class="fa-solid fa-list-music" style="color: var(--primary-color);"></i> রচিত গানসমূহ (Lyrics)</h3>
+                                <p style="color: var(--text-light); font-size: 14px; margin: 0;">এই গীতিকারের লেখা সর্বমোট <strong style="color: var(--text-main);">১২৫টি</strong> গান ডাটাবেজে যুক্ত আছে।</p>
+                            </div>
+                            <div class="tracklist-search">
+                                <i class="fa-solid fa-search"></i>
+                                <input type="text" placeholder="গানের নাম বা অ্যালবামের নাম খুঁজুন...">
+                            </div>
+                        </div>
+
+                        <!-- Filters -->
+                        <div class="tracklist-filters">
+                            <div class="filter-pill active">জনপ্রিয় গান</div>
+                            <div class="filter-pill">নতুন রিলিজ</div>
+                            <div class="filter-pill">দেশাত্মবোধক</div>
+                            <div class="filter-pill">হামদ ও নাত</div>
+                            <div class="filter-pill">অ্যালবাম অনুযায়ী</div>
+                        </div>
+                        
+                        <!-- Premium Flexbox List -->
+                        <div class="track-list-container">
+                            
+                            <!-- Track 1 -->
+                            <div class="lyric-track-item">
+                                <div class="track-left">
+                                    <div class="track-icon-box"><i class="fa-solid fa-music"></i></div>
+                                    <div class="track-primary-info">
+                                        <h4 class="track-title">পৃথিবী আমার আসল ঠিকানা নয়</h4>
+                                        <div class="track-artist">
+                                            <span><i class="fa-solid fa-microphone"></i> আবু তাহের</span>
+                                            <span>•</span>
+                                            <span><i class="fa-solid fa-compact-disc"></i> সাইমুম ভলিউম ১</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="track-middle">
+                                    <span class="track-badge badge-popular">জনপ্রিয়</span>
+                                    <span class="track-year"><i class="fa-regular fa-clock"></i> ১৯৯৮</span>
+                                </div>
+                                <div class="track-right">
+                                    <a href="#" class="btn-read-lyrics">লিরিক্স পড়ুন <i class="fa-solid fa-angle-right"></i></a>
+                                </div>
+                            </div>
+
+                            <!-- Track 2 -->
+                            <div class="lyric-track-item">
+                                <div class="track-left">
+                                    <div class="track-icon-box"><i class="fa-solid fa-music"></i></div>
+                                    <div class="track-primary-info">
+                                        <h4 class="track-title">তোরা আয় রে ছুটে আয়</h4>
+                                        <div class="track-artist">
+                                            <span><i class="fa-solid fa-microphone"></i> সাইমুম কোরাস</span>
+                                            <span>•</span>
+                                            <span><i class="fa-solid fa-compact-disc"></i> জাগরণী</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="track-middle">
+                                    <span class="track-badge badge-desh">দেশাত্মবোধক</span>
+                                    <span class="track-year"><i class="fa-regular fa-clock"></i> ২০০০</span>
+                                </div>
+                                <div class="track-right">
+                                    <a href="#" class="btn-read-lyrics">লিরিক্স পড়ুন <i class="fa-solid fa-angle-right"></i></a>
+                                </div>
+                            </div>
+
+                            <!-- Track 3 -->
+                            <div class="lyric-track-item">
+                                <div class="track-left">
+                                    <div class="track-icon-box"><i class="fa-solid fa-music"></i></div>
+                                    <div class="track-primary-info">
+                                        <h4 class="track-title">এই সুন্দর ফুল সুন্দর ফল</h4>
+                                        <div class="track-artist">
+                                            <span><i class="fa-solid fa-microphone"></i> শফিকুল ইসলাম</span>
+                                            <span>•</span>
+                                            <span><i class="fa-solid fa-compact-disc"></i> সাইমুম ভলিউম ২</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="track-middle">
+                                    <span class="track-badge badge-hamd">হামদ</span>
+                                    <span class="track-year"><i class="fa-regular fa-clock"></i> ২০০২</span>
+                                </div>
+                                <div class="track-right">
+                                    <a href="#" class="btn-read-lyrics">লিরিক্স পড়ুন <i class="fa-solid fa-angle-right"></i></a>
+                                </div>
+                            </div>
+
+                            <!-- Track 4 -->
+                            <div class="lyric-track-item">
+                                <div class="track-left">
+                                    <div class="track-icon-box"><i class="fa-solid fa-music"></i></div>
+                                    <div class="track-primary-info">
+                                        <h4 class="track-title">মদীনার ঐ সবুজ গম্বুজ</h4>
+                                        <div class="track-artist">
+                                            <span><i class="fa-solid fa-microphone"></i> আবু তাহের</span>
+                                            <span>•</span>
+                                            <span><i class="fa-solid fa-compact-disc"></i> সিঙ্গেল রিলিজ</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="track-middle">
+                                    <span class="track-badge badge-naat">নাত</span>
+                                    <span class="track-year"><i class="fa-regular fa-clock"></i> ২০০৫</span>
+                                </div>
+                                <div class="track-right">
+                                    <a href="#" class="btn-read-lyrics">লিরিক্স পড়ুন <i class="fa-solid fa-angle-right"></i></a>
+                                </div>
+                            </div>
+
+                            <!-- Track 5 -->
+                            <div class="lyric-track-item">
+                                <div class="track-left">
+                                    <div class="track-icon-box"><i class="fa-solid fa-music"></i></div>
+                                    <div class="track-primary-info">
+                                        <h4 class="track-title">শোন শোন ইয়া ইলাহী</h4>
+                                        <div class="track-artist">
+                                            <span><i class="fa-solid fa-microphone"></i> আব্দুল লতিফ</span>
+                                            <span>•</span>
+                                            <span><i class="fa-solid fa-compact-disc"></i> সাইমুম ভলিউম ৩</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="track-middle">
+                                    <span class="track-badge badge-hamd">মোনাজাত</span>
+                                    <span class="track-year"><i class="fa-regular fa-clock"></i> ২০০৮</span>
+                                </div>
+                                <div class="track-right">
+                                    <a href="#" class="btn-read-lyrics">লিরিক্স পড়ুন <i class="fa-solid fa-angle-right"></i></a>
+                                </div>
+                            </div>
+
+                        </div>
+                        
+                        <div style="text-align: center; margin-top: 30px; padding-top: 10px;">
+                            <button class="btn btn-outline" style="padding: 12px 35px; border-radius: 30px; border: 2px solid var(--primary-color); color: var(--primary-color); background: transparent; font-weight: 600; cursor: pointer; transition: all 0.3s ease; display: inline-flex; align-items: center; gap: 10px;" onmouseover="this.style.background='var(--primary-color)'; this.style.color='white'; this.style.boxShadow='0 5px 15px rgba(249, 115, 22, 0.3)';" onmouseout="this.style.background='transparent'; this.style.color='var(--primary-color)'; this.style.boxShadow='none';">
+                                <i class="fa-solid fa-chevron-down"></i> আরও ১০টি গান লোড করুন
+                            </button>
+                        </div>
+
+                    </div>
+
+                </div> <!-- Close profile-main -->
+            </div> <!-- Close profile-content-grid -->
+        </div> <!-- Close container profile-hero -->
+
+    </div>
+<footer class="master-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Brand Section -->
+                <div class="footer-brand">
+                    <a href="../index.html" class="logo" style="color: white; margin-bottom: 20px; display: inline-flex;">
+                        <div class="logo-icon"><i class="fa-solid fa-fire-flame-curved"></i></div>
+                        <div class="logo-text">সাইমুম<span>.org</span></div>
+                    </a>
+                    <p>সুস্থ সংস্কৃতির বিকাশ এবং মানবতার কল্যাণে ১৯৭৮ সাল থেকে নিরলসভাবে কাজ করে যাচ্ছে সাইমুম শিল্পীগোষ্ঠী।</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div class="footer-links">
+                    <h3>গুরুত্বপূর্ণ লিংক</h3>
+                    <ul>
+                        <li><a href="../about.html"><i class="fa-solid fa-angle-right"></i> আমাদের সম্পর্কে</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> সাইমুম স্ট্রিম</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> সাইমুম একাডেমি</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> সাইমুম শপ</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> অনুদান / বাইতুল মাল</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Departments -->
+                <div class="footer-links">
+                    <h3>শাখা সমূহ</h3>
+                    <ul>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> সংগীত বিভাগ</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> থিয়েটার ও মঞ্চনাটক</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> ক্বিরাত বিভাগ</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> সাহিত্য ও প্রকাশনা</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Info -->
+                <div class="footer-contact">
+                    <h3>যোগাযোগ</h3>
+                    <ul>
+                        <li>
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>মিজান টাওয়ার, মগবাজার, ঢাকা, বাংলাদেশ</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-phone"></i>
+                            <span>+৮৮০ ১২৩৪-৫৬৭৮৯০</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>info@saimum.org</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container text-center">
+                <p>&copy; ২০২৬ সাইমুম শিল্পীগোষ্ঠী. সর্বস্বত্ব সংরক্ষিত।</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
+
