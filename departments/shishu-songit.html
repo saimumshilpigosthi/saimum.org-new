@@ -1,0 +1,1459 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>শিশু সঙ্গীত বিভাগ - Saimum</title>
+    <meta name="description" content="Central portal of Saimum Shilpigosthi.">
+    
+    <!-- Google Fonts: Noto Sans Bengali & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <!-- Top Ecosystem Bar -->
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <div class="ecosystem-links">
+                <a href="#"><i class="fa-solid fa-play"></i> সাইমুম স্ট্রিম</a>
+                <a href="#"><i class="fa-solid fa-graduation-cap"></i> সাইমুম একাডেমি</a>
+                <a href="#"><i class="fa-solid fa-bag-shopping"></i> সাইমুম শপ</a>
+                <a href="#"><i class="fa-solid fa-hand-holding-heart"></i> অনুদান / বাইতুল মাল</a>
+            </div>
+            <div class="top-bar-right">
+                <div class="language-switcher">
+                    <span><img src="https://flagcdn.com/w20/bd.png" alt="BD Flag" class="flag-icon"> বাংলা</span> <i class="fa-solid fa-chevron-down"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <header class="main-header">
+        <div class="container header-container">
+            <a href="../index.html" class="logo">
+                <div class="logo-icon"><i class="fa-solid fa-fire-flame-curved"></i></div>
+                <div class="logo-text">সাইমুম<span>.org</span></div>
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li class="has-dropdown">
+                        <a href="#">পরিচিতি</a>
+                                                                                                                        <ul class="dropdown">
+                            <li><a href="../about.html">আমাদের সম্পর্কে</a></li>
+                            <li><a href="../founders.html">প্রতিষ্ঠাতা সদস্যবৃন্দ</a></li>
+                            <li><a href="../directors.html">পরিচালকবৃন্দ</a></li>
+                            <li><a href="../management.html">পরিচালনা পর্ষদ</a></li>
+                            <li><a href="../past-management.html">বিগত পরিচালনা পর্ষদ</a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                    <li class="has-dropdown">
+                        <a href="#">সাংস্কৃতিক ব্যক্তিবর্গ</a>
+                        <ul class="dropdown">
+                            <li><a href="../lyricists.html">জনপ্রিয় গীতিকারবৃন্দ</a></li>
+                            <li><a href="../composers.html">জনপ্রিয় সুরকারবৃন্দ</a></li>
+                            <li><a href="../artists.html">জনপ্রিয় শিল্পীবৃন্দ</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="#">বিভাগসমূহ</a>
+                        <ul class="dropdown">
+                            <li><a href="../departments/shishu-songit.html">শিশু সঙ্গীত বিভাগ</a></li>
+                            <li><a href="../departments/kishor-songit.html">কিশোর সঙ্গীত বিভাগ</a></li>
+                            <li><a href="../departments/boro-songit.html">বড় সঙ্গীত বিভাগ</a></li>
+                            <li><a href="../departments/abriti.html">আবৃত্তি ও উপস্থাপনা বিভাগ</a></li>
+                            <li><a href="../departments/qirat.html">কিরাত বিভাগ</a></li>
+                            <li><a href="../departments/theatre.html">থিয়েটার বিভাগ</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="#">প্রকাশনা</a>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="#">গ্যালারি</a>
+                    </li>
+                    <li><a href="#">ব্লগ</a></li>
+                    <li class="has-dropdown">
+                        <a href="#">কার্যক্রম</a>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="#">প্রোগ্রাম ও প্রদর্শনী</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="#" class="btn btn-primary"><i class="fa-solid fa-user"></i> লগইন</a>
+            </div>
+        </div>
+    </header>
+    <!-- Custom CSS for Department Page -->
+    <style>
+        :root {
+            --dept-accent: var(--primary-color);
+            --dept-accent-light: var(--primary-light);
+        }
+
+        body {
+            background-color: var(--bg-light);
+        }
+
+        /* Hero Banner */
+        .dept-hero {
+            position: relative;
+            height: 500px;
+            background-image: url('https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: flex-end; /* Push content to bottom */
+            justify-content: center;
+            color: white;
+            text-align: left;
+            margin-bottom: 80px;
+        }
+
+        /* Gradient that only darkens the bottom so the group photo is clearly visible */
+        .dept-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(15,23,42,0.95) 0%, rgba(15,23,42,0.4) 40%, rgba(15,23,42,0) 100%);
+            z-index: 1;
+        }
+
+        .dept-hero-content {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            max-width: 1200px;
+            padding: 0 20px 40px; /* Space from the bottom */
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .dept-title-area {
+            flex: 1;
+        }
+
+        .dept-title {
+            font-size: 56px;
+            font-weight: 800;
+            margin: 0;
+            letter-spacing: -1px;
+            text-shadow: 0 5px 15px rgba(0,0,0,0.5);
+        }
+
+        /* Sleek horizontal glassmorphic bar for stats */
+        .dept-info-bar {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 15px 30px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .info-item i {
+            font-size: 20px;
+            color: var(--dept-accent);
+            background: rgba(255, 255, 255, 0.95);
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        .info-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .info-text .label {
+            font-size: 11px;
+            color: rgba(255, 255, 255, 0.7);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 2px;
+        }
+
+        .info-text .value {
+            font-size: 15px;
+            font-weight: 700;
+            color: white;
+        }
+
+        /* Layout Grid */
+        .dept-container {
+            display: flex;
+            gap: 40px;
+            align-items: flex-start;
+        }
+
+        /* Sticky Sidebar Nav */
+        .dept-sidebar {
+            width: 250px;
+            position: sticky;
+            top: 100px;
+            flex-shrink: 0;
+            background: white;
+            border-radius: 16px;
+            padding: 20px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.03);
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .dept-nav {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .dept-nav li a {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 15px;
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .dept-nav li a:hover, .dept-nav li a.active {
+            background: var(--dept-accent-light);
+            color: var(--dept-accent);
+        }
+
+        .dept-main {
+            flex: 1;
+            min-width: 0;
+        }
+
+        
+        
+        /* Premium Committee Section */
+        .premium-committee {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        /* Leader Horizontal Card */
+        .leader-card-premium {
+            display: flex;
+            background: linear-gradient(145deg, #ffffff, #f8fafc);
+            border-radius: 24px;
+            overflow: hidden;
+            border: 1px solid rgba(249, 115, 22, 0.15);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.04);
+            transition: all 0.4s ease;
+        }
+
+        .leader-card-premium:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(249, 115, 22, 0.08);
+            border-color: rgba(249, 115, 22, 0.3);
+        }
+
+        .leader-image-wrap {
+            width: 35%;
+            min-width: 250px;
+            position: relative;
+        }
+
+        .leader-image-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-right: 4px solid var(--primary-light);
+        }
+
+        .leader-glow {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to right, transparent, rgba(255,255,255,0.9));
+        }
+
+        .leader-info {
+            padding: 40px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .leader-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: var(--primary-light);
+            color: var(--primary-color);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            width: fit-content;
+        }
+
+        .leader-info h3 {
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--text-main);
+            margin-bottom: 12px;
+        }
+
+        .leader-info p {
+            color: var(--text-light);
+            font-size: 15px;
+            line-height: 1.7;
+            margin-bottom: 25px;
+        }
+
+        
+
+        
+
+        /* Members Sleek Grid */
+        .committee-members-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* Force exactly 3 columns */
+            gap: 25px;
+        }
+
+        .member-card-sleek {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid rgba(0,0,0,0.06);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.03);
+            transition: all 0.4s ease;
+            text-align: center;
+            padding-bottom: 25px;
+            position: relative;
+        }
+
+        .member-card-sleek:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+            border-color: rgba(249, 115, 22, 0.2);
+        }
+
+        .member-header-bg {
+            height: 80px;
+            background: linear-gradient(135deg, #fff3e0, var(--primary-light));
+            transition: all 0.4s;
+        }
+
+        .member-card-sleek:hover .member-header-bg {
+            background: linear-gradient(135deg, var(--primary-light), var(--primary-color));
+        }
+
+        .member-img-wrap {
+            width: 100px;
+            height: 100px;
+            margin: -50px auto 15px;
+            background: white;
+            padding: 4px;
+            border-radius: 50%;
+            position: relative;
+            z-index: 2;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .member-img-wrap img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .member-info {
+            padding: 0 20px;
+        }
+
+        .member-role {
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .member-info h4 {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 15px;
+        }
+
+        
+
+        .member-card-sleek:hover 
+
+        @media (max-width: 768px) {
+            .leader-card-premium {
+                flex-direction: column;
+            }
+            .leader-image-wrap {
+                width: 100%;
+                height: 250px;
+            }
+            .leader-image-wrap img {
+                border-right: none;
+                border-bottom: 4px solid var(--primary-light);
+            }
+            .leader-glow {
+                background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.9));
+            }
+            .leader-info {
+                padding: 25px;
+            }
+        }
+
+        /* Videos */
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        .video-card {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            background: var(--bg-light);
+        }
+        .video-thumbnail {
+            position: relative;
+            cursor: pointer;
+        }
+        .video-thumbnail img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            display: block;
+        }
+        .play-btn {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 50px;
+            height: 50px;
+            background: rgba(249, 115, 22, 0.9);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            transition: all 0.3s;
+        }
+        .video-thumbnail:hover .play-btn {
+            transform: translate(-50%, -50%) scale(1.1);
+            background: var(--primary-color);
+        }
+        .video-title {
+            padding: 15px;
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+        /* Programs */
+        .program-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .program-item {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 15px;
+            background: var(--bg-light);
+            border-radius: 12px;
+            border-left: 4px solid var(--primary-color);
+        }
+        .program-date {
+            text-align: center;
+            background: white;
+            padding: 10px 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .program-date .day {
+            display: block;
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--primary-color);
+            line-height: 1;
+        }
+        .program-date .month {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--text-light);
+        }
+        .program-info h4 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+        .program-info p {
+            color: var(--text-muted);
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            margin: 0;
+        }
+
+        /* Gallery */
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
+        }
+        .photo-grid img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+        .photo-grid img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Contact */
+        .contact-card {
+            background: linear-gradient(135deg, var(--bg-light), #fff);
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+        .contact-details {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 600;
+            color: var(--text-main);
+        }
+        .contact-item i {
+            color: var(--primary-color);
+            font-size: 18px;
+            width: 25px;
+        }
+
+        
+        
+        /* Premium Admission CTA */
+        .admission-section {
+            padding: 0 !important; /* Reset default section padding */
+            background: transparent !important;
+            border: none !important;
+            box-shadow: none !important;
+        }
+
+        
+        .admission-cta-premium {
+            position: relative;
+            background-image: linear-gradient(135deg, rgba(234, 88, 12, 0.95) 0%, rgba(249, 115, 22, 0.9) 100%), url('https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');
+            background-size: cover;
+            background-position: center;
+            border-radius: 20px;
+            padding: 30px 40px; /* Reduced height */
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+            color: white;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(249, 115, 22, 0.15);
+        }
+
+        .watermark-icon {
+            position: absolute;
+            right: -20px;
+            bottom: -40px;
+            font-size: 200px; /* slightly smaller */
+            color: rgba(255, 255, 255, 0.05);
+            transform: rotate(-15deg);
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .cta-content-premium {
+            position: relative;
+            z-index: 2;
+            flex: 1;
+            max-width: 600px;
+        }
+
+        .cta-tag {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(5px);
+            padding: 4px 12px;
+            border-radius: 30px;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 12px; /* reduced */
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .cta-content-premium h2 {
+            font-size: 32px; /* reduced */
+            font-weight: 800;
+            margin-bottom: 10px; /* reduced */
+            text-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .cta-content-premium p {
+            font-size: 15px; /* reduced */
+            opacity: 0.9;
+            line-height: 1.5;
+            margin-bottom: 15px; /* reduced */
+        }
+
+        .cta-features-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 8px; /* reduced */
+        }
+
+        .cta-features-list li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 14px; /* reduced */
+            font-weight: 600;
+        }
+
+        .cta-features-list li i {
+            color: #fef08a;
+            font-size: 16px;
+        }
+
+        .cta-action-premium {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px; /* reduced */
+            min-width: 250px;
+        }
+
+        .btn-apply-premium {
+            background: white;
+            color: var(--primary-color);
+            padding: 14px 28px; /* reduced */
+            border-radius: 50px;
+            font-size: 16px; /* reduced */
+            font-weight: 800;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+.btn-apply-premium:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+            background: var(--bg-light);
+        }
+
+        .btn-apply-premium i {
+            background: var(--primary-light);
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s;
+        }
+
+        .btn-apply-premium:hover i {
+            transform: translateX(5px);
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .cta-note {
+            font-size: 13px;
+            font-weight: 600;
+            opacity: 0.8;
+            background: rgba(0,0,0,0.15);
+            padding: 5px 15px;
+            border-radius: 20px;
+        }
+
+
+        @media (max-width: 900px) {
+            .committee-members-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .admission-cta-premium {
+                flex-direction: column;
+                text-align: center;
+                padding: 40px 30px;
+            }
+            .cta-features-list {
+                align-items: center;
+            }
+        }
+/* FAQ Section */
+        .faq-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .faq-item {
+            background: var(--bg-light);
+            border: 1px solid rgba(0,0,0,0.05);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        .faq-question {
+            padding: 20px;
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--text-main);
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            user-select: none;
+        }
+        .faq-question::-webkit-details-marker {
+            display: none;
+        }
+        .faq-question::after {
+            content: '\f078';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            color: var(--primary-color);
+            transition: transform 0.3s;
+        }
+        details[open] .faq-question::after {
+            transform: rotate(180deg);
+        }
+        details[open] .faq-question {
+            border-bottom: 1px dashed rgba(0,0,0,0.1);
+        }
+        .faq-answer {
+            padding: 20px;
+            color: var(--text-light);
+            font-size: 15px;
+            line-height: 1.6;
+            background: white;
+        }
+
+        @media (max-width: 768px) {
+            .admission-cta {
+                flex-direction: column;
+                text-align: center;
+            }
+            .cta-features {
+                justify-content: center;
+                margin-bottom: 20px;
+            }
+        }
+
+        /* Section Styles */
+        .dept-section {
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.02);
+            border: 1px solid rgba(0,0,0,0.04);
+            scroll-margin-top: 120px; /* Prevents sticky header from covering the section on anchor click */
+        }
+
+        .section-header {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 2px dashed rgba(0,0,0,0.08);
+            text-align: left;
+        }
+
+        .section-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .section-title i {
+            color: var(--dept-accent);
+        }
+
+        .view-all {
+            color: var(--dept-accent);
+            font-weight: 600;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            transition: all 0.3s;
+        }
+
+        .view-all:hover {
+            opacity: 0.8;
+            transform: translateX(3px);
+        }
+
+        /* Head Profile */
+        .head-profile {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            padding: 20px;
+            background: var(--bg-light);
+            border-radius: 12px;
+            border-left: 5px solid var(--dept-accent);
+        }
+
+        .head-profile img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .head-info h4 {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .head-info p {
+            color: var(--dept-accent);
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        /* Artist Grid */
+        .artist-grid-mini {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+            gap: 20px;
+        }
+
+        .artist-mini-card {
+            text-align: center;
+        }
+
+        .artist-mini-card img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+            border: 2px solid transparent;
+            transition: all 0.3s;
+        }
+
+        .artist-mini-card:hover img {
+            border-color: var(--dept-accent);
+            transform: scale(1.05);
+        }
+
+        .artist-mini-card h5 {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--text-main);
+        }
+        
+        .artist-more-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100px;
+            width: 100px;
+            margin: 0 auto 10px;
+            border-radius: 50%;
+            background: var(--dept-accent-light);
+            color: var(--dept-accent);
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        
+        .artist-more-card:hover {
+            background: var(--dept-accent);
+            color: white;
+        }
+
+        /* Album Grid */
+        .album-grid-mini {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .album-card {
+            background: var(--bg-light);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.3s;
+        }
+
+        .album-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+        }
+
+        .album-card img {
+            width: 100%;
+            aspect-ratio: 1;
+            object-fit: cover;
+        }
+
+        .album-info {
+            padding: 15px;
+            text-align: center;
+        }
+
+        /* Awards */
+        .awards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .award-card {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 20px;
+            background: linear-gradient(135deg, #fff, #f8fafc);
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+        }
+
+        .award-card i {
+            font-size: 32px;
+            color: #fbbf24;
+        }
+
+
+        @media (max-width: 900px) {
+            .committee-members-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .dept-hero-content {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 20px;
+            }
+            .dept-info-bar {
+                width: 100%;
+                flex-wrap: wrap;
+                gap: 20px;
+            }
+            .dept-container {
+                flex-direction: column;
+            }
+            .dept-sidebar {
+                width: 100%;
+                position: static;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .committee-members-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+
+    <!-- ① HERO BANNER -->
+    <section class="dept-hero">
+        <div class="dept-hero-content">
+            <div class="dept-title-area">
+                <h1 class="dept-title">শিশু সঙ্গীত বিভাগ</h1>
+            </div>
+            
+            <div class="dept-info-bar">
+                <div class="info-item">
+                    <i class="fa-solid fa-flag"></i>
+                    <div class="info-text">
+                        <span class="label">প্রতিষ্ঠা</span>
+                        <span class="value">১৯৭৮ সাল</span>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fa-solid fa-user-tie"></i>
+                    <div class="info-text">
+                        <span class="label">বিভাগীয় প্রধান</span>
+                        <span class="value">আহমদ হোসাইন</span>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fa-solid fa-users"></i>
+                    <div class="info-text">
+                        <span class="label">শিল্পী ও সদস্য</span>
+                        <span class="value">৪৫ জন</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="dept-container">
+            <!-- STICKY SIDEBAR NAV -->
+            <aside class="dept-sidebar">
+                <ul class="dept-nav">
+                    <li><a href="#about" class="active"><i class="fa-solid fa-circle-info"></i> বিভাগ পরিচিতি</a></li>
+                    <li><a href="#committee"><i class="fa-solid fa-users-gear"></i> পরিচালনা পর্ষদ</a></li>
+                    <li><a href="#albums"><i class="fa-solid fa-record-vinyl"></i> প্রকাশনা ও অ্যালবাম</a></li>
+                    <li><a href="#videos"><i class="fa-brands fa-youtube"></i> জনপ্রিয় ভিডিও</a></li>
+                    <li><a href="#programs"><i class="fa-solid fa-calendar-check"></i> সাংস্কৃতিক অনুষ্ঠান</a></li>
+                    <li><a href="#gallery"><i class="fa-solid fa-images"></i> ফটো গ্যালারি</a></li>
+                    <li><a href="#admission"><i class="fa-solid fa-graduation-cap"></i> ভর্তির আবেদন</a></li>
+                    <li><a href="#faq"><i class="fa-solid fa-circle-question"></i> সাধারণ জিজ্ঞাসা</a></li>
+                    <li><a href="#contact"><i class="fa-solid fa-address-book"></i> যোগাযোগ</a></li>
+                </ul>
+            </aside>
+
+            <main class="dept-main">
+                
+                <!-- ② বিভাগ পরিচয় -->
+                <section id="about" class="dept-section">
+                    <div class="section-header">
+                        <h2 class="section-title"><i class="fa-solid fa-circle-info"></i> বিভাগ পরিচিতি</h2>
+                    </div>
+                    <div class="rich-text" style="color: var(--text-light); line-height: 1.8; font-size: 16px;">
+                        <p style="margin-bottom: 15px;">সাইমুম শিল্পীগোষ্ঠীর সবচেয়ে প্রাণবন্ত এবং প্রাচীনতম বিভাগ হলো সংগীত বিভাগ। প্রতিষ্ঠালগ্ন থেকেই এই বিভাগটি সুস্থ ও সুন্দর সমাজ বিনির্মাণে সুরের মাধ্যমে গুরুত্বপূর্ণ অবদান রেখে আসছে। মানুষের হৃদয়ে সত্যের বাণী পৌঁছে দিতে সংগীত এক অনবদ্য মাধ্যম হিসেবে কাজ করে।</p>
+                        <p>এই বিভাগের শিল্পীরা প্রতিনিয়ত নতুন নতুন কথা ও সুরে গান তৈরি করছেন, যা দেশ-বিদেশের অগণিত শ্রোতার কাছে সমাদৃত হচ্ছে। আমাদের লক্ষ্য হলো, ইসলামী মূল্যবোধ ও দেশপ্রেমের আলোকে এমন একটি প্রজন্ম গড়ে তোলা, যারা অপসংস্কৃতির বিপরীতে একটি সুস্থ ধারার সাংস্কৃতিক বিপ্লব ঘটাতে সক্ষম হবে।</p>
+                    </div>
+                </section>
+
+                <!-- ③ পরিচালনা পর্ষদ -->
+                <section id="committee" class="dept-section">
+                    <div class="section-header">
+                        <h2 class="section-title"><i class="fa-solid fa-users-gear"></i> বিভাগীয় পরিচালনা পর্ষদ</h2>
+                    </div>
+                    
+                    <div class="premium-committee">
+                        <!-- Director: Premium Horizontal Card -->
+                        <div class="leader-card-premium">
+                            <div class="leader-image-wrap">
+                                <img src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="আহমদ হোসাইন">
+                                <div class="leader-glow"></div>
+                            </div>
+                            <div class="leader-info">
+                                <div class="leader-badge"><i class="fa-solid fa-star"></i> পরিচালক</div>
+                                <h3>আহমদ হোসাইন</h3>
+                                <p>সুদীর্ঘ সময় ধরে সাইমুমের সংগীত অঙ্গনকে যোগ্যতার সাথে নেতৃত্ব দিচ্ছেন এবং সুস্থ ধারার সংস্কৃতির প্রসারে কাজ করছেন।</p>
+                                
+                            </div>
+                        </div>
+                        
+                        <!-- Others: Sleek Vertical Cards -->
+                        <div class="committee-members-grid">
+                            <!-- Asst Director -->
+                            <div class="member-card-sleek">
+                                <div class="member-header-bg"></div>
+                                <div class="member-img-wrap">
+                                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="হাসান মাহমুদ">
+                                </div>
+                                <div class="member-info">
+                                    <span class="member-role">সহকারী পরিচালক</span>
+                                    <h4>হাসান মাহমুদ</h4>
+                                    
+                                </div>
+                            </div>
+                            
+                            <!-- Organizing Sec -->
+                            <div class="member-card-sleek">
+                                <div class="member-header-bg"></div>
+                                <div class="member-img-wrap">
+                                    <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="তারেক মনোয়ার">
+                                </div>
+                                <div class="member-info">
+                                    <span class="member-role">সাংগঠনিক সম্পাদক</span>
+                                    <h4>তারেক মনোয়ার</h4>
+                                    
+                                </div>
+                            </div>
+                            
+                            <!-- Member -->
+                            <div class="member-card-sleek">
+                                <div class="member-header-bg"></div>
+                                <div class="member-img-wrap">
+                                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="কামরুল ইসলাম">
+                                </div>
+                                <div class="member-info">
+                                    <span class="member-role">সদস্য</span>
+                                    <h4>কামরুল ইসলাম</h4>
+                                    
+                                </div>
+                            </div>
+
+                            <!-- Member 4 -->
+                            <div class="member-card-sleek">
+                                <div class="member-header-bg"></div>
+                                <div class="member-img-wrap">
+                                    <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="রফিকুল ইসলাম">
+                                </div>
+                                <div class="member-info">
+                                    <span class="member-role">সদস্য</span>
+                                    <h4>রফিকুল ইসলাম</h4>
+                                </div>
+                            </div>
+                            
+                            <!-- Member 5 -->
+                            <div class="member-card-sleek">
+                                <div class="member-header-bg"></div>
+                                <div class="member-img-wrap">
+                                    <img src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="শরীফুল হক">
+                                </div>
+                                <div class="member-info">
+                                    <span class="member-role">সদস্য</span>
+                                    <h4>শরীফুল হক</h4>
+                                </div>
+                            </div>
+                            
+                            <!-- Member 6 -->
+                            <div class="member-card-sleek">
+                                <div class="member-header-bg"></div>
+                                <div class="member-img-wrap">
+                                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="আব্দুল্লাহ আল নোমান">
+                                </div>
+                                <div class="member-info">
+                                    <span class="member-role">সদস্য</span>
+                                    <h4>আব্দুল্লাহ আল নোমান</h4>
+                                </div>
+                            </div>
+
+                        
+                            
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ⑥ অ্যালবাম -->
+                <section id="albums" class="dept-section">
+                    <div class="section-header">
+                        <h2 class="section-title"><i class="fa-solid fa-record-vinyl"></i> রিলিজকৃত অ্যালবাম</h2>
+                        <a href="#" class="view-all">সব অ্যালবাম <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                    <div class="album-grid-mini">
+                        <div class="album-card">
+                            <img src="https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Album 1">
+                            <div class="album-info">
+                                <h4 style="margin: 0 0 5px; font-size: 16px;">সাইমুম ভলিউম ১০</h4>
+                                <span style="color: var(--text-muted); font-size: 13px;">২০২৩ • ১২টি গান</span>
+                            </div>
+                        </div>
+                        <div class="album-card">
+                            <img src="https://images.unsplash.com/photo-1619983081563-430f63602796?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Album 2">
+                            <div class="album-info">
+                                <h4 style="margin: 0 0 5px; font-size: 16px;">জাগ্রত তারুণ্য</h4>
+                                <span style="color: var(--text-muted); font-size: 13px;">২০২১ • ১০টি গান</span>
+                            </div>
+                        </div>
+                        <div class="album-card">
+                            <img src="https://images.unsplash.com/photo-1493225457124-a1a2a5956093?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Album 3">
+                            <div class="album-info">
+                                <h4 style="margin: 0 0 5px; font-size: 16px;">শেকড়ের সন্ধানে</h4>
+                                <span style="color: var(--text-muted); font-size: 13px;">২০১৯ • ১৪টি গান</span>
+                            </div>
+                        
+                            
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ⑥ জনপ্রিয় ভিডিও পরিবেশনা -->
+                <section id="videos" class="dept-section">
+                    <div class="section-header">
+                        <h2 class="section-title"><i class="fa-brands fa-youtube"></i> জনপ্রিয় ভিডিও পরিবেশনা</h2>
+                        <a href="#" class="view-all">সব ভিডিও <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                    <div class="video-grid">
+                        <div class="video-card">
+                            <div class="video-thumbnail">
+                                <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Video">
+                                <div class="play-btn"><i class="fa-solid fa-play"></i></div>
+                            </div>
+                            <h4 class="video-title">বিজয়ের গান - ৫৩তম স্বাধীনতা দিবস</h4>
+                        </div>
+                        <div class="video-card">
+                            <div class="video-thumbnail">
+                                <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Video">
+                                <div class="play-btn"><i class="fa-solid fa-play"></i></div>
+                            </div>
+                            <h4 class="video-title">সাইমুম লাইভ কনসার্ট ২০২৩</h4>
+                        
+                            
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ⑦ সাংস্কৃতিক অনুষ্ঠান -->
+                <section id="programs" class="dept-section">
+                    <div class="section-header">
+                        <h2 class="section-title"><i class="fa-solid fa-calendar-check"></i> পরিবেশিত সাংস্কৃতিক অনুষ্ঠান</h2>
+                        <a href="#" class="view-all">সব অনুষ্ঠান <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                    <div class="program-list">
+                        <div class="program-item">
+                            <div class="program-date">
+                                <span class="day">১৬</span>
+                                <span class="month">ডিসে</span>
+                            </div>
+                            <div class="program-info">
+                                <h4>মহান বিজয় দিবস কনসার্ট</h4>
+                                <p><i class="fa-solid fa-location-dot"></i> বাংলাদেশ শিল্পকলা একাডেমি</p>
+                            </div>
+                        </div>
+                        <div class="program-item">
+                            <div class="program-date">
+                                <span class="day">২১</span>
+                                <span class="month">ফেব্রু</span>
+                            </div>
+                            <div class="program-info">
+                                <h4>আন্তর্জাতিক মাতৃভাষা দিবস সম্মাননা</h4>
+                                <p><i class="fa-solid fa-location-dot"></i> ইঞ্জিনিয়ার্স ইনস্টিটিউশন, ঢাকা</p>
+                            </div>
+                        
+                            
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ⑧ ফটো গ্যালারি -->
+                <section id="gallery" class="dept-section">
+                    <div class="section-header">
+                        <h2 class="section-title"><i class="fa-solid fa-images"></i> ফটো গ্যালারি</h2>
+                        <a href="#" class="view-all">গ্যালারি <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                    <div class="photo-grid">
+                        <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Gallery">
+                        <img src="https://images.unsplash.com/photo-1520625902100-c515a4b7f940?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Gallery">
+                        <img src="https://images.unsplash.com/photo-1493225457124-a1a2a5956093?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Gallery">
+                        <img src="https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Gallery">
+                    </div>
+                </section>
+
+                <!-- ⑩ ভর্তির আবেদন (Admission CTA) -->
+                <section id="admission" class="dept-section admission-section">
+                    <div class="admission-cta-premium">
+                        <!-- Watermark Icon -->
+                        <i class="fa-solid fa-microphone-lines watermark-icon"></i>
+                        
+                        <div class="cta-content-premium">
+                            <div class="cta-tag">আমাদের সাথে যুক্ত হোন</div>
+                            <h2>সাইমুমের সদস্য হতে চান?</h2>
+                            <p>
+                                ইসলামী সংস্কৃতির সুস্থ ধারায় নিজের প্রতিভাকে বিকশিত করতে চাইলে আপনিও যুক্ত হতে পারেন সাইমুম শিল্পীগোষ্ঠীতে। আমাদের কার্যক্রম, সদস্য হওয়ার যোগ্যতা এবং আবেদনের বিস্তারিত নিয়মাবলি জানতে এডমিশন পোর্টালে ভিজিট করুন।
+                            </p>
+                        </div>
+                        
+                        <div class="cta-action-premium">
+                            <a href="../admission.html" class="btn-apply-premium">
+                                <span>এডমিশন পোর্টাল ভিজিট করুন</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        
+                            
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ⑪ সাধারণ জিজ্ঞাসা (FAQ) -->
+                <section id="faq" class="dept-section">
+                    <div class="section-header">
+                        <h2 class="section-title"><i class="fa-solid fa-circle-question"></i> সাধারণ জিজ্ঞাসা (FAQ)</h2>
+                    </div>
+                    <div class="faq-container">
+                        <details class="faq-item" open>
+                            <summary class="faq-question">সংগীত বিভাগে ভর্তির বয়সসীমা কত?</summary>
+                            <div class="faq-answer">
+                                সাধারণত শিশু বিভাগের জন্য ৫-১২ বছর এবং মূল সংগীত বিভাগের জন্য ১৩-২৫ বছর বয়সীদের অগ্রাধিকার দেওয়া হয়। তবে বিশেষ প্রতিভার ক্ষেত্রে বয়স শিথিলযোগ্য।
+                            </div>
+                        </details>
+                        <details class="faq-item">
+                            <summary class="faq-question">ভর্তির জন্য কি পূর্ব-অভিজ্ঞতা থাকা বাধ্যতামূলক?</summary>
+                            <div class="faq-answer">
+                                না, পূর্ব-অভিজ্ঞতা বাধ্যতামূলক নয়। আপনার কণ্ঠস্বর এবং শেখার আগ্রহই এখানে মূল বিবেচ্য। আমাদের অভিজ্ঞ প্রশিক্ষকরা আপনাকে একেবারে প্রাথমিক পর্যায় থেকে প্রশিক্ষণ দেবেন।
+                            </div>
+                        </details>
+                        <details class="faq-item">
+                            <summary class="faq-question">আপনাদেরকে কি প্রাইভেট বা ভার্সিটি প্রোগ্রামে ইনভাইট করা যাবে?</summary>
+                            <div class="faq-answer">
+                                হ্যাঁ, সুস্থ সংস্কৃতির বিকাশে আমরা স্কুল, কলেজ, বিশ্ববিদ্যালয়সহ বিভিন্ন সামাজিক ও ধর্মীয় অনুষ্ঠানে অংশগ্রহণ করে থাকি। প্রোগ্রাম বুকিংয়ের জন্য যোগাযোগ সেকশনে দেওয়া নম্বরে কথা বলতে পারেন।
+                            </div>
+                        </details>
+                        <details class="faq-item">
+                            <summary class="faq-question">প্রোগ্রাম বুকিং কতদিন আগে কনফার্ম করতে হয়?</summary>
+                            <div class="faq-answer">
+                                যেকোনো প্রোগ্রামের জন্য অন্তত ২ থেকে ৩ সপ্তাহ আগে আমাদের সাথে যোগাযোগ করে বুকিং কনফার্ম করা বাঞ্ছনীয়। এতে আমাদের টিমের প্রস্তুতি নিতে সুবিধা হয়।
+                            </div>
+                        </details>
+                    </div>
+                </section>
+
+                <!-- ⑨ যোগাযোগ -->
+                <section id="contact" class="dept-section">
+                    <div class="section-header">
+                        <h2 class="section-title"><i class="fa-solid fa-address-book"></i> যোগাযোগ</h2>
+                    </div>
+                    <div class="contact-card">
+                        <p>যেকোনো অনুষ্ঠান, পারফরম্যান্স বুকিং বা তথ্যের জন্য সংগীত বিভাগের সাথে যোগাযোগ করুন:</p>
+                        <div class="contact-details">
+                            <div class="contact-item"><i class="fa-solid fa-phone"></i> +880 1234 567890</div>
+                            <div class="contact-item"><i class="fa-solid fa-envelope"></i> songit@saimum.org</div>
+                            <div class="contact-item"><i class="fa-solid fa-location-dot"></i> সাইমুম কেন্দ্রীয় কার্যালয়, ঢাকা</div>
+                        </div>
+                        <a href="#" class="btn btn-primary" style="margin-top:20px;">ম্যাসেজ পাঠান</a>
+                    </div>
+                </section>
+
+
+                
+
+            </main>
+        </div>
+    </div>
+<footer class="master-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Brand Section -->
+                <div class="footer-brand">
+                    <a href="../index.html" class="logo" style="color: white; margin-bottom: 20px; display: inline-flex;">
+                        <div class="logo-icon"><i class="fa-solid fa-fire-flame-curved"></i></div>
+                        <div class="logo-text">সাইমুম<span>.org</span></div>
+                    </a>
+                    <p>সুস্থ সংস্কৃতির বিকাশ এবং মানবতার কল্যাণে ১৯৭৮ সাল থেকে নিরলসভাবে কাজ করে যাচ্ছে সাইমুম শিল্পীগোষ্ঠী।</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div class="footer-links">
+                    <h3>গুরুত্বপূর্ণ লিংক</h3>
+                    <ul>
+                        <li><a href="../about.html"><i class="fa-solid fa-angle-right"></i> আমাদের সম্পর্কে</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> সাইমুম স্ট্রিম</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> সাইমুম একাডেমি</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> সাইমুম শপ</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> অনুদান / বাইতুল মাল</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Departments -->
+                <div class="footer-links">
+                    <h3>শাখা সমূহ</h3>
+                    <ul>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> সংগীত বিভাগ</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> থিয়েটার ও মঞ্চনাটক</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> ক্বিরাত বিভাগ</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> সাহিত্য ও প্রকাশনা</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Info -->
+                <div class="footer-contact">
+                    <h3>যোগাযোগ</h3>
+                    <ul>
+                        <li>
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>মিজান টাওয়ার, মগবাজার, ঢাকা, বাংলাদেশ</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-phone"></i>
+                            <span>+৮৮০ ১২৩৪-৫৬৭৮৯০</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>info@saimum.org</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container text-center">
+                <p>&copy; ২০২৬ সাইমুম শিল্পীগোষ্ঠী. সর্বস্বত্ব সংরক্ষিত।</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Slider Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const slides = document.querySelectorAll('.hero .slide');
+            let currentSlide = 0;
+            
+            // Ken Burns style smooth fade & zoom every 6 seconds
+            setInterval(() => {
+                slides[currentSlide].classList.remove('active');
+                currentSlide = (currentSlide + 1) % slides.length;
+                slides[currentSlide].classList.add('active');
+            }, 6000);
+        });
+    </script>
+
+</body>
+</html>
