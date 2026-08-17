@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ছবিঘর | সাইমুম শিল্পীগোষ্ঠী</title>
+    <meta name="description" content="Central portal of Saimum Shilpigosthi.">
+    
+    <!-- Google Fonts: Noto Sans Bengali & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Top Ecosystem Bar -->
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <div class="ecosystem-links">
+                <a href="#"><i class="fa-solid fa-play"></i> সাইমুম স্ট্রিম</a>
+                <a href="#"><i class="fa-solid fa-graduation-cap"></i> সাইমুম একাডেমি</a>
+                <a href="#"><i class="fa-solid fa-bag-shopping"></i> সাইমুম শপ</a>
+                <a href="#"><i class="fa-solid fa-hand-holding-heart"></i> অনুদান / বাইতুল মাল</a>
+            </div>
+            <div class="top-bar-right">
+                <div class="language-switcher">
+                    <span><img src="https://flagcdn.com/w20/bd.png" alt="BD Flag" class="flag-icon"> বাংলা</span> <i class="fa-solid fa-chevron-down"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <header class="main-header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon"><i class="fa-solid fa-fire-flame-curved"></i></div>
+                <div class="logo-text">সাইমুম<span>.org</span></div>
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li class="has-dropdown">
+                        <a href="#">পরিচিতি</a>
+                                                                                                                        <ul class="dropdown">
+                            <li><a href="about.html">আমাদের সম্পর্কে</a></li>
+                            <li><a href="founders.html">প্রতিষ্ঠাতা সদস্যবৃন্দ</a></li>
+                            <li><a href="directors.html">পরিচালকবৃন্দ</a></li>
+                            <li><a href="management.html">পরিচালনা পর্ষদ</a></li>
+                            <li><a href="past-management.html">বিগত পরিচালনা পর্ষদ</a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                    <li class="has-dropdown">
+                        <a href="#">সাংস্কৃতিক ব্যক্তিবর্গ</a>
+                        <ul class="dropdown">
+                            <li><a href="lyricists.html">জনপ্রিয় গীতিকারবৃন্দ</a></li>
+                            <li><a href="composers.html">জনপ্রিয় সুরকারবৃন্দ</a></li>
+                            <li><a href="artists.html">জনপ্রিয় শিল্পীবৃন্দ</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="#">বিভাগসমূহ</a>
+                        <ul class="dropdown">
+                            <li><a href="departments/shishu-songit.html">শিশু সঙ্গীত বিভাগ</a></li>
+                            <li><a href="departments/kishor-songit.html">কিশোর সঙ্গীত বিভাগ</a></li>
+                            <li><a href="departments/boro-songit.html">বড় সঙ্গীত বিভাগ</a></li>
+                            <li><a href="departments/abriti.html">আবৃত্তি ও উপস্থাপনা বিভাগ</a></li>
+                            <li><a href="departments/qirat.html">কিরাত বিভাগ</a></li>
+                            <li><a href="departments/theatre.html">থিয়েটার বিভাগ</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="#">প্রকাশনা</a>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="gallery.html">ছবিঘর</a>
+                    </li>
+                    <li><a href="blog.html">ব্লগ</a></li>
+                    <li class="has-dropdown">
+                        <a href="activities.html">কার্যক্রম</a>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="#">প্রোগ্রাম ও প্রদর্শনী</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="#" class="btn btn-primary"><i class="fa-solid fa-user"></i> লগইন</a>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Gallery Albums Specific CSS -->
+    <style>
+        body { background: #f8fafc; } /* Light white theme matching the rest of the site */
+        
+        /* Gallery Hero */
+        .gallery-hero {
+            background: url('https://images.unsplash.com/photo-1517842645767-c639042777db?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+            padding: 100px 20px;
+            position: relative;
+            color: white;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .gallery-hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(15, 23, 42, 0.5);
+            z-index: 1;
+        }
+
+        .gallery-hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .gallery-title {
+            font-size: 48px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+        .gallery-desc {
+            font-size: 18px;
+            color: rgba(255,255,255,0.8);
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+            margin-top: 15px;
+        }
+
+
+        /* Gallery Controls (Filter + Search) */
+        .gallery-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+            margin-top: 50px;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .gallery-filter {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .gallery-search {
+            position: relative;
+            min-width: 300px;
+        }
+
+        .gallery-search input {
+            width: 100%;
+            padding: 12px 20px 12px 45px;
+            border-radius: 30px;
+            border: 1px solid #cbd5e1;
+            font-size: 15px;
+            color: #1e293b;
+            transition: all 0.3s;
+            background: white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.02);
+        }
+        
+        .gallery-search input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.1);
+        }
+
+        .gallery-search i {
+            position: absolute;
+            left: 18px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #94a3b8;
+            font-size: 16px;
+        }
+
+        /* Filter Toolbar */
+
+
+        .filter-btn {
+            background: white;
+            color: #64748b;
+            border: 1px solid #cbd5e1;
+            padding: 10px 24px;
+            border-radius: 30px;
+            font-size: 15px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.02);
+        }
+
+        .filter-btn:hover {
+            border-color: var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        .filter-btn.active {
+            background: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+            box-shadow: 0 5px 15px rgba(249, 115, 22, 0.3);
+        }
+
+        /* Album Grid */
+        .album-container {
+            max-width: 1300px;
+            margin: 0 auto 100px;
+            padding: 0 20px;
+        }
+
+        .album-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .album-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+            transition: all 0.3s;
+            cursor: pointer;
+            border: 1px solid rgba(0,0,0,0.03);
+            text-decoration: none;
+            display: block;
+        }
+
+        .album-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(249, 115, 22, 0.1);
+            border-color: rgba(249, 115, 22, 0.2);
+        }
+
+        .album-cover-wrapper {
+            position: relative;
+            height: 240px;
+            overflow: hidden;
+        }
+
+        .album-cover {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .album-card:hover .album-cover {
+            transform: scale(1.08);
+        }
+
+        .album-overlay {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: linear-gradient(to top, rgba(15,23,42,0.6) 0%, rgba(15,23,42,0) 60%);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .album-card:hover .album-overlay {
+            opacity: 1;
+        }
+
+        .album-photo-count {
+            position: absolute;
+            bottom: 15px;
+            right: 15px;
+            background: rgba(15, 23, 42, 0.8);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            backdrop-filter: blur(4px);
+        }
+
+        .album-details {
+            padding: 20px;
+        }
+
+        .album-category {
+            color: var(--primary-color);
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .album-title {
+            color: #0f172a;
+            font-size: 20px;
+            font-weight: 800;
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+        
+        .album-card:hover .album-title {
+            color: var(--primary-color);
+        }
+
+        .album-meta {
+            color: #64748b;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-weight: 500;
+        }
+
+        .album-meta i {
+            color: #cbd5e1;
+        }
+
+        @media (max-width: 768px) {
+            .album-grid {
+                grid-template-columns: 1fr;
+            }
+            .gallery-title {
+                font-size: 36px;
+            }
+        .gallery-desc {
+            font-size: 18px;
+            color: rgba(255,255,255,0.8);
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+            margin-top: 15px;
+        }
+
+        }
+    
+        /* Pagination */
+        .pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            margin-top: 50px;
+            margin-bottom: 80px;
+            flex-wrap: wrap;
+        }
+        
+        .page-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 40px;
+            height: 40px;
+            padding: 0 15px;
+            border-radius: 8px;
+            border: 1px solid #cbd5e1;
+            background: white;
+            color: #475569;
+            font-size: 15px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s;
+            cursor: pointer;
+        }
+        
+        .page-item:hover {
+            border-color: var(--primary-color);
+            color: var(--primary-color);
+            background: rgba(249, 115, 22, 0.05);
+        }
+        
+        .page-item.active {
+            background: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+        
+        .page-dots {
+            color: #94a3b8;
+            font-weight: 700;
+            padding: 0 5px;
+        }
+
+    </style>
+
+    <!-- Hero Section -->
+    <div class="gallery-hero">
+        <div class="gallery-hero-content container">
+            <h1 class="gallery-title"><i class="fa-regular fa-images"></i> ছবিঘর</h1>
+            <p class="gallery-desc">সাইমুম শিল্পীগোষ্ঠীর বিভিন্ন অনুষ্ঠান, প্রোগ্রাম, কর্মশালা এবং পর্দার পেছনের কিছু স্মরণীয় মুহূর্তের স্থিরচিত্র।</p>
+            
+            
+        </div>
+    </div>
+
+    <!-- Album Container -->
+    <div class="album-container">
+        
+        <!-- Gallery Controls -->
+        <div class="gallery-controls">
+            <!-- Filter Toolbar -->
+            <div class="gallery-filter">
+                <button class="filter-btn active">সব</button>
+                <button class="filter-btn">অনুষ্ঠান</button>
+                <button class="filter-btn">প্রদর্শনী</button>
+                <button class="filter-btn">কার্যক্রম</button>
+                <button class="filter-btn">২০২৩</button>
+                <button class="filter-btn">২০২৪</button>
+            </div>
+            
+            <!-- Search Bar -->
+            <div class="gallery-search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="অ্যালবাম বা অনুষ্ঠানের নাম খুঁজুন...">
+            </div>
+        </div>
+
+        <!-- Album Grid -->
+        <div class="album-grid">
+            
+            <!-- Album 1 -->
+            <a href="gallery/event-details.html" class="album-card">
+                <div class="album-cover-wrapper">
+                    <img src="https://images.unsplash.com/photo-1540039155732-d6f746f104b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="album-cover">
+                    <div class="album-overlay"></div>
+                    <div class="album-photo-count"><i class="fa-regular fa-image"></i> ২৪ ছবি</div>
+                </div>
+                <div class="album-details">
+                    <span class="album-category">অনুষ্ঠান</span>
+                    <h3 class="album-title">৪৫ বর্ষপূর্তি অনুষ্ঠান ও পুনর্মিলনী</h3>
+                    <div class="album-meta">
+                        <span><i class="fa-regular fa-calendar"></i> ১২ জানু, ২০২৪</span>
+                        <span><i class="fa-solid fa-location-dot"></i> ঢাকা</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Album 2 -->
+            <a href="gallery/event-details.html" class="album-card">
+                <div class="album-cover-wrapper">
+                    <img src="https://images.unsplash.com/photo-1516280440502-86927d291ba4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="album-cover">
+                    <div class="album-overlay"></div>
+                    <div class="album-photo-count"><i class="fa-regular fa-image"></i> ১৮ ছবি</div>
+                </div>
+                <div class="album-details">
+                    <span class="album-category">কার্যক্রম</span>
+                    <h3 class="album-title">স্টুডিও রেকর্ডিং সেশন: নতুন অ্যালবাম</h3>
+                    <div class="album-meta">
+                        <span><i class="fa-regular fa-calendar"></i> ০৫ ডিসে, ২০২৩</span>
+                        <span><i class="fa-solid fa-location-dot"></i> সাউন্ড স্টুডিও</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Album 3 -->
+            <a href="gallery/event-details.html" class="album-card">
+                <div class="album-cover-wrapper">
+                    <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="album-cover">
+                    <div class="album-overlay"></div>
+                    <div class="album-photo-count"><i class="fa-regular fa-image"></i> ৩০ ছবি</div>
+                </div>
+                <div class="album-details">
+                    <span class="album-category">অনুষ্ঠান</span>
+                    <h3 class="album-title">নাশীদ শিল্পীগোষ্ঠী বার্ষিক সংগীত সন্ধ্যা</h3>
+                    <div class="album-meta">
+                        <span><i class="fa-regular fa-calendar"></i> ২০ নভে, ২০২৩</span>
+                        <span><i class="fa-solid fa-location-dot"></i> শিল্পকলা একাডেমি</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Album 4 -->
+            <a href="gallery/event-details.html" class="album-card">
+                <div class="album-cover-wrapper">
+                    <img src="https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="album-cover">
+                    <div class="album-overlay"></div>
+                    <div class="album-photo-count"><i class="fa-regular fa-image"></i> ১২ ছবি</div>
+                </div>
+                <div class="album-details">
+                    <span class="album-category">কার্যক্রম</span>
+                    <h3 class="album-title">বাৎসরিক ইফতার মাহফিল ও দোয়া</h3>
+                    <div class="album-meta">
+                        <span><i class="fa-regular fa-calendar"></i> ১৫ রমজান, ১৪৪৫</span>
+                        <span><i class="fa-solid fa-location-dot"></i> কেন্দ্রীয় কার্যালয়</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Album 5 -->
+            <a href="gallery/event-details.html" class="album-card">
+                <div class="album-cover-wrapper">
+                    <img src="https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="album-cover">
+                    <div class="album-overlay"></div>
+                    <div class="album-photo-count"><i class="fa-regular fa-image"></i> ৪৫ ছবি</div>
+                </div>
+                <div class="album-details">
+                    <span class="album-category">প্রদর্শনী</span>
+                    <h3 class="album-title">ইসলামী ক্যালিগ্রাফি ও আর্ট প্রদর্শনী</h3>
+                    <div class="album-meta">
+                        <span><i class="fa-regular fa-calendar"></i> ১০ অক্টো, ২০২৩</span>
+                        <span><i class="fa-solid fa-location-dot"></i> ঢাকা গ্যালারি</span>
+                    </div>
+                </div>
+            </a>
+            
+            <!-- Album 6 -->
+            <a href="gallery/event-details.html" class="album-card">
+                <div class="album-cover-wrapper">
+                    <img src="https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="album-cover">
+                    <div class="album-overlay"></div>
+                    <div class="album-photo-count"><i class="fa-regular fa-image"></i> ৫২ ছবি</div>
+                </div>
+                <div class="album-details">
+                    <span class="album-category">অনুষ্ঠান</span>
+                    <h3 class="album-title">ওপেন এয়ার চ্যারিটি কনসার্ট</h3>
+                    <div class="album-meta">
+                        <span><i class="fa-regular fa-calendar"></i> ০৫ সেপ্টে, ২০২৩</span>
+                        <span><i class="fa-solid fa-location-dot"></i> স্টেডিয়াম</span>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+
+        <!-- Pagination -->
+        <div class="pagination">
+            <a href="#" class="page-item"><i class="fa-solid fa-chevron-left"></i>&nbsp; পূর্ববর্তী</a>
+            <a href="#" class="page-item active">১</a>
+            <a href="#" class="page-item">২</a>
+            <a href="#" class="page-item">৩</a>
+            <span class="page-dots">...</span>
+            <a href="#" class="page-item">১২</a>
+            <a href="#" class="page-item">পরবর্তী &nbsp;<i class="fa-solid fa-chevron-right"></i></a>
+        </div>
+
+    </div>
+<footer class="master-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Brand Section -->
+                <div class="footer-brand">
+                    <a href="index.html" class="logo" style="color: white; margin-bottom: 20px; display: inline-flex;">
+                        <div class="logo-icon"><i class="fa-solid fa-fire-flame-curved"></i></div>
+                        <div class="logo-text">সাইমুম<span>.org</span></div>
+                    </a>
+                    <p>সুস্থ সংস্কৃতির বিকাশ এবং মানবতার কল্যাণে ১৯৭৮ সাল থেকে নিরলসভাবে কাজ করে যাচ্ছে সাইমুম শিল্পীগোষ্ঠী।</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div class="footer-links">
+                    <h3>গুরুত্বপূর্ণ লিংক</h3>
+                    <ul>
+                        <li><a href="about.html"><i class="fa-solid fa-angle-right"></i> আমাদের সম্পর্কে</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> সাইমুম স্ট্রিম</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> সাইমুম একাডেমি</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> সাইমুম শপ</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> অনুদান / বাইতুল মাল</a></li>
+                    <li><a href="blog/submit.html"><i class="fa-solid fa-angle-right"></i> লেখা জমা দিন</a></li>
+                      </ul>
+                </div>
+                
+                <!-- Departments -->
+                <div class="footer-links">
+                    <h3>শাখা সমূহ</h3>
+                    <ul>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> সংগীত বিভাগ</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> থিয়েটার ও মঞ্চনাটক</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> ক্বিরাত বিভাগ</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> সাহিত্য ও প্রকাশনা</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Info -->
+                <div class="footer-contact">
+                    <h3>যোগাযোগ</h3>
+                    <ul>
+                        <li>
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>মিজান টাওয়ার, মগবাজার, ঢাকা, বাংলাদেশ</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-phone"></i>
+                            <span>+৮৮০ ১২৩৪-৫৬৭৮৯০</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>info@saimum.org</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container text-center">
+                <p>&copy; ২০২৬ সাইমুম শিল্পীগোষ্ঠী. সর্বস্বত্ব সংরক্ষিত।</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Slider Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const slides = document.querySelectorAll('.hero .slide');
+            let currentSlide = 0;
+            
+            // Ken Burns style smooth fade & zoom every 6 seconds
+            setInterval(() => {
+                slides[currentSlide].classList.remove('active');
+                currentSlide = (currentSlide + 1) % slides.length;
+                slides[currentSlide].classList.add('active');
+            }, 6000);
+        });
+    </script>
+
+</body>
+</html>

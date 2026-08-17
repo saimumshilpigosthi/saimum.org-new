@@ -1,0 +1,1419 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ব্লগ - Saimum</title>
+    <meta name="description" content="Central portal of Saimum Shilpigosthi.">
+    
+    <!-- Google Fonts: Noto Sans Bengali & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Top Ecosystem Bar -->
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <div class="ecosystem-links">
+                <a href="#"><i class="fa-solid fa-play"></i> সাইমুম স্ট্রিম</a>
+                <a href="#"><i class="fa-solid fa-graduation-cap"></i> সাইমুম একাডেমি</a>
+                <a href="#"><i class="fa-solid fa-bag-shopping"></i> সাইমুম শপ</a>
+                <a href="#"><i class="fa-solid fa-hand-holding-heart"></i> অনুদান / বাইতুল মাল</a>
+            </div>
+            <div class="top-bar-right">
+                <div class="language-switcher">
+                    <span><img src="https://flagcdn.com/w20/bd.png" alt="BD Flag" class="flag-icon"> বাংলা</span> <i class="fa-solid fa-chevron-down"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <header class="main-header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon"><i class="fa-solid fa-fire-flame-curved"></i></div>
+                <div class="logo-text">সাইমুম<span>.org</span></div>
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li class="has-dropdown">
+                        <a href="#">পরিচিতি</a>
+                                                                                                                        <ul class="dropdown">
+                            <li><a href="about.html">আমাদের সম্পর্কে</a></li>
+                            <li><a href="founders.html">প্রতিষ্ঠাতা সদস্যবৃন্দ</a></li>
+                            <li><a href="directors.html">পরিচালকবৃন্দ</a></li>
+                            <li><a href="management.html">পরিচালনা পর্ষদ</a></li>
+                            <li><a href="past-management.html">বিগত পরিচালনা পর্ষদ</a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                    <li class="has-dropdown">
+                        <a href="#">সাংস্কৃতিক ব্যক্তিবর্গ</a>
+                        <ul class="dropdown">
+                            <li><a href="lyricists.html">জনপ্রিয় গীতিকারবৃন্দ</a></li>
+                            <li><a href="composers.html">জনপ্রিয় সুরকারবৃন্দ</a></li>
+                            <li><a href="artists.html">জনপ্রিয় শিল্পীবৃন্দ</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="#">বিভাগসমূহ</a>
+                        <ul class="dropdown">
+                            <li><a href="departments/shishu-songit.html">শিশু সঙ্গীত বিভাগ</a></li>
+                            <li><a href="departments/kishor-songit.html">কিশোর সঙ্গীত বিভাগ</a></li>
+                            <li><a href="departments/boro-songit.html">বড় সঙ্গীত বিভাগ</a></li>
+                            <li><a href="departments/abriti.html">আবৃত্তি ও উপস্থাপনা বিভাগ</a></li>
+                            <li><a href="departments/qirat.html">কিরাত বিভাগ</a></li>
+                            <li><a href="departments/theatre.html">থিয়েটার বিভাগ</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="#">প্রকাশনা</a>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="gallery.html">ছবিঘর</a>
+                    </li>
+                    <li><a href="blog.html">ব্লগ</a></li>
+                    <li class="has-dropdown">
+                        <a href="activities.html">কার্যক্রম</a>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="#">প্রোগ্রাম ও প্রদর্শনী</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="#" class="btn btn-primary"><i class="fa-solid fa-user"></i> লগইন</a>
+            </div>
+        </div>
+    </header>
+    <!-- Blog Specific CSS -->
+    <style>
+        .blog-wrapper {
+            background: #f8fafc;
+            padding: 30px 0 80px; /* offset for fixed header */
+            min-height: 100vh;
+        }
+        
+        .blog-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+        .blog-page-title {
+            font-size: 36px;
+            font-weight: 800;
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .btn-submit-post {
+            background: var(--primary-color);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 30px;
+            font-weight: 700;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 4px 15px rgba(249, 115, 22, 0.3);
+            transition: all 0.3s;
+        }
+
+        .btn-submit-post:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(249, 115, 22, 0.4);
+            color: white;
+        }
+
+        
+
+        
+        /* Filter Pills & Search */
+        .blog-filters-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 0;
+            margin-bottom: 60px;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .blog-filters {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .blog-search-box {
+            display: flex;
+            align-items: center;
+            background: white;
+            border: 1px solid rgba(0,0,0,0.08);
+            border-radius: 30px;
+            padding: 5px 20px;
+            width: 300px;
+            transition: all 0.3s;
+        }
+
+        .blog-search-box:focus-within {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.1);
+        }
+
+        .blog-search-box input {
+            border: none;
+            outline: none;
+            padding: 8px 0;
+            width: 100%;
+            font-size: 15px;
+            color: var(--text-main);
+            background: transparent;
+        }
+
+        .blog-search-box button {
+            background: none;
+            border: none;
+            color: var(--primary-color);
+            cursor: pointer;
+            font-size: 16px;
+            padding: 5px;
+        }
+
+        @media (max-width: 768px) {
+            .blog-search-box {
+                width: 100%;
+                order: -1; /* optionally push search above filters on mobile */
+            }
+        }
+
+        .filter-pill {
+            background: white;
+            border: 1px solid rgba(0,0,0,0.08);
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-main);
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+        }
+
+        .filter-pill.active, .filter-pill:hover {
+            background: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+
+        /* Section Titles */
+        .section-heading {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--text-main);
+            margin: 0; /* Removed 50px top margin that was causing misalignment and extra gaps */
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-heading::before {
+            content: '';
+            display: block;
+            width: 4px;
+            height: 24px;
+            background: var(--primary-color);
+            border-radius: 4px;
+        }
+
+        /* Featured Hero Grid */
+        .featured-hero-grid {
+            display: grid;
+            grid-template-columns: 1.8fr 1fr;
+            gap: 25px;
+            margin-bottom: 50px;
+        }
+
+        .featured-main-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+            position: relative; /* Changed for overlay */
+            display: block;
+            height: 600px;
+            transition: transform 0.3s;
+            text-decoration: none;
+        }
+
+        .featured-main-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .featured-main-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .featured-main-card:hover .featured-main-img {
+            transform: scale(1.08);
+        }
+
+        .featured-main-body {
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            padding: 40px 30px 20px 30px;
+            background: linear-gradient(to top, rgba(15,23,42,0.95) 0%, rgba(15,23,42,0.5) 60%, transparent 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            z-index: 2;
+        }
+
+        .post-title-lg {
+            font-size: 28px;
+            font-weight: 800;
+            line-height: 1.3;
+            margin-bottom: 15px;
+            color: var(--text-main);
+        }
+
+        .post-meta {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 13px;
+            color: #64748b;
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+
+        .author-info {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-main);
+            font-weight: 700;
+        }
+
+        .author-avatar {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid rgba(255,255,255,0.2);
+        }
+
+        /* Hero Text Color Overrides for Overlay */
+        .featured-main-body .post-title-lg,
+        .side-body .post-title-md {
+            color: white;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+        .featured-main-body .post-meta,
+        .side-body .post-meta {
+            color: rgba(255, 255, 255, 0.85);
+            margin-bottom: 0;
+        }
+        .featured-main-body .author-info,
+        .side-body .author-info {
+            color: white;
+        }
+
+        /* Side Stacked Cards */
+        .featured-side-stack {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            height: 600px;
+        }
+
+        .side-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+            position: relative; /* Changed for overlay */
+            display: block;
+            flex: 1;
+            text-decoration: none;
+            transition: transform 0.3s;
+        }
+
+        .side-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .side-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .side-card:hover .side-img {
+            transform: scale(1.08);
+        }
+
+        .side-body {
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            padding: 30px 25px 15px 25px;
+            background: linear-gradient(to top, rgba(15,23,42,0.95) 0%, rgba(15,23,42,0.5) 60%, transparent 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            z-index: 2;
+        }
+
+        .post-title-md {
+            font-size: 20px;
+            font-weight: 800;
+            line-height: 1.4;
+            margin-bottom: 12px;
+            color: var(--text-main);
+        }
+
+        /* Horizontal Card List (সর্বশেষ পোস্ট) */
+        .horizontal-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-bottom: 60px;
+        }
+
+        .horiz-card {
+            display: flex;
+            background: white;
+            border-radius: 16px;
+            padding: 20px;
+            gap: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+            text-decoration: none;
+            color: inherit;
+            align-items: center;
+            border: 1px solid rgba(0,0,0,0.03);
+            transition: box-shadow 0.3s;
+        }
+
+        .horiz-card:hover {
+            box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+        }
+
+        .horiz-img {
+            width: 140px;
+            height: 100px;
+            border-radius: 12px;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+
+        .horiz-body {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .post-title-sm {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: var(--text-main);
+        }
+
+        .horiz-excerpt {
+            color: var(--text-light);
+            font-size: 14px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 90%;
+        }
+        
+        .horiz-meta {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .horiz-meta .author-info {
+            color: var(--text-main); /* Ensure it's not white like the overlay */
+        }
+        
+
+        /* Grid Category (বিভাগীয় Section) */
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .cat-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+            text-decoration: none;
+            color: inherit;
+            transition: transform 0.3s;
+        }
+
+        .cat-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .cat-img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+        }
+
+        .cat-body {
+            padding: 20px;
+        }
+        
+        .cat-title {
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 1.4;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 992px) {
+            .featured-hero-grid {
+                grid-template-columns: 1fr;
+            }
+            .featured-main-card { height: 400px; }
+            .featured-side-stack { height: auto; }
+            .side-card { height: 250px; flex: none; }
+            .category-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 768px) {
+            .horiz-card {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .horiz-img {
+                width: 100%;
+                height: 180px;
+            }
+            /* mobile horiz-meta handled by flex */
+            .category-grid {
+                grid-template-columns: 1fr;
+            }
+            .side-card {
+                flex-direction: column;
+            }
+            .side-img {
+                width: 100%;
+                height: 200px;
+            }
+        }
+    
+        /* 1. জনপ্রিয় প্রবন্ধ (Masonry) */
+        .masonry-grid {
+            columns: 3;
+            column-gap: 20px;
+            margin-bottom: 60px;
+        }
+        .masonry-item {
+            break-inside: avoid;
+            margin-bottom: 20px;
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+            border: 1px solid rgba(0,0,0,0.03);
+            transition: transform 0.3s;
+        }
+        .masonry-item:hover { transform: translateY(-5px); }
+        .masonry-img { width: 100%; display: block; }
+
+        /* 2. ভিডিও ব্লগ (Video Cards) */
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-bottom: 60px;
+        }
+        .video-card {
+            position: relative;
+            border-radius: 16px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        .video-card img { width: 100%; height: 250px; object-fit: cover; transition: transform 0.4s; }
+        .video-overlay {
+            position: absolute; inset: 0; background: rgba(0,0,0,0.4);
+            display: flex; flex-direction: column; justify-content: center; align-items: center;
+            color: white; padding: 20px; text-align: center;
+        }
+        .play-btn {
+            width: 60px; height: 60px; background: var(--primary-color); border-radius: 50%;
+            display: flex; justify-content: center; align-items: center; font-size: 20px;
+            margin-bottom: 15px; box-shadow: 0 5px 15px rgba(249, 115, 22, 0.5);
+            transition: transform 0.3s;
+        }
+        .video-card:hover img { transform: scale(1.05); }
+        .video-card:hover .play-btn { transform: scale(1.1); }
+
+        /* 3. সাক্ষাৎকার (Split Layout) */
+        .interview-box {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            margin-bottom: 60px;
+        }
+        .interview-img { width: 100%; height: 100%; object-fit: cover; min-height: 400px; }
+        .interview-content { padding: 50px; display: flex; flex-direction: column; justify-content: center; }
+        .quote-icon { font-size: 40px; color: var(--primary-light); margin-bottom: 20px; opacity: 0.5; }
+
+        /* 4. সাহিত্য ও কবিতা (Text Heavy) */
+        .poetry-grid {
+            display: grid; 
+            grid-template-columns: repeat(4, 1fr); 
+            gap: 25px;
+            margin-bottom: 60px;
+        }
+        .poetry-card {
+            background: white; 
+            border-radius: 20px; 
+            padding: 45px 30px 30px; 
+            position: relative; 
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+            border: 1px solid rgba(0,0,0,0.03);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            
+            /* Flexbox to push author to bottom */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .poetry-text {
+            color: #475569; 
+            font-size: 15px; 
+            line-height: 2; 
+            font-style: italic; 
+            margin-bottom: 25px;
+            
+            /* Limit to 5 lines with ellipsis */
+            display: -webkit-box;
+            -webkit-line-clamp: 5;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        .poetry-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+            border-color: rgba(249, 115, 22, 0.2);
+        }
+        .poetry-icon {
+            position: absolute;
+            top: -22px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 44px; height: 44px;
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+            color: white;
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 18px;
+            box-shadow: 0 8px 20px rgba(249, 115, 22, 0.3);
+            border: 4px solid white;
+        }
+        .poetry-divider {
+            width: 40px; height: 3px; background: rgba(249, 115, 22, 0.3);
+            margin: 0 auto 20px auto; border-radius: 2px;
+            transition: width 0.3s ease;
+        }
+        .poetry-card:hover .poetry-divider {
+            width: 60px;
+            background: var(--primary-color);
+        }
+        .poetry-author {
+            display: inline-block;
+            background: #f8fafc;
+            padding: 6px 18px;
+            border-radius: 20px;
+            font-size: 13px; font-weight: 700; color: #334155;
+            transition: background 0.3s, color 0.3s;
+            margin-top: auto; /* Pushes badge to the very bottom */
+        }
+        .poetry-card:hover .poetry-author {
+            background: rgba(249, 115, 22, 0.1);
+            color: var(--primary-color);
+        }
+
+        /* 5. নিউজলেটার */
+        .newsletter-banner {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #ea580c 100%);
+            padding: 60px 40px; border-radius: 24px; text-align: center; color: white; margin: 60px 0;
+        }
+        .newsletter-form {
+            display: flex; gap: 10px; max-width: 500px; margin: 20px auto 0;
+        }
+        .newsletter-form input {
+            flex: 1; padding: 12px 20px; border-radius: 30px; border: none; outline: none;
+        }
+        .newsletter-form button {
+            padding: 12px 30px; border-radius: 30px; border: none; background: #1e293b;
+            color: white; font-weight: 700; cursor: pointer;
+        }
+
+        /* 6. সম্পাদকীয় (Hero Card) */
+        .editorial-hero {
+            position: relative; border-radius: 24px; overflow: hidden; height: 600px;
+            margin-bottom: 60px;
+        }
+        .editorial-hero img { width: 100%; height: 100%; object-fit: cover; }
+        .editorial-content {
+            position: absolute; bottom: 0; left: 0; right: 0;
+            background: linear-gradient(to top, rgba(15,23,42,0.95), transparent);
+            padding: 60px 40px 40px; color: white;
+        }
+
+        /* 7. ইসলাম ও জীবন (Zigzag) */
+        .zigzag-row { display: flex; gap: 40px; align-items: center; margin-bottom: 60px; }
+        .zigzag-row.reverse { flex-direction: row-reverse; }
+        .zigzag-img { width: 50%; border-radius: 20px; height: 350px; object-fit: cover; }
+        .zigzag-text { width: 50%; padding: 20px; }
+
+        /* 8. ফটো স্টোরি (CSS Grid Gallery) */
+        .photo-story {
+            display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 200px; gap: 15px;
+            margin-bottom: 60px;
+        }
+        .ps-item { border-radius: 16px; overflow: hidden; position: relative; }
+        .ps-item img { width: 100%; height: 100%; object-fit: cover; }
+        .ps-large { grid-column: span 2; grid-row: span 2; }
+        .ps-wide { grid-column: span 2; }
+        .ps-overlay {
+            position: absolute; inset: 0; background: rgba(0,0,0,0.5); opacity: 0;
+            transition: 0.3s; display: flex; align-items: flex-end; padding: 20px; color: white;
+        }
+        .ps-item:hover .ps-overlay { opacity: 1; }
+
+        /* 9. আর্কাইভ (Timeline) */
+        .timeline { border-left: 3px solid rgba(249, 115, 22, 0.3); padding-left: 30px; position: relative; margin-left: 15px; }
+        .timeline-item { position: relative; margin-bottom: 30px; }
+        .timeline-item::before {
+            content: ''; position: absolute; left: -39px; top: 5px; width: 16px; height: 16px;
+            background: var(--primary-color); border-radius: 50%; box-shadow: 0 0 0 4px rgba(249, 115, 22, 0.2);
+        }
+        
+        /* 10. জনপ্রিয় লেখক (Authors Scroll) */
+        .authors-scroll { display: flex; gap: 20px; overflow-x: auto; padding-bottom: 20px; }
+        .author-card {
+            min-width: 150px; text-align: center; background: white; padding: 20px;
+            border-radius: 16px; border: 1px solid rgba(0,0,0,0.03);
+        }
+        .author-card img { width: 80px; height: 80px; border-radius: 50%; margin-bottom: 15px; object-fit: cover; }
+
+        @media (max-width: 992px) {
+            .masonry-grid { columns: 2; }
+            .video-grid { grid-template-columns: repeat(2, 1fr); }
+            .interview-box, .zigzag-row { grid-template-columns: 1fr; flex-direction: column !important; }
+            .zigzag-img, .zigzag-text { width: 100%; height: 250px; }
+            .poetry-grid { grid-template-columns: repeat(2, 1fr); }
+            .photo-story { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 768px) {
+            .masonry-grid { columns: 1; }
+            .video-grid { grid-template-columns: 1fr; }
+            .poetry-grid { grid-template-columns: 1fr; }
+        }
+
+    
+        
+        .view-all-btn {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 18px;
+            background: rgba(249, 115, 22, 0.1);
+            border-radius: 30px;
+            transition: all 0.3s ease;
+        }
+        .view-all-btn:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: translateX(3px);
+        }
+
+    </style>
+
+    <div class="blog-wrapper">
+        <div class="container">
+            
+            <!-- Header & Filter -->
+            
+
+            
+
+            <!-- ① FEATURED HERO (৩ পোস্ট) -->
+            <div class="featured-hero-grid">
+                <!-- Left (Main Featured) -->
+                <a href="blog/blog-details.html" class="featured-main-card">
+                    <img src="https://images.unsplash.com/photo-1585829365295-ab7cd400c167?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Featured" class="featured-main-img">
+                    <div class="featured-main-body">
+                        <div>
+                            <h2 class="post-title-lg">বর্তমান সময়ের সুস্থ সংস্কৃতি চর্চায় তরুণদের ভূমিকা ও সাইমুমের উদ্যোগ</h2>
+                            <div class="post-meta">
+                                <span class="author-info">
+                                    <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Author" class="author-avatar">
+                                    সাইফুল মামুন
+                                </span>
+                                <span>•</span>
+                                <span>২৪ অক্টোবর, ২০২৪</span>
+                                <span>•</span>
+                                <span>৫ মিনিট পাঠ</span>
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                </a>
+
+                <!-- Right (2 Stacked) -->
+                <div class="featured-side-stack">
+                    <a href="blog/blog-details.html" class="side-card">
+                        <img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Post" class="side-img">
+                        <div class="side-body">
+                            <h3 class="post-title-md">কাজী নজরুল ইসলামের ইসলামী সঙ্গীত: এক অনন্য অধ্যায়</h3>
+                            <div class="post-meta" style="margin-bottom: 10px;">
+                                <span class="author-info"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Author" class="author-avatar">রফিকুল ইসলাম</span>
+                                <span>•</span>
+                                <span>১৫ সেপ্টে, ২০২৪</span>
+                            </div>
+                            
+                        </div>
+                    </a>
+
+                    <a href="blog/blog-details.html" class="side-card">
+                        <img src="https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Post" class="side-img">
+                        <div class="side-body">
+                            <h3 class="post-title-md">শুদ্ধ উচ্চারণ ও সুন্দর আবৃত্তির কার্যকর কৌশল</h3>
+                            <div class="post-meta" style="margin-bottom: 10px;">
+                                <span class="author-info"><img src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Author" class="author-avatar">আহমদ হোসাইন</span>
+                                <span>•</span>
+                                <span>২০ জুলাই, ২০২৪</span>
+                            </div>
+                            
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="blog-filters-container">
+                <div class="blog-filters">
+                    <a href="#" class="filter-pill active">সব</a>
+                    <a href="#" class="filter-pill">সংগীত</a>
+                    <a href="#" class="filter-pill">কবিতা</a>
+                    <a href="#" class="filter-pill">ইসলাম</a>
+                    <a href="#" class="filter-pill">সংস্কৃতি</a>
+                    <a href="#" class="filter-pill">সমাজ</a>
+                </div>
+                <div class="blog-search-box">
+                    <input type="text" placeholder="অনুসন্ধান করুন...">
+                    <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+            </div>
+
+            <!-- ② সর্বশেষ পোস্ট (horizontal card list) -->
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px;">
+                <h2 class="section-heading" style="margin-bottom: 0;">সর্বশেষ পোস্ট</h2>
+                <a href="blog/category-name.html" class="view-all-btn">আরও দেখুন <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div class="horizontal-list">
+                <!-- Horiz Card 1 -->
+                <a href="blog/blog-details.html" class="horiz-card">
+                    <img src="https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Post" class="horiz-img">
+                    <div class="horiz-body">
+                        <h3 class="post-title-sm">সাইমুম শিল্পীগোষ্ঠীর ৪ দশক: ফিরে দেখা</h3>
+                        <p class="horiz-excerpt">দীর্ঘ ৪০ বছরের পথচলায় সাইমুম শিল্পীগোষ্ঠীর অর্জন, চ্যালেঞ্জ এবং ইসলামী সংস্কৃতিতে অবদান...</p>
+                        <div class="horiz-meta">
+                            <div class="author-info" style="font-size: 13px;"><img src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Author" class="author-avatar">সাইমুম ডেস্ক</div>
+                            <div style="font-size: 13px; color: #64748b; font-weight: 500;">• &nbsp; ১০ জুন, ২০২৪</div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Horiz Card 2 -->
+                <a href="blog/blog-details.html" class="horiz-card">
+                    <img src="https://images.unsplash.com/photo-1466096115517-bceecbfb6fde?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Post" class="horiz-img">
+                    <div class="horiz-body">
+                        <h3 class="post-title-sm">স্পেনের ইসলামী স্থাপত্য এবং আধুনিক দুনিয়ায় তার প্রভাব</h3>
+                        <p class="horiz-excerpt">আন্দালুসিয়ার ইসলামী স্থাপত্য কীভাবে ইউরোপের আধুনিক স্থাপত্য শিল্পকে প্রভাবিত করেছে তার ইতিহাস...</p>
+                        <div class="horiz-meta">
+                            <div class="author-info" style="font-size: 13px;"><img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Author" class="author-avatar">ফাহিম ফয়সাল</div>
+                            <div style="font-size: 13px; color: #64748b; font-weight: 500;">• &nbsp; ০৫ মে, ২০২৪</div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Horiz Card 3 -->
+                <a href="blog/blog-details.html" class="horiz-card">
+                    <img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Post" class="horiz-img">
+                    <div class="horiz-body">
+                        <h3 class="post-title-sm">বিশ্বমঞ্চে ইসলামী সংস্কৃতির প্রসার ও এর প্রভাব</h3>
+                        <p class="horiz-excerpt">কীভাবে আধুনিক তথ্যপ্রযুক্তির যুগে ইসলামী সংস্কৃতি গোটা বিশ্বে তার স্বকীয়তা বজায় রেখে ছড়িয়ে পড়ছে...</p>
+                        <div class="horiz-meta">
+                            <div class="author-info" style="font-size: 13px;"><img src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Author" class="author-avatar">আহমদ হোসাইন</div>
+                            <div style="font-size: 13px; color: #64748b; font-weight: 500;">• &nbsp; ২২ এপ্রিল, ২০২৪</div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Horiz Card 4 -->
+                <a href="blog/blog-details.html" class="horiz-card">
+                    <img src="https://images.unsplash.com/photo-1516280440502-3c87ceaba6d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Post" class="horiz-img">
+                    <div class="horiz-body">
+                        <h3 class="post-title-sm">সুন্দর হাতের লেখা ও ক্যালিগ্রাফি শিল্পের ইতিহাস</h3>
+                        <p class="horiz-excerpt">আরবি ক্যালিগ্রাফির উদ্ভব, বিকাশ এবং বর্তমান যুগে এর চর্চা নিয়ে এক বিস্তারিত গবেষণাধর্মী লেখা...</p>
+                        <div class="horiz-meta">
+                            <div class="author-info" style="font-size: 13px;"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Author" class="author-avatar">রাফিয়া ইসলাম</div>
+                            <div style="font-size: 13px; color: #64748b; font-weight: 500;">• &nbsp; ১৫ মার্চ, ২০২৪</div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Horiz Card 5 -->
+                <a href="blog/blog-details.html" class="horiz-card">
+                    <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Post" class="horiz-img">
+                    <div class="horiz-body">
+                        <h3 class="post-title-sm">মঞ্চনাটক ও থিয়েটার: ইসলামী দৃষ্টিকোণ</h3>
+                        <p class="horiz-excerpt">সুস্থ বিনোদনের মাধ্যম হিসেবে মঞ্চনাটক কতটা কার্যকর ভূমিকা রাখতে পারে, সে বিষয়ে বিশদ আলোচনা...</p>
+                        <div class="horiz-meta">
+                            <div class="author-info" style="font-size: 13px;"><img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Author" class="author-avatar">তারেক আনোয়ার</div>
+                            <div style="font-size: 13px; color: #64748b; font-weight: 500;">• &nbsp; ০২ ফেব্রুয়ারি, ২০২৪</div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+                        <!-- ③ বিভাগীয় Section: সংগীত বিষয়ক -->
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px;">
+                <h2 class="section-heading" style="margin-bottom: 0;">সংগীত বিষয়ক</h2>
+                <a href="blog/category-name.html" class="view-all-btn">আরও দেখুন <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div class="category-grid" style="margin-bottom: 60px;">
+                <a href="blog/blog-details.html" class="cat-card">
+                    <img src="https://images.unsplash.com/photo-1478737270239-2f02b77fc618?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Post" class="cat-img">
+                    <div class="cat-body">
+                        <h4 class="cat-title">হামদ ও নাতের ইতিহাস ও বর্তমান পেক্ষাপট</h4>
+                        <div style="font-size: 12px; color: #64748b;">০২ আগস্ট, ২০২৪ • তারেক মনোয়ার</div>
+                    </div>
+                </a>
+                <a href="blog/blog-details.html" class="cat-card">
+                    <img src="https://images.unsplash.com/photo-1511367461989-f85a21fda167?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Post" class="cat-img">
+                    <div class="cat-body">
+                        <h4 class="cat-title">মঞ্চ পরিবেশনায় সাউন্ড সিস্টেমের গুরুত্ব</h4>
+                        <div style="font-size: 12px; color: #64748b;">১৫ মার্চ, ২০২৪ • সাউন্ড ইঞ্জিনিয়ার</div>
+                    </div>
+                </a>
+                <a href="blog/blog-details.html" class="cat-card">
+                    <img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Post" class="cat-img">
+                    <div class="cat-body">
+                        <h4 class="cat-title">কণ্ঠশীলন: কীভাবে নিজের কণ্ঠের যত্ন নেবেন?</h4>
+                        <div style="font-size: 12px; color: #64748b;">১০ ফেব্রুয়ারি, ২০২৪ • ড. মুস্তফা</div>
+                    </div>
+                </a>
+                <a href="blog/blog-details.html" class="cat-card">
+                    <img src="https://images.unsplash.com/photo-1528459801416-a9e53bbf4e17?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Post" class="cat-img">
+                    <div class="cat-body">
+                        <h4 class="cat-title">ঐতিহ্যবাহী বাদ্যযন্ত্র ও ইসলামী সংস্কৃতির মেলবন্ধন</h4>
+                        <div style="font-size: 12px; color: #64748b;">০৫ জানুয়ারি, ২০২৪ • সাইমুম ডেস্ক</div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- 6. সম্পাদকীয় (Hero Card) -->
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px;">
+                <h2 class="section-heading" style="margin-bottom: 0;">সম্পাদকীয়</h2>
+                <a href="blog/category-name.html" class="view-all-btn">আরও দেখুন <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div class="editorial-hero">
+                <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80">
+                <div class="editorial-content">
+                    <span class="post-category" style="margin-bottom:10px; display:inline-block; background:var(--primary-color); padding:5px 15px; border-radius:20px; font-size:13px; font-weight:700;">বিশেষ কলাম</span>
+                    <h2 style="font-size:36px; font-weight:800; margin-bottom:15px; line-height:1.2;">ডিজিটাল যুগে সংস্কৃতি চর্চা: চ্যালেঞ্জ ও সম্ভাবনা</h2>
+                    <p style="font-size:16px; opacity:0.9; max-width:800px; margin-bottom: 20px;">বর্তমান তথ্য প্রযুক্তির যুগে আমাদের নিজস্ব সংস্কৃতিকে কীভাবে বিশ্বমঞ্চে আরও শক্তিশালী ভাবে উপস্থাপন করা যায়, তা নিয়ে সম্পাদকীয় বোর্ডের বিশেষ বিশ্লেষণ।</p>
+                    <a href="blog/blog-details.html" class="read-more-link" style="color:white; border: 1px solid white; padding: 8px 20px; border-radius: 30px; display:inline-flex;">বিস্তারিত পড়ুন</a>
+                </div>
+            </div>
+
+            <!-- 2. ভিডিও ব্লগ (Video Cards) -->
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px;">
+                <h2 class="section-heading" style="margin-bottom: 0;">ভিডিও ব্লগ (Vlogs)</h2>
+                <a href="blog/category-name.html" class="view-all-btn">আরও দেখুন <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div class="video-grid">
+                <a href="blog/blog-details.html" class="video-card" style="text-decoration:none; color:inherit; display:block;">
+                    <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80">
+                    <div class="video-overlay">
+                        <div class="play-btn"><i class="fa-solid fa-play"></i></div>
+                        <h3 style="font-size:18px; font-weight:700;">স্টুডিও রেকর্ডিং এর পর্দার আড়ালে</h3>
+                    </div>
+                </a>
+                <a href="blog/blog-details.html" class="video-card" style="text-decoration:none; color:inherit; display:block;">
+                    <img src="https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80">
+                    <div class="video-overlay">
+                        <div class="play-btn"><i class="fa-solid fa-play"></i></div>
+                        <h3 style="font-size:18px; font-weight:700;">আবৃত্তি কর্মশালা ২০২৪</h3>
+                    </div>
+                </a>
+                <a href="blog/blog-details.html" class="video-card" style="text-decoration:none; color:inherit; display:block;">
+                    <img src="https://images.unsplash.com/photo-1540039155732-d68a2bf6914b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80">
+                    <div class="video-overlay">
+                        <div class="play-btn"><i class="fa-solid fa-play"></i></div>
+                        <h3 style="font-size:18px; font-weight:700;">কনসার্ট লাইভ হাইলাইটস</h3>
+                    </div>
+                </a>
+            </div>
+
+            <!-- LAYOUT 1: SAIMUM ALBUMS -->
+            <div style="margin-bottom: 60px;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px;">
+                <h2 class="section-heading" style="margin-bottom: 0;">সাইমুম অ্যালবাম</h2>
+                <a href="blog/category-name.html" class="view-all-btn">আরও দেখুন <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+                
+                <div style="display: grid; grid-template-columns: 1.7fr 1fr; gap: 20px;" class="custom-grid-1">
+                    <a href="blog/blog-details.html" class="featured-main-card" style="height: 505px; display: block; overflow: hidden; border-radius: 16px; position: relative;">
+                        <img src="https://images.unsplash.com/photo-1619983081563-430f63602796?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="featured-main-img" style="width: 100%; height: 100%; object-fit: cover;">
+                        <div class="featured-main-body" style="position: absolute; bottom: 0; left: 0; right: 0; padding: 30px; background: linear-gradient(to top, rgba(15,23,42,0.95), transparent);">
+                            <h3 class="post-title-lg" style="color: white; font-size: 26px; margin-bottom: 15px;">আলোর প্রভা অ্যালবাম | সাইমুম শিল্পীগোষ্ঠী</h3>
+                            <div class="post-meta" style="color: rgba(255,255,255,0.85);">
+                                <span class="author-info" style="color: white;"><img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" class="author-avatar">সাইফুল ইসলাম মামুন</span>
+                                <span>•</span>
+                                <span>১২ আগস্ট, ২০২২</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <div style="display: flex; flex-direction: column; gap: 15px;">
+                        <a href="blog/blog-details.html" class="horiz-card" style="margin-bottom: 0; padding: 15px; border-radius: 12px; gap: 15px;">
+                            <img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" class="horiz-img" style="width: 120px; height: 85px; border-radius: 8px;">
+                            <div class="horiz-body" style="padding: 0;">
+                                <h4 style="font-size: 15px; font-weight: 700; margin-bottom: 8px; line-height: 1.4;">ঈদের গান ০১ অ্যালবাম | সাইমুম শিল্পীগোষ্ঠী</h4>
+                                <div style="font-size: 13px; color: #64748b; font-weight: 500;">সাইফুল ইসলাম মামুন • ১২ আগস্ট, ২০২২</div>
+                            </div>
+                        </a>
+                        <a href="blog/blog-details.html" class="horiz-card" style="margin-bottom: 0; padding: 15px; border-radius: 12px; gap: 15px;">
+                            <img src="https://images.unsplash.com/photo-1511367461989-f85a21fda167?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" class="horiz-img" style="width: 120px; height: 85px; border-radius: 8px;">
+                            <div class="horiz-body" style="padding: 0;">
+                                <h4 style="font-size: 15px; font-weight: 700; margin-bottom: 8px; line-height: 1.4;">অনুপ্রানান অ্যালবাম | সাইমুম শিল্পীগোষ্ঠী</h4>
+                                <div style="font-size: 13px; color: #64748b; font-weight: 500;">সাইমুম ডেস্ক • ১২ আগস্ট, ২০২২</div>
+                            </div>
+                        </a>
+                        <a href="blog/blog-details.html" class="horiz-card" style="margin-bottom: 0; padding: 15px; border-radius: 12px; gap: 15px;">
+                            <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" class="horiz-img" style="width: 120px; height: 85px; border-radius: 8px;">
+                            <div class="horiz-body" style="padding: 0;">
+                                <h4 style="font-size: 15px; font-weight: 700; margin-bottom: 8px; line-height: 1.4;">ভোরের পাখিরা অ্যালবাম | সাইমুম শিল্পীগোষ্ঠী</h4>
+                                <div style="font-size: 13px; color: #64748b; font-weight: 500;">তারেক আনোয়ার • ১২ আগস্ট, ২০২২</div>
+                            </div>
+                        </a>
+                        <a href="blog/blog-details.html" class="horiz-card" style="margin-bottom: 0; padding: 15px; border-radius: 12px; gap: 15px;">
+                            <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" class="horiz-img" style="width: 120px; height: 85px; border-radius: 8px;">
+                            <div class="horiz-body" style="padding: 0;">
+                                <h4 style="font-size: 15px; font-weight: 700; margin-bottom: 8px; line-height: 1.4;">মনিহার অ্যালবাম | সাইমুম শিল্পীগোষ্ঠী</h4>
+                                <div style="font-size: 13px; color: #64748b; font-weight: 500;">সাইমুম বার্তা • ১২ আগস্ট, ২০২২</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LAYOUT 2: SHISHU BIVAG -->
+            <div style="margin-bottom: 60px;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px;">
+                <h2 class="section-heading" style="margin-bottom: 0;">শিশু বিভাগ</h2>
+                <a href="blog/category-name.html" class="view-all-btn">আরও দেখুন <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+
+                <a href="blog/blog-details.html" class="featured-main-card" style="height: 450px; margin-bottom: 30px; width: 100%; display: block; position: relative; border-radius: 20px; overflow: hidden;">
+                    <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" class="featured-main-img" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div class="featured-main-body" style="position: absolute; bottom: 0; left: 0; right: 0; padding: 40px; background: linear-gradient(to top, rgba(15,23,42,0.95), transparent);">
+                        <h2 class="post-title-lg" style="font-size: 32px; color: white; margin-bottom: 15px;">সাইমুম শিল্পীগোষ্ঠীর দুই প্রতিভাবান শিশু শিল্পীর কণ্ঠে আসছে নতুন গান "বাবা-সপ্ত সমুদ্র"</h2>
+                        <div class="post-meta" style="color: rgba(255,255,255,0.85);">
+                            <span class="author-info" style="color: white;"><img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" class="author-avatar">সাইফুল ইসলাম মামুন</span>
+                                <span>•</span>
+                                <span>০৪ জানুয়ারি, ২০২৩</span>
+                        </div>
+                    </div>
+                </a>
+
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px;">
+                    <a href="blog/blog-details.html" class="cat-card" style="display: block; border-radius: 16px; overflow: hidden; background: white; box-shadow: 0 5px 15px rgba(0,0,0,0.03);">
+                        <img src="https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" style="width: 100%; height: 200px; object-fit: cover;">
+                        <div style="padding: 25px;">
+                            <h4 style="font-size: 18px; font-weight: 700; line-height: 1.4; margin-bottom: 12px; color: var(--text-main);">প্রকাশিত হলো সাইমুম শিল্পীগোষ্ঠীর ভাষার গান রক্ত মাখা বর্ণমালা</h4>
+                            <div style="font-size: 13px; color: #64748b; font-weight: 500;">রাফিয়া ইসলাম • ১৯ ফেব্রুয়ারি, ২০২২</div>
+                        </div>
+                    </a>
+                    <a href="blog/blog-details.html" class="cat-card" style="display: block; border-radius: 16px; overflow: hidden; background: white; box-shadow: 0 5px 15px rgba(0,0,0,0.03);">
+                        <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" style="width: 100%; height: 200px; object-fit: cover;">
+                        <div style="padding: 25px;">
+                            <h4 style="font-size: 18px; font-weight: 700; line-height: 1.4; margin-bottom: 12px; color: var(--text-main);">ইসলামের ফরজ বিধান পর্দা নিয়ে গান | পর্দা | Porda Kora</h4>
+                            <div style="font-size: 13px; color: #64748b; font-weight: 500;">ফাহিম ফয়সাল • ০৯ জুলাই, ২০২০</div>
+                        </div>
+                    </a>
+                    <a href="blog/blog-details.html" class="cat-card" style="display: block; border-radius: 16px; overflow: hidden; background: white; box-shadow: 0 5px 15px rgba(0,0,0,0.03);">
+                        <img src="https://images.unsplash.com/photo-1540039155732-d68a2bf6914b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" style="width: 100%; height: 200px; object-fit: cover;">
+                        <div style="padding: 25px;">
+                            <h4 style="font-size: 18px; font-weight: 700; line-height: 1.4; margin-bottom: 12px; color: var(--text-main);">মুগ্ধকরা কথা ও সুরে চমৎকার কুরবানি গান || কুরবানি || Kurbani</h4>
+                            <div style="font-size: 13px; color: #64748b; font-weight: 500;">সাইফুল ইসলাম মামুন • ১৯ মে, ২০২০</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- LAYOUT 3: SPLIT SECTION -->
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-bottom: 60px;" class="custom-grid-split">
+                <!-- Column 1: Kishor -->
+                <div>
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px;">
+                <h2 class="section-heading" style="margin-bottom: 0;">কিশোর বিভাগ</h2>
+                <a href="blog/category-name.html" class="view-all-btn">আরও দেখুন <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+                    <a href="blog/blog-details.html" class="featured-main-card" style="height: 300px; margin-bottom: 20px; display: block; position: relative; border-radius: 16px; overflow: hidden;">
+                        <img src="https://images.unsplash.com/photo-1528459801416-a9e53bbf4e17?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="featured-main-img" style="width: 100%; height: 100%; object-fit: cover;">
+                        <div class="featured-main-body" style="position: absolute; bottom: 0; left: 0; right: 0; padding: 25px; background: linear-gradient(to top, rgba(15,23,42,0.95), transparent);">
+                            <h4 class="post-title-md" style="color: white; margin-bottom: 10px;">সাইমুম শিল্পীগোষ্ঠীর কিশোর বিভাগের ইফতার মাহফিল সম্পন্ন</h4>
+                            <div class="post-meta" style="color: rgba(255,255,255,0.85);">
+                                <span class="author-info" style="color: white;"><img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" class="author-avatar">সাইফুল ইসলাম মামুন</span>
+                                <span>•</span>
+                                <span>১৭ এপ্রিল, ২০২২</span>
+                            </div>
+                        </div>
+                    </a>
+                    <div style="display: flex; flex-direction: column; gap: 15px;">
+                        <a href="blog/blog-details.html" class="horiz-card" style="margin-bottom: 0; box-shadow: none; border-bottom: 1px solid rgba(0,0,0,0.05); padding-bottom: 15px; border-radius: 0;">
+                            <img src="https://images.unsplash.com/photo-1493225457124-a1a2a5ff3d44?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" class="horiz-img" style="width: 110px; height: 80px; border-radius: 8px;">
+                            <div class="horiz-body" style="padding: 0;">
+                                <h5 style="font-size: 15px; font-weight: 700; margin-bottom: 5px;">সেরা শিল্পীদের কণ্ঠে সেরা কিছু ইসলামিক গান</h5>
+                                <div style="font-size: 13px; color: #64748b; font-weight: 500;">সাইমুম ডেস্ক • ০৪ মার্চ, ২০২২</div>
+                            </div>
+                        </a>
+                        <a href="blog/blog-details.html" class="horiz-card" style="margin-bottom: 0; box-shadow: none; border-bottom: 1px solid rgba(0,0,0,0.05); padding-bottom: 15px; border-radius: 0;">
+                            <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" class="horiz-img" style="width: 110px; height: 80px; border-radius: 8px;">
+                            <div class="horiz-body" style="padding: 0;">
+                                <h5 style="font-size: 15px; font-weight: 700; margin-bottom: 5px;">সাইমুম শিল্পীগোষ্ঠীর জনপ্রিয় কিছু ইসলামিক গান</h5>
+                                <div style="font-size: 13px; color: #64748b; font-weight: 500;">তারেক আনোয়ার • ২০ ফেব্রুয়ারি, ২০২২</div>
+                            </div>
+                        </a>
+                        <a href="blog/blog-details.html" class="horiz-card" style="margin-bottom: 0; box-shadow: none; border: none; padding-bottom: 0; border-radius: 0;">
+                            <img src="https://images.unsplash.com/photo-1511367461989-f85a21fda167?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" class="horiz-img" style="width: 110px; height: 80px; border-radius: 8px;">
+                            <div class="horiz-body" style="padding: 0;">
+                                <h5 style="font-size: 15px; font-weight: 700; margin-bottom: 5px;">কিশোর শিল্পী রাআদ ইজাযের কণ্ঠে চমৎকার গান</h5>
+                                <div style="font-size: 13px; color: #64748b; font-weight: 500;">সাইমুম বার্তা • ১৫ আগস্ট, ২০২১</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Column 2: Sangeet -->
+                <div>
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px;">
+                <h2 class="section-heading" style="margin-bottom: 0;">সঙ্গীত বিভাগ</h2>
+                <a href="blog/category-name.html" class="view-all-btn">আরও দেখুন <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+                    <a href="blog/blog-details.html" class="featured-main-card" style="height: 300px; margin-bottom: 20px; display: block; position: relative; border-radius: 16px; overflow: hidden;">
+                        <img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="featured-main-img" style="width: 100%; height: 100%; object-fit: cover;">
+                        <div class="featured-main-body" style="position: absolute; bottom: 0; left: 0; right: 0; padding: 25px; background: linear-gradient(to top, rgba(15,23,42,0.95), transparent);">
+                            <h4 class="post-title-md" style="color: white; margin-bottom: 10px;">প্রকাশিত হলো সাইমুম শিল্পীগোষ্ঠীর সঙ্গীত বিভাগের নতুন গান "জুমুয়া"</h4>
+                            <div class="post-meta" style="color: rgba(255,255,255,0.85);">
+                                <span class="author-info" style="color: white;"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" class="author-avatar">সাইমুম বার্তা</span>
+                                <span>•</span>
+                                <span>১১ জানুয়ারি, ২০২২</span>
+                            </div>
+                        </div>
+                    </a>
+                    <div style="display: flex; flex-direction: column; gap: 15px;">
+                        <a href="blog/blog-details.html" class="horiz-card" style="margin-bottom: 0; box-shadow: none; border-bottom: 1px solid rgba(0,0,0,0.05); padding-bottom: 15px; border-radius: 0;">
+                            <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" class="horiz-img" style="width: 110px; height: 80px; border-radius: 8px;">
+                            <div class="horiz-body" style="padding: 0;">
+                                <h5 style="font-size: 15px; font-weight: 700; margin-bottom: 5px;">সাইমুম শিল্পীগোষ্ঠীর আহ্বানমূলক নতুন গান | বন্ধু</h5>
+                                <div style="font-size: 13px; color: #64748b; font-weight: 500;">রাফিয়া ইসলাম • ২৫ আগস্ট, ২০২১</div>
+                            </div>
+                        </a>
+                        <a href="blog/blog-details.html" class="horiz-card" style="margin-bottom: 0; box-shadow: none; border-bottom: 1px solid rgba(0,0,0,0.05); padding-bottom: 15px; border-radius: 0;">
+                            <img src="https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" class="horiz-img" style="width: 110px; height: 80px; border-radius: 8px;">
+                            <div class="horiz-body" style="padding: 0;">
+                                <h5 style="font-size: 15px; font-weight: 700; margin-bottom: 5px;">স্টুডিও লাইভ পারফর্মেন্স: জনপ্রিয় শিল্পীদের আড্ডা</h5>
+                                <div style="font-size: 13px; color: #64748b; font-weight: 500;">ফাহিম ফয়সাল • ১০ জুলাই, ২০২১</div>
+                            </div>
+                        </a>
+                        <a href="blog/blog-details.html" class="horiz-card" style="margin-bottom: 0; box-shadow: none; border: none; padding-bottom: 0; border-radius: 0;">
+                            <img src="https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" class="horiz-img" style="width: 110px; height: 80px; border-radius: 8px;">
+                            <div class="horiz-body" style="padding: 0;">
+                                <h5 style="font-size: 15px; font-weight: 700; margin-bottom: 5px;">নতুন কণ্ঠশিল্পীদের অডিশন চলছে, বিস্তারিত জানুন</h5>
+                                <div style="font-size: 13px; color: #64748b; font-weight: 500;">সাইফুল ইসলাম মামুন • ০৫ জুন, ২০২১</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- 3. সাক্ষাৎকার (Split Layout) -->
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px;">
+                <h2 class="section-heading" style="margin-bottom: 0;">সাক্ষাৎকার</h2>
+                <a href="blog/category-name.html" class="view-all-btn">আরও দেখুন <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div class="interview-box">
+                <img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="interview-img">
+                <div class="interview-content">
+                    <i class="fa-solid fa-quote-left quote-icon"></i>
+                    <h3 style="font-size: 26px; font-weight:800; margin-bottom: 20px;">"সংস্কৃতি হলো মানুষের আত্মার খোরাক। সুস্থ সংস্কৃতি ছাড়া সুন্দর সমাজ গঠন অসম্ভব।"</h3>
+                    <p style="color:#64748b; font-size:16px; margin-bottom: 20px;">সাইমুম শিল্পীগোষ্ঠীর প্রতিষ্ঠাতাদের একজনের সাথে একান্ত আলাপচারিতায় উঠে এসেছে সংগঠনটির শুরুর দিকের চ্যালেঞ্জ ও ভবিষ্যৎ স্বপ্নের কথা।</p>
+                    <a href="blog/blog-details.html" class="read-more-link">সম্পূর্ণ সাক্ষাৎকার পড়ুন <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- 7. ইসলাম ও জীবন (Zigzag) -->
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px;">
+                <h2 class="section-heading" style="margin-bottom: 0;">ইসলাম ও জীবন</h2>
+                <a href="blog/category-name.html" class="view-all-btn">আরও দেখুন <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div>
+                <div class="zigzag-row">
+                    <img src="https://images.unsplash.com/photo-1542816417-0983c9c9ad53?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="zigzag-img">
+                    <div class="zigzag-text">
+                        <h3 style="font-size:24px; font-weight:800; margin-bottom:15px; color:var(--text-main);">নবীজীর (সা.) সুন্নাহ এবং মানসিক শান্তি</h3>
+                        <p style="color:#64748b; font-size:16px; line-height:1.6; margin-bottom:20px;">আধুনিক জীবনের স্ট্রেস এবং হতাশা দূর করতে রাসূলুল্লাহ (সা.) এর শেখানো জীবন ব্যবস্থা কতটা বিজ্ঞানসম্মত এবং কার্যকরী তা নিয়ে বিস্তারিত আলোচনা।</p>
+                        <a href="blog/blog-details.html" class="read-more-link">আরও পড়ুন <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="zigzag-row reverse">
+                    <img src="https://images.unsplash.com/photo-1579373903781-fd5c0c30c4cd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="zigzag-img">
+                    <div class="zigzag-text">
+                        <h3 style="font-size:24px; font-weight:800; margin-bottom:15px; color:var(--text-main);">পারিবারিক বন্ধন অটুট রাখার ইসলামী নীতিমালা</h3>
+                        <p style="color:#64748b; font-size:16px; line-height:1.6; margin-bottom:20px;">সমাজকে সুন্দর করতে হলে আগে পরিবারকে সুন্দর করতে হবে। ইসলামে পিতা-মাতা, স্বামী-স্ত্রী এবং সন্তানদের অধিকার ও কর্তব্যের চমৎকার রূপরেখা।</p>
+                        <a href="blog/blog-details.html" class="read-more-link">আরও পড়ুন <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 1. জনপ্রিয় প্রবন্ধ (Masonry) -->
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px;">
+                <h2 class="section-heading" style="margin-bottom: 0;">জনপ্রিয় প্রবন্ধ</h2>
+                <a href="blog/category-name.html" class="view-all-btn">আরও দেখুন <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div class="masonry-grid">
+                <a href="#" class="masonry-item" style="display:block; text-decoration:none; color:inherit;">
+                    <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="masonry-img">
+                    <div style="padding: 20px;">
+                        <h4 style="font-weight:700; font-size:18px;">আধুনিক বিশ্বে ইসলামী সংস্কৃতির প্রয়োজনীয়তা</h4>
+                        <p style="color:#64748b; font-size:14px; margin-top:10px;">কীভাবে আমরা আমাদের শেকড় ধরে রাখতে পারি...</p>
+                    </div>
+                </a>
+                <a href="#" class="masonry-item" style="display:block; text-decoration:none; color:inherit;">
+                    <div style="padding: 20px; background:var(--primary-color); color:white;">
+                        <h4 style="font-weight:700; font-size:18px;">"আমাদের সংস্কৃতিই আমাদের পরিচয়"</h4>
+                        <p style="font-size:14px; margin-top:10px; opacity:0.9;">- এক বিশেষ কলাম</p>
+                    </div>
+                </a>
+                <a href="#" class="masonry-item" style="display:block; text-decoration:none; color:inherit;">
+                    <img src="https://images.unsplash.com/photo-1494548162494-384bba4ab999?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="masonry-img">
+                    <div style="padding: 20px;">
+                        <h4 style="font-weight:700; font-size:18px;">সুন্দর জীবনের গল্প</h4>
+                    </div>
+                </a>
+                <a href="#" class="masonry-item" style="display:block; text-decoration:none; color:inherit;">
+                    <img src="https://images.unsplash.com/photo-1472289065668-ce650ac443d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="masonry-img">
+                    <div style="padding: 20px;">
+                        <h4 style="font-weight:700; font-size:18px;">তরুণ প্রজন্মের ভাবনা</h4>
+                    </div>
+                </a>
+                <a href="#" class="masonry-item" style="display:block; text-decoration:none; color:inherit;">
+                    <div style="padding: 20px; background:#1e293b; color:white;">
+                        <h4 style="font-weight:700; font-size:18px;">প্রবন্ধ গুচ্ছ</h4>
+                        <p style="font-size:14px; margin-top:10px; opacity:0.7;">বাছাইকৃত ১০টি প্রবন্ধের সংগ্রহ...</p>
+                    </div>
+                </a>
+            </div>
+
+            <!-- 4. সাহিত্য ও কবিতা (Text Heavy) -->
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px;">
+                <h2 class="section-heading" style="margin-bottom: 0;">সাহিত্য ও কবিতা</h2>
+                <a href="blog/category-name.html" class="view-all-btn">আরও দেখুন <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div class="poetry-grid">
+                <a href="blog/blog-details.html" class="poetry-card" style="text-decoration:none; color:inherit;">
+                    <div class="poetry-icon"><i class="fa-solid fa-quote-left"></i></div>
+                    <h4 style="font-size:22px; font-weight:800; margin-bottom:15px; color:#1e293b;">ভোরের আযান</h4>
+                    <div class="poetry-divider"></div>
+                    <div class="poetry-text">ঘুম ভাঙানো সুমধুর সুর<br>আসে ভেসে দূর বহুদূর<br>মুয়াজ্জিনের সেই ডাক শুনে<br>জেগে ওঠে মন নব গুনে<br><br>রাতের আঁধার কেটে গিয়ে<br>পুব আকাশে ওঠে রবি<br>পাখির গানে মুখর ধরা<br>আঁকে এক নতুন ছবি<br><br>প্রভুর প্রেমে সিক্ত হৃদয়<br>পড়ে যায় সেজদাতে<br>রহমতের এই শীতল হাওয়া<br>ছড়িয়ে পড়ে প্রভাতে...</div>
+                    <div class="poetry-author">— আবদুর রহমান</div>
+                </a>
+                <a href="blog/blog-details.html" class="poetry-card" style="text-decoration:none; color:inherit;">
+                    <div class="poetry-icon"><i class="fa-solid fa-quote-left"></i></div>
+                    <h4 style="font-size:22px; font-weight:800; margin-bottom:15px; color:#1e293b;">শুকরিয়া</h4>
+                    <div class="poetry-divider"></div>
+                    <div class="poetry-text">তোমার দেওয়া এই জীবন<br>তোমার দেওয়া আলো<br>সব কিছুতেই তোমায় খুঁজি<br>তুমিই বাসো ভালো...</div>
+                    <div class="poetry-author">— কাজী নজরুল ইসলাম</div>
+                </a>
+                <a href="blog/blog-details.html" class="poetry-card" style="text-decoration:none; color:inherit;">
+                    <div class="poetry-icon"><i class="fa-solid fa-quote-left"></i></div>
+                    <h4 style="font-size:22px; font-weight:800; margin-bottom:15px; color:#1e293b;">মায়ের দোয়া</h4>
+                    <div class="poetry-divider"></div>
+                    <div class="poetry-text">মায়ের দোয়ায় পার হয়ে যাই<br>জীবনের সব বাধা<br>মায়ের আঁচল পৃথিবীর বুকে<br>সবচেয়ে বড় ছাতা<br><br>মায়ের হাসিতে মুক্তো ঝরে<br>দুঃখ কোথায় পালায়<br>তার পরশে জুড়ায় এ মন<br>স্নিগ্ধ শীতল ছাঁয়ায়...</div>
+                    <div class="poetry-author">— সংগৃহীত</div>
+                </a>
+                <a href="blog/blog-details.html" class="poetry-card" style="text-decoration:none; color:inherit;">
+                    <div class="poetry-icon"><i class="fa-solid fa-quote-left"></i></div>
+                    <h4 style="font-size:22px; font-weight:800; margin-bottom:15px; color:#1e293b;">প্রার্থনা</h4>
+                    <div class="poetry-divider"></div>
+                    <div class="poetry-text">হে প্রভু দয়াময়<br>ক্ষমা করো অপরাধ<br>তোমার রহম ছাড়া<br>জীবন যে বরবাদ...</div>
+                    <div class="poetry-author">— গোলাম মোস্তফা</div>
+                </a>
+            </div>
+            
+            <!-- 8. ফটো স্টোরি (CSS Grid Gallery) -->
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px;">
+                <h2 class="section-heading" style="margin-bottom: 0;">ফটো স্টোরি</h2>
+                <a href="blog/category-name.html" class="view-all-btn">আরও দেখুন <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div class="photo-story">
+                <a href="blog/blog-details.html" class="ps-item ps-large">
+                    <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80">
+                    <div class="ps-overlay"><h3 style="font-size:22px; font-weight:800;">বিজয় দিবস কনসার্টের সেরা মুহূর্ত</h3></div>
+                </a>
+                <a href="blog/blog-details.html" class="ps-item">
+                    <img src="https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80">
+                    <div class="ps-overlay"><h4>স্টুডিও লাইফ</h4></div>
+                </a>
+                <a href="blog/blog-details.html" class="ps-item">
+                    <img src="https://images.unsplash.com/photo-1493225457124-a1a2a5ff3d44?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80">
+                    <div class="ps-overlay"><h4>রিহার্সাল</h4></div>
+                </a>
+                <a href="blog/blog-details.html" class="ps-item ps-wide">
+                    <img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80">
+                    <div class="ps-overlay"><h4>অনাথ শিশুদের মাঝে ত্রাণ বিতরণ</h4></div>
+                </a>
+            </div>
+
+            <!-- 5. নিউজলেটার -->
+            <div class="newsletter-banner">
+                <h2 style="font-size:32px; font-weight:800; margin-bottom:10px;">সাইমুম নিউজলেটারে যুক্ত হোন</h2>
+                <p style="font-size:18px; opacity:0.9;">নতুন ব্লগ, ইভেন্ট এবং গানের আপডেট সরাসরি আপনার ইনবক্সে পেতে সাবস্ক্রাইব করুন।</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="আপনার ইমেইল এড্রেস দিন...">
+                    <button type="button">সাবস্ক্রাইব</button>
+                </form>
+            </div>
+
+                    </div>
+    </div>
+<footer class="master-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Brand Section -->
+                <div class="footer-brand">
+                    <a href="index.html" class="logo" style="color: white; margin-bottom: 20px; display: inline-flex;">
+                        <div class="logo-icon"><i class="fa-solid fa-fire-flame-curved"></i></div>
+                        <div class="logo-text">সাইমুম<span>.org</span></div>
+                    </a>
+                    <p>সুস্থ সংস্কৃতির বিকাশ এবং মানবতার কল্যাণে ১৯৭৮ সাল থেকে নিরলসভাবে কাজ করে যাচ্ছে সাইমুম শিল্পীগোষ্ঠী।</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div class="footer-links">
+                    <h3>গুরুত্বপূর্ণ লিংক</h3>
+                    <ul>
+                        <li><a href="about.html"><i class="fa-solid fa-angle-right"></i> আমাদের সম্পর্কে</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> সাইমুম স্ট্রিম</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> সাইমুম একাডেমি</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> সাইমুম শপ</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> অনুদান / বাইতুল মাল</a></li>
+                    <li><a href="blog/submit.html"><i class="fa-solid fa-angle-right"></i> লেখা জমা দিন</a></li>
+                      </ul>
+                </div>
+                
+                <!-- Departments -->
+                <div class="footer-links">
+                    <h3>শাখা সমূহ</h3>
+                    <ul>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> সংগীত বিভাগ</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> থিয়েটার ও মঞ্চনাটক</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> ক্বিরাত বিভাগ</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> সাহিত্য ও প্রকাশনা</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Info -->
+                <div class="footer-contact">
+                    <h3>যোগাযোগ</h3>
+                    <ul>
+                        <li>
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>মিজান টাওয়ার, মগবাজার, ঢাকা, বাংলাদেশ</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-phone"></i>
+                            <span>+৮৮০ ১২৩৪-৫৬৭৮৯০</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>info@saimum.org</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container text-center">
+                <p>&copy; ২০২৬ সাইমুম শিল্পীগোষ্ঠী. সর্বস্বত্ব সংরক্ষিত।</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Slider Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const slides = document.querySelectorAll('.hero .slide');
+            let currentSlide = 0;
+            
+            // Ken Burns style smooth fade & zoom every 6 seconds
+            setInterval(() => {
+                slides[currentSlide].classList.remove('active');
+                currentSlide = (currentSlide + 1) % slides.length;
+                slides[currentSlide].classList.add('active');
+            }, 6000);
+        });
+    </script>
+
+</body>
+</html>

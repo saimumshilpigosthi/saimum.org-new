@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ব্লগ - Saimum</title>
+    <meta name="description" content="Central portal of Saimum Shilpigosthi.">
+    
+    <!-- Google Fonts: Noto Sans Bengali & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <!-- Top Ecosystem Bar -->
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <div class="ecosystem-links">
+                <a href="#"><i class="fa-solid fa-play"></i> সাইমুম স্ট্রিম</a>
+                <a href="#"><i class="fa-solid fa-graduation-cap"></i> সাইমুম একাডেমি</a>
+                <a href="#"><i class="fa-solid fa-bag-shopping"></i> সাইমুম শপ</a>
+                <a href="#"><i class="fa-solid fa-hand-holding-heart"></i> অনুদান / বাইতুল মাল</a>
+            </div>
+            <div class="top-bar-right">
+                <div class="language-switcher">
+                    <span><img src="https://flagcdn.com/w20/bd.png" alt="BD Flag" class="flag-icon"> বাংলা</span> <i class="fa-solid fa-chevron-down"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <header class="main-header">
+        <div class="container header-container">
+            <a href="../index.html" class="logo">
+                <div class="logo-icon"><i class="fa-solid fa-fire-flame-curved"></i></div>
+                <div class="logo-text">সাইমুম<span>.org</span></div>
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li class="has-dropdown">
+                        <a href="#">পরিচিতি</a>
+                                                                                                                        <ul class="dropdown">
+                            <li><a href="../about.html">আমাদের সম্পর্কে</a></li>
+                            <li><a href="../founders.html">প্রতিষ্ঠাতা সদস্যবৃন্দ</a></li>
+                            <li><a href="../directors.html">পরিচালকবৃন্দ</a></li>
+                            <li><a href="../management.html">পরিচালনা পর্ষদ</a></li>
+                            <li><a href="../past-management.html">বিগত পরিচালনা পর্ষদ</a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                    <li class="has-dropdown">
+                        <a href="#">সাংস্কৃতিক ব্যক্তিবর্গ</a>
+                        <ul class="dropdown">
+                            <li><a href="../lyricists.html">জনপ্রিয় গীতিকারবৃন্দ</a></li>
+                            <li><a href="../composers.html">জনপ্রিয় সুরকারবৃন্দ</a></li>
+                            <li><a href="../artists.html">জনপ্রিয় শিল্পীবৃন্দ</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="#">বিভাগসমূহ</a>
+                        <ul class="dropdown">
+                            <li><a href="../departments/shishu-songit.html">শিশু সঙ্গীত বিভাগ</a></li>
+                            <li><a href="../departments/kishor-songit.html">কিশোর সঙ্গীত বিভাগ</a></li>
+                            <li><a href="../departments/boro-songit.html">বড় সঙ্গীত বিভাগ</a></li>
+                            <li><a href="../departments/abriti.html">আবৃত্তি ও উপস্থাপনা বিভাগ</a></li>
+                            <li><a href="../departments/qirat.html">কিরাত বিভাগ</a></li>
+                            <li><a href="../departments/theatre.html">থিয়েটার বিভাগ</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="#">প্রকাশনা</a>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="../gallery.html">ছবিঘর</a>
+                    </li>
+                    <li><a href="../blog.html">ব্লগ</a></li>
+                    <li class="has-dropdown">
+                        <a href="../activities.html">কার্যক্রম</a>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="#">প্রোগ্রাম ও প্রদর্শনী</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="#" class="btn btn-primary"><i class="fa-solid fa-user"></i> লগইন</a>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Category Page Specific CSS -->
+    <style>
+        body { background: #f8fafc; }
+        
+        /* Category Header Banner */
+        .category-hero {
+            background: url('https://images.unsplash.com/photo-1457369804613-52c61a468e7d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+            padding: 100px 20px;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Dark overlay for text readability */
+        .category-hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: linear-gradient(to right, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.7));
+            z-index: 1;
+        }
+
+        .category-breadcrumb {
+            font-size: 14px;
+            font-weight: 600;
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .category-breadcrumb a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+        .category-breadcrumb a:hover { opacity: 0.8; }
+        
+        .category-title {
+            font-size: 48px;
+            font-weight: 800;
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 2;
+            text-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .category-desc {
+            font-size: 18px;
+            font-weight: 500;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+            line-height: 1.6;
+        }
+
+        /* Main Category Wrapper */
+        .category-wrapper {
+            max-width: 1250px;
+            margin: 30px auto 60px;
+            padding: 0 20px;
+        }
+
+        /* Enhanced White Toolbar */
+        .category-toolbar {
+            background: white;
+            border-radius: 16px;
+            padding: 20px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.06), 0 0 0 1px rgba(0,0,0,0.04);
+            margin: 0 0 30px 0;
+            position: relative;
+            z-index: 10;
+            width: 100%;
+        }
+
+        .toolbar-search {
+            display: flex;
+            align-items: center;
+            flex: 1;
+            gap: 15px;
+            color: var(--primary-color);
+            font-size: 22px;
+        }
+
+        .toolbar-search input {
+            border: none;
+            outline: none;
+            font-size: 17px;
+            color: var(--text-main);
+            width: 100%;
+            background: transparent;
+            font-family: inherit;
+        }
+        
+        .toolbar-search input::placeholder {
+            color: #94a3b8;
+            font-weight: 500;
+        }
+
+        .toolbar-right {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .post-count {
+            font-size: 15px;
+            font-weight: 700;
+            color: #64748b;
+            background: #f8fafc;
+            padding: 12px 24px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .sort-dropdown {
+            padding: 12px 25px;
+            border-radius: 12px;
+            border: none;
+            background: var(--primary-color);
+            color: white;
+            font-weight: 700;
+            font-size: 15px;
+            outline: none;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(249, 115, 22, 0.3);
+            transition: all 0.3s;
+            appearance: none;
+            -webkit-appearance: none;
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right 15px center;
+            background-size: 16px;
+            padding-right: 40px;
+        }
+        
+        .sort-dropdown:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(249, 115, 22, 0.4);
+        }
+
+        .sort-dropdown option {
+            background: white;
+            color: var(--text-main);
+        }
+
+        /* Grid System */
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+
+        /* Card Styles */
+        .archive-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            text-decoration: none;
+            color: inherit;
+            border: 1px solid rgba(0,0,0,0.04);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .archive-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(249, 115, 22, 0.1);
+            border-color: rgba(249, 115, 22, 0.2);
+        }
+
+        .archive-img-wrapper {
+            position: relative;
+            width: 100%;
+            padding-top: 60%; /* 16:9 Aspect Ratio approx */
+            overflow: hidden;
+        }
+
+        .archive-img {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .archive-card:hover .archive-img {
+            transform: scale(1.05);
+        }
+
+        .archive-badge {
+            position: absolute;
+            top: 20px; left: 20px;
+            background: var(--primary-color);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 800;
+            z-index: 2;
+            text-transform: uppercase;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        .archive-body {
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        .archive-title {
+            font-size: 22px;
+            font-weight: 800;
+            color: var(--text-main);
+            margin-bottom: 15px;
+            line-height: 1.4;
+            transition: color 0.3s;
+        }
+
+        .archive-card:hover .archive-title {
+            color: var(--primary-color);
+        }
+
+        .archive-excerpt {
+            color: #64748b;
+            font-size: 15px;
+            line-height: 1.7;
+            margin-bottom: 25px;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .archive-meta {
+            margin-top: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 20px;
+            border-top: 1px solid #f1f5f9;
+        }
+
+        .archive-author {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 700;
+            font-size: 14px;
+            color: var(--text-main);
+        }
+
+        .archive-author img {
+            width: 30px; height: 30px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .archive-date {
+            font-size: 13px;
+            font-weight: 600;
+            color: #94a3b8;
+        }
+
+        /* Pagination */
+        .pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            margin-top: 80px;
+        }
+
+        .page-link {
+            width: 45px; height: 45px;
+            display: flex; align-items: center; justify-content: center;
+            background: white;
+            border-radius: 50%;
+            font-weight: 700;
+            color: var(--text-main);
+            text-decoration: none;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+            border: 1px solid transparent;
+            transition: all 0.3s;
+        }
+
+        .page-link:hover {
+            border-color: var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        .page-link.active {
+            background: var(--primary-color);
+            color: white;
+            box-shadow: 0 8px 20px rgba(249, 115, 22, 0.3);
+        }
+
+        @media (max-width: 992px) {
+            .category-grid { grid-template-columns: repeat(2, 1fr); gap: 30px; }
+            .category-title { font-size: 40px; }
+        }
+        @media (max-width: 768px) {
+            .category-grid { grid-template-columns: 1fr; }
+            .category-hero { padding: 100px 20px; }
+            .category-title { font-size: 32px; }
+            .category-toolbar { flex-direction: column; gap: 15px; align-items: flex-start; }
+        }
+    </style>
+
+    <!-- Category Hero Header -->
+    <div class="category-hero">
+        <div class="container">
+            <div class="category-breadcrumb">
+                <a href="../index.html">হোম</a> &nbsp;/&nbsp; <a href="../blog.html">ব্লগ</a> &nbsp;/&nbsp; <span style="opacity:0.7">সাহিত্য ও কবিতা</span>
+            </div>
+            <h1 class="category-title">সাহিত্য ও কবিতা</h1>
+            <p class="category-desc">আমাদের দেশীয় মূল্যবোধ, জীবনবোধ এবং ইসলামী চিন্তাধারার আলোকে রচিত চমৎকার সব কবিতা ও সাহিত্যের সমাহার।</p>
+        </div>
+    </div>
+
+    <!-- Main Category Wrapper -->
+    <div class="category-wrapper">
+        
+        <!-- Premium Floating Toolbar -->
+        <div class="category-toolbar">
+            <!-- Search -->
+            <div class="toolbar-search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="এই ক্যাটাগরিতে খুঁজুন...">
+            </div>
+            
+            <div class="toolbar-right">
+                <div class="post-count">২৪টি পোস্ট</div>
+                <select class="sort-dropdown">
+                    <option>সর্বশেষ পোস্ট</option>
+                    <option>সর্বাধিক পঠিত</option>
+                    <option>পুরাতন পোস্ট</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Posts Grid -->
+        <div class="category-grid">
+            
+            <!-- Card 1 -->
+            <a href="blog-details.html" class="archive-card">
+                <div class="archive-img-wrapper">
+                    <span class="archive-badge">কবিতা</span>
+                    <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="archive-img">
+                </div>
+                <div class="archive-body">
+                    <h3 class="archive-title">ভোরের আযান: এক শান্তির ডাক</h3>
+                    <p class="archive-excerpt">ঘুম ভাঙানো সুমধুর সুর আসে ভেসে দূর বহুদূর, মুয়াজ্জিনের সেই ডাক শুনে জেগে ওঠে মন নব গুনে। প্রভুর প্রেমে সিক্ত হৃদয় পড়ে যায় সেজদাতে...</p>
+                    <div class="archive-meta">
+                        <div class="archive-author">
+                            <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80">
+                            আবদুর রহমান
+                        </div>
+                        <span class="archive-date">২৪ অক্টো, ২০২৪</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Card 2 -->
+            <a href="blog-details.html" class="archive-card">
+                <div class="archive-img-wrapper">
+                    <span class="archive-badge">প্রবন্ধ</span>
+                    <img src="https://images.unsplash.com/photo-1457369804613-52c61a468e7d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="archive-img">
+                </div>
+                <div class="archive-body">
+                    <h3 class="archive-title">সুস্থ সংস্কৃতির বিকাশে সাহিত্যের ভূমিকা</h3>
+                    <p class="archive-excerpt">সাহিত্য একটি সমাজের দর্পণ। আমরা যেমন সাহিত্য রচনা করব, আমাদের আগামী প্রজন্ম ঠিক তেমনভাবেই গড়ে উঠবে। অপসংস্কৃতি রুখতে সুস্থ ধারার সাহিত্যের কোনো বিকল্প নেই।</p>
+                    <div class="archive-meta">
+                        <div class="archive-author">
+                            <img src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80">
+                            আহমদ হোসাইন
+                        </div>
+                        <span class="archive-date">১৫ সেপ্টে, ২০২৪</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Card 3 -->
+            <a href="blog-details.html" class="archive-card">
+                <div class="archive-img-wrapper">
+                    <span class="archive-badge">কবিতা</span>
+                    <img src="https://images.unsplash.com/photo-1476275466078-4007374efac4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="archive-img">
+                </div>
+                <div class="archive-body">
+                    <h3 class="archive-title">শুকরিয়া: তোমার দেওয়া এই জীবন</h3>
+                    <p class="archive-excerpt">তোমার দেওয়া এই জীবন, তোমার দেওয়া আলো, সব কিছুতেই তোমায় খুঁজি, তুমিই বাসো ভালো। বিপদে আপদে তুমিই তো ভরসা, তুমিই আমার সকল কাজের প্রেরণা...</p>
+                    <div class="archive-meta">
+                        <div class="archive-author">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80">
+                            কাজী নজরুল ইসলাম
+                        </div>
+                        <span class="archive-date">০৫ সেপ্টে, ২০২৪</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Card 4 -->
+            <a href="blog-details.html" class="archive-card">
+                <div class="archive-img-wrapper">
+                    <span class="archive-badge">ছোটগল্প</span>
+                    <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="archive-img">
+                </div>
+                <div class="archive-body">
+                    <h3 class="archive-title">পথের ধুলোয় লুকানো সত্য</h3>
+                    <p class="archive-excerpt">অন্ধকার গলির মোড়ে দাঁড়িয়ে থাকা ছেলেটি হয়তো কখনো জানত না যে, তার জীবনে এত বড় একটি পরিবর্তন আসতে যাচ্ছে। একটি ছোট্ট কোরআনের আয়াত তার পুরো জগত পালটে দিল।</p>
+                    <div class="archive-meta">
+                        <div class="archive-author">
+                            <img src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80">
+                            সাইফুল ইসলাম
+                        </div>
+                        <span class="archive-date">২০ আগস্ট, ২০২৪</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Card 5 -->
+            <a href="blog-details.html" class="archive-card">
+                <div class="archive-img-wrapper">
+                    <span class="archive-badge">কবিতা</span>
+                    <img src="https://images.unsplash.com/photo-1493612276216-ee3925520721?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="archive-img">
+                </div>
+                <div class="archive-body">
+                    <h3 class="archive-title">মায়ের দোয়া: পৃথিবীর সেরা ছাতা</h3>
+                    <p class="archive-excerpt">মায়ের দোয়ায় পার হয়ে যাই জীবনের সব বাধা, মায়ের আঁচল পৃথিবীর বুকে সবচেয়ে বড় ছাতা। মায়ের হাসিতে মুক্তো ঝরে, দুঃখ কোথায় পালায়...</p>
+                    <div class="archive-meta">
+                        <div class="archive-author">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80">
+                            ফাতেমা তুজ জোহরা
+                        </div>
+                        <span class="archive-date">১২ আগস্ট, ২০২৪</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Card 6 -->
+            <a href="blog-details.html" class="archive-card">
+                <div class="archive-img-wrapper">
+                    <span class="archive-badge">উপন্যাসিকা</span>
+                    <img src="https://images.unsplash.com/photo-1532012197267-da84d127e765?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="archive-img">
+                </div>
+                <div class="archive-body">
+                    <h3 class="archive-title">আলোর সন্ধানে: প্রথম পর্ব</h3>
+                    <p class="archive-excerpt">অন্ধকার সমাজ ব্যবস্থার মাঝে কিছু তরুণ যখন সত্যের মশাল হাতে তুলে নেয়, তখন শুরু হয় এক নতুন সংগ্রাম। সেই সংগ্রামের গল্প নিয়েই ধারাবাহিক উপন্যাসিকা...</p>
+                    <div class="archive-meta">
+                        <div class="archive-author">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80">
+                            গোলাম মোস্তফা
+                        </div>
+                        <span class="archive-date">০১ আগস্ট, ২০২৪</span>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+
+        <!-- Pagination -->
+        <div class="pagination">
+            <a href="#" class="page-link"><i class="fa-solid fa-angle-left"></i></a>
+            <a href="#" class="page-link active">১</a>
+            <a href="#" class="page-link">২</a>
+            <a href="#" class="page-link">৩</a>
+            <span style="color:#94a3b8; font-weight:700;">...</span>
+            <a href="#" class="page-link">১২</a>
+            <a href="#" class="page-link"><i class="fa-solid fa-angle-right"></i></a>
+        </div>
+
+    </div>
+<footer class="master-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Brand Section -->
+                <div class="footer-brand">
+                    <a href="../index.html" class="logo" style="color: white; margin-bottom: 20px; display: inline-flex;">
+                        <div class="logo-icon"><i class="fa-solid fa-fire-flame-curved"></i></div>
+                        <div class="logo-text">সাইমুম<span>.org</span></div>
+                    </a>
+                    <p>সুস্থ সংস্কৃতির বিকাশ এবং মানবতার কল্যাণে ১৯৭৮ সাল থেকে নিরলসভাবে কাজ করে যাচ্ছে সাইমুম শিল্পীগোষ্ঠী।</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div class="footer-links">
+                    <h3>গুরুত্বপূর্ণ লিংক</h3>
+                    <ul>
+                        <li><a href="../about.html"><i class="fa-solid fa-angle-right"></i> আমাদের সম্পর্কে</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> সাইমুম স্ট্রিম</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> সাইমুম একাডেমি</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> সাইমুম শপ</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> অনুদান / বাইতুল মাল</a></li>
+                    <li><a href="submit.html"><i class="fa-solid fa-angle-right"></i> লেখা জমা দিন</a></li>
+                      </ul>
+                </div>
+                
+                <!-- Departments -->
+                <div class="footer-links">
+                    <h3>শাখা সমূহ</h3>
+                    <ul>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> সংগীত বিভাগ</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> থিয়েটার ও মঞ্চনাটক</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> ক্বিরাত বিভাগ</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> সাহিত্য ও প্রকাশনা</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Info -->
+                <div class="footer-contact">
+                    <h3>যোগাযোগ</h3>
+                    <ul>
+                        <li>
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>মিজান টাওয়ার, মগবাজার, ঢাকা, বাংলাদেশ</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-phone"></i>
+                            <span>+৮৮০ ১২৩৪-৫৬৭৮৯০</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>info@saimum.org</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container text-center">
+                <p>&copy; ২০২৬ সাইমুম শিল্পীগোষ্ঠী. সর্বস্বত্ব সংরক্ষিত।</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Slider Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const slides = document.querySelectorAll('.hero .slide');
+            let currentSlide = 0;
+            
+            // Ken Burns style smooth fade & zoom every 6 seconds
+            setInterval(() => {
+                slides[currentSlide].classList.remove('active');
+                currentSlide = (currentSlide + 1) % slides.length;
+                slides[currentSlide].classList.add('active');
+            }, 6000);
+        });
+    </script>
+
+</body>
+</html>

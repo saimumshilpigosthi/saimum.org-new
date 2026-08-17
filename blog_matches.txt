@@ -1,0 +1,22 @@
+ounders`, `directors`, `artists`, `departments`, `blog_posts`, `notices`, `competitions`, `bookings`  **REST API Endpoints:** | Method | Endpoint | বিবরণ | |---|---|---| | GET | `/api/v1/albums` | সব অ্যালবাম | | GET | `/api/v1/lyrics/{slug}` | গানের লির
+---
+stream.saimum.org/playlists` | | 6 | **ব্লগ** | `/blog` | — | | 7 | **কার্যক্রম ▾** | `/activities` | সর্বশেষ কার্যক্রম `/activities` · নোটিশ `/notices` | | 8 | **প্রোগ্রাম ও প্রদর্শনী 🎧 ▾** | `/programs` | সকল প্রোগ্রাম `/programs` · প্রদর্শনী `/exhibit
+---
+প্তাহ ৭–৮)  | পেজ | URL | বিবরণ | |---|---|---| | Blog | `/blog` | সবার জন্য কালচারাল ব্লগ | | **কার্যক্রম** | `/activities` | সংগঠনের নিজস্ব আপডেট | | Publications | `/publications` | ডিজিটাল লাইব্রেরি | | Competitions | `/competitions` | প্রতিযোগিতার ত
+---
+n | `/login` | ইউজার লগইন (Sanctum) |  ---  ### 📝 Blog System – বিস্তারিত Feature  **Workflow:** ``` User → /blog/submit থেকে লেখা Submit করে          ↓  Admin (Filament) → Review করে Approve বা Reject          ↓ Approve হলে /blog → Published হয় (লেখকের
+---
+on | Admin comment approve/delete করতে পারবে |  **Blog URL Pattern:** ``` /blog              → সব approved পোস্টের তালিকা /blog/{slug}       → একটি পোস্ট বিস্তারিত + Comment Section /blog/submit       → লেখা জমাদেওয়ার ফর্ম (লগইন লাগবে) ```  **DB টেবিল:*
+---
+* ```sql CREATE TABLE blog_posts (   id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,   user_id BIGINT UNSIGNED NOT NULL,         -- লেখক (FK → users)   title VARCHAR(255) NOT NULL,   slug VARCHAR(255) UNIQUE NOT NULL,   content
+---
+Y (user_id) REFERENCES users(id) );  CREATE TABLE blog_comments (   id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,   blog_post_id BIGINT UNSIGNED NOT NULL,   user_id BIGINT UNSIGNED NOT NULL,   comment TEXT NOT NULL,   is_approved BOOLEAN DEFAULT TRUE,  
+---
+ created_at TIMESTAMP NULL,   FOREIGN KEY (blog_post_id) REFERENCES blog_posts(id),   FOREIGN KEY (user_id) REFERENCES users(id) ); ```  ### 🖊️ Blog Page – Layout & Design  **① `/blog` — Blog Index Page (Full Layout):**  ``` ┌─────────────────────
+---
+োস্ট | Numbered list + view/like count |    **② `/blog/{slug}` — Single Post Page:**  ``` ┌─────────────────────────────────────────────────────────┐ │  [Post Banner Image — Full Width]                       │ │                                           
+---
+ করতে লগইন করুন" দেখাবে | | **Infinite Scroll** | Blog index-এ পেজিনেশন নয়, scroll করলে আরও লোড |  ```sql -- blog_posts table-এ অতিরিক্ত column যোগ: ALTER TABLE blog_posts ADD COLUMN thumbnail_url VARCHAR(500) NULL; ALTER TABLE blog_posts ADD COLUMN tag
+---
+R(255) NULL;         -- "সংগীত,কবিতা" ALTER TABLE blog_posts ADD COLUMN reading_time_minutes INT DEFAULT 3; ALTER TABLE blog_posts ADD COLUMN excerpt TEXT NULL;              -- সংক্ষিপ্ত বিবরণ ```  ---    প্রতিটি সাবডোমেইন আলাদা Next.js app হিসেবে VPS-এ 
+---
