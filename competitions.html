@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>প্রতিযোগিতা | সাইমুম শিল্পীগোষ্ঠী</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Bengali:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    
+
+    
+
+
+    
+
+
+    
+
+
+    <style>
+        .comp-hero {
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.95)), url('https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+            padding: 120px 20px;
+            text-align: center;
+            color: white;
+            position: relative;
+            border-bottom: 5px solid var(--primary-color);
+        }
+
+        .comp-hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .comp-title {
+            font-size: 48px;
+            font-weight: 800;
+            margin-bottom: 18px;
+            letter-spacing: -1px;
+        }
+
+        .comp-desc {
+            font-size: 18px;
+            color: rgba(255,255,255,0.85);
+            max-width: 650px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        .comp-section {
+            padding: 60px 0;
+            background: #ffffff;
+            position: relative;
+        }
+
+        .comp-section.bg-light {
+            background: #f8fafc;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .sub-badge {
+            background: rgba(249, 115, 22, 0.1);
+            color: var(--primary-color);
+            padding: 6px 16px;
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            letter-spacing: 1px;
+        }
+
+        .section-header h2 {
+            font-size: 42px;
+            color: #0f172a;
+            font-weight: 800;
+            letter-spacing: -1px;
+            margin-bottom: 20px;
+        }
+        
+        .section-header h2 .text-gradient {
+            background: linear-gradient(135deg, var(--primary-color), #f59e0b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .section-header p {
+            color: #64748b;
+            font-size: 18px;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        .comp-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .comp-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.04);
+            border: 1px solid rgba(0,0,0,0.03);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .comp-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.08);
+            border-color: rgba(249, 115, 22, 0.2);
+        }
+
+        .comp-image {
+            width: 100%;
+            height: 240px;
+            overflow: hidden;
+            position: relative;
+            background: #f1f5f9; /* placeholder color if image fails */
+        }
+
+        .comp-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .comp-card:hover .comp-image img {
+            transform: scale(1.08);
+        }
+
+        .comp-badge {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: #10b981;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 30px;
+            font-size: 13px;
+            font-weight: 600;
+            z-index: 2;
+            box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        .comp-badge i { font-size: 10px; animation: pulse 2s infinite; }
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.4; }
+            100% { opacity: 1; }
+        }
+
+        .status-closed {
+            background: #64748b;
+            box-shadow: none;
+        }
+        .status-closed i { display: none; }
+
+        .comp-content {
+            padding: 35px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .comp-content h3 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #0f172a;
+            line-height: 1.4;
+        }
+
+        .comp-text {
+            color: #64748b;
+            line-height: 1.7;
+            margin-bottom: 25px;
+            font-size: 16px;
+        }
+
+        /* Large Featured Card */
+        .featured-card {
+            grid-column: 1 / -1;
+            display: flex;
+            flex-direction: row;
+            background: #ffffff;
+            border: 1px solid rgba(249, 115, 22, 0.15);
+            box-shadow: 0 20px 40px rgba(249, 115, 22, 0.05);
+        }
+
+        .featured-card:hover {
+            box-shadow: 0 30px 60px rgba(249, 115, 22, 0.08);
+            border-color: rgba(249, 115, 22, 0.3);
+        }
+
+        .featured-card .comp-image {
+            width: 45%;
+            height: auto;
+            min-height: 400px;
+        }
+
+        .featured-card .comp-content {
+            width: 55%;
+            padding: 50px;
+            justify-content: center;
+        }
+
+        .featured-card h3 {
+            font-size: 32px;
+            color: #0f172a;
+        }
+
+        .comp-meta-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 35px;
+        }
+
+        .meta-box {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            padding: 16px;
+            border-radius: 12px;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .meta-box:hover {
+            background: white;
+            border-color: var(--primary-color);
+            box-shadow: 0 5px 15px rgba(249, 115, 22, 0.08);
+        }
+
+        .meta-icon {
+            width: 36px;
+            height: 36px;
+            background: rgba(249, 115, 22, 0.1);
+            color: var(--primary-color);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            flex-shrink: 0;
+        }
+
+        .meta-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .meta-label {
+            font-size: 12px;
+            color: #94a3b8;
+            text-transform: uppercase;
+            font-weight: 600;
+            margin-bottom: 3px;
+        }
+
+        .meta-value {
+            font-size: 15px;
+            color: #1e293b;
+            font-weight: 600;
+        }
+
+        .comp-actions {
+            display: flex;
+            gap: 15px;
+            margin-top: auto;
+        }
+
+        .btn-primary {
+            background: var(--primary-color);
+            color: white;
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+            text-align: center;
+            border: none;
+            box-shadow: 0 4px 15px rgba(249, 115, 22, 0.3);
+        }
+
+        .btn-primary:hover {
+            background: #e14d0a;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(249, 115, 22, 0.4);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid #e2e8f0;
+            color: #475569;
+            padding: 12px 28px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+            text-align: center;
+        }
+
+        .btn-outline:hover {
+            border-color: var(--primary-color);
+            color: var(--primary-color);
+            background: rgba(249, 115, 22, 0.05);
+        }
+
+        @media (max-width: 992px) {
+            .featured-card { flex-direction: column; }
+            .featured-card .comp-image { width: 100%; height: 300px; min-height: 300px; }
+            .featured-card .comp-content { width: 100%; padding: 40px 30px; }
+            .comp-meta-grid { grid-template-columns: 1fr; }
+        }
+        
+        @media (max-width: 576px) {
+            .comp-actions { flex-direction: column; }
+            .comp-actions .btn-primary, .comp-actions .btn-outline { width: 100%; }
+            .comp-title { font-size: 36px; }
+        }
+    </style>
+
+</head>
+<body>
+    <!-- Top Ecosystem Bar -->
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <div class="ecosystem-links">
+                <a href="#"><i class="fa-solid fa-play"></i> সাইমুম স্ট্রিম</a>
+                <a href="#"><i class="fa-solid fa-graduation-cap"></i> সাইমুম একাডেমি</a>
+                <a href="#"><i class="fa-solid fa-bag-shopping"></i> সাইমুম শপ</a>
+                <a href="#"><i class="fa-solid fa-hand-holding-heart"></i> অনুদান / বাইতুল মাল</a>
+            </div>
+            <div class="top-bar-right">
+                <div class="language-switcher">
+                    <span><img src="https://flagcdn.com/w20/bd.png" alt="BD Flag" class="flag-icon"> বাংলা</span> <i class="fa-solid fa-chevron-down"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <header class="main-header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon"><i class="fa-solid fa-fire-flame-curved"></i></div>
+                <div class="logo-text">সাইমুম<span>.org</span></div>
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li class="has-dropdown">
+                        <a href="#">পরিচিতি</a>
+                        <ul class="dropdown">
+                            <li><a href="about.html">আমাদের সম্পর্কে</a></li>
+                            <li><a href="founders.html">প্রতিষ্ঠাতা সদস্যবৃন্দ</a></li>
+                            <li><a href="directors.html">পরিচালকবৃন্দ</a></li>
+                            <li><a href="management.html">পরিচালনা পর্ষদ</a></li>
+                            <li><a href="past-management.html">বিগত পরিচালনা পর্ষদ</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="#">সাংস্কৃতিক ব্যক্তিবর্গ</a>
+                        <ul class="dropdown">
+                            <li><a href="lyricists.html">জনপ্রিয় গীতিকারবৃন্দ</a></li>
+                            <li><a href="composers.html">জনপ্রিয় সুরকারবৃন্দ</a></li>
+                            <li><a href="artists.html">জনপ্রিয় শিল্পীবৃন্দ</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="#">বিভাগসমূহ</a>
+                        <ul class="dropdown">
+                            <li><a href="departments/shishu-songit.html">শিশু সঙ্গীত বিভাগ</a></li>
+                            <li><a href="departments/kishor-songit.html">কিশোর সঙ্গীত বিভাগ</a></li>
+                            <li><a href="departments/boro-songit.html">বড় সঙ্গীত বিভাগ</a></li>
+                            <li><a href="departments/abriti.html">আবৃত্তি ও উপস্থাপনা বিভাগ</a></li>
+                            <li><a href="departments/qirat.html">কিরাত বিভাগ</a></li>
+                            <li><a href="departments/theatre.html">থিয়েটার বিভাগ</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown"><a href="#">প্রকাশনা</a></li>
+                    <li class="has-dropdown"><a href="gallery.html">ছবিঘর</a></li>
+                    <li><a href="blog.html">ব্লগ</a></li>
+                    <li class="has-dropdown">
+                        <a href="#">কার্যক্রম</a>
+                        <ul class="dropdown">
+                            <li><a href="activities.html">নিয়মিত কার্যক্রম</a></li>
+                            <li><a href="competitions.html">প্রতিযোগিতা</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown"><a href="#">প্রোগ্রামসমূহ</a></li>
+                                        
+                    <li class="has-dropdown">
+                        <a href="#">যোগাযোগ</a>
+                        <ul class="dropdown">
+                            <li><a href="contact.html">যোগাযোগ করুন</a></li>
+                            <li><a href="book-program.html">প্রোগ্রাম বুকিং</a></li>
+                            <li><a href="links.html">সোশ্যাল মিডিয়া</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="#" class="btn btn-primary"><i class="fa-solid fa-user"></i> লগইন</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="comp-hero">
+        <div class="container comp-hero-content">
+            <h1 class="comp-title">প্রতিযোগিতা</h1>
+            <p class="comp-desc">প্রতিভা বিকাশের নতুন দিগন্ত — জাতীয় ও আন্তর্জাতিক মানের সুস্থ সংস্কৃতির প্রতিযোগিতা</p>
+        </div>
+    </div>
+
+    <!-- Active Competitions -->
+    <section class="comp-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>চলমান <span class="text-gradient">প্রতিযোগিতা</span></h2>
+                <p>আমাদের বর্তমান আয়োজনে অংশ নিয়ে আপনার সুপ্ত প্রতিভার বিকাশ ঘটান এবং জাতীয় পর্যায়ে নিজের মেধার স্বাক্ষর রাখুন।</p>
+            </div>
+
+            <div class="comp-grid">
+                <!-- Featured Competition Card -->
+                <div class="comp-card featured-card">
+                    <div class="comp-badge"><i class="fa-solid fa-circle"></i> রেজিস্ট্রেশন চলছে</div>
+                    <div class="comp-image">
+                        <!-- Used highly reliable image links -->
+                        <img src="https://images.unsplash.com/photo-1493225457124-a1a2a5f0119f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Islamic Song Competition" onerror="this.src='https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=800';">
+                    </div>
+                    <div class="comp-content">
+                        <h3>জাতীয় ইসলামী সংগীত প্রতিযোগিতা ২০২৬</h3>
+                        <p class="comp-text">দেশব্যাপী তরুণ প্রতিভাদের খুঁজে বের করার সর্ববৃহৎ আয়োজন। শিশু ও কিশোরদের জন্য আলাদা বিভাগে অংশগ্রহণ করার সুযোগ। সুস্থ সংস্কৃতির ধারক হতে আজই যোগ দিন এবং আপনার মেধার স্বাক্ষর রাখুন।</p>
+                        
+                        <div class="comp-meta-grid">
+                            <div class="meta-box">
+                                <div class="meta-icon"><i class="fa-regular fa-calendar-check"></i></div>
+                                <div class="meta-info">
+                                    <span class="meta-label">আবেদনের শেষ তারিখ</span>
+                                    <span class="meta-value">১৫ সেপ্টেম্বর, ২০২৬</span>
+                                </div>
+                            </div>
+                            <div class="meta-box">
+                                <div class="meta-icon"><i class="fa-solid fa-trophy"></i></div>
+                                <div class="meta-info">
+                                    <span class="meta-label">প্রথম পুরস্কার</span>
+                                    <span class="meta-value">১ লক্ষ টাকা ও ক্রেস্ট</span>
+                                </div>
+                            </div>
+                            <div class="meta-box">
+                                <div class="meta-icon"><i class="fa-solid fa-users"></i></div>
+                                <div class="meta-info">
+                                    <span class="meta-label">বয়সসীমা</span>
+                                    <span class="meta-value">৮ থেকে ২৫ বছর</span>
+                                </div>
+                            </div>
+                            <div class="meta-box">
+                                <div class="meta-icon"><i class="fa-solid fa-video"></i></div>
+                                <div class="meta-info">
+                                    <span class="meta-label">অংশগ্রহণের মাধ্যম</span>
+                                    <span class="meta-value">অনলাইন ও অফলাইন</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="comp-actions">
+                            <a href="competition-details.html" class="btn-primary">রেজিস্ট্রেশন করুন</a>
+                            <a href="competition-details.html" class="btn-outline">বিস্তারিত নিয়মাবলী</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Past Competitions -->
+    <section class="comp-section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>পূর্ববর্তী <span class="text-gradient">আয়োজনসমূহ</span></h2>
+                <p>আমাদের আয়োজিত সফল ও বর্ণাঢ্য প্রতিযোগিতাসমূহের এক ঝলক। যেখান থেকে উঠে এসেছে দেশের সেরা প্রতিভারা।</p>
+            </div>
+
+            <div class="comp-grid">
+                
+                <!-- Past Comp 1 -->
+                <div class="comp-card">
+                    <div class="comp-badge status-closed">সম্পন্ন (২০২৫)</div>
+                    <div class="comp-image">
+                        <img src="https://images.unsplash.com/photo-1505236858219-8359eb29e325?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Quran Comp" onerror="this.src='https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=800';">
+                    </div>
+                    <div class="comp-content">
+                        <h3>হিফজুল কুরআন ও ক্বিরাত প্রতিযোগিতা</h3>
+                        <p class="comp-text">সারাদেশ থেকে তিন সহস্রাধিক প্রতিযোগীর অংশগ্রহণে অনুষ্ঠিত একটি সফল আয়োজন। যেখানে দেশের সেরা ক্বারীগণ বিচারক হিসেবে উপস্থিত ছিলেন।</p>
+                        <div class="comp-actions">
+                            <a href="#" class="btn-outline" style="width: 100%;">বিজয়ীদের তালিকা দেখুন</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Past Comp 2 -->
+                <div class="comp-card">
+                    <div class="comp-badge status-closed">সম্পন্ন (২০২৪)</div>
+                    <div class="comp-image">
+                        <img src="https://images.unsplash.com/photo-1478147427282-58a87a120781?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Poem Comp" onerror="this.src='https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=800';">
+                    </div>
+                    <div class="comp-content">
+                        <h3>জাতীয় আবৃত্তি উৎসব</h3>
+                        <p class="comp-text">সুস্থ ধারার সাহিত্য ও আবৃত্তি চর্চায় দেশসেরা আবৃত্তিকারদের নিয়ে আয়োজিত উৎসব। স্কুল ও কলেজ পর্যায়ের শিক্ষার্থীরা এই আসরে অংশ নেয়।</p>
+                        <div class="comp-actions">
+                            <a href="#" class="btn-outline" style="width: 100%;">গ্যালারি দেখুন</a>
+                        </div>
+                    </div>
+                </div>
+                
+                 <!-- Past Comp 3 -->
+                <div class="comp-card">
+                    <div class="comp-badge status-closed">সম্পন্ন (২০২৩)</div>
+                    <div class="comp-image">
+                        <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Song Comp" onerror="this.src='https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=800';">
+                    </div>
+                    <div class="comp-content">
+                        <h3>কিশোর প্রতিভা অন্বেষণ</h3>
+                        <p class="comp-text">বিদ্যালয় পর্যায়ের ছাত্র-ছাত্রীদের নিয়ে আয়োজিত সর্ববৃহৎ দেশীয় সাংস্কৃতিক প্রতিযোগিতা। এতে সংগীত, আবৃত্তি ও অভিনয় বিভাগ ছিল।</p>
+                        <div class="comp-actions">
+                            <a href="#" class="btn-outline" style="width: 100%;">হাইলাইটস ভিডিও</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+<!-- Master Footer -->
+    <footer class="master-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Brand Section -->
+                <div class="footer-brand">
+                    <a href="index.html" class="logo" style="color: white; margin-bottom: 20px; display: inline-flex;">
+                        <div class="logo-icon"><i class="fa-solid fa-fire-flame-curved"></i></div>
+                        <div class="logo-text">সাইমুম<span>.org</span></div>
+                    </a>
+                    <p>সুস্থ সংস্কৃতির বিকাশ এবং মানবতার কল্যাণে ১৯৭৮ সাল থেকে নিরলসভাবে কাজ করে যাচ্ছে সাইমুম শিল্পীগোষ্ঠী।</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div class="footer-links">
+                    <h3>গুরুত্বপূর্ণ লিংক</h3>
+                    <ul>
+                        <li><a href="about.html"><i class="fa-solid fa-angle-right"></i> আমাদের সম্পর্কে</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> সাইমুম স্ট্রিম</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> সাইমুম একাডেমি</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> সাইমুম শপ</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> অনুদান / বাইতুল মাল</a></li>
+                    <li><a href="blog/submit.html"><i class="fa-solid fa-angle-right"></i> লেখা জমা দিন</a></li>
+                      </ul>
+                </div>
+                
+                <!-- Departments -->
+                <div class="footer-links">
+                    <h3>শাখা সমূহ</h3>
+                    <ul>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> সংগীত বিভাগ</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> থিয়েটার ও মঞ্চনাটক</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> ক্বিরাত বিভাগ</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> সাহিত্য ও প্রকাশনা</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Info -->
+                <div class="footer-contact">
+                    <h3>যোগাযোগ</h3>
+                    <ul>
+                        <li>
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>মিজান টাওয়ার, মগবাজার, ঢাকা, বাংলাদেশ</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-phone"></i>
+                            <span>+৮৮০ ১২৩৪-৫৬৭৮৯০</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>info@saimum.org</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container text-center">
+                <p>&copy; ২০২৬ সাইমুম শিল্পীগোষ্ঠী. সর্বস্বত্ব সংরক্ষিত।</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

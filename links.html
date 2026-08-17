@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>সোশ্যাল মিডিয়া | সাইমুম শিল্পীগোষ্ঠী</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Bengali:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    
+
+    
+
+
+    <style>
+        body { 
+            background: #f1f5f9; 
+            position: relative;
+            overflow-x: hidden;
+        }
+        
+        /* Decorative Background blobs */
+        body::before, body::after {
+            content: '';
+            position: fixed;
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            filter: blur(100px);
+            z-index: 0;
+            opacity: 0.5;
+            pointer-events: none;
+        }
+        body::before {
+            top: -100px;
+            left: -100px;
+            background: rgba(249, 115, 22, 0.2); /* Primary Orange */
+        }
+        body::after {
+            bottom: -100px;
+            right: -100px;
+            background: rgba(59, 130, 246, 0.2); /* Blue */
+        }
+
+        .links-hero {
+            background: url('https://images.unsplash.com/photo-1551818255-e6e10975bc17?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+            padding: 120px 20px 60px;
+            text-align: center;
+            color: white;
+            position: relative;
+            z-index: 2;
+        }
+
+        .links-hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.7));
+            z-index: 1;
+        }
+
+        .links-hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .links-title {
+            font-size: 48px;
+            font-weight: 800;
+            margin-bottom: 15px;
+            letter-spacing: -0.5px;
+            background: linear-gradient(to right, #fff, #cbd5e1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .links-desc {
+            font-size: 18px;
+            color: rgba(255,255,255,0.85);
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        .links-section {
+            padding: 60px 20px;
+            max-width: 1100px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 10;
+        }
+
+        .social-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 25px;
+        }
+
+        .social-card {
+            display: flex;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(20px);
+            padding: 25px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
+            border: 1px solid rgba(255,255,255, 0.5);
+            text-decoration: none;
+            color: #0f172a;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        /* Hover animation background */
+        .social-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            opacity: 0;
+            z-index: -1;
+            transition: opacity 0.4s ease;
+        }
+
+        .social-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+            color: white;
+            border-color: transparent;
+        }
+
+        .social-card:hover::before {
+            opacity: 1;
+        }
+
+        /* Platform specific gradients */
+        .social-card.youtube::before { background: linear-gradient(135deg, #FF0000, #cc0000); }
+        .social-card.facebook::before { background: linear-gradient(135deg, #1877F2, #0b59c2); }
+        .social-card.instagram::before { background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); }
+        .social-card.twitter::before { background: linear-gradient(135deg, #14171A, #000000); }
+        .social-card.linkedin::before { background: linear-gradient(135deg, #0A66C2, #004182); }
+        .social-card.apple::before { background: linear-gradient(135deg, #fa243c, #c7162b); }
+        .social-card.telegram::before { background: linear-gradient(135deg, #229ED9, #1b82b3); }
+        .social-card.googleplay::before { background: linear-gradient(135deg, #3bccff, #34a853, #fbbc04, #ea4335); }
+
+        .social-icon-box {
+            width: 65px;
+            height: 65px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            color: white;
+            margin-right: 20px;
+            transition: all 0.4s ease;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+
+        .social-card.youtube .social-icon-box { background: #FF0000; }
+        .social-card.facebook .social-icon-box { background: #1877F2; }
+        .social-card.instagram .social-icon-box { background: linear-gradient(45deg, #f09433, #dc2743, #bc1888); }
+        .social-card.twitter .social-icon-box { background: #000; }
+        .social-card.linkedin .social-icon-box { background: #0A66C2; }
+        .social-card.apple .social-icon-box { background: #fa243c; }
+        .social-card.telegram .social-icon-box { background: #229ED9; }
+        .social-card.googleplay .social-icon-box { background: #414141; }
+
+        .social-card:hover .social-icon-box {
+            background: rgba(255, 255, 255, 0.2) !important;
+            box-shadow: none;
+            transform: rotate(-10deg) scale(1.1);
+        }
+
+        .social-content {
+            flex-grow: 1;
+        }
+
+        .social-content h3 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 4px;
+            transition: color 0.4s ease;
+        }
+
+        .social-content p {
+            color: #64748b;
+            font-size: 14px;
+            margin: 0;
+            line-height: 1.4;
+            transition: color 0.4s ease;
+        }
+
+        .social-card:hover .social-content h3,
+        .social-card:hover .social-content p {
+            color: rgba(255, 255, 255, 0.95);
+        }
+
+        .social-arrow {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #f1f5f9;
+            color: #94a3b8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            transition: all 0.4s ease;
+        }
+
+        .social-card:hover .social-arrow {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            transform: translateX(5px);
+        }
+
+        /* Pulse animation for the main logo */
+        .links-brand {
+            width: 90px;
+            height: 90px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            color: white;
+            margin: 0 auto 20px;
+            box-shadow: 0 0 0 0 rgba(249, 115, 22, 0.7);
+            animation: pulse-orange 2s infinite;
+        }
+
+        @keyframes pulse-orange {
+            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(249, 115, 22, 0.7); }
+            70% { transform: scale(1); box-shadow: 0 0 0 20px rgba(249, 115, 22, 0); }
+            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(249, 115, 22, 0); }
+        }
+
+        @media (max-width: 768px) {
+            .social-grid {
+                grid-template-columns: 1fr;
+            }
+            .links-hero {
+                padding: 100px 20px 80px;
+            }
+        }
+    </style>
+
+</head>
+<body>
+<!-- Top Ecosystem Bar -->
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <div class="ecosystem-links">
+                <a href="#"><i class="fa-solid fa-play"></i> সাইমুম স্ট্রিম</a>
+                <a href="#"><i class="fa-solid fa-graduation-cap"></i> সাইমুম একাডেমি</a>
+                <a href="#"><i class="fa-solid fa-bag-shopping"></i> সাইমুম শপ</a>
+                <a href="#"><i class="fa-solid fa-hand-holding-heart"></i> অনুদান / বাইতুল মাল</a>
+            </div>
+            <div class="top-bar-right">
+                <div class="language-switcher">
+                    <span><img src="https://flagcdn.com/w20/bd.png" alt="BD Flag" class="flag-icon"> বাংলা</span> <i class="fa-solid fa-chevron-down"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <header class="main-header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon"><i class="fa-solid fa-fire-flame-curved"></i></div>
+                <div class="logo-text">সাইমুম<span>.org</span></div>
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li class="has-dropdown">
+                        <a href="#">পরিচিতি</a>
+                        <ul class="dropdown">
+                            <li><a href="about.html">আমাদের সম্পর্কে</a></li>
+                            <li><a href="founders.html">প্রতিষ্ঠাতা সদস্যবৃন্দ</a></li>
+                            <li><a href="directors.html">পরিচালকবৃন্দ</a></li>
+                            <li><a href="management.html">পরিচালনা পর্ষদ</a></li>
+                            <li><a href="past-management.html">বিগত পরিচালনা পর্ষদ</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="#">সাংস্কৃতিক ব্যক্তিবর্গ</a>
+                        <ul class="dropdown">
+                            <li><a href="lyricists.html">জনপ্রিয় গীতিকারবৃন্দ</a></li>
+                            <li><a href="composers.html">জনপ্রিয় সুরকারবৃন্দ</a></li>
+                            <li><a href="artists.html">জনপ্রিয় শিল্পীবৃন্দ</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="#">বিভাগসমূহ</a>
+                        <ul class="dropdown">
+                            <li><a href="departments/shishu-songit.html">শিশু সঙ্গীত বিভাগ</a></li>
+                            <li><a href="departments/kishor-songit.html">কিশোর সঙ্গীত বিভাগ</a></li>
+                            <li><a href="departments/boro-songit.html">বড় সঙ্গীত বিভাগ</a></li>
+                            <li><a href="departments/abriti.html">আবৃত্তি ও উপস্থাপনা বিভাগ</a></li>
+                            <li><a href="departments/qirat.html">কিরাত বিভাগ</a></li>
+                            <li><a href="departments/theatre.html">থিয়েটার বিভাগ</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown"><a href="#">প্রকাশনা</a></li>
+                    <li class="has-dropdown"><a href="gallery.html">ছবিঘর</a></li>
+                    <li><a href="blog.html">ব্লগ</a></li>
+                    <li class="has-dropdown">
+                        <a href="#">কার্যক্রম</a>
+                        <ul class="dropdown">
+                            <li><a href="activities.html">নিয়মিত কার্যক্রম</a></li>
+                            <li><a href="competitions.html">প্রতিযোগিতা</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown"><a href="#">প্রোগ্রামসমূহ</a></li>
+                                        
+                    <li class="has-dropdown">
+                        <a href="#">যোগাযোগ</a>
+                        <ul class="dropdown">
+                            <li><a href="contact.html">যোগাযোগ করুন</a></li>
+                            <li><a href="book-program.html">প্রোগ্রাম বুকিং</a></li>
+                            <li><a href="links.html">সোশ্যাল মিডিয়া</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="#" class="btn btn-primary"><i class="fa-solid fa-user"></i> লগইন</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="links-hero">
+        <div class="container links-hero-content">
+            <div class="links-brand"><i class="fa-solid fa-fire-flame-curved"></i></div>
+            <h1 class="links-title">সোশ্যাল মিডিয়া</h1>
+            <p class="links-desc">সাইমুম শিল্পীগোষ্ঠীর সকল অফিসিয়াল সোশ্যাল মিডিয়া প্ল্যাটফর্মে যুক্ত থাকুন এবং আমাদের নিয়মিত আপডেট পান।</p>
+        </div>
+    </div>
+
+    <!-- Links Section -->
+    <section class="links-section">
+        <div class="social-grid">
+            
+            <a href="https://www.youtube.com/c/saimumshilpigosthiofficial?sub_confirmation=1" target="_blank" class="social-card youtube">
+                <div class="social-icon-box"><i class="fa-brands fa-youtube"></i></div>
+                <div class="social-content">
+                    <h3>YouTube</h3>
+                    <p>নতুন অডিও ও ভিডিও গান উপভোগ করুন</p>
+                </div>
+                <div class="social-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+            </a>
+
+            <a href="https://www.facebook.com/saimum1978" target="_blank" class="social-card facebook">
+                <div class="social-icon-box"><i class="fa-brands fa-facebook-f"></i></div>
+                <div class="social-content">
+                    <h3>Facebook</h3>
+                    <p>ইভেন্ট ও লাইভ আপডেট পেতে যুক্ত থাকুন</p>
+                </div>
+                <div class="social-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+            </a>
+
+            <a href="https://instagram.com/SaimumShilpigosthi" target="_blank" class="social-card instagram">
+                <div class="social-icon-box"><i class="fa-brands fa-instagram"></i></div>
+                <div class="social-content">
+                    <h3>Instagram</h3>
+                    <p>অনুষ্ঠানের পর্দার আড়ালের চমৎকার ছবি</p>
+                </div>
+                <div class="social-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+            </a>
+
+            <a href="https://twitter.com/saimum1978" target="_blank" class="social-card twitter">
+                <div class="social-icon-box"><i class="fa-brands fa-x-twitter"></i></div>
+                <div class="social-content">
+                    <h3>X (Twitter)</h3>
+                    <p>সর্বশেষ সংবাদ ও আপডেটের জন্য ফলো করুন</p>
+                </div>
+                <div class="social-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+            </a>
+
+            <a href="https://bd.linkedin.com/company/saimumshilpigosthi" target="_blank" class="social-card linkedin">
+                <div class="social-icon-box"><i class="fa-brands fa-linkedin-in"></i></div>
+                <div class="social-content">
+                    <h3>LinkedIn</h3>
+                    <p>আমাদের প্রফেশনাল নেটওয়ার্কের সাথে যুক্ত হোন</p>
+                </div>
+                <div class="social-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+            </a>
+
+            <a href="https://music.apple.com/us/artist/1580638561" target="_blank" class="social-card apple">
+                <div class="social-icon-box"><i class="fa-brands fa-apple"></i></div>
+                <div class="social-content">
+                    <h3>Apple Music</h3>
+                    <p>অ্যাপল মিউজিকে শুনুন এক্সক্লুসিভ রিলিজগুলো</p>
+                </div>
+                <div class="social-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+            </a>
+
+            <a href="https://t.me/saimumshilpigosthi" target="_blank" class="social-card telegram">
+                <div class="social-icon-box"><i class="fa-brands fa-telegram"></i></div>
+                <div class="social-content">
+                    <h3>Telegram</h3>
+                    <p>টেলিগ্রাম চ্যানেলে যুক্ত হয়ে দ্রুত আপডেট পান</p>
+                </div>
+                <div class="social-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+            </a>
+
+            <a href="https://play.google.com/store/apps/details?id=com.saimum.saimummusic" target="_blank" class="social-card googleplay">
+                <div class="social-icon-box"><i class="fa-brands fa-google-play"></i></div>
+                <div class="social-content">
+                    <h3>Saimum Music</h3>
+                    <p>আমাদের নিজস্ব মিউজিক অ্যাপটি ডাউনলোড করুন</p>
+                </div>
+                <div class="social-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+            </a>
+            
+        </div>
+    </section>
+
+<!-- Master Footer -->
+    <footer class="master-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Brand Section -->
+                <div class="footer-brand">
+                    <a href="index.html" class="logo" style="color: white; margin-bottom: 20px; display: inline-flex;">
+                        <div class="logo-icon"><i class="fa-solid fa-fire-flame-curved"></i></div>
+                        <div class="logo-text">সাইমুম<span>.org</span></div>
+                    </a>
+                    <p>সুস্থ সংস্কৃতির বিকাশ এবং মানবতার কল্যাণে ১৯৭৮ সাল থেকে নিরলসভাবে কাজ করে যাচ্ছে সাইমুম শিল্পীগোষ্ঠী।</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div class="footer-links">
+                    <h3>গুরুত্বপূর্ণ লিংক</h3>
+                    <ul>
+                        <li><a href="about.html"><i class="fa-solid fa-angle-right"></i> আমাদের সম্পর্কে</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> সাইমুম স্ট্রিম</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> সাইমুম একাডেমি</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> সাইমুম শপ</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> অনুদান / বাইতুল মাল</a></li>
+                    <li><a href="blog/submit.html"><i class="fa-solid fa-angle-right"></i> লেখা জমা দিন</a></li>
+                      </ul>
+                </div>
+                
+                <!-- Departments -->
+                <div class="footer-links">
+                    <h3>শাখা সমূহ</h3>
+                    <ul>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> সংগীত বিভাগ</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> থিয়েটার ও মঞ্চনাটক</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> ক্বিরাত বিভাগ</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> সাহিত্য ও প্রকাশনা</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Info -->
+                <div class="footer-contact">
+                    <h3>যোগাযোগ</h3>
+                    <ul>
+                        <li>
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>মিজান টাওয়ার, মগবাজার, ঢাকা, বাংলাদেশ</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-phone"></i>
+                            <span>+৮৮০ ১২৩৪-৫৬৭৮৯০</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>info@saimum.org</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container text-center">
+                <p>&copy; ২০২৬ সাইমুম শিল্পীগোষ্ঠী. সর্বস্বত্ব সংরক্ষিত।</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

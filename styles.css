@@ -299,13 +299,13 @@ ul {
 
 .main-nav ul {
     display: flex;
-    gap: 32px;
+    gap: 18px;
     align-items: center;
 }
 
 .main-nav a {
-    font-weight: 500;
-    font-size: 15px;
+    font-weight: 600;
+    font-size: 16px;
     color: var(--text-main);
     position: relative;
 }
@@ -376,7 +376,7 @@ ul {
 .dropdown a {
     display: block;
     padding: 10px 20px;
-    font-size: 15px;
+    font-size: 16px;
     color: var(--text-main);
     transition: var(--transition);
 }
