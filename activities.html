@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>আমাদের কার্যক্রম - Saimum Artist Portal</title>
+    <meta name="description" content="Central portal of Saimum Shilpigosthi.">
+    
+    <!-- Google Fonts: Noto Sans Bengali & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Top Ecosystem Bar -->
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <div class="ecosystem-links">
+                <a href="#"><i class="fa-solid fa-play"></i> সাইমুম স্ট্রিম</a>
+                <a href="#"><i class="fa-solid fa-graduation-cap"></i> সাইমুম একাডেমি</a>
+                <a href="#"><i class="fa-solid fa-bag-shopping"></i> সাইমুম শপ</a>
+                <a href="#"><i class="fa-solid fa-hand-holding-heart"></i> অনুদান / বাইতুল মাল</a>
+            </div>
+            <div class="top-bar-right">
+                <div class="language-switcher">
+                    <span><img src="https://flagcdn.com/w20/bd.png" alt="BD Flag" class="flag-icon"> বাংলা</span> <i class="fa-solid fa-chevron-down"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <header class="main-header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon"><i class="fa-solid fa-fire-flame-curved"></i></div>
+                <div class="logo-text">সাইমুম<span>.org</span></div>
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li class="has-dropdown">
+                        <a href="#">পরিচিতি</a>
+                                                                                                                        <ul class="dropdown">
+                            <li><a href="about.html">আমাদের সম্পর্কে</a></li>
+                            <li><a href="founders.html">প্রতিষ্ঠাতা সদস্যবৃন্দ</a></li>
+                            <li><a href="directors.html">পরিচালকবৃন্দ</a></li>
+                            <li><a href="management.html">পরিচালনা পর্ষদ</a></li>
+                            <li><a href="past-management.html">বিগত পরিচালনা পর্ষদ</a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                    <li class="has-dropdown">
+                        <a href="#">সাংস্কৃতিক ব্যক্তিবর্গ</a>
+                        <ul class="dropdown">
+                            <li><a href="lyricists.html">জনপ্রিয় গীতিকারবৃন্দ</a></li>
+                            <li><a href="composers.html">জনপ্রিয় সুরকারবৃন্দ</a></li>
+                            <li><a href="artists.html">জনপ্রিয় শিল্পীবৃন্দ</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="#">বিভাগসমূহ</a>
+                        <ul class="dropdown">
+                            <li><a href="departments/shishu-songit.html">শিশু সঙ্গীত বিভাগ</a></li>
+                            <li><a href="departments/kishor-songit.html">কিশোর সঙ্গীত বিভাগ</a></li>
+                            <li><a href="departments/boro-songit.html">বড় সঙ্গীত বিভাগ</a></li>
+                            <li><a href="departments/abriti.html">আবৃত্তি ও উপস্থাপনা বিভাগ</a></li>
+                            <li><a href="departments/qirat.html">কিরাত বিভাগ</a></li>
+                            <li><a href="departments/theatre.html">থিয়েটার বিভাগ</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="#">প্রকাশনা</a>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="#">গ্যালারি</a>
+                    </li>
+                    <li><a href="#">ব্লগ</a></li>
+                    <li class="has-dropdown">
+                        <a href="activities.html">কার্যক্রম</a>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="#">প্রোগ্রাম ও প্রদর্শনী</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="#" class="btn btn-primary"><i class="fa-solid fa-user"></i> লগইন</a>
+            </div>
+        </div>
+    </header>
+    <!-- Custom CSS for Activities Page -->
+    <style>
+        /* Activities Hero Banner */
+                .activities-hero-banner {
+            position: relative;
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.85) 0%, rgba(30, 41, 59, 0.7) 100%), url('https://images.unsplash.com/photo-1470225620780-dba8ba36b745?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            padding: 160px 0 100px; /* Padding pushes content down, so we don't need margin-top */
+            text-align: center;
+            color: white;
+            /* Removed margin-top: 80px which was causing the white gap */
+        }
+
+.activities-title {
+            font-size: 54px;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 20px;
+            text-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+
+        .activities-title span {
+            color: var(--primary-color);
+        }
+
+        .activities-subtitle {
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 750px;
+            margin: 0 auto;
+            line-height: 1.6;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        /* Filter Categories */
+        .filter-container {
+            margin-top: -30px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .filter-nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            background: white;
+            padding: 20px 30px;
+            border-radius: 50px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            width: max-content;
+            margin: 0 auto 40px;
+            border: 1px solid rgba(0,0,0,0.02);
+        }
+
+        .filter-btn {
+            background: transparent;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 30px;
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--text-main);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .filter-btn:hover, .filter-btn.active {
+            background: var(--primary-color);
+            color: white;
+            box-shadow: 0 5px 15px rgba(249, 115, 22, 0.3);
+            transform: translateY(-2px);
+        }
+
+        /* Activity Grid */
+        .activity-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 30px;
+            padding: 40px 0 80px;
+        }
+
+        .activity-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: all 0.4s ease;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid rgba(0,0,0,0.03);
+        }
+
+        .activity-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .activity-image {
+            position: relative;
+            height: 220px;
+            overflow: hidden;
+        }
+
+        .activity-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .activity-card:hover .activity-image img {
+            transform: scale(1.08);
+        }
+
+        .activity-category {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(255, 255, 255, 0.95);
+            color: var(--primary-color);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 800;
+            text-transform: uppercase;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            backdrop-filter: blur(5px);
+        }
+
+        .activity-content {
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        .activity-date {
+            font-size: 13px;
+            font-weight: 700;
+            color: #64748b;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .activity-title-card {
+            font-size: 22px;
+            font-weight: 800;
+            color: var(--text-main);
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+
+        .activity-desc {
+            color: var(--text-light);
+            font-size: 15px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            flex: 1;
+        }
+
+        .activity-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-top: 1px dashed rgba(0,0,0,0.1);
+            padding-top: 15px;
+            margin-top: auto;
+        }
+
+        .activity-location {
+            font-size: 13px;
+            color: #64748b;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-weight: 600;
+        }
+
+        .btn-read-more {
+            color: var(--primary-color);
+            font-weight: 700;
+            font-size: 14px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            transition: all 0.3s;
+        }
+
+        .btn-read-more:hover {
+            gap: 8px;
+        }
+
+        @media (max-width: 768px) {
+            .filter-nav {
+                width: 90%;
+                border-radius: 20px;
+                padding: 15px;
+            }
+        }
+    </style>
+
+    <!-- Hero Section -->
+    <section class="activities-hero-banner">
+        <div class="container">
+            <h1 class="activities-title">আমাদের <span>কার্যক্রম</span></h1>
+            <p class="activities-subtitle">
+                ইসলামী সংস্কৃতির সুস্থ ধারা বিকাশে সাইমুম শিল্পীগোষ্ঠী বছরজুড়ে দেশ ও দেশের বাইরে নানাবিধ সাংস্কৃতিক ও সামাজিক কার্যক্রম পরিচালনা করে থাকে।
+            </p>
+        </div>
+    </section>
+
+    <!-- Filter Categories -->
+    <div class="container filter-container">
+        <div class="filter-nav">
+            <button class="filter-btn active">সব কার্যক্রম</button>
+            <button class="filter-btn">কনসার্ট</button>
+            <button class="filter-btn">কর্মশালা</button>
+            <button class="filter-btn">সামাজিক কাজ</button>
+            <button class="filter-btn">আন্তর্জাতিক ট্যুর</button>
+        </div>
+    </div>
+
+    <!-- Activity Grid -->
+    <section class="container">
+        <div class="activity-grid">
+            <!-- Card 1 -->
+            <div class="activity-card">
+                <div class="activity-image">
+                    <img src="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Activity">
+                    <span class="activity-category">কনসার্ট</span>
+                </div>
+                <div class="activity-content">
+                    <div class="activity-date"><i class="fa-regular fa-calendar"></i> ১৬ ডিসেম্বর, ২০২৪</div>
+                    <h3 class="activity-title-card"><a href="activity-details.html" style="color:inherit; text-decoration:none;">মহান বিজয় দিবস কনসার্ট ২০২৪</a></h3>
+                    <p class="activity-desc">বিজয় দিবস উপলক্ষ্যে বাংলাদেশ শিল্পকলা একাডেমিতে আয়োজিত বিশেষ সাংস্কৃতিক সন্ধ্যা এবং লাইভ পারফরম্যান্স।</p>
+                    <div class="activity-footer">
+                        <span class="activity-location"><i class="fa-solid fa-location-dot"></i> ঢাকা, বাংলাদেশ</span>
+                        <a href="activity-details.html" class="btn-read-more">বিস্তারিত <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="activity-card">
+                <div class="activity-image">
+                    <img src="https://images.unsplash.com/photo-1544928147-79a2dbc1f389?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Activity">
+                    <span class="activity-category">কর্মশালা</span>
+                </div>
+                <div class="activity-content">
+                    <div class="activity-date"><i class="fa-regular fa-calendar"></i> ১২ অক্টোবর, ২০২৪</div>
+                    <h3 class="activity-title-card"><a href="activity-details.html" style="color:inherit; text-decoration:none;">৩ দিনব্যাপী মিউজিক প্রোডাকশন কর্মশালা</a></h3>
+                    <p class="activity-desc">নতুন প্রজন্মের শিল্পীদের জন্য আধুনিক সাউন্ড ডিজাইন ও স্টুডিও প্রোডাকশনের ওপর প্রফেশনাল ওয়ার্কশপ।</p>
+                    <div class="activity-footer">
+                        <span class="activity-location"><i class="fa-solid fa-location-dot"></i> সাইমুম স্টুডিও</span>
+                        <a href="activity-details.html" class="btn-read-more">বিস্তারিত <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="activity-card">
+                <div class="activity-image">
+                    <img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Activity">
+                    <span class="activity-category">আন্তর্জাতিক ট্যুর</span>
+                </div>
+                <div class="activity-content">
+                    <div class="activity-date"><i class="fa-regular fa-calendar"></i> ৫ আগস্ট, ২০২৪</div>
+                    <h3 class="activity-title-card"><a href="activity-details.html" style="color:inherit; text-decoration:none;">ইউরোপ ট্যুর: ইসলামিক আর্ট ফেস্টিভ্যাল</a></h3>
+                    <p class="activity-desc">লন্ডনের বিখ্যাত ইসলামিক আর্ট ফেস্টিভ্যালে বাংলাদেশের প্রতিনিধিত্ব এবং মনোমুগ্ধকর পরিবেশনা।</p>
+                    <div class="activity-footer">
+                        <span class="activity-location"><i class="fa-solid fa-location-dot"></i> লন্ডন, ইউকে</span>
+                        <a href="activity-details.html" class="btn-read-more">বিস্তারিত <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="activity-card">
+                <div class="activity-image">
+                    <img src="https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Activity">
+                    <span class="activity-category">সামাজিক কাজ</span>
+                </div>
+                <div class="activity-content">
+                    <div class="activity-date"><i class="fa-regular fa-calendar"></i> ২০ জুন, ২০২৪</div>
+                    <h3 class="activity-title-card"><a href="activity-details.html" style="color:inherit; text-decoration:none;">বন্যা দুর্গতদের মাঝে ত্রাণ বিতরণ</a></h3>
+                    <p class="activity-desc">সিলেটের বন্যা কবলিত এলাকায় সাইমুম চ্যারিটি ফান্ডের উদ্যোগে ত্রাণ ও চিকিৎসা সহায়তা প্রদান।</p>
+                    <div class="activity-footer">
+                        <span class="activity-location"><i class="fa-solid fa-location-dot"></i> সিলেট, বাংলাদেশ</span>
+                        <a href="activity-details.html" class="btn-read-more">বিস্তারিত <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="activity-card">
+                <div class="activity-image">
+                    <img src="https://images.unsplash.com/photo-1511367461989-f85a21fda167?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Activity">
+                    <span class="activity-category">কনসার্ট</span>
+                </div>
+                <div class="activity-content">
+                    <div class="activity-date"><i class="fa-regular fa-calendar"></i> ১ মে, ২০২৪</div>
+                    <h3 class="activity-title-card"><a href="activity-details.html" style="color:inherit; text-decoration:none;">আন্তর্জাতিক শ্রমিক দিবস সম্মাননা</a></h3>
+                    <p class="activity-desc">শ্রমিকদের সম্মানে আয়োজিত বিশেষ ইসলামিক কালচারাল ইভেন্ট এবং গুণীজন সংবর্ধনা অনুষ্ঠান।</p>
+                    <div class="activity-footer">
+                        <span class="activity-location"><i class="fa-solid fa-location-dot"></i> ঢাকা, বাংলাদেশ</span>
+                        <a href="activity-details.html" class="btn-read-more">বিস্তারিত <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="activity-card">
+                <div class="activity-image">
+                    <img src="https://images.unsplash.com/photo-1558008258-3256797b43f3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Activity">
+                    <span class="activity-category">কর্মশালা</span>
+                </div>
+                <div class="activity-content">
+                    <div class="activity-date"><i class="fa-regular fa-calendar"></i> ১৫ মার্চ, ২০২৪</div>
+                    <h3 class="activity-title-card"><a href="activity-details.html" style="color:inherit; text-decoration:none;">আবৃত্তি ও উপস্থাপনা প্রশিক্ষণ</a></h3>
+                    <p class="activity-desc">দেশের স্বনামধন্য উপস্থাপকদের উপস্থিতিতে তিন সপ্তাহব্যাপী আবৃত্তি ও শুদ্ধ উচ্চারণ কর্মশালা।</p>
+                    <div class="activity-footer">
+                        <span class="activity-location"><i class="fa-solid fa-location-dot"></i> সাইমুম একাডেমি</span>
+                        <a href="activity-details.html" class="btn-read-more">বিস্তারিত <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pagination -->
+        <div style="text-align: center; margin-bottom: 80px;">
+            <a href="#" class="btn btn-primary" style="padding: 15px 40px; border-radius: 30px; box-shadow: 0 10px 20px rgba(249,115,22,0.2);">আরও কার্যক্রম লোড করুন</a>
+        </div>
+    </section>
+<footer class="master-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Brand Section -->
+                <div class="footer-brand">
+                    <a href="index.html" class="logo" style="color: white; margin-bottom: 20px; display: inline-flex;">
+                        <div class="logo-icon"><i class="fa-solid fa-fire-flame-curved"></i></div>
+                        <div class="logo-text">সাইমুম<span>.org</span></div>
+                    </a>
+                    <p>সুস্থ সংস্কৃতির বিকাশ এবং মানবতার কল্যাণে ১৯৭৮ সাল থেকে নিরলসভাবে কাজ করে যাচ্ছে সাইমুম শিল্পীগোষ্ঠী।</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div class="footer-links">
+                    <h3>গুরুত্বপূর্ণ লিংক</h3>
+                    <ul>
+                        <li><a href="about.html"><i class="fa-solid fa-angle-right"></i> আমাদের সম্পর্কে</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> সাইমুম স্ট্রিম</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> সাইমুম একাডেমি</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> সাইমুম শপ</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> অনুদান / বাইতুল মাল</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Departments -->
+                <div class="footer-links">
+                    <h3>শাখা সমূহ</h3>
+                    <ul>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> সংগীত বিভাগ</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> থিয়েটার ও মঞ্চনাটক</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> ক্বিরাত বিভাগ</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> সাহিত্য ও প্রকাশনা</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Info -->
+                <div class="footer-contact">
+                    <h3>যোগাযোগ</h3>
+                    <ul>
+                        <li>
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>মিজান টাওয়ার, মগবাজার, ঢাকা, বাংলাদেশ</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-phone"></i>
+                            <span>+৮৮০ ১২৩৪-৫৬৭৮৯০</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>info@saimum.org</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container text-center">
+                <p>&copy; ২০২৬ সাইমুম শিল্পীগোষ্ঠী. সর্বস্বত্ব সংরক্ষিত।</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Slider Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const slides = document.querySelectorAll('.hero .slide');
+            let currentSlide = 0;
+            
+            // Ken Burns style smooth fade & zoom every 6 seconds
+            setInterval(() => {
+                slides[currentSlide].classList.remove('active');
+                currentSlide = (currentSlide + 1) % slides.length;
+                slides[currentSlide].classList.add('active');
+            }, 6000);
+        });
+    </script>
+
+</body>
+</html>
