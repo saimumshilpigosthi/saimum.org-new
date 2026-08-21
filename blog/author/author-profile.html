@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>নতুন ইউজার - সাইমুম ব্লগ</title>
+    <meta name="description" content="Central portal of Saimum Shilpigosthi.">
+    
+    <!-- Google Fonts: Noto Sans Bengali & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../styles.css">
+
+    <style>
+        body { background: #f8fafc; }
+
+        /* Premium Horizontal Author Hero */
+        .author-hero-premium {
+            background: url('https://images.unsplash.com/photo-1517842645767-c639042777db?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+            padding: 160px 20px 60px;
+            color: white;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 60px;
+        }
+        .author-hero-premium::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: linear-gradient(to right, rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.6));
+            z-index: 1;
+        }
+
+        .author-hero-grid {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .author-hero-avatar {
+            flex-shrink: 0;
+        }
+        .author-hero-avatar img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 6px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+        }
+
+        .author-hero-info {
+            flex: 1;
+        }
+
+        .author-hero-info h1 {
+            font-size: 46px;
+            font-weight: 900;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            letter-spacing: -1px;
+        }
+        .author-hero-info h1 .verify-badge {
+            color: #38bdf8;
+            font-size: 28px;
+        }
+
+        .author-hero-bio {
+            font-size: 18px;
+            color: rgba(255,255,255,0.85);
+            line-height: 1.8;
+            max-width: 750px;
+            margin-bottom: 40px;
+        }
+
+        /* Simple Bar for Stats & Socials */
+        .author-hero-bottom {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .author-hero-stats {
+            display: flex;
+            gap: 40px;
+            padding-right: 40px;
+            border-right: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .stat-box {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .stat-box strong {
+            font-size: 32px;
+            font-weight: 900;
+            color: white;
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+        .stat-box span {
+            font-size: 13px;
+            color: rgba(255,255,255,0.7);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+
+        .author-hero-socials {
+            display: flex;
+            gap: 15px;
+        }
+        .author-hero-socials a {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.1);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            transition: all 0.3s;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        .author-hero-socials a:hover {
+            background: var(--primary-color);
+            border-color: var(--primary-color);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(242, 101, 34, 0.3);
+        }
+
+        @media (max-width: 992px) {
+            .author-hero-grid {
+                flex-direction: column;
+                text-align: center;
+                gap: 40px;
+            }
+            .author-hero-info h1 {
+                justify-content: center;
+            }
+            .author-hero-bottom {
+                flex-direction: column;
+                gap: 30px;
+            }
+            .author-hero-stats {
+                padding-right: 0;
+                border-right: none;
+                border-bottom: 1px solid rgba(255,255,255,0.2);
+                padding-bottom: 30px;
+                justify-content: center;
+            }
+            .stat-box {
+                align-items: center;
+            }
+        }
+
+        /* Blogs Section */
+        .section-title {
+            font-size: 28px;
+            font-weight: 800;
+            color: #0f172a;
+            margin-bottom: 30px;
+            text-align: center;
+            position: relative;
+        }
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: var(--primary-color);
+            margin: 15px auto 0;
+            border-radius: 2px;
+        }
+
+        .author-blogs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        /* Modern Blog Card */
+        .blog-card {
+            background: white;
+            border-radius: 20px;
+            border: 1px solid #e2e8f0;
+            overflow: hidden;
+            transition: all 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+        .blog-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(242, 101, 34, 0.1);
+            border-color: rgba(242, 101, 34, 0.3);
+        }
+        .blog-thumb {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+        .blog-content {
+            padding: 25px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .blog-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            font-size: 13px;
+            font-weight: 600;
+        }
+        .blog-meta .cat {
+            background: rgba(242, 101, 34, 0.1);
+            color: var(--primary-color);
+            padding: 4px 12px;
+            border-radius: 20px;
+        }
+        .blog-meta .date {
+            color: #94a3b8;
+        }
+        .blog-title {
+            font-size: 20px;
+            font-weight: 800;
+            color: #0f172a;
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+        .blog-title a {
+            color: inherit;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .blog-title a:hover {
+            color: var(--primary-color);
+        }
+        .blog-excerpt {
+            font-size: 15px;
+            color: #64748b;
+            line-height: 1.7;
+            margin-bottom: 25px;
+            flex: 1;
+        }
+        .blog-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 15px;
+            border-top: 1px dashed #e2e8f0;
+        }
+        .read-more {
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: gap 0.3s;
+        }
+        .read-more:hover {
+            gap: 12px;
+        }
+        .views {
+            color: #94a3b8;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        /* Ensure blogs grid container is 1200px max-width */
+        .blogs-section-wrapper {
+            max-width: 1200px;
+            margin: 0 auto 100px;
+            padding: 0 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Ecosystem Bar -->
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <div class="ecosystem-links">
+                <a href="#"><i class="fa-solid fa-play"></i> সাইমুম স্ট্রিম</a>
+                <a href="#"><i class="fa-solid fa-graduation-cap"></i> সাইমুম একাডেমি</a>
+                <a href="#"><i class="fa-solid fa-bag-shopping"></i> সাইমুম শপ</a>
+                <a href="#"><i class="fa-solid fa-hand-holding-heart"></i> অনুদান / বাইতুল মাল</a>
+            </div>
+            <div class="top-bar-right">
+                <div class="language-switcher">
+                    <span><img src="https://flagcdn.com/w20/bd.png" alt="BD Flag" class="flag-icon"> বাংলা</span> <i class="fa-solid fa-chevron-down"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <header class="main-header">
+        <div class="container header-container">
+            <a href="../../index.html" class="logo">
+                <div class="logo-icon"><i class="fa-solid fa-fire-flame-curved"></i></div>
+                <div class="logo-text">সাইমুম<span>.org</span></div>
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li class="has-dropdown">
+                        <a href="#">পরিচিতি</a>
+                                                                                                                        <ul class="dropdown">
+                            <li><a href="../../about.html">আমাদের সম্পর্কে</a></li>
+                            <li><a href="../../founders.html">প্রতিষ্ঠাতা সদস্যবৃন্দ</a></li>
+                            <li><a href="../../directors.html">পরিচালকবৃন্দ</a></li>
+                            <li><a href="../../management.html">পরিচালনা পর্ষদ</a></li>
+                            <li><a href="../../past-management.html">বিগত পরিচালনা পর্ষদ</a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                    <li class="has-dropdown">
+                        <a href="#">ব্যক্তিবর্গ</a>
+                        <ul class="dropdown">
+                            <li><a href="../../lyricists.html">গীতিকার</a></li>
+                            <li><a href="../../composers.html">সুরকার</a></li>
+                            <li><a href="../../artists.html">শিল্পী</a></li>
+                            <li><a href="playwrights.html">নাট্যকার</a></li>
+                            <li><a href="writers.html">কবি</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="#">বিভাগ</a>
+                        <ul class="dropdown">
+                            <li><a href="../../departments/shishu-songit.html">শিশু সঙ্গীত বিভাগ</a></li>
+                            <li><a href="../../departments/kishor-songit.html">কিশোর সঙ্গীত বিভাগ</a></li>
+                            <li><a href="../../departments/boro-songit.html">বড় সঙ্গীত বিভাগ</a></li>
+                            <li><a href="../../departments/abriti.html">আবৃত্তি ও উপস্থাপনা বিভাগ</a></li>
+                            <li><a href="../../departments/qirat.html">কিরাত বিভাগ</a></li>
+                            <li><a href="../../departments/theatre.html">থিয়েটার বিভাগ</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="#">প্রকাশনা</a>
+                        <ul class="dropdown">
+                            <li><a href="albums.html">অ্যালবাম</a></li>
+                            <li><a href="lyrics.html">লিরিক</a></li>
+                            <li><a href="natok.html">নাটক</a></li>
+                            <li><a href="poems.html">কবিতা</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="../../gallery.html">ছবিঘর</a>
+                    </li>
+                    <li><a href="../../blog.html">ব্লগ</a></li>
+                    <li class="has-dropdown">
+                        <a href="#">কার্যক্রম</a>
+                        <ul class="dropdown">
+                            <li><a href="../../activities.html">নিয়মিত কার্যক্রম</a></li>
+                            <li><a href="../../competitions.html">প্রতিযোগিতা</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="#">ইভেন্ট</a>
+                        <ul class="dropdown">
+                            <li><a href="../../programs.html">প্রোগ্রাম</a></li>
+                            <li><a href="../../exhibitions.html">প্রদর্শনী</a></li>
+                        </ul>
+                    </li>
+                                        
+                    <li class="has-dropdown">
+                        <a href="#">যোগাযোগ</a>
+                        <ul class="dropdown">
+                            <li><a href="../../contact.html">যোগাযোগ করুন</a></li>
+                            <li><a href="../../book-program.html">প্রোগ্রাম বুকিং</a></li>
+                            <li><a href="../../links.html">সোশ্যাল মিডিয়া</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="../../login.html" class="btn btn-primary"><i class="fa-solid fa-user"></i> লগইন</a>
+            </div>
+        </div>
+    </header>
+    <!-- Premium Horizontal Hero Section -->
+    <div class="author-hero-premium">
+        <div class="container author-hero-grid">
+            <div class="author-hero-avatar">
+                <img src="https://ui-avatars.com/api/?name=New+User&background=0D8ABC&color=fff&size=250" alt="Author">
+            </div>
+            <div class="author-hero-info">
+                <h1>নতুন ইউজার <i class="fa-solid fa-circle-check verify-badge" title="ভেরিফাইড লেখক"></i></h1>
+                <p class="author-hero-bio">আমি একজন ফ্রিল্যান্স লেখক এবং সাহিত্যপ্রেমী। সুস্থ সংস্কৃতি, সমাজ সংস্কার এবং ইসলামের সঠিক বার্তা সবার মাঝে ছড়িয়ে দেওয়ার লক্ষ্যে সাইমুম ব্লগে নিয়মিত লেখালেখি করি। অবসর সময়ে বই পড়তে এবং নতুন বিষয় নিয়ে গবেষণা করতে ভালোবাসি।</p>
+                
+                <div class="author-hero-bottom">
+                    <div class="author-hero-stats">
+                        <div class="stat-box">
+                            <strong>০২</strong>
+                            <span>প্রকাশিত ব্লগ</span>
+                        </div>
+                        <div class="stat-box">
+                            <strong>২.১k</strong>
+                            <span>মোট ভিউজ</span>
+                        </div>
+                    </div>
+                    <div class="author-hero-socials">
+                        <a href="#" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" title="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#" title="Website"><i class="fa-solid fa-globe"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Blogs Section Wrapper -->
+    <div class="blogs-section-wrapper">
+
+        <!-- Blogs Section -->
+        <div class="author-blogs-section">
+            <h2 class="section-title">লেখকের প্রকাশিত ব্লগসমূহ</h2>
+            
+            <div class="author-blogs-grid">
+                <!-- Blog Card 1 -->
+                <article class="blog-card">
+                    <img src="https://picsum.photos/seed/saimum1/600/400" alt="Blog" class="blog-thumb">
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="cat">প্রবন্ধ</span>
+                            <span class="date"><i class="fa-regular fa-calendar"></i> ১৫ আগস্ট, ২০২৬</span>
+                        </div>
+                        <h3 class="blog-title"><a href="#">সুস্থ সংস্কৃতির বিকাশে তরুণদের ভূমিকা ও আমাদের করণীয়</a></h3>
+                        <p class="blog-excerpt">আজকের তরুন সমাজ কিভাবে অপসংস্কৃতির ছোবল থেকে নিজেদের রক্ষা করে একটি সুস্থ সমাজ গড়তে পারে তার বিস্তারিত বিশ্লেষণ...</p>
+                        
+                        <div class="blog-footer">
+                            <a href="#" class="read-more">বিস্তারিত পড়ুন <i class="fa-solid fa-arrow-right"></i></a>
+                            <span class="views"><i class="fa-regular fa-eye"></i> ১.২k</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Blog Card 2 -->
+                <article class="blog-card">
+                    <img src="https://picsum.photos/seed/saimum2/600/400" alt="Blog" class="blog-thumb">
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="cat">সংগীত</span>
+                            <span class="date"><i class="fa-regular fa-calendar"></i> ২ জুলাই, ২০২৬</span>
+                        </div>
+                        <h3 class="blog-title"><a href="#">ইসলামি সঙ্গীতে সুর ও কথার মেলবন্ধন</a></h3>
+                        <p class="blog-excerpt">একটি সার্থক ইসলামী সঙ্গীতে সুর এবং কথার গুরুত্ব কতটা এবং কীভাবে এটি মানুষের মনে প্রভাব ফেলে...</p>
+                        
+                        <div class="blog-footer">
+                            <a href="#" class="read-more">বিস্তারিত পড়ুন <i class="fa-solid fa-arrow-right"></i></a>
+                            <span class="views"><i class="fa-regular fa-eye"></i> ৮৫০</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+
+    </div>
+<!-- Master Footer -->
+    <footer class="master-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Brand Section -->
+                <div class="footer-brand">
+                    <a href="../../index.html" class="logo" style="color: white; margin-bottom: 20px; display: inline-flex;">
+                        <div class="logo-icon"><i class="fa-solid fa-fire-flame-curved"></i></div>
+                        <div class="logo-text">সাইমুম<span>.org</span></div>
+                    </a>
+                    <p>সুস্থ সংস্কৃতির বিকাশ এবং মানবতার কল্যাণে ১৯৭৮ সাল থেকে নিরলসভাবে কাজ করে যাচ্ছে সাইমুম শিল্পীগোষ্ঠী।</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div class="footer-links">
+                    <h3>গুরুত্বপূর্ণ লিংক</h3>
+                    <ul>
+                        <li><a href="../../about.html"><i class="fa-solid fa-angle-right"></i> আমাদের সম্পর্কে</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> সাইমুম স্ট্রিম</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> সাইমুম একাডেমি</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> সাইমুম শপ</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> অনুদান / বাইতুল মাল</a></li>
+                    <li><a href="../submit.html"><i class="fa-solid fa-angle-right"></i> লেখা জমা দিন</a></li>
+                      </ul>
+                </div>
+                
+                <!-- Departments -->
+                <div class="footer-links">
+                    <h3>শাখা সমূহ</h3>
+                    <ul>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> সংগীত বিভাগ</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> থিয়েটার ও মঞ্চনাটক</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> ক্বিরাত বিভাগ</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> সাহিত্য ও প্রকাশনা</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Info -->
+                <div class="footer-contact">
+                    <h3>যোগাযোগ</h3>
+                    <ul>
+                        <li>
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>মিজান টাওয়ার, মগবাজার, ঢাকা, বাংলাদেশ</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-phone"></i>
+                            <span>+৮৮০ ১২৩৪-৫৬৭৮৯০</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>info@saimum.org</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container text-center">
+                <p>&copy; ২০২৬ সাইমুম শিল্পীগোষ্ঠী. সর্বস্বত্ব সংরক্ষিত।</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Slider Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const slides = document.querySelectorAll('.hero .slide');
+            let currentSlide = 0;
+            
+            // Ken Burns style smooth fade & zoom every 6 seconds
+            setInterval(() => {
+                slides[currentSlide].classList.remove('active');
+                currentSlide = (currentSlide + 1) % slides.length;
+                slides[currentSlide].classList.add('active');
+            }, 6000);
+        });
+    </script>
+
+</body>
+</html>

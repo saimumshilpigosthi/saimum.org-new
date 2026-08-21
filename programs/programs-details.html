@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>প্রোগ্রাম ও প্রদর্শনী | সাইমুম শিল্পীগোষ্ঠী</title>
+    <meta name="description" content="Central portal of Saimum Shilpigosthi.">
+    
+    <!-- Google Fonts: Noto Sans Bengali & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../styles.css">
+
+    <style>
+        .page-header {
+            background-image: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.95)), url('https://images.unsplash.com/photo-1492684223066-81342ee5ff30?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');
+            padding: 120px 0 100px; 
+            text-align: center; 
+            color: white;
+            border-bottom: 4px solid var(--primary-color);
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .search-container {
+            max-width: 900px;
+            margin: -45px auto 40px;
+            position: relative;
+            z-index: 10;
+            padding: 0 20px;
+        }
+
+        .search-box-premium {
+            display: flex;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+            padding: 10px;
+            border: 1px solid rgba(0,0,0,0.05);
+            align-items: center;
+        }
+
+        .search-filter {
+            padding: 0 20px;
+            border-right: 1px solid #e2e8f0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #64748b;
+            font-weight: 600;
+        }
+
+        .search-filter select {
+            border: none;
+            outline: none;
+            background: transparent;
+            font-size: 15px;
+            font-family: inherit;
+            color: var(--text-main);
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .search-box-premium input {
+            flex: 1;
+            border: none;
+            outline: none;
+            padding: 15px 25px;
+            font-size: 18px;
+            color: var(--text-main);
+            font-family: inherit;
+        }
+
+        .search-box-premium input::placeholder {
+            color: #94a3b8;
+        }
+
+        .search-box-premium button {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            padding: 15px 40px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .search-box-premium button:hover {
+            background: #e14d0a;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(242, 101, 34, 0.3);
+        }
+
+        /* Program Cards */
+        .programs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .program-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid rgba(0,0,0,0.05);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+            transition: all 0.3s;
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+            color: inherit;
+            position: relative;
+        }
+
+        .program-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(242, 101, 34, 0.1);
+            border-color: rgba(242, 101, 34, 0.2);
+        }
+
+        .program-poster {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .program-type-badge {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(15, 23, 42, 0.85);
+            backdrop-filter: blur(5px);
+            color: white;
+            padding: 6px 14px;
+            border-radius: 30px;
+            font-size: 13px;
+            font-weight: 600;
+            z-index: 2;
+        }
+        
+        .exhibition-badge {
+            background: rgba(242, 101, 34, 0.85);
+        }
+
+        .vt-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: #10b981;
+            color: white;
+            width: 35px;
+            height: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-size: 14px;
+            z-index: 2;
+            box-shadow: 0 4px 10px rgba(16, 185, 129, 0.4);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(16, 185, 129, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+        }
+
+        .program-content {
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        .program-meta {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            color: #64748b;
+            font-size: 13px;
+            font-weight: 500;
+            margin-bottom: 12px;
+        }
+
+        .program-meta i {
+            color: var(--primary-color);
+            opacity: 0.8;
+            margin-right: 5px;
+        }
+
+        .program-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 15px;
+            line-height: 1.4;
+            transition: color 0.3s;
+        }
+
+        .program-card:hover .program-title {
+            color: var(--primary-color);
+        }
+
+        .program-footer {
+            margin-top: auto;
+            padding-top: 15px;
+            border-top: 1px dashed #e2e8f0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .btn-view-details {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .btn-view-details i {
+            transition: transform 0.3s;
+        }
+        
+        .program-card:hover .btn-view-details i {
+            transform: translateX(5px);
+        }
+
+        .pagination {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 50px;
+        }
+
+        .page-btn {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            border: 1px solid #e2e8f0;
+            background: white;
+            color: #475569;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .page-btn:hover, .page-btn.active {
+            background: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+            box-shadow: 0 5px 15px rgba(242, 101, 34, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .search-box-premium {
+                flex-direction: column;
+                padding: 15px;
+            }
+            .search-filter {
+                width: 100%;
+                border-right: none;
+                border-bottom: 1px solid #e2e8f0;
+                padding-bottom: 15px;
+                margin-bottom: 5px;
+            }
+            .search-box-premium button {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .cinematic-row, .cinematic-row:nth-child(even) {
+                flex-direction: column;
+                gap: 30px;
+            }
+            .cine-image-wrapper img {
+                height: 300px;
+            }
+            .cine-stats {
+                flex-wrap: wrap;
+            }
+            .cine-actions {
+                flex-direction: column;
+            }
+            .btn-cine-vr, .btn-cine-details {
+                text-align: center;
+                justify-content: center;
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <!-- Top Ecosystem Bar -->
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <div class="ecosystem-links">
+                <a href="#"><i class="fa-solid fa-play"></i> সাইমুম স্ট্রিম</a>
+                <a href="#"><i class="fa-solid fa-graduation-cap"></i> সাইমুম একাডেমি</a>
+                <a href="#"><i class="fa-solid fa-bag-shopping"></i> সাইমুম শপ</a>
+                <a href="#"><i class="fa-solid fa-hand-holding-heart"></i> অনুদান / বাইতুল মাল</a>
+            </div>
+            <div class="top-bar-right">
+                <div class="language-switcher">
+                    <span><img src="https://flagcdn.com/w20/bd.png" alt="BD Flag" class="flag-icon"> বাংলা</span> <i class="fa-solid fa-chevron-down"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <header class="main-header">
+        <div class="container header-container">
+            <a href="../index.html" class="logo">
+                <img src="../Images/logo.png" alt="Saimum Logo" class="main-logo-img">
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li class="has-dropdown">
+                        <a href="#">পরিচিতি</a>
+                                                                                                                        <ul class="dropdown">
+                            <li><a href="../about.html">আমাদের সম্পর্কে</a></li>
+                            <li><a href="../founders.html">প্রতিষ্ঠাতা সদস্যবৃন্দ</a></li>
+                            <li><a href="../directors.html">পরিচালকবৃন্দ</a></li>
+                            <li><a href="../management.html">পরিচালনা পর্ষদ</a></li>
+                            <li><a href="../past-management.html">বিগত পরিচালনা পর্ষদ</a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                    <li class="has-dropdown">
+                        <a href="#">ব্যক্তিবর্গ</a>
+                        <ul class="dropdown">
+                            <li><a href="../lyricists.html">গীতিকার</a></li>
+                            <li><a href="../composers.html">সুরকার</a></li>
+                            <li><a href="../artists.html">শিল্পী</a></li>
+                            <li><a href="../playwrights.html">নাট্যকার</a></li>
+                            <li><a href="../writers.html">কবি</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="#">বিভাগ</a>
+                        <ul class="dropdown">
+                            <li><a href="../departments/shishu-songit.html">শিশু সঙ্গীত বিভাগ</a></li>
+                            <li><a href="../departments/kishor-songit.html">কিশোর সঙ্গীত বিভাগ</a></li>
+                            <li><a href="../departments/boro-songit.html">বড় সঙ্গীত বিভাগ</a></li>
+                            <li><a href="../departments/abriti.html">আবৃত্তি ও উপস্থাপনা বিভাগ</a></li>
+                            <li><a href="../departments/qirat.html">কিরাত বিভাগ</a></li>
+                            <li><a href="../departments/theatre.html">থিয়েটার বিভাগ</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="#">প্রকাশনা</a>
+                        <ul class="dropdown">
+                            <li><a href="../albums.html">অ্যালবাম</a></li>
+                            <li><a href="../lyrics.html">লিরিক</a></li>
+                            <li><a href="../natok.html">নাটক</a></li>
+                            <li><a href="../poems.html">কবিতা</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="../gallery.html">ছবিঘর</a>
+                    </li>
+                    <li><a href="../blog.html">ব্লগ</a></li>
+                    <li class="has-dropdown">
+                        <a href="#">কার্যক্রম</a>
+                        <ul class="dropdown">
+                            <li><a href="../activities.html">নিয়মিত কার্যক্রম</a></li>
+                            <li><a href="../competitions.html">প্রতিযোগিতা</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="#">ইভেন্ট</a>
+                        <ul class="dropdown">
+                            <li><a href="../programs.html">প্রোগ্রাম</a></li>
+                            <li><a href="../exhibitions.html">প্রদর্শনী</a></li>
+                        </ul>
+                    </li>
+                                        
+                    <li class="has-dropdown">
+                        <a href="#">যোগাযোগ</a>
+                        <ul class="dropdown">
+                            <li><a href="../contact.html">যোগাযোগ করুন</a></li>
+                            <li><a href="../book-program.html">প্রোগ্রাম বুকিং</a></li>
+                            <li><a href="../links.html">সোশ্যাল মিডিয়া</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="../login.html" class="btn btn-primary"><i class="fa-solid fa-user"></i> লগইন</a>
+            </div>
+        </div>
+    </header>
+    <style>
+        /* Details Hero Section */
+        .details-hero {
+            position: relative;
+            height: 60vh;
+            min-height: 500px;
+            display: flex;
+            align-items: flex-end;
+            padding-bottom: 60px;
+            background-image: linear-gradient(to top, rgba(15, 23, 42, 1) 0%, rgba(15, 23, 42, 0.4) 50%, rgba(15, 23, 42, 0.1) 100%), url('https://picsum.photos/seed/event1/1920/1080');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            border-bottom: 5px solid var(--primary-color);
+        }
+
+        .details-hero-content {
+            position: relative;
+            z-index: 10;
+            max-width: 900px;
+        }
+
+        .event-type-badge {
+            display: inline-block;
+            background: var(--primary-color);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 14px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 15px rgba(242, 101, 34, 0.4);
+            letter-spacing: 1px;
+        }
+
+        .details-title {
+            font-size: 56px;
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+            text-shadow: 0 5px 15px rgba(0,0,0,0.5);
+        }
+
+        .details-meta-row {
+            display: flex;
+            gap: 30px;
+            font-size: 18px;
+            font-weight: 500;
+            color: #cbd5e1;
+            text-shadow: 0 2px 5px rgba(0,0,0,0.5);
+        }
+        
+        .details-meta-row i {
+            color: var(--primary-color);
+            margin-right: 8px;
+        }
+
+        /* Main Content Area */
+        .program-content-section {
+            padding: 80px 0;
+            background: #f8fafc;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 50px;
+        }
+
+        .main-article {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .article-title {
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--text-main);
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .article-body {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #475569;
+        }
+        
+        .article-body p {
+            margin-bottom: 20px;
+        }
+
+        .performers-list {
+            margin-top: 40px;
+        }
+        
+        .performer-tag {
+            display: inline-block;
+            background: #f1f5f9;
+            color: #334155;
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-weight: 600;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s;
+        }
+        
+        .performer-tag:hover {
+            background: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+
+        /* Sidebar */
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .sidebar-widget {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .widget-title {
+            font-size: 20px;
+            font-weight: 800;
+            color: var(--text-main);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .widget-title i {
+            color: var(--primary-color);
+        }
+
+        /* VR Button Action */
+        .vr-action-card {
+            background: linear-gradient(135deg, #0f172a, #1e293b);
+            color: white;
+            text-align: center;
+            border: none;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .vr-action-card::before {
+            content: '\f06e';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            font-size: 150px;
+            color: rgba(255,255,255,0.03);
+            right: -20px;
+            bottom: -30px;
+            transform: rotate(-15deg);
+        }
+
+        .vr-btn-large {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            background: #10b981;
+            color: white;
+            padding: 18px 20px;
+            border-radius: 12px;
+            font-size: 18px;
+            font-weight: 800;
+            text-decoration: none;
+            transition: all 0.3s;
+            box-shadow: 0 10px 20px rgba(16, 185, 129, 0.3);
+            margin-top: 20px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .vr-btn-large:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 25px rgba(16, 185, 129, 0.5);
+            background: #0ea5e9;
+        }
+        
+        .vr-btn-large i {
+            animation: vr-pulse 2s infinite;
+        }
+
+        @keyframes vr-pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+
+        /* Video Embed */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 */
+            height: 0;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        /* Gallery Section */
+        .gallery-preview {
+            margin-top: 60px;
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin-top: 25px;
+        }
+        
+        .gallery-item {
+            border-radius: 12px;
+            overflow: hidden;
+            height: 150px;
+            cursor: pointer;
+            position: relative;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        .gallery-item::after {
+            content: '\f00e';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            inset: 0;
+            background: rgba(242, 101, 34, 0.7);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        
+        .gallery-item:hover::after {
+            opacity: 1;
+        }
+        
+        .more-photos {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #e2e8f0;
+            color: var(--text-main);
+            font-weight: 700;
+            font-size: 18px;
+            text-decoration: none;
+        }
+        
+        .more-photos:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        @media (max-width: 992px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+            .details-title {
+                font-size: 40px;
+            }
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+
+    <section class="details-hero">
+        <div class="container">
+            <div class="details-hero-content">
+                <div class="event-type-badge">মেগা ইভেন্ট</div>
+                <h1 class="details-title">সাইমুম জাতীয় সাংস্কৃতিক উৎসব ২০২৩</h1>
+                <div class="details-meta-row">
+                    <span><i class="fa-regular fa-calendar"></i> ২৫ - ২৯ ডিসেম্বর, ২০২৩</span>
+                    <span><i class="fa-solid fa-location-dot"></i> বঙ্গবন্ধু আন্তর্জাতিক সম্মেলন কেন্দ্র (BICC)</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="program-content-section">
+        <div class="container">
+            <div class="content-grid">
+                
+                <!-- Left: Main Article -->
+                <div class="main-article">
+                    <h2 class="article-title">ইভেন্ট সম্পর্কে বিস্তারিত</h2>
+                    <div class="article-body">
+                        <p>
+                            ৫ দিনব্যাপী বাংলাদেশের সর্ববৃহৎ ইসলামি সাংস্কৃতিক মেলা ও প্রদর্শনী। যেখানে ছিল ৫টি ভিন্ন ভিন্ন গ্যালারি, বিশাল ক্যালিগ্রাফি এক্সিবিশন, লাইভ পারফরম্যান্স এবং লক্ষাধিক দর্শনার্থীর মিলনমেলা।
+                        </p>
+                        <p>
+                            এই আয়োজনের মূল লক্ষ্য ছিল সুস্থ সংস্কৃতির বিকাশ এবং দেশীয় ঐতিহ্যের সাথে ইসলামিক মূল্যবোধের এক অপূর্ব সমন্বয় ঘটানো। প্রতিদিন সকাল ১০টা থেকে রাত ৮টা পর্যন্ত চলা এই উৎসবে দেশের শীর্ষস্থানীয় ইসলামী চিন্তাবিদ, শিল্পী এবং সাহিত্যিকরা অংশগ্রহণ করেন।
+                        </p>
+                        <p>
+                            বিশেষ আকর্ষণ হিসেবে ছিল <strong>৩৬০° ভার্চুয়াল গ্যালারি</strong>, যেখানে দর্শনার্থীরা ভিআর হেডসেটের মাধ্যমে ঐতিহাসিক মক্কা ও মদিনার ভার্চুয়াল ট্যুর উপভোগ করার সুযোগ পেয়েছেন। এছাড়া শিশু-কিশোরদের জন্য ছিল বিশেষ ক্যালিগ্রাফি কর্মশালা এবং প্রতিযোগিতা।
+                        </p>
+                    </div>
+
+                    <div class="performers-list">
+                        <h3 style="font-size: 20px; font-weight: 700; margin-bottom: 15px; color: var(--text-main);">বিশেষ পরিবেশনায়:</h3>
+                        <div>
+                            <a href="#" class="performer-tag">সাইমুম সঙ্গীত বিভাগ</a>
+                            <a href="#" class="performer-tag">সাইমুম থিয়েটার</a>
+                            <a href="#" class="performer-tag">আবু রায়হান</a>
+                            <a href="#" class="performer-tag">ওস্তাদ মোস্তফা তারেক</a>
+                            <a href="#" class="performer-tag">ক্বারি আবু সালেহ</a>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-preview">
+                        <h3 style="font-size: 24px; font-weight: 800; margin-bottom: 20px; color: var(--text-main);">ইভেন্ট গ্যালারি একনজরে</h3>
+                        <div class="gallery-grid">
+                            <div class="gallery-item"><img src="https://picsum.photos/seed/g1/400/300" alt="Gallery Image"></div>
+                            <div class="gallery-item"><img src="https://picsum.photos/seed/g2/400/300" alt="Gallery Image"></div>
+                            <div class="gallery-item"><img src="https://picsum.photos/seed/g3/400/300" alt="Gallery Image"></div>
+                            <a href="#" class="gallery-item more-photos">
+                                +২৪ আরো ছবি
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Sidebar -->
+                <div class="sidebar">
+                    
+                    <!-- VR Action Widget -->
+                    <div class="sidebar-widget vr-action-card">
+                        <h3 style="font-size: 22px; font-weight: 800; margin-bottom: 10px;">ইমারসিভ অভিজ্ঞতা</h3>
+                        <p style="color: #cbd5e1; font-size: 15px; line-height: 1.5;">আপনি কি ইভেন্টটি মিস করেছেন? কোনো সমস্যা নেই! আমাদের ৩৬০° ভার্চুয়াল ট্যুরের মাধ্যমে পুরো এক্সিবিশনটি ঘুরে দেখুন।</p>
+                        <a href="#" class="vr-btn-large">
+                            <i class="fa-solid fa-vr-cardboard"></i> ট্যুর শুরু করুন
+                        </a>
+                    </div>
+
+                    <!-- Video Highlight Widget -->
+                    <div class="sidebar-widget">
+                        <h3 class="widget-title"><i class="fa-brands fa-youtube" style="color: #ef4444;"></i> ভিডিও হাইলাইটস</h3>
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0" allowfullscreen></iframe>
+                        </div>
+                    </div>
+
+                    <!-- Info Summary Widget -->
+                    <div class="sidebar-widget" style="background: #f1f5f9; border: none;">
+                        <h3 class="widget-title"><i class="fa-solid fa-circle-info"></i> ইভেন্ট ইনফো</h3>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="padding: 12px 0; border-bottom: 1px dashed #cbd5e1; display: flex; justify-content: space-between;">
+                                <span style="color: #64748b; font-weight: 600;">ধরন:</span>
+                                <span style="font-weight: 700; color: var(--text-main);">মেগা ইভেন্ট</span>
+                            </li>
+                            <li style="padding: 12px 0; border-bottom: 1px dashed #cbd5e1; display: flex; justify-content: space-between;">
+                                <span style="color: #64748b; font-weight: 600;">সময়কাল:</span>
+                                <span style="font-weight: 700; color: var(--text-main);">৫ দিন</span>
+                            </li>
+                            <li style="padding: 12px 0; border-bottom: 1px dashed #cbd5e1; display: flex; justify-content: space-between;">
+                                <span style="color: #64748b; font-weight: 600;">দর্শনার্থী:</span>
+                                <span style="font-weight: 700; color: var(--text-main);">১ লাখ+</span>
+                            </li>
+                            <li style="padding: 12px 0; display: flex; justify-content: space-between;">
+                                <span style="color: #64748b; font-weight: 600;">অ্যালবাম:</span>
+                                <a href="#" style="font-weight: 700; color: var(--primary-color); text-decoration: none;">ফটো গ্যালারি দেখুন</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+<!-- Master Footer -->
+    <footer class="master-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Brand Section -->
+                <div class="footer-brand">
+                    <a href="../index.html" class="logo" style="color: white; margin-bottom: 20px; display: inline-flex;">
+                        <img src="../Images/logo.png" alt="Saimum Logo" class="main-logo-img">
+                    </a>
+                    <p>সুস্থ সংস্কৃতির বিকাশ এবং মানবতার কল্যাণে ১৯৭৮ সাল থেকে নিরলসভাবে কাজ করে যাচ্ছে সাইমুম শিল্পীগোষ্ঠী।</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div class="footer-links">
+                    <h3>গুরুত্বপূর্ণ লিংক</h3>
+                    <ul>
+                        <li><a href="../about.html"><i class="fa-solid fa-angle-right"></i> আমাদের সম্পর্কে</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> সাইমুম স্ট্রিম</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> সাইমুম একাডেমি</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> সাইমুম শপ</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> অনুদান / বাইতুল মাল</a></li>
+                    <li><a href="../blog/submit.html"><i class="fa-solid fa-angle-right"></i> লেখা জমা দিন</a></li>
+                      </ul>
+                </div>
+                
+                <!-- Departments -->
+                <div class="footer-links">
+                    <h3>শাখা সমূহ</h3>
+                    <ul>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> সংগীত বিভাগ</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> থিয়েটার ও মঞ্চনাটক</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> ক্বিরাত বিভাগ</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> সাহিত্য ও প্রকাশনা</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Info -->
+                <div class="footer-contact">
+                    <h3>যোগাযোগ</h3>
+                    <ul>
+                        <li>
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>মিজান টাওয়ার, মগবাজার, ঢাকা, বাংলাদেশ</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-phone"></i>
+                            <span>+৮৮০ ১২৩৪-৫৬৭৮৯০</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>info@saimum.org</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container text-center">
+                <p>&copy; ২০২৬ সাইমুম শিল্পীগোষ্ঠী. সর্বস্বত্ব সংরক্ষিত।</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>নতুন প্রভাতের ডাক এসেছে - লিরিক | সাইমুম শিল্পীগোষ্ঠী</title>
+    <meta name="description" content="Lyrics for 'Notun Provater Dak Eseche' by Saimum Shilpigosthi.">
+    
+    <!-- Google Fonts: Noto Sans Bengali & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../styles.css">
+    
+    <style>
+        /* Lyric Page Specific Styles */
+        body {
+            background-color: var(--bg-light);
+        }
+
+        .lyric-hero {
+            background-image: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.95)), url('https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            padding: 80px 0 60px;
+            color: white;
+            text-align: center;
+            border-bottom: 4px solid var(--primary-color);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .lyric-hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: url('https://www.transparenttextures.com/patterns/cubes.png');
+            opacity: 0.05;
+        }
+
+        .lyric-title {
+            font-size: 42px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            color: white;
+            position: relative;
+            z-index: 1;
+        }
+
+        .lyric-meta {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 30px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .lyric-meta-tag {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-size: 15px;
+            color: rgba(255, 255, 255, 0.9);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            backdrop-filter: blur(5px);
+        }
+
+        .lyric-meta-tag i {
+            color: var(--primary-color);
+        }
+
+        .stream-actions {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            position: relative;
+            z-index: 1;
+            margin-top: 10px;
+        }
+
+        .btn-stream {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 28px;
+            border-radius: 30px;
+            font-size: 15px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .btn-stream-yt {
+            background: #ef4444; /* YouTube red */
+            color: white;
+            box-shadow: 0 4px 15px rgba(239, 68, 68, 0.3);
+        }
+
+        .btn-stream-yt:hover {
+            background: white;
+            color: #ef4444;
+            transform: translateY(-2px);
+        }
+
+        .btn-stream-outline {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(5px);
+        }
+
+        .btn-stream-outline:hover {
+            background: white;
+            color: var(--text-main);
+            transform: translateY(-2px);
+        }
+
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        /* Lyrics Body */
+        .lyric-content-section {
+            padding: 60px 0 100px;
+        }
+
+        .lyric-paper {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 60px 80px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+            border: 1px solid rgba(0,0,0,0.03);
+            text-align: center;
+            position: relative;
+        }
+        
+        .lyric-paper::before {
+            content: '\f10d'; /* Quote left icon */
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            top: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 40px;
+            color: rgba(242, 101, 34, 0.1);
+        }
+
+        
+        .lyric-inline-meta {
+            margin-bottom: 30px;
+            padding-bottom: 25px;
+            border-bottom: 2px solid rgba(242, 101, 34, 0.1);
+            text-align: center;
+            font-size: 18px;
+            line-height: 1.8;
+            color: #64748b;
+        }
+
+        .lyric-inline-meta strong {
+            color: var(--primary-color);
+            font-weight: 700;
+            margin-right: 5px;
+        }
+
+        .lyric-inline-meta a {
+            color: #334155;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .lyric-inline-meta a:hover {
+            color: var(--primary-color);
+            text-decoration: underline;
+        }
+.lyric-text {
+            font-size: 24px;
+            line-height: 2.4;
+            color: #1e293b;
+            font-weight: 500;
+            margin-top: 30px;
+        }
+
+        .lyric-stanza {
+            margin-bottom: 45px;
+        }
+
+        .lyric-actions {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 1px dashed #e2e8f0;
+        }
+
+        .btn-lyric-action {
+            background: white;
+            border: 1px solid #cbd5e1;
+            color: #64748b;
+            padding: 12px 25px;
+            border-radius: 30px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-lyric-action:hover {
+            border-color: var(--primary-color);
+            color: var(--primary-color);
+            background: rgba(242, 101, 34, 0.05);
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .lyric-title {
+                font-size: 32px;
+            }
+            .lyric-paper {
+                padding: 40px 20px;
+            }
+            .lyric-text {
+                font-size: 20px;
+                line-height: 2.2;
+            }
+            
+            .lyric-meta-tag {
+                font-size: 13px;
+                padding: 6px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Ecosystem Bar -->
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <div class="ecosystem-links">
+                <a href="#"><i class="fa-solid fa-play"></i> সাইমুম স্ট্রিম</a>
+                <a href="#"><i class="fa-solid fa-graduation-cap"></i> সাইমুম একাডেমি</a>
+                <a href="#"><i class="fa-solid fa-bag-shopping"></i> সাইমুম শপ</a>
+                <a href="#"><i class="fa-solid fa-hand-holding-heart"></i> অনুদান / বাইতুল মাল</a>
+            </div>
+            <div class="top-bar-right">
+                <div class="language-switcher">
+                    <span><img src="https://flagcdn.com/w20/bd.png" alt="BD Flag" class="flag-icon"> বাংলা</span> <i class="fa-solid fa-chevron-down"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <header class="main-header">
+        <div class="container header-container">
+            <a href="../index.html" class="logo">
+                <img src="../Images/logo.png" alt="Saimum Logo" class="main-logo-img">
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li class="has-dropdown">
+                        <a href="#">পরিচিতি</a>
+                                                                                                                        <ul class="dropdown">
+                            <li><a href="../about.html">আমাদের সম্পর্কে</a></li>
+                            <li><a href="../founders.html">প্রতিষ্ঠাতা সদস্যবৃন্দ</a></li>
+                            <li><a href="../directors.html">পরিচালকবৃন্দ</a></li>
+                            <li><a href="../management.html">পরিচালনা পর্ষদ</a></li>
+                            <li><a href="../past-management.html">বিগত পরিচালনা পর্ষদ</a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                    <li class="has-dropdown">
+                        <a href="#">ব্যক্তিবর্গ</a>
+                        <ul class="dropdown">
+                            <li><a href="../lyricists.html">গীতিকার</a></li>
+                            <li><a href="../composers.html">সুরকার</a></li>
+                            <li><a href="../artists.html">শিল্পী</a></li>
+                            <li><a href="../playwrights.html">নাট্যকার</a></li>
+                            <li><a href="../writers.html">কবি</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="#">বিভাগ</a>
+                        <ul class="dropdown">
+                            <li><a href="../departments/shishu-songit.html">শিশু সঙ্গীত বিভাগ</a></li>
+                            <li><a href="../departments/kishor-songit.html">কিশোর সঙ্গীত বিভাগ</a></li>
+                            <li><a href="../departments/boro-songit.html">বড় সঙ্গীত বিভাগ</a></li>
+                            <li><a href="../departments/abriti.html">আবৃত্তি ও উপস্থাপনা বিভাগ</a></li>
+                            <li><a href="../departments/qirat.html">কিরাত বিভাগ</a></li>
+                            <li><a href="../departments/theatre.html">থিয়েটার বিভাগ</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="#">প্রকাশনা</a>
+                        <ul class="dropdown">
+                            <li><a href="../albums.html">অ্যালবাম</a></li>
+                            <li><a href="../lyrics.html">লিরিক</a></li>
+                            <li><a href="../natok.html">নাটক</a></li>
+                            <li><a href="../poems.html">কবিতা</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="../gallery.html">ছবিঘর</a>
+                    </li>
+                    <li><a href="../blog.html">ব্লগ</a></li>
+                    <li class="has-dropdown">
+                        <a href="#">কার্যক্রম</a>
+                        <ul class="dropdown">
+                            <li><a href="../activities.html">নিয়মিত কার্যক্রম</a></li>
+                            <li><a href="../competitions.html">প্রতিযোগিতা</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="#">ইভেন্ট</a>
+                        <ul class="dropdown">
+                            <li><a href="../programs.html">প্রোগ্রাম</a></li>
+                            <li><a href="../exhibitions.html">প্রদর্শনী</a></li>
+                        </ul>
+                    </li>
+                                        
+                    <li class="has-dropdown">
+                        <a href="#">যোগাযোগ</a>
+                        <ul class="dropdown">
+                            <li><a href="../contact.html">যোগাযোগ করুন</a></li>
+                            <li><a href="../book-program.html">প্রোগ্রাম বুকিং</a></li>
+                            <li><a href="../links.html">সোশ্যাল মিডিয়া</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="../login.html" class="btn btn-primary"><i class="fa-solid fa-user"></i> লগইন</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Lyric Hero Section -->
+    <section class="lyric-hero">
+        <div class="container">
+            <h1 class="lyric-title">নতুন প্রভাতের ডাক এসেছে</h1>
+            
+            <div class="lyric-meta">
+                <a href="../albums/album-details.html" class="lyric-meta-tag" style="text-decoration: none;" title="অ্যালবাম"><i class="fa-solid fa-record-vinyl"></i> পথ চলার গান</a>
+                <div class="lyric-meta-tag" title="অ্যালবাম নম্বর"><i class="fa-solid fa-compact-disc"></i> সাইমুম ১০২</div>
+            
+                <div class="lyric-meta-tag" style="background: rgba(242, 101, 34, 0.2); border-color: var(--primary-color);" title="ভিউ কাউন্ট"><i class="fa-solid fa-eye" style="color: white;"></i> ১,২৪৫ ভিউ</div>
+            </div>
+
+            <!-- External Stream Links -->
+            <div class="stream-actions">
+                <a href="#" class="btn-stream btn-stream-yt"><i class="fa-brands fa-youtube"></i> ইউটিউবে শুনুন</a>
+                <a href="#" class="btn-stream btn-stream-outline"><i class="fa-solid fa-play"></i> সাইমুম স্ট্রিমে শুনুন</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lyrics Content -->
+    <section class="lyric-content-section">
+        <div class="container">
+            <div class="lyric-paper">
+                
+
+                
+                <div class="lyric-text">
+                    <div class="lyric-inline-meta">
+                        <div><strong>কথা:</strong> <a href="#">মতিউর রহমান মল্লিক</a></div>
+                        <div><strong>সুর:</strong> <a href="#">মশিউর রহমান</a></div>
+                        <div><strong>শিল্পী:</strong> <a href="#">আবু রায়হান, মুহিব্বুল্লাহ</a></div>
+                    </div>
+
+                    <div class="lyric-stanza">
+                        নতুন প্রভাতের ডাক এসেছে<br>
+                        জাগো রে জাগো মুসলিম<br>
+                        আঁধার কেটে ঐ আলো হেসেছে<br>
+                        জাগো রে জাগো মুসলিম
+                    </div>
+
+                    <div class="lyric-stanza">
+                        কুরআনের আলো ঘরে ঘরে জ্বালো<br>
+                        হৃদয়ে হৃদয়ে ঈমান আনো<br>
+                        বাতিলের ভয় দূরে ফেলে দাও<br>
+                        সত্যের পথে ছুটে চলো
+                    </div>
+
+                    <div class="lyric-stanza">
+                        এসো ভাই এসো হাতে হাত রাখি<br>
+                        ভেদাভেদ সব ভুলে যাই<br>
+                        একই কালিমার ছায়াতলে আজ<br>
+                        নতুন সমাজ গড়ে তুলি ভাই
+                    </div>
+
+                    <div class="lyric-stanza">
+                        নতুন প্রভাতের ডাক এসেছে<br>
+                        জাগো রে জাগো মুসলিম<br>
+                        আঁধার কেটে ঐ আলো হেসেছে<br>
+                        জাগো রে জাগো মুসলিম
+                    </div>
+                </div>
+
+                <div class="lyric-actions">
+                    <button class="btn-lyric-action" onclick="alert('লিরিক কপি করা হয়েছে!')"><i class="fa-solid fa-copy"></i> কপি করুন</button>
+                    <button class="btn-lyric-action" onclick="window.print()"><i class="fa-solid fa-print"></i> প্রিন্ট করুন</button>
+                    <button class="btn-lyric-action"><i class="fa-solid fa-share-nodes"></i> শেয়ার করুন</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Master Footer -->
+    <footer class="master-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Brand Section -->
+                <div class="footer-brand">
+                    <a href="../index.html" class="logo" style="color: white; margin-bottom: 20px; display: inline-flex;">
+                        <img src="../Images/logo.png" alt="Saimum Logo" class="main-logo-img">
+                    </a>
+                    <p>সুস্থ সংস্কৃতির বিকাশ এবং মানবতার কল্যাণে ১৯৭৮ সাল থেকে নিরলসভাবে কাজ করে যাচ্ছে সাইমুম শিল্পীগোষ্ঠী।</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div class="footer-links">
+                    <h3>গুরুত্বপূর্ণ লিংক</h3>
+                    <ul>
+                        <li><a href="../about.html"><i class="fa-solid fa-angle-right"></i> আমাদের সম্পর্কে</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> সাইমুম স্ট্রিম</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> সাইমুম একাডেমি</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> সাইমুম শপ</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> অনুদান / বাইতুল মাল</a></li>
+                    <li><a href="../blog/submit.html"><i class="fa-solid fa-angle-right"></i> লেখা জমা দিন</a></li>
+                      </ul>
+                </div>
+                
+                <!-- Departments -->
+                <div class="footer-links">
+                    <h3>শাখা সমূহ</h3>
+                    <ul>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> সংগীত বিভাগ</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> থিয়েটার ও মঞ্চনাটক</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> ক্বিরাত বিভাগ</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> সাহিত্য ও প্রকাশনা</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Info -->
+                <div class="footer-contact">
+                    <h3>যোগাযোগ</h3>
+                    <ul>
+                        <li>
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>মিজান টাওয়ার, মগবাজার, ঢাকা, বাংলাদেশ</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-phone"></i>
+                            <span>+৮৮০ ১২৩৪-৫৬৭৮৯০</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>info@saimum.org</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container text-center">
+                <p>&copy; ২০২৬ সাইমুম শিল্পীগোষ্ঠী. সর্বস্বত্ব সংরক্ষিত।</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

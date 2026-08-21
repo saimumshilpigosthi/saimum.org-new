@@ -1111,3 +1111,9 @@ ul {
     margin-left: auto;
     margin-right: auto;
 }
+
+.main-logo-img {
+    height: 45px;
+    width: auto;
+    object-fit: contain;
+}

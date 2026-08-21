@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>নতুন লেখা জমা দিন | সাইমুম শিল্পীগোষ্ঠী</title>
+    <title>প্রকাশনার শর্তাবলী | সাইমুম শিল্পীগোষ্ঠী</title>
     <meta name="description" content="Central portal of Saimum Shilpigosthi.">
     
     <!-- Google Fonts: Noto Sans Bengali & Inter -->
@@ -18,258 +18,101 @@
     <link rel="stylesheet" href="../styles.css">
 
     <style>
-        body {
-            background: #f1f5f9; /* Soft background */
-        }
-        
-        
-        .submit-hero {
-            background: url('https://images.unsplash.com/photo-1517842645767-c639042777db?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+        .terms-hero {
+            background: url('https://images.unsplash.com/photo-1455390582262-044cdead27d4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
             padding: 100px 20px;
             text-align: center;
             color: white;
             position: relative;
             overflow: hidden;
         }
-
-        .submit-hero::before {
+        .terms-hero::before {
             content: '';
             position: absolute;
             top: 0; left: 0; right: 0; bottom: 0;
-            background: linear-gradient(to right, rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.4));
+            background: linear-gradient(to right, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.7));
             z-index: 1;
         }
-
-        .submit-hero-content {
+        .terms-hero-content {
             position: relative;
             z-index: 2;
         }
-
-        .submit-title {
+        .terms-title {
             font-size: 42px;
             font-weight: 800;
             margin-bottom: 15px;
         }
-
-        .submit-desc {
+        .terms-desc {
             font-size: 18px;
             color: rgba(255,255,255,0.7);
             max-width: 600px;
             margin: 0 auto;
             line-height: 1.6;
         }
-        
-        .submit-page-wrapper {
-            max-width: 1200px;
-            margin: 60px auto 100px;
-            padding: 0 20px;
+
+        .terms-section {
+            padding: 40px 0 80px;
+            background: #f8fafc;
         }
-
-        
-
-        .submit-form-card {
+        .terms-card {
             background: white;
-            border-radius: 24px;
+            border-radius: 20px;
             padding: 50px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.04);
-            border: 1px solid rgba(0,0,0,0.05);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.04);
+            max-width: 1200px;
+            margin: 0 auto;
+            border: 1px solid #e2e8f0;
         }
-
-        .form-group {
-            margin-bottom: 30px;
+        .terms-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
         }
-        .form-group label {
-            display: block;
+        .terms-list li {
+            position: relative;
+            padding-left: 35px;
+            margin-bottom: 25px;
             font-size: 16px;
-            font-weight: 700;
-            color: #1e293b;
-            margin-bottom: 10px;
-        }
-        .form-group label .required {
-            color: var(--primary-color);
-        }
-
-        /* Modern Input Styling */
-        .input-modern {
-            width: 100%;
-            padding: 16px 20px;
-            border: 2px solid #e2e8f0;
-            border-radius: 12px;
-            font-size: 16px;
-            font-family: inherit;
-            color: var(--text-main);
-            transition: all 0.3s;
-            background: #f8fafc;
-            outline: none;
-        }
-        .input-modern:focus {
-            border-color: var(--primary-color);
-            background: white;
-            box-shadow: 0 0 0 4px rgba(242, 101, 34, 0.1);
-        }
-
-        /* Drag and Drop Upload Zone */
-        .upload-dropzone {
-            border: 2px dashed #cbd5e1;
-            border-radius: 16px;
-            padding: 40px 20px;
-            text-align: center;
-            background: #f8fafc;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-        .upload-dropzone:hover {
-            border-color: var(--primary-color);
-            background: #fff7ed;
-        }
-        .upload-dropzone i {
-            font-size: 40px;
-            color: #94a3b8;
-            margin-bottom: 15px;
-            transition: color 0.3s;
-        }
-        .upload-dropzone:hover i {
-            color: var(--primary-color);
-        }
-        .upload-dropzone p {
-            font-size: 16px;
+            line-height: 1.8;
             color: #475569;
-            font-weight: 600;
-            margin-bottom: 8px;
-        }
-        .upload-dropzone p span {
-            color: var(--primary-color);
-        }
-        .upload-dropzone .sub-text {
-            font-size: 13px;
-            color: #94a3b8;
             font-weight: 500;
         }
-
-        /* Editor Box */
-        .editor-box {
-            border: 2px solid #e2e8f0;
-            border-radius: 12px;
-            overflow: hidden;
-            background: white;
-            transition: border-color 0.3s;
-        }
-        .editor-box:focus-within {
-            border-color: var(--primary-color);
-            box-shadow: 0 0 0 4px rgba(242, 101, 34, 0.1);
-        }
-        
-        .editor-toolbar {
-            background: #f8fafc;
-            border-bottom: 2px solid #e2e8f0;
-            padding: 10px 15px;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-        .toolbar-group {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-        .toolbar-group .divider {
-            width: 1px;
-            height: 20px;
-            background: #cbd5e1;
-            margin: 0 10px;
-        }
-        .editor-toolbar button {
-            background: transparent;
-            border: none;
-            width: 32px;
-            height: 32px;
-            border-radius: 6px;
-            color: #64748b;
-            font-size: 15px;
-            cursor: pointer;
-            transition: all 0.2s;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .editor-toolbar button:hover {
-            background: #e2e8f0;
+        .terms-list li::before {
+            content: '\f058';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            top: 4px;
             color: var(--primary-color);
+            font-size: 20px;
+        }
+        .terms-list li strong {
+            color: var(--text-main);
+            font-size: 17px;
+            display: block;
+            margin-bottom: 5px;
         }
         
-        .editor-textarea {
-            border: none !important;
-            border-radius: 0 !important;
-            background: white !important;
-            box-shadow: none !important;
-            min-height: 350px;
-            resize: vertical;
-        }
-
-        /* Submit Area */
-        .submit-action-area {
+        .accept-btn-wrapper {
+            text-align: center;
             margin-top: 40px;
-            background: rgba(242, 101, 34, 0.05);
-            padding: 25px;
-            border-radius: 16px;
-            border: 1px dashed rgba(242, 101, 34, 0.3);
+            padding-top: 30px;
+            border-top: 1px dashed #e2e8f0;
         }
-        .terms-checkbox {
-            display: flex;
-            align-items: flex-start;
-            gap: 12px;
-            cursor: pointer;
-            margin-bottom: 25px;
-        }
-        .terms-checkbox input[type="checkbox"] {
-            width: 22px;
-            height: 22px;
-            accent-color: var(--primary-color);
-            margin-top: 2px;
-            cursor: pointer;
-        }
-        .terms-checkbox span {
-            color: #475569;
-            font-size: 15px;
-            line-height: 1.6;
-        }
-        .terms-checkbox a {
-            color: var(--primary-color);
-            font-weight: 700;
-            text-decoration: none;
-        }
-        .terms-checkbox a:hover {
-            text-decoration: underline;
-        }
-
-        .btn-publish {
+        .btn-primary {
             background: var(--primary-color);
             color: white;
-            padding: 16px 40px;
+            padding: 15px 40px;
             border-radius: 30px;
-            border: none;
-            font-size: 18px;
-            font-weight: 800;
-            cursor: pointer;
-            width: 100%;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
+            text-decoration: none;
+            font-weight: 700;
+            display: inline-block;
             transition: all 0.3s;
-            box-shadow: 0 10px 20px rgba(242, 101, 34, 0.2);
         }
-        .btn-publish:hover {
-            background: #e14d0a;
+        .btn-primary:hover {
             transform: translateY(-3px);
-            box-shadow: 0 15px 30px rgba(242, 101, 34, 0.3);
-        }
-
-        @media (max-width: 768px) {
-            .submit-form-card {
-                padding: 30px 20px;
-            }
+            box-shadow: 0 10px 20px rgba(249, 115, 22, 0.3);
         }
     </style>
 </head>
@@ -375,90 +218,50 @@
             </div>
         </div>
     </header>
-    
-    <!-- Hero Section -->
-    <div class="submit-hero">
-        <div class="submit-hero-content container">
-            <h1 class="submit-title">আপনার লেখা জমা দিন</h1>
-            <p class="submit-desc">সাইমুম ব্লগে আপনার মৌলিক প্রবন্ধ, কবিতা, গল্প বা প্রাসঙ্গিক লেখা প্রকাশ করতে নিচের ফর্মটি পূরণ করুন।</p>
+    <div class="terms-hero">
+        <div class="terms-hero-content container">
+            <h1 class="terms-title">প্রকাশনার শর্তাবলী</h1>
+            <p class="terms-desc">সাইমুম ব্লগে লেখা জমা দেওয়ার পূর্বে অনুগ্রহ করে আমাদের নীতিমালা ও শর্তাবলীগুলো সতর্কতার সাথে পড়ে নিন।</p>
         </div>
     </div>
 
-    <div class="submit-page-wrapper">
-
-
-        <div class="submit-form-card">
-            <form onsubmit="event.preventDefault(); alert('আপনার লেখাটি সফলভাবে জমা দেওয়া হয়েছে! রিভিউ শেষে প্রকাশ করা হবে।'); window.location.href='profile.html';">
+    <section class="terms-section">
+        <div class="container">
+            <div class="terms-card">
+                <ul class="terms-list">
+                    <li>
+                        <strong>১. মৌলিকত্ব</strong>
+                        আপনার পাঠানো লেখাটি সম্পূর্ণ মৌলিক হতে হবে। অন্য কোনো পত্রিকা, ওয়েবসাইট, ফেসবুক বা ব্লগ থেকে আংশিক বা সম্পূর্ণ কপি করা লেখা কোনোভাবেই গ্রহণ করা হবে না।
+                    </li>
+                    <li>
+                        <strong>২. বিষয়বস্তু</strong>
+                        লেখার বিষয়বস্তু অবশ্যই সুস্থ সংস্কৃতি, দেশপ্রেম, ইসলামী মূল্যবোধ এবং সাইমুম শিল্পীগোষ্ঠীর আদর্শের সাথে সামঞ্জস্যপূর্ণ হতে হবে।
+                    </li>
+                    <li>
+                        <strong>৩. নিষিদ্ধ বিষয়</strong>
+                        যেকোনো ধরণের বিতর্কিত, রাজনৈতিক, উসকানিমূলক, সাম্প্রদায়িক সম্প্রীতি বিনষ্টকারী অথবা কাউকে ব্যক্তি আক্রমণ করে লেখা সম্পূর্ণ নিষিদ্ধ।
+                    </li>
+                    <li>
+                        <strong>৪. ভাষা ও বানান</strong>
+                        বাংলা ভাষার প্রতি শ্রদ্ধাশীল হয়ে প্রমিত বাংলা বানানরীতি অনুসরণ করার চেষ্টা করুন। বাক্য গঠনে সতর্ক থাকুন এবং অপ্রয়োজনীয় ইংরেজি বা অন্য ভাষার ব্যবহার পরিহার করুন।
+                    </li>
+                    <li>
+                        <strong>৫. সম্পাদনার অধিকার</strong>
+                        সম্পাদকীয় পর্ষদ যেকোনো লেখা আংশিক পরিবর্তন, পরিমার্জন, শিরোনাম পরিবর্তন অথবা বাতিল করার সম্পূর্ণ অধিকার রাখে।
+                    </li>
+                    <li>
+                        <strong>৬. পর্যালোচনা সময়</strong>
+                        লেখা জমা দেওয়ার পর সেটি যাচাই-বাছাই ও রিভিউ হতে সাধারণত ২ থেকে ৩ দিন সময় লাগতে পারে। লেখাটি প্রকাশযোগ্য বলে বিবেচিত হলে আপনাকে ইমেইলের মাধ্যমে জানিয়ে দেওয়া হবে।
+                    </li>
+                </ul>
                 
-                <div class="form-group">
-                    <label>কভার ছবি বা ইমেজ (ঐচ্ছিক)</label>
-                    <label for="cover-upload" class="upload-dropzone" style="display: block;">
-                        <i class="fa-solid fa-cloud-arrow-up"></i>
-                        <p>ছবি আপলোড করতে এখানে ক্লিক করুন অথবা <span>ফাইল টেনে আনুন</span></p>
-                        <span class="sub-text">সর্বোচ্চ সাইজ ২ মেগাবাইট (JPG, PNG)</span>
-                        <input type="file" id="cover-upload" style="display:none;" accept="image/*">
-                    </label>
+                <div class="accept-btn-wrapper">
+                    <p style="color: #64748b; margin-bottom: 15px;">উপরের সকল শর্তাবলী সম্পর্কে একমত হলে আপনি আপনার লেখা জমা দিতে পারেন।</p>
+                    <a href="submit.html" class="btn-primary"><i class="fa-solid fa-paper-plane"></i> লেখা জমা দিন</a>
                 </div>
-
-                <div class="form-group">
-                    <label>লেখার শিরোনাম <span class="required">*</span></label>
-                    <input type="text" class="input-modern" placeholder="আপনার লেখার সুন্দর একটি শিরোনাম দিন" required>
-                </div>
-
-                <div class="form-group">
-                    <label>ক্যাটাগরি নির্বাচন করুন <span class="required">*</span></label>
-                    <select class="input-modern" required>
-                        <option value="" disabled selected>-- একটি ক্যাটাগরি বেছে নিন --</option>
-                        <option value="প্রবন্ধ">প্রবন্ধ</option>
-                        <option value="কবিতা">কবিতা</option>
-                        <option value="ছোটগল্প">ছোটগল্প</option>
-                        <option value="ইসলাম ও জীবন">ইসলাম ও জীবন</option>
-                        <option value="সংগীত">সংগীত</option>
-                        <option value="গবেষণা">গবেষণা</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label>মূল লেখা <span class="required">*</span></label>
-                    <div class="editor-box">
-                        <div class="editor-toolbar">
-                            <div class="toolbar-group">
-                                <button type="button" title="Bold"><i class="fa-solid fa-bold"></i></button>
-                                <button type="button" title="Italic"><i class="fa-solid fa-italic"></i></button>
-                                <button type="button" title="Underline"><i class="fa-solid fa-underline"></i></button>
-                            </div>
-                            <div class="divider"></div>
-                            <div class="toolbar-group">
-                                <button type="button" title="Heading"><i class="fa-solid fa-heading"></i></button>
-                                <button type="button" title="Quote"><i class="fa-solid fa-quote-left"></i></button>
-                            </div>
-                            <div class="divider"></div>
-                            <div class="toolbar-group">
-                                <button type="button" title="Link"><i class="fa-solid fa-link"></i></button>
-                                <button type="button" title="Image"><i class="fa-regular fa-image"></i></button>
-                            </div>
-                            <div class="divider"></div>
-                            <div class="toolbar-group">
-                                <button type="button" title="Bulleted List"><i class="fa-solid fa-list-ul"></i></button>
-                                <button type="button" title="Numbered List"><i class="fa-solid fa-list-ol"></i></button>
-                            </div>
-                        </div>
-                        <textarea class="input-modern editor-textarea" placeholder="আপনার লেখাটি এখানে টাইপ করুন অথবা কপি করে পেস্ট করুন..." required></textarea>
-                    </div>
-                </div>
-
-                <div class="submit-action-area">
-                    <label class="terms-checkbox">
-                        <input type="checkbox" required>
-                        <span>আমি সাইমুম ব্লগের <a href="terms.html" target="_blank">প্রকাশনার শর্তাবলী</a> মনোযোগ দিয়ে পড়েছি এবং উল্লিখিত সকল শর্ত মেনে আমার এই লেখাটি জমা দিচ্ছি।</span>
-                    </label>
-                    
-                    <button type="submit" class="btn-publish"><i class="fa-solid fa-paper-plane"></i> লেখা জমা দিন</button>
-                </div>
-
-            </form>
+            </div>
         </div>
-    </div>
+    </section>
 <!-- Master Footer -->
     <footer class="master-footer">
         <div class="container">
