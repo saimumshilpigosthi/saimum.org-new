@@ -460,7 +460,7 @@
                             <li><a href="../lyricists.html">গীতিকার</a></li>
                             <li><a href="../composers.html">সুরকার</a></li>
                             <li><a href="../artists.html">শিল্পী</a></li>
-                            <li><a href="../script-writer.html">নাট্যকার</a></li>
+                            <li><a href="../writer.html">নাট্যকার</a></li>
                             <li><a href="../writers.html">কবি</a></li>
                         </ul>
                     </li>
@@ -484,7 +484,7 @@
                             <li><a href="../poems.html">কবিতা</a></li>
                         </ul>
                     </li>
-                    <li class="has-dropdown">
+                    <li>
                         <a href="../gallery.html">ছবিঘর</a>
                     </li>
                     <li><a href="../blog.html">ব্লগ</a></li>
@@ -507,10 +507,34 @@
                             <li><a href="../links.html">সোশ্যাল মিডিয়া</a></li>
                         </ul>
                     </li>
+                    <li class="mobile-only-login">
+
+                        <a href="../login.html"><i class="fa-solid fa-user"></i> লগইন</a>
+
+                    </li>
+
                 </ul>
-            </nav>
+
+                <div class="mobile-top-bar-links">
+
+                    <a href="#"><i class="fa-solid fa-play"></i> সাইমুম স্ট্রিম</a>
+
+                    <a href="#"><i class="fa-solid fa-graduation-cap"></i> সাইমুম একাডেমি</a>
+
+                    <a href="#"><i class="fa-solid fa-bag-shopping"></i> সাইমুম শপ</a>
+
+                    <a href="#"><i class="fa-solid fa-hand-holding-heart"></i> অনুদান দিন</a>
+
+                    <div class="language-switcher-mobile">
+
+                        <span><img src="https://flagcdn.com/w20/bd.png" alt="BD Flag" class="flag-icon" loading="lazy"> বাংলা</span> <i class="fa-solid fa-chevron-down"></i>
+
+                    </div>
+
+                </div>
+</nav>
             <div class="header-actions">
-                <a href="../login.html" class="btn btn-primary"><i class="fa-solid fa-user"></i> লগইন</a>
+                <a href="../login.html" class="btn btn-primary btn-login"><i class="fa-solid fa-user"></i> লগইন</a>
             </div>
         </div>
     </header>
@@ -756,5 +780,49 @@
             });
         });
     </script>
+
+    <!-- Mobile Menu Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuBtn = document.querySelector('.mobile-menu-toggle');
+            const mainNav = document.getElementById('mobile-nav');
+            
+            if (mobileMenuBtn && mainNav) {
+                mobileMenuBtn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    mainNav.classList.toggle('active');
+                    const isExpanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
+                    mobileMenuBtn.setAttribute('aria-expanded', !isExpanded);
+                });
+
+                document.addEventListener('click', function(e) {
+                    if (!mainNav.contains(e.target) && !mobileMenuBtn.contains(e.target) && mainNav.classList.contains('active')) {
+                        mainNav.classList.remove('active');
+                        mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                    }
+                });
+            }
+
+            const dropdownLinks = document.querySelectorAll('.has-dropdown > a');
+            dropdownLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    if (window.innerWidth <= 992) {
+                        const parent = this.parentElement;
+                        const dropdown = parent.querySelector('.dropdown');
+                        if (dropdown) {
+                            e.preventDefault();
+                            document.querySelectorAll('.has-dropdown.active').forEach(activeParent => {
+                                if (activeParent !== parent) {
+                                    activeParent.classList.remove('active');
+                                }
+                            });
+                            parent.classList.toggle('active');
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+
 </body>
 </html>

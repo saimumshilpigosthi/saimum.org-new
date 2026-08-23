@@ -29,7 +29,7 @@
             </div>
             <div class="top-bar-right">
                 <div class="language-switcher">
-                    <span><img src="https://flagcdn.com/w20/bd.png" alt="BD Flag" class="flag-icon"> বাংলা</span> <i class="fa-solid fa-chevron-down"></i>
+                    <span><img src="https://flagcdn.com/w20/bd.png" alt="BD Flag" class="flag-icon" loading="lazy"> বাংলা</span> <i class="fa-solid fa-chevron-down"></i>
                 </div>
             </div>
         </div>
@@ -46,23 +46,21 @@
                 <ul>
                     <li class="has-dropdown">
                         <a href="#">পরিচিতি</a>
-                                                                                                                        <ul class="dropdown">
+                        <ul class="dropdown">
                             <li><a href="../about.html">আমাদের সম্পর্কে</a></li>
                             <li><a href="../founders.html">প্রতিষ্ঠাতা সদস্যবৃন্দ</a></li>
                             <li><a href="../directors.html">পরিচালকবৃন্দ</a></li>
                             <li><a href="../management.html">পরিচালনা পর্ষদ</a></li>
                             <li><a href="../past-management.html">বিগত পরিচালনা পর্ষদ</a></li>
-                            
                         </ul>
                     </li>
-                    
                     <li class="has-dropdown">
                         <a href="#">ব্যক্তিবর্গ</a>
                         <ul class="dropdown">
                             <li><a href="../lyricists.html">গীতিকার</a></li>
                             <li><a href="../composers.html">সুরকার</a></li>
                             <li><a href="../artists.html">শিল্পী</a></li>
-                            <li><a href="../script-writer.html">নাট্যকার</a></li>
+                            <li><a href="../writer.html">নাট্যকার</a></li>
                             <li><a href="../writers.html">কবি</a></li>
                         </ul>
                     </li>
@@ -86,12 +84,16 @@
                             <li><a href="../poems.html">কবিতা</a></li>
                         </ul>
                     </li>
-                    <li class="has-dropdown">
+                    <li>
                         <a href="../gallery.html">ছবিঘর</a>
                     </li>
                     <li><a href="../blog.html">ব্লগ</a></li>
                     <li class="has-dropdown">
-                        <a href="../activities.html">কার্যক্রম</a>
+                        <a href="#">কার্যক্রম</a>
+                        <ul class="dropdown">
+                            <li><a href="../activities.html">নিয়মিত কার্যক্রম</a></li>
+                            <li><a href="../competitions.html">প্রতিযোগিতা</a></li>
+                        </ul>
                     </li>
                     <li class="has-dropdown">
                         <a href="#">ইভেন্ট</a>
@@ -100,7 +102,6 @@
                             <li><a href="../exhibitions.html">প্রদর্শনী</a></li>
                         </ul>
                     </li>
-                                        <li><a href="../competitions.html">প্রতিযোগিতা</a></li>
                     <li class="has-dropdown">
                         <a href="#">যোগাযোগ</a>
                         <ul class="dropdown">
@@ -109,13 +110,41 @@
                             <li><a href="../links.html">সোশ্যাল মিডিয়া</a></li>
                         </ul>
                     </li>
+                    <li class="mobile-only-login">
+
+                        <a href="../login.html"><i class="fa-solid fa-user"></i> লগইন</a>
+
+                    </li>
+
                 </ul>
-            </nav>
+
+                <div class="mobile-top-bar-links">
+
+                    <a href="#"><i class="fa-solid fa-play"></i> সাইমুম স্ট্রিম</a>
+
+                    <a href="#"><i class="fa-solid fa-graduation-cap"></i> সাইমুম একাডেমি</a>
+
+                    <a href="#"><i class="fa-solid fa-bag-shopping"></i> সাইমুম শপ</a>
+
+                    <a href="#"><i class="fa-solid fa-hand-holding-heart"></i> অনুদান দিন</a>
+
+                    <div class="language-switcher-mobile">
+
+                        <span><img src="https://flagcdn.com/w20/bd.png" alt="BD Flag" class="flag-icon" loading="lazy"> বাংলা</span> <i class="fa-solid fa-chevron-down"></i>
+
+                    </div>
+
+                </div>
+</nav>
             <div class="header-actions">
-                <a href="../login.html" class="btn btn-primary"><i class="fa-solid fa-user"></i> লগইন</a>
+                <a href="../login.html" class="btn btn-primary btn-login"><i class="fa-solid fa-user"></i> লগইন</a>
+                <button class="mobile-menu-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="mobile-nav">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
             </div>
         </div>
     </header>
+
     
     <!-- Blog Details Specific CSS -->
     <style>
@@ -441,7 +470,7 @@
             <h1 class="article-title">বর্তমান সময়ের সুস্থ সংস্কৃতি চর্চায় তরুণদের ভূমিকা ও সাইমুমের উদ্যোগ</h1>
             <div class="article-meta">
                 <div class="author-info">
-                    <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Author">
+                    <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Author" loading="lazy">
                     সাইফুল ইসলাম মামুন
                 </div>
                 <span>•</span>
@@ -479,7 +508,7 @@
 
                 <p>সাম্প্রতিক সময়ে সাইমুম আয়োজিত বিভিন্ন কর্মশালা, স্টেজ পারফরম্যান্স এবং সোশ্যাল মিডিয়া ক্যাম্পেইন তরুণদের মাঝে বিপুল সাড়া ফেলেছে। বিশেষ করে তাদের 'কিশোর বিভাগ' এবং 'সংগীত বিভাগ'-এর কার্যক্রমগুলো নতুন প্রজন্মের কাছে সুস্থ ধারার বিনোদন পৌঁছে দিচ্ছে অত্যন্ত সুনিপুণভাবে।</p>
 
-                <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Youth performing on stage">
+                <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Youth performing on stage" loading="lazy">
 
                 <h3>সাইমুমের ভবিষ্যৎ পরিকল্পনা</h3>
                 <p>সামনের দিনগুলোতে সাইমুম তাদের কার্যক্রম আরও প্রসারিত করার উদ্যোগ নিয়েছে। নতুন প্রজন্মকে সঠিক পথ দেখাতে তারা কয়েকটি সুনির্দিষ্ট পরিকল্পনা হাতে নিয়েছে:</p>
@@ -509,7 +538,7 @@
         <h3 class="related-title">আরও পড়তে পারেন</h3>
         <div class="related-grid">
             <a href="#" class="related-card">
-                <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="related-img">
+                <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="related-img" loading="lazy">
                 <div class="related-body">
                     <span style="font-size:12px; color:var(--primary-color); font-weight:800; margin-bottom:10px; display:block; text-transform:uppercase;">সংগীত</span>
                     <h4 style="font-size:20px; font-weight:800; margin-bottom:15px; line-height:1.4; color:var(--text-main);">ইসলামের ফরজ বিধান পর্দা নিয়ে গান</h4>
@@ -517,7 +546,7 @@
                 </div>
             </a>
             <a href="#" class="related-card">
-                <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="related-img">
+                <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="related-img" loading="lazy">
                 <div class="related-body">
                     <span style="font-size:12px; color:var(--primary-color); font-weight:800; margin-bottom:10px; display:block; text-transform:uppercase;">প্রবন্ধ</span>
                     <h4 style="font-size:20px; font-weight:800; margin-bottom:15px; line-height:1.4; color:var(--text-main);">ডিজিটাল যুগে সংস্কৃতি চর্চা: চ্যালেঞ্জ ও সম্ভাবনা</h4>
@@ -525,7 +554,7 @@
                 </div>
             </a>
             <a href="#" class="related-card">
-                <img src="https://images.unsplash.com/photo-1542816417-0983c9c9ad53?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="related-img">
+                <img src="https://images.unsplash.com/photo-1542816417-0983c9c9ad53?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="related-img" loading="lazy">
                 <div class="related-body">
                     <span style="font-size:12px; color:var(--primary-color); font-weight:800; margin-bottom:10px; display:block; text-transform:uppercase;">ইসলাম ও জীবন</span>
                     <h4 style="font-size:20px; font-weight:800; margin-bottom:15px; line-height:1.4; color:var(--text-main);">নবীজীর (সা.) সুন্নাহ এবং মানসিক শান্তি</h4>
@@ -620,32 +649,50 @@
     </script>
 
 
+    
+
     <!-- Mobile Menu Script -->
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const mobileToggle = document.querySelector('.mobile-menu-toggle');
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuBtn = document.querySelector('.mobile-menu-toggle');
             const mainNav = document.getElementById('mobile-nav');
             
-            if(mobileToggle && mainNav) {
-                mobileToggle.addEventListener('click', () => {
+            if (mobileMenuBtn && mainNav) {
+                mobileMenuBtn.addEventListener('click', function(e) {
+                    e.stopPropagation();
                     mainNav.classList.toggle('active');
-                    const isExpanded = mainNav.classList.contains('active');
-                    mobileToggle.setAttribute('aria-expanded', isExpanded);
+                    const isExpanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
+                    mobileMenuBtn.setAttribute('aria-expanded', !isExpanded);
+                });
+
+                document.addEventListener('click', function(e) {
+                    if (!mainNav.contains(e.target) && !mobileMenuBtn.contains(e.target) && mainNav.classList.contains('active')) {
+                        mainNav.classList.remove('active');
+                        mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                    }
                 });
             }
 
-            // Handle dropdowns on mobile
-            const dropdowns = document.querySelectorAll('.has-dropdown');
-            dropdowns.forEach(dropdown => {
-                const link = dropdown.querySelector('a');
-                link.addEventListener('click', (e) => {
+            const dropdownLinks = document.querySelectorAll('.has-dropdown > a');
+            dropdownLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
                     if (window.innerWidth <= 992) {
-                        e.preventDefault();
-                        dropdown.classList.toggle('active');
+                        const parent = this.parentElement;
+                        const dropdown = parent.querySelector('.dropdown');
+                        if (dropdown) {
+                            e.preventDefault();
+                            document.querySelectorAll('.has-dropdown.active').forEach(activeParent => {
+                                if (activeParent !== parent) {
+                                    activeParent.classList.remove('active');
+                                }
+                            });
+                            parent.classList.toggle('active');
+                        }
                     }
                 });
             });
         });
     </script>
+
 </body>
 </html>

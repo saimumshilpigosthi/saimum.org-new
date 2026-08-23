@@ -1,0 +1,98 @@
+<!-- Master Footer -->
+    <footer class="master-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Brand Section -->
+                <div class="footer-brand">
+                    <a href="{{BASE_URL}}/index.html" class="logo text-white mb-5 inline-flex">
+                        <div class="logo-icon"><i class="fa-solid fa-fire-flame-curved"></i></div>
+                        <div class="logo-text">সাইমুম<span>.org</span></div>
+                    </a>
+                    <p>সুস্থ সংস্কৃতির বিকাশ এবং মানবতার কল্যাণে ১৯৭৮ সাল থেকে নিরলসভাবে কাজ করে যাচ্ছে সাইমুম শিল্পীগোষ্ঠী।</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div class="footer-links">
+                    <h3>গুরুত্বপূর্ণ লিংক</h3>
+                    <ul>
+                        <li><a href="{{BASE_URL}}/about.html"><i class="fa-solid fa-angle-right"></i> আমাদের সম্পর্কে</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> সাইমুম স্ট্রিম</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> সাইমুম একাডেমি</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> সাইমুম শপ</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> অনুদান / বাইতুল মাল</a></li>
+                        <li><a href="{{BASE_URL}}/blog/submit.html"><i class="fa-solid fa-angle-right"></i> লেখা জমা দিন</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Departments -->
+                <div class="footer-links">
+                    <h3>শাখা সমূহ</h3>
+                    <ul>
+                        <li><a href="{{BASE_URL}}/departments/shishu-songit.html"><i class="fa-solid fa-angle-right"></i> সংগীত বিভাগ</a></li>
+                        <li><a href="{{BASE_URL}}/departments/theatre.html"><i class="fa-solid fa-angle-right"></i> থিয়েটার ও মঞ্চনাটক</a></li>
+                        <li><a href="{{BASE_URL}}/departments/qirat.html"><i class="fa-solid fa-angle-right"></i> ক্বিরাত বিভাগ</a></li>
+                        <li><a href="{{BASE_URL}}/albums.html"><i class="fa-solid fa-angle-right"></i> সাহিত্য ও প্রকাশনা</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Info -->
+                <div class="footer-contact">
+                    <h3>যোগাযোগ</h3>
+                    <ul>
+                        <li>
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>মিজান টাওয়ার, মগবাজার, ঢাকা, বাংলাদেশ</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-phone"></i>
+                            <span>+৮৮০ ১২৩৪-৫৬৭৮৯০</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>info@saimum.org</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container text-center">
+                <p>&copy; ২০২৬ সাইমুম শিল্পীগোষ্ঠী. সর্বস্বত্ব সংরক্ষিত।</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileToggle = document.querySelector('.mobile-menu-toggle');
+            const mainNav = document.getElementById('mobile-nav');
+            
+            if(mobileToggle && mainNav) {
+                mobileToggle.addEventListener('click', () => {
+                    mainNav.classList.toggle('active');
+                    const isExpanded = mainNav.classList.contains('active');
+                    mobileToggle.setAttribute('aria-expanded', isExpanded);
+                });
+            }
+
+            // Handle dropdowns on mobile
+            const dropdowns = document.querySelectorAll('.has-dropdown');
+            dropdowns.forEach(dropdown => {
+                const link = dropdown.querySelector('a');
+                link.addEventListener('click', (e) => {
+                    if (window.innerWidth <= 992) {
+                        e.preventDefault();
+                        dropdown.classList.toggle('active');
+                    }
+                });
+            });
+        });
+    </script>

@@ -427,7 +427,7 @@
             </div>
             <div class="top-bar-right">
                 <div class="language-switcher">
-                    <span><img src="https://flagcdn.com/w20/bd.png" alt="BD Flag" class="flag-icon"> বাংলা</span> <i class="fa-solid fa-chevron-down"></i>
+                    <span><img src="https://flagcdn.com/w20/bd.png" alt="BD Flag" class="flag-icon" loading="lazy"> বাংলা</span> <i class="fa-solid fa-chevron-down"></i>
                 </div>
             </div>
         </div>
@@ -444,23 +444,21 @@
                 <ul>
                     <li class="has-dropdown">
                         <a href="#">পরিচিতি</a>
-                                                                                                                        <ul class="dropdown">
+                        <ul class="dropdown">
                             <li><a href="../about.html">আমাদের সম্পর্কে</a></li>
                             <li><a href="../founders.html">প্রতিষ্ঠাতা সদস্যবৃন্দ</a></li>
                             <li><a href="../directors.html">পরিচালকবৃন্দ</a></li>
                             <li><a href="../management.html">পরিচালনা পর্ষদ</a></li>
                             <li><a href="../past-management.html">বিগত পরিচালনা পর্ষদ</a></li>
-                            
                         </ul>
                     </li>
-                    
                     <li class="has-dropdown">
                         <a href="#">ব্যক্তিবর্গ</a>
                         <ul class="dropdown">
                             <li><a href="../lyricists.html">গীতিকার</a></li>
                             <li><a href="../composers.html">সুরকার</a></li>
                             <li><a href="../artists.html">শিল্পী</a></li>
-                            <li><a href="../script-writer.html">নাট্যকার</a></li>
+                            <li><a href="../writer.html">নাট্যকার</a></li>
                             <li><a href="../writers.html">কবি</a></li>
                         </ul>
                     </li>
@@ -484,12 +482,16 @@
                             <li><a href="../poems.html">কবিতা</a></li>
                         </ul>
                     </li>
-                    <li class="has-dropdown">
+                    <li>
                         <a href="../gallery.html">ছবিঘর</a>
                     </li>
                     <li><a href="../blog.html">ব্লগ</a></li>
                     <li class="has-dropdown">
-                        <a href="../activities.html">কার্যক্রম</a>
+                        <a href="#">কার্যক্রম</a>
+                        <ul class="dropdown">
+                            <li><a href="../activities.html">নিয়মিত কার্যক্রম</a></li>
+                            <li><a href="../competitions.html">প্রতিযোগিতা</a></li>
+                        </ul>
                     </li>
                     <li class="has-dropdown">
                         <a href="#">ইভেন্ট</a>
@@ -498,7 +500,6 @@
                             <li><a href="../exhibitions.html">প্রদর্শনী</a></li>
                         </ul>
                     </li>
-                                        <li><a href="../competitions.html">প্রতিযোগিতা</a></li>
                     <li class="has-dropdown">
                         <a href="#">যোগাযোগ</a>
                         <ul class="dropdown">
@@ -507,13 +508,41 @@
                             <li><a href="../links.html">সোশ্যাল মিডিয়া</a></li>
                         </ul>
                     </li>
+                    <li class="mobile-only-login">
+
+                        <a href="../login.html"><i class="fa-solid fa-user"></i> লগইন</a>
+
+                    </li>
+
                 </ul>
-            </nav>
+
+                <div class="mobile-top-bar-links">
+
+                    <a href="#"><i class="fa-solid fa-play"></i> সাইমুম স্ট্রিম</a>
+
+                    <a href="#"><i class="fa-solid fa-graduation-cap"></i> সাইমুম একাডেমি</a>
+
+                    <a href="#"><i class="fa-solid fa-bag-shopping"></i> সাইমুম শপ</a>
+
+                    <a href="#"><i class="fa-solid fa-hand-holding-heart"></i> অনুদান দিন</a>
+
+                    <div class="language-switcher-mobile">
+
+                        <span><img src="https://flagcdn.com/w20/bd.png" alt="BD Flag" class="flag-icon" loading="lazy"> বাংলা</span> <i class="fa-solid fa-chevron-down"></i>
+
+                    </div>
+
+                </div>
+</nav>
             <div class="header-actions">
-                <a href="../login.html" class="btn btn-primary"><i class="fa-solid fa-user"></i> লগইন</a>
+                <a href="../login.html" class="btn btn-primary btn-login"><i class="fa-solid fa-user"></i> লগইন</a>
+                <button class="mobile-menu-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="mobile-nav">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
             </div>
         </div>
     </header>
+
 
     <!-- Cinematic Hero Section -->
     <section class="artist-hero">
@@ -560,7 +589,7 @@
                         
                         <div class="track-item">
                             <div class="track-num">1</div>
-                            <img src="https://images.unsplash.com/photo-1614113489855-66422ad300a4?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Cover" class="track-img">
+                            <img src="https://images.unsplash.com/photo-1614113489855-66422ad300a4?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Cover" class="track-img" loading="lazy">
                             <div class="track-info">
                                 <div class="track-name">সূরা আর-রহমান</div>
                                 <div class="track-album">মাকাম: হিজায</div>
@@ -569,7 +598,7 @@
                         </div>
                         <div class="track-item">
                             <div class="track-num">2</div>
-                            <img src="https://images.unsplash.com/photo-1614113489855-66422ad300a4?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Cover" class="track-img">
+                            <img src="https://images.unsplash.com/photo-1614113489855-66422ad300a4?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Cover" class="track-img" loading="lazy">
                             <div class="track-info">
                                 <div class="track-name">সূরা ইয়াসীন</div>
                                 <div class="track-album">মাকাম: নাহাওয়ান্দ</div>
@@ -578,7 +607,7 @@
                         </div>
                         <div class="track-item">
                             <div class="track-num">3</div>
-                            <img src="https://images.unsplash.com/photo-1614113489855-66422ad300a4?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Cover" class="track-img">
+                            <img src="https://images.unsplash.com/photo-1614113489855-66422ad300a4?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Cover" class="track-img" loading="lazy">
                             <div class="track-info">
                                 <div class="track-name">সূরা আল-মুলক</div>
                                 <div class="track-album">স্টুডিও তিলাওয়াত</div>
@@ -593,19 +622,19 @@
                     </div>
                     <div class="premium-gallery">
                         <div class="gallery-item">
-                            <img src="https://images.unsplash.com/photo-1516280440502-6020c02c63f2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Concert">
+                            <img src="https://images.unsplash.com/photo-1516280440502-6020c02c63f2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Concert" loading="lazy">
                             <div class="gallery-overlay"><i class="fa-solid fa-expand gallery-icon"></i></div>
                         </div>
                         <div class="gallery-item">
-                            <img src="https://images.unsplash.com/photo-1493225457124-a1a2a5f03914?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Studio">
+                            <img src="https://images.unsplash.com/photo-1493225457124-a1a2a5f03914?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Studio" loading="lazy">
                             <div class="gallery-overlay"><i class="fa-solid fa-expand gallery-icon"></i></div>
                         </div>
                         <div class="gallery-item">
-                            <img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Backstage">
+                            <img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Backstage" loading="lazy">
                             <div class="gallery-overlay"><i class="fa-solid fa-expand gallery-icon"></i></div>
                         </div>
                         <div class="gallery-item">
-                            <img src="https://images.unsplash.com/photo-1470229722913-7c090be5c520?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Group Photo">
+                            <img src="https://images.unsplash.com/photo-1470229722913-7c090be5c520?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Group Photo" loading="lazy">
                             <div class="gallery-overlay"><i class="fa-solid fa-expand gallery-icon"></i></div>
                         </div>
                     </div>
@@ -636,7 +665,7 @@
                     
                     <!-- Dynamic Latest Release -->
                     <div class="sidebar-card">
-                        <img src="https://images.unsplash.com/photo-1614113489855-66422ad300a4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="New Release" class="release-img">
+                        <img src="https://images.unsplash.com/photo-1614113489855-66422ad300a4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="New Release" class="release-img" loading="lazy">
                         <div class="release-info">
                             <span class="release-badge">নতুন রিলিজ</span>
                             <h3 class="release-title">সম্পূর্ণ কুরআন অডিও</h3>
@@ -646,7 +675,7 @@
 
                     <!-- Dynamic Video / Media -->
                     <div class="sidebar-card" style="position: relative;">
-                        <img src="https://images.unsplash.com/photo-1493225457124-a1a2a5f03914?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" style="width: 100%; height: 200px; object-fit: cover;">
+                        <img src="https://images.unsplash.com/photo-1493225457124-a1a2a5f03914?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" style="width: 100%; height: 200px; object-fit: cover;" loading="lazy">
                         <div style="position: absolute; top:0; left:0; right:0; bottom:0; background: rgba(0,0,0,0.4); display: flex; flex-direction: column; justify-content: center; align-items: center; color: white; padding: 20px; text-align: center;">
                             <a href="#" style="width: 50px; height: 50px; background: rgba(255,0,0,0.9); color: white; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 20px; margin-bottom: 15px;"><i class="fa-solid fa-play" style="margin-left: 3px;"></i></a>
                             <h4 style="margin: 0; font-size: 16px;">সর্বশেষ তিলাওয়াত ভিডিও</h4>
@@ -664,9 +693,9 @@
             <div class="footer-grid">
                 <!-- Brand Section -->
                 <div class="footer-brand">
-                    <a href="../index.html" class="logo" style="color: white; margin-bottom: 20px; display: inline-flex;">
+                    <a href="../index.html" class="logo text-white mb-5 inline-flex">
                         <div class="logo-icon"><i class="fa-solid fa-fire-flame-curved"></i></div>
-                <div class="logo-text">সাইমুম<span>.org</span></div>
+                        <div class="logo-text">সাইমুম<span>.org</span></div>
                     </a>
                     <p>সুস্থ সংস্কৃতির বিকাশ এবং মানবতার কল্যাণে ১৯৭৮ সাল থেকে নিরলসভাবে কাজ করে যাচ্ছে সাইমুম শিল্পীগোষ্ঠী।</p>
                     <div class="social-links">
@@ -686,18 +715,18 @@
                         <li><a href="#"><i class="fa-solid fa-angle-right"></i> সাইমুম একাডেমি</a></li>
                         <li><a href="#"><i class="fa-solid fa-angle-right"></i> সাইমুম শপ</a></li>
                         <li><a href="#"><i class="fa-solid fa-angle-right"></i> অনুদান / বাইতুল মাল</a></li>
-                    <li><a href="../blog/submit.html"><i class="fa-solid fa-angle-right"></i> লেখা জমা দিন</a></li>
-                      </ul>
+                        <li><a href="../blog/submit.html"><i class="fa-solid fa-angle-right"></i> লেখা জমা দিন</a></li>
+                    </ul>
                 </div>
                 
                 <!-- Departments -->
                 <div class="footer-links">
                     <h3>শাখা সমূহ</h3>
                     <ul>
-                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> পরিচালক</a></li>
-                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> থিয়েটার ও মঞ্চনাটক</a></li>
-                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> ক্বিরাত বিভাগ</a></li>
-                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> সাহিত্য ও প্রকাশনা</a></li>
+                        <li><a href="../departments/shishu-songit.html"><i class="fa-solid fa-angle-right"></i> সংগীত বিভাগ</a></li>
+                        <li><a href="../departments/theatre.html"><i class="fa-solid fa-angle-right"></i> থিয়েটার ও মঞ্চনাটক</a></li>
+                        <li><a href="../departments/qirat.html"><i class="fa-solid fa-angle-right"></i> ক্বিরাত বিভাগ</a></li>
+                        <li><a href="../albums.html"><i class="fa-solid fa-angle-right"></i> সাহিত্য ও প্রকাশনা</a></li>
                     </ul>
                 </div>
                 
@@ -729,32 +758,53 @@
         </div>
     </footer>
 
+    
+
+
+    
+
     <!-- Mobile Menu Script -->
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const mobileToggle = document.querySelector('.mobile-menu-toggle');
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuBtn = document.querySelector('.mobile-menu-toggle');
             const mainNav = document.getElementById('mobile-nav');
             
-            if(mobileToggle && mainNav) {
-                mobileToggle.addEventListener('click', () => {
+            if (mobileMenuBtn && mainNav) {
+                mobileMenuBtn.addEventListener('click', function(e) {
+                    e.stopPropagation();
                     mainNav.classList.toggle('active');
-                    const isExpanded = mainNav.classList.contains('active');
-                    mobileToggle.setAttribute('aria-expanded', isExpanded);
+                    const isExpanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
+                    mobileMenuBtn.setAttribute('aria-expanded', !isExpanded);
+                });
+
+                document.addEventListener('click', function(e) {
+                    if (!mainNav.contains(e.target) && !mobileMenuBtn.contains(e.target) && mainNav.classList.contains('active')) {
+                        mainNav.classList.remove('active');
+                        mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                    }
                 });
             }
 
-            // Handle dropdowns on mobile
-            const dropdowns = document.querySelectorAll('.has-dropdown');
-            dropdowns.forEach(dropdown => {
-                const link = dropdown.querySelector('a');
-                link.addEventListener('click', (e) => {
+            const dropdownLinks = document.querySelectorAll('.has-dropdown > a');
+            dropdownLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
                     if (window.innerWidth <= 992) {
-                        e.preventDefault();
-                        dropdown.classList.toggle('active');
+                        const parent = this.parentElement;
+                        const dropdown = parent.querySelector('.dropdown');
+                        if (dropdown) {
+                            e.preventDefault();
+                            document.querySelectorAll('.has-dropdown.active').forEach(activeParent => {
+                                if (activeParent !== parent) {
+                                    activeParent.classList.remove('active');
+                                }
+                            });
+                            parent.classList.toggle('active');
+                        }
                     }
                 });
             });
         });
     </script>
+
 </body>
 </html>

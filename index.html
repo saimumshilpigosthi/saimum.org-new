@@ -20,6 +20,29 @@
     <meta name="twitter:title" content="সাইমুম শিল্পীগোষ্ঠী | Saimum Shilpigosthi">
     <meta name="twitter:description" content="সাইমুম শিল্পীগোষ্ঠীর অফিসিয়াল পোর্টালে আপনাকে স্বাগতম।">
     
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Saimum Shilpigosthi",
+      "alternateName": "সাইমুম শিল্পীগোষ্ঠী",
+      "url": "https://saimum.org",
+      "logo": "https://saimum.org/Images/logo.png",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+880-1234-567890",
+        "contactType": "customer service",
+        "areaServed": "BD",
+        "availableLanguage": ["Bengali", "English"]
+      },
+      "sameAs": [
+        "https://www.facebook.com/saimum.org",
+        "https://www.youtube.com/c/SaimumShilpiGosthi"
+      ]
+    }
+    </script>
+    
     <link rel="canonical" href="https://saimum.org/">
     
     <!-- Google Fonts: Noto Sans Bengali & Inter -->
@@ -46,7 +69,7 @@
             </div>
             <div class="top-bar-right">
                 <div class="language-switcher">
-                    <span><img src="https://flagcdn.com/w20/bd.png" alt="BD Flag" class="flag-icon"> বাংলা</span> <i class="fa-solid fa-chevron-down"></i>
+                    <span><img src="https://flagcdn.com/w20/bd.png" alt="BD Flag" class="flag-icon" loading="lazy"> বাংলা</span> <i class="fa-solid fa-chevron-down"></i>
                 </div>
             </div>
         </div>
@@ -55,85 +78,95 @@
     <!-- Main Navigation -->
     <header class="main-header">
         <div class="container header-container">
-            <a href="index.html" class="logo">
+            <a href="./index.html" class="logo">
                 <div class="logo-icon"><i class="fa-solid fa-fire-flame-curved"></i></div>
                 <div class="logo-text">সাইমুম<span>.org</span></div>
             </a>
             <nav class="main-nav" id="mobile-nav">
+
                 <ul>
                     <li class="has-dropdown">
                         <a href="#">পরিচিতি</a>
-                                                                                                                        <ul class="dropdown">
-                            <li><a href="about.html">আমাদের সম্পর্কে</a></li>
-                            <li><a href="founders.html">প্রতিষ্ঠাতা সদস্যবৃন্দ</a></li>
-                            <li><a href="directors.html">পরিচালকবৃন্দ</a></li>
-                            <li><a href="management.html">পরিচালনা পর্ষদ</a></li>
-                            <li><a href="past-management.html">বিগত পরিচালনা পর্ষদ</a></li>
-                            
+                        <ul class="dropdown">
+                            <li><a href="./about.html">আমাদের সম্পর্কে</a></li>
+                            <li><a href="./founders.html">প্রতিষ্ঠাতা সদস্যবৃন্দ</a></li>
+                            <li><a href="./directors.html">পরিচালকবৃন্দ</a></li>
+                            <li><a href="./management.html">পরিচালনা পর্ষদ</a></li>
+                            <li><a href="./past-management.html">বিগত পরিচালনা পর্ষদ</a></li>
                         </ul>
                     </li>
-                    
                     <li class="has-dropdown">
                         <a href="#">ব্যক্তিবর্গ</a>
                         <ul class="dropdown">
-                            <li><a href="lyricists.html">গীতিকার</a></li>
-                            <li><a href="composers.html">সুরকার</a></li>
-                            <li><a href="artists.html">শিল্পী</a></li>
-                            <li><a href="script-writer.html">নাট্যকার</a></li>
-                            <li><a href="writers.html">কবি</a></li>
+                            <li><a href="./lyricists.html">গীতিকার</a></li>
+                            <li><a href="./composers.html">সুরকার</a></li>
+                            <li><a href="./artists.html">শিল্পী</a></li>
+                            <li><a href="./writer.html">নাট্যকার</a></li>
+                            <li><a href="./writers.html">কবি</a></li>
                         </ul>
                     </li>
                     <li class="has-dropdown">
                         <a href="#">বিভাগ</a>
                         <ul class="dropdown">
-                            <li><a href="departments/shishu-songit.html">শিশু সঙ্গীত বিভাগ</a></li>
-                            <li><a href="departments/kishor-songit.html">কিশোর সঙ্গীত বিভাগ</a></li>
-                            <li><a href="departments/boro-songit.html">বড় সঙ্গীত বিভাগ</a></li>
-                            <li><a href="departments/abriti.html">আবৃত্তি ও উপস্থাপনা বিভাগ</a></li>
-                            <li><a href="departments/qirat.html">কিরাত বিভাগ</a></li>
-                            <li><a href="departments/theatre.html">থিয়েটার বিভাগ</a></li>
+                            <li><a href="./departments/shishu-songit.html">শিশু সঙ্গীত বিভাগ</a></li>
+                            <li><a href="./departments/kishor-songit.html">কিশোর সঙ্গীত বিভাগ</a></li>
+                            <li><a href="./departments/boro-songit.html">বড় সঙ্গীত বিভাগ</a></li>
+                            <li><a href="./departments/abriti.html">আবৃত্তি ও উপস্থাপনা বিভাগ</a></li>
+                            <li><a href="./departments/qirat.html">কিরাত বিভাগ</a></li>
+                            <li><a href="./departments/theatre.html">থিয়েটার বিভাগ</a></li>
                         </ul>
                     </li>
                     <li class="has-dropdown">
                         <a href="#">প্রকাশনা</a>
                         <ul class="dropdown">
-                            <li><a href="albums.html">অ্যালবাম</a></li>
-                            <li><a href="lyrics.html">লিরিক</a></li>
-                            <li><a href="natok.html">নাটক</a></li>
-                            <li><a href="poems.html">কবিতা</a></li>
+                            <li><a href="./albums.html">অ্যালবাম</a></li>
+                            <li><a href="./lyrics.html">লিরিক</a></li>
+                            <li><a href="./natok.html">নাটক</a></li>
+                            <li><a href="./poems.html">কবিতা</a></li>
                         </ul>
                     </li>
-                    <li class="has-dropdown">
-                        <a href="gallery.html">ছবিঘর</a>
+                    <li>
+                        <a href="./gallery.html">ছবিঘর</a>
                     </li>
-                    <li><a href="blog.html">ব্লগ</a></li>
+                    <li><a href="./blog.html">ব্লগ</a></li>
                     <li class="has-dropdown">
                         <a href="#">কার্যক্রম</a>
                         <ul class="dropdown">
-                            <li><a href="activities.html">নিয়মিত কার্যক্রম</a></li>
-                            <li><a href="competitions.html">প্রতিযোগিতা</a></li>
+                            <li><a href="./activities.html">নিয়মিত কার্যক্রম</a></li>
+                            <li><a href="./competitions.html">প্রতিযোগিতা</a></li>
                         </ul>
                     </li>
                     <li class="has-dropdown">
                         <a href="#">ইভেন্ট</a>
                         <ul class="dropdown">
-                            <li><a href="programs.html">প্রোগ্রাম</a></li>
-                            <li><a href="exhibitions.html">প্রদর্শনী</a></li>
+                            <li><a href="./programs.html">প্রোগ্রাম</a></li>
+                            <li><a href="./exhibitions.html">প্রদর্শনী</a></li>
                         </ul>
                     </li>
-                                        
                     <li class="has-dropdown">
                         <a href="#">যোগাযোগ</a>
                         <ul class="dropdown">
-                            <li><a href="contact.html">যোগাযোগ করুন</a></li>
-                            <li><a href="book-program.html">প্রোগ্রাম বুকিং</a></li>
-                            <li><a href="links.html">সোশ্যাল মিডিয়া</a></li>
+                            <li><a href="./contact.html">যোগাযোগ করুন</a></li>
+                            <li><a href="./book-program.html">প্রোগ্রাম বুকিং</a></li>
+                            <li><a href="./links.html">সোশ্যাল মিডিয়া</a></li>
                         </ul>
                     </li>
+                    <li class="mobile-only-login">
+                        <a href="./login.html"><i class="fa-solid fa-user"></i> লগইন</a>
+                    </li>
                 </ul>
+                <div class="mobile-top-bar-links">
+                    <a href="#"><i class="fa-solid fa-play"></i> সাইমুম স্ট্রিম</a>
+                    <a href="#"><i class="fa-solid fa-graduation-cap"></i> সাইমুম একাডেমি</a>
+                    <a href="#"><i class="fa-solid fa-bag-shopping"></i> সাইমুম শপ</a>
+                    <a href="#"><i class="fa-solid fa-hand-holding-heart"></i> অনুদান দিন</a>
+                    <div class="language-switcher-mobile">
+                        <span><img src="https://flagcdn.com/w20/bd.png" alt="BD Flag" class="flag-icon" loading="lazy"> বাংলা</span> <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                </div>
             </nav>
             <div class="header-actions">
-                <a href="login.html" class="btn btn-primary"><i class="fa-solid fa-user"></i> লগইন</a>
+                <a href="./login.html" class="btn btn-primary btn-login"><i class="fa-solid fa-user"></i> লগইন</a>
                 <button class="mobile-menu-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="mobile-nav">
                     <i class="fa-solid fa-bars"></i>
                 </button>
@@ -141,20 +174,49 @@
         </div>
     </header>
 
+
     <!-- Hero Section -->
     <section class="hero">
         <!-- Image Slider (Ken Burns Effect) -->
-        <div class="slide active" style="background-image: linear-gradient(to bottom, rgba(15, 23, 42, 0) 0%, rgba(15, 23, 42, 0.2) 40%, rgba(15, 23, 42, 0.95) 100%), url('Images/সাংস্কৃতিক_কর্মশালার_ফলাফল_ও_সার্টিফিকেট_বিতরন_২০২৫_02.webp');"></div>
-        <div class="slide" style="background-image: linear-gradient(to bottom, rgba(15, 23, 42, 0) 0%, rgba(15, 23, 42, 0.2) 40%, rgba(15, 23, 42, 0.95) 100%), url('Images/সাংস্কৃতিক_কর্মশালার_ফলাফল_ও_সার্টিফিকেট_বিতরন_২০২৫_03.webp');"></div>
-        <div class="slide" style="background-image: linear-gradient(to bottom, rgba(15, 23, 42, 0) 0%, rgba(15, 23, 42, 0.2) 40%, rgba(15, 23, 42, 0.95) 100%), url('Images/সাংস্কৃতিক_কর্মশালার_ফলাফল_ও_সার্টিফিকেট_বিতরন_২০২৫_04.webp');"></div>
-        <div class="slide" style="background-image: linear-gradient(to bottom, rgba(15, 23, 42, 0) 0%, rgba(15, 23, 42, 0.2) 40%, rgba(15, 23, 42, 0.95) 100%), url('Images/সাংস্কৃতিক_কর্মশালার_ফলাফল_ও_সার্টিফিকেট_বিতরন_২০২৫_05.webp');"></div>
+        <div class="slide active">
+            <div class="slide-overlay"></div>
+            <picture>
+                <source media="(max-width: 768px)" srcset="Images/সাংস্কৃতিক_কর্মশালার_ফলাফল_ও_সার্টিফিকেট_বিতরন_২০২৫_02.webp">
+                <source media="(max-width: 1200px)" srcset="Images/সাংস্কৃতিক_কর্মশালার_ফলাফল_ও_সার্টিফিকেট_বিতরন_২০২৫_02.webp">
+                <img src="Images/সাংস্কৃতিক_কর্মশালার_ফলাফল_ও_সার্টিফিকেট_বিতরন_২০২৫_02.webp" width="1920" height="1080" loading="eager" decoding="async" alt="Cultural Workshop Award Ceremony 1">
+            </picture>
+        </div>
+        <div class="slide">
+            <div class="slide-overlay"></div>
+            <picture>
+                <source media="(max-width: 768px)" srcset="Images/সাংস্কৃতিক_কর্মশালার_ফলাফল_ও_সার্টিফিকেট_বিতরন_২০২৫_03.webp">
+                <source media="(max-width: 1200px)" srcset="Images/সাংস্কৃতিক_কর্মশালার_ফলাফল_ও_সার্টিফিকেট_বিতরন_২০২৫_03.webp">
+                <img src="Images/সাংস্কৃতিক_কর্মশালার_ফলাফল_ও_সার্টিফিকেট_বিতরন_২০২৫_03.webp" width="1920" height="1080" loading="lazy" decoding="async" alt="Cultural Workshop Award Ceremony 2">
+            </picture>
+        </div>
+        <div class="slide">
+            <div class="slide-overlay"></div>
+            <picture>
+                <source media="(max-width: 768px)" srcset="Images/সাংস্কৃতিক_কর্মশালার_ফলাফল_ও_সার্টিফিকেট_বিতরন_২০২৫_04.webp">
+                <source media="(max-width: 1200px)" srcset="Images/সাংস্কৃতিক_কর্মশালার_ফলাফল_ও_সার্টিফিকেট_বিতরন_২০২৫_04.webp">
+                <img src="Images/সাংস্কৃতিক_কর্মশালার_ফলাফল_ও_সার্টিফিকেট_বিতরন_২০২৫_04.webp" width="1920" height="1080" loading="lazy" decoding="async" alt="Cultural Workshop Award Ceremony 3">
+            </picture>
+        </div>
+        <div class="slide">
+            <div class="slide-overlay"></div>
+            <picture>
+                <source media="(max-width: 768px)" srcset="Images/সাংস্কৃতিক_কর্মশালার_ফলাফল_ও_সার্টিফিকেট_বিতরন_২০২৫_05.webp">
+                <source media="(max-width: 1200px)" srcset="Images/সাংস্কৃতিক_কর্মশালার_ফলাফল_ও_সার্টিফিকেট_বিতরন_২০২৫_05.webp">
+                <img src="Images/সাংস্কৃতিক_কর্মশালার_ফলাফল_ও_সার্টিফিকেট_বিতরন_২০২৫_05.webp" width="1920" height="1080" loading="lazy" decoding="async" alt="Cultural Workshop Award Ceremony 4">
+            </picture>
+        </div>
         
         <!-- Hero Static Content -->
         <div class="hero-static-content">
             <div class="container slide-content text-center">
                 <p class="hero-subtitle">সাইমুম শিল্পীগোষ্ঠীর অফিসিয়াল পোর্টালে আপনাকে স্বাগতম। আমাদের সব কার্যক্রম, প্রকাশনা ও সংবাদ এখন এক ঠিকানায়।</p>
                 <div class="hero-buttons">
-                    <a href="#" class="btn btn-primary btn-large"><i class="fa-solid fa-headphones"></i> সর্বশেষ অ্যালবাম শুনুন</a>
+
                     <a href="about.html" class="btn btn-outline btn-large">আমাদের সম্পর্কে <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
             </div>
@@ -171,15 +233,15 @@
                     
                     <p><strong>সাইমুম শিল্পীগোষ্ঠী</strong> বাংলাদেশের একটি সুপরিচিত ও শীর্ষস্থানীয় ইসলামি সাংস্কৃতিক সংগঠন। ১৯৭৮ সালের ১ জানুয়ারি প্রখ্যাত গীতিকার ও কবি মতিউর রহমান মল্লিক এটি প্রতিষ্ঠা করেন। সংগঠনটির নামকরণের প্রস্তাব দিয়েছিলেন সরকারের সাবেক সচিব মিয়া মোহাম্মদ আইয়ুব।</p>
                     
-                    <p>আমাদের মূল উদ্দেশ্য হলো <strong>'সাংস্কৃতিক বিপ্লব'</strong>। সংগীত, ক্বিরাত, আবৃত্তি, থিয়েটার বা নাটক, সাহিত্য, ক্যালিগ্রাফি ও চলচ্চিত্রসহ বিভিন্ন সাংস্কৃতিক ক্ষেত্রে আমরা কাজ করে যাচ্ছি। এ পর্যন্ত শতাধিক অ্যালবাম প্রকাশ এবং ৪০টিরও বেশি মঞ্চনাটক পরিবেশন করেছে সাইমুম।</p>
+
                     
-                    <div style="margin-top: 35px;">
-                        <a href="about.html" class="btn btn-primary btn-large" style="border-radius: 30px; padding: 12px 30px; font-weight: 700; box-shadow: 0 10px 20px rgba(242, 101, 34, 0.2);">বিস্তারিত জানুন <i class="fa-solid fa-arrow-right" style="margin-left: 8px;"></i></a>
+                    <div class="mt-5">
+                        <a href="about.html" class="btn btn-primary btn-large btn-pill btn-shadow">বিস্তারিত জানুন <i class="fa-solid fa-arrow-right ml-2"></i></a>
                     </div>
                 </div>
                 
                 <div class="about-image-wrapper">
-                    <img src="Images/সাংস্কৃতিক_কর্মশালার_ফলাফল_ও_সার্টিফিকেট_বিতরন_২০২৫_04.webp" alt="About Saimum" class="about-main-image">
+                    <img src="Images/সাংস্কৃতিক_কর্মশালার_ফলাফল_ও_সার্টিফিকেট_বিতরন_২০২৫_04.webp" alt="About Saimum" class="about-main-image" loading="lazy">
                     
                     <div class="about-experience-badge">
                         <h3>৪৬</h3>
@@ -191,81 +253,105 @@
     </section>
 
     <!-- Departments Section -->
-    <section class="departments" style="padding: 60px 0 20px; background: #ffffff;">
+    <section class="departments">
         <div class="container">
             <div class="section-header text-center">
                 <span class="section-subtitle">আমাদের বিভাগসমূহ</span>
                 <h2>প্রশিক্ষণের বিভাগসমূহ</h2>
-                <div class="header-line" style="margin: 15px auto 0;"></div>
+                <div class="header-line"></div>
             </div>
             <div class="dept-horizontal-scroll">
                 <!-- Card 1 -->
-                <div class="dept-card" style="--accent-color: #3b82f6;">
-                    <div class="dept-icon"><i class="fa-solid fa-child-reaching"></i></div>
-                    <h3>শিশু সঙ্গীত বিভাগ</h3>
-                    <p>বাচ্চাদের সুপ্ত প্রতিভাকে বিকশিত করে সুস্থ ধারার সঙ্গীতের হাতেখড়ি।</p>
-                    <a href="departments/shishu-songit.html" class="dept-link">বিস্তারিত <i class="fa-solid fa-arrow-right"></i></a>
+                <div class="card card--department" style="--accent-color: #3b82f6;">
+                    <div class="card-body">
+                        <div class="dept-icon"><i class="fa-solid fa-child-reaching"></i></div>
+                        <h3 class="card-title">শিশু সঙ্গীত বিভাগ</h3>
+                        <p class="card-text">বাচ্চাদের সুপ্ত প্রতিভাকে বিকশিত করে সুস্থ ধারার সঙ্গীতের হাতেখড়ি।</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="departments/shishu-songit.html" class="dept-link">বিস্তারিত <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
                 </div>
                 <!-- Card 2 -->
-                <div class="dept-card" style="--accent-color: #f59e0b;">
-                    <div class="dept-icon"><i class="fa-solid fa-guitar"></i></div>
-                    <h3>কিশোর সঙ্গীত বিভাগ</h3>
-                    <p>কিশোরদের বয়সভিত্তিক কণ্ঠের পরিচর্যা ও ইসলামী সঙ্গীতের প্রশিক্ষণ।</p>
-                    <a href="departments/kishor-songit.html" class="dept-link">বিস্তারিত <i class="fa-solid fa-arrow-right"></i></a>
+                <div class="card card--department" style="--accent-color: #f59e0b;">
+                    <div class="card-body">
+                        <div class="dept-icon"><i class="fa-solid fa-guitar"></i></div>
+                        <h3 class="card-title">কিশোর সঙ্গীত বিভাগ</h3>
+                        <p class="card-text">কিশোরদের বয়সভিত্তিক কণ্ঠের পরিচর্যা ও ইসলামী সঙ্গীতের প্রশিক্ষণ।</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="departments/kishor-songit.html" class="dept-link">বিস্তারিত <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
                 </div>
                 <!-- Card 3 -->
-                <div class="dept-card" style="--accent-color: #ef4444;">
-                    <div class="dept-icon"><i class="fa-solid fa-microphone-lines"></i></div>
-                    <h3>বড় সঙ্গীত বিভাগ</h3>
-                    <p>উচ্চাঙ্গ ও আধুনিক ইসলামী সঙ্গীতের প্রফেশনাল প্রশিক্ষণ কোর্স।</p>
-                    <a href="departments/boro-songit.html" class="dept-link">বিস্তারিত <i class="fa-solid fa-arrow-right"></i></a>
+                <div class="card card--department" style="--accent-color: #ef4444;">
+                    <div class="card-body">
+                        <div class="dept-icon"><i class="fa-solid fa-microphone-lines"></i></div>
+                        <h3 class="card-title">বড় সঙ্গীত বিভাগ</h3>
+                        <p class="card-text">উচ্চাঙ্গ ও আধুনিক ইসলামী সঙ্গীতের প্রফেশনাল প্রশিক্ষণ কোর্স।</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="departments/boro-songit.html" class="dept-link">বিস্তারিত <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
                 </div>
                 <!-- Card 4 -->
-                <div class="dept-card" style="--accent-color: #8b5cf6;">
-                    <div class="dept-icon"><i class="fa-solid fa-bullhorn"></i></div>
-                    <h3>আবৃত্তি ও উপস্থাপনা বিভাগ</h3>
-                    <p>কণ্ঠে কবিতার শৈল্পিক প্রকাশ এবং প্রফেশনাল উপস্থাপনার কৌশল।</p>
-                    <a href="departments/abriti.html" class="dept-link">বিস্তারিত <i class="fa-solid fa-arrow-right"></i></a>
+                <div class="card card--department" style="--accent-color: #8b5cf6;">
+                    <div class="card-body">
+                        <div class="dept-icon"><i class="fa-solid fa-bullhorn"></i></div>
+                        <h3 class="card-title">আবৃত্তি ও উপস্থাপনা বিভাগ</h3>
+                        <p class="card-text">কণ্ঠে কবিতার শৈল্পিক প্রকাশ এবং প্রফেশনাল উপস্থাপনার কৌশল।</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="departments/abriti.html" class="dept-link">বিস্তারিত <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
                 </div>
                 <!-- Card 5 -->
-                <div class="dept-card" style="--accent-color: #10b981;">
-                    <div class="dept-icon"><i class="fa-solid fa-book-quran"></i></div>
-                    <h3>কিরাত বিভাগ</h3>
-                    <p>বিশুদ্ধ তিলাওয়াত, তাজবীদ এবং কুরআনের সুমধুর সুরের চর্চা।</p>
-                    <a href="departments/qirat.html" class="dept-link">বিস্তারিত <i class="fa-solid fa-arrow-right"></i></a>
+                <div class="card card--department" style="--accent-color: #10b981;">
+                    <div class="card-body">
+                        <div class="dept-icon"><i class="fa-solid fa-book-quran"></i></div>
+                        <h3 class="card-title">কিরাত বিভাগ</h3>
+                        <p class="card-text">বিশুদ্ধ তিলাওয়াত, তাজবীদ এবং কুরআনের সুমধুর সুরের চর্চা।</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="departments/qirat.html" class="dept-link">বিস্তারিত <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
                 </div>
                 <!-- Card 6 -->
-                <div class="dept-card" style="--accent-color: #6366f1;">
-                    <div class="dept-icon"><i class="fa-solid fa-masks-theater"></i></div>
-                    <h3>থিয়েটার বিভাগ</h3>
-                    <p>মঞ্চে জীবনের বাস্তব প্রতিচ্ছবি ও সামাজিক সচেতনতামূলক অভিনয়।</p>
-                    <a href="departments/theatre.html" class="dept-link">বিস্তারিত <i class="fa-solid fa-arrow-right"></i></a>
+                <div class="card card--department" style="--accent-color: #6366f1;">
+                    <div class="card-body">
+                        <div class="dept-icon"><i class="fa-solid fa-masks-theater"></i></div>
+                        <h3 class="card-title">থিয়েটার বিভাগ</h3>
+                        <p class="card-text">মঞ্চে জীবনের বাস্তব প্রতিচ্ছবি ও সামাজিক সচেতনতামূলক অভিনয়।</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="departments/theatre.html" class="dept-link">বিস্তারিত <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Popular Lyrics -->
-    <section class="popular-lyrics bg-light" style="padding: 40px 0 20px;">
+    <section class="popular-lyrics bg-light section-padding">
         <div class="container">
             <div class="section-header text-center">
                 <span class="section-subtitle">সর্বাধিক পঠিত</span>
                 <h2>জনপ্রিয় লিরিকসমূহ</h2>
-                <div class="header-line" style="margin: 15px auto 0;"></div>
+                <div class="header-line"></div>
             </div>
             
             <div class="home-lyrics-scroll">
                 <!-- Lyric Card 1 -->
-                <a href="lyrics/jekhane-rat-pohale.html" class="premium-lyric-card">
-                    <div class="plc-img-box">
-                        <img src="https://picsum.photos/seed/lyric1/600/400" alt="Lyric">
+                <a href="lyrics/jekhane-rat-pohale.html" class="card card--lyric">
+                    <div class="card-header card-image-box">
+                        <img src="https://picsum.photos/seed/lyric1/600/400" alt="Lyric" loading="lazy">
                         <div class="plc-badge"><i class="fa-solid fa-eye"></i> ১.২k</div>
                     </div>
-                    <div class="plc-content">
+                    <div class="card-body">
                         <div class="plc-album"><i class="fa-solid fa-compact-disc"></i> সুরের প্রতিধ্বনি</div>
-                        <h3 class="plc-title">যেখানে রাত পোহালে</h3>
-                        <p class="plc-excerpt">যেখানে রাত পোহালে তোমার কথা মনে পড়ে, সেখানে আমি দাঁড়িয়ে থাকি...</p>
-                        <div class="plc-footer">
+                        <h3 class="card-title">যেখানে রাত পোহালে</h3>
+                        <p class="card-text">যেখানে রাত পোহালে তোমার কথা মনে পড়ে, সেখানে আমি দাঁড়িয়ে থাকি...</p>
+                        <div class="card-footer">
                             <span class="plc-author"><i class="fa-solid fa-pen-nib"></i> মতিউর রহমান</span>
                             <span class="plc-read">পড়ুন <i class="fa-solid fa-arrow-right"></i></span>
                         </div>
@@ -273,16 +359,16 @@
                 </a>
                 
                 <!-- Lyric Card 2 -->
-                <a href="lyrics/akaser-oi.html" class="premium-lyric-card">
-                    <div class="plc-img-box">
-                        <img src="https://picsum.photos/seed/lyric2/600/400" alt="Lyric">
+                <a href="lyrics/akaser-oi.html" class="card card--lyric">
+                    <div class="card-header card-image-box">
+                        <img src="https://picsum.photos/seed/lyric2/600/400" alt="Lyric" loading="lazy">
                         <div class="plc-badge"><i class="fa-solid fa-eye"></i> ৯৫০</div>
                     </div>
-                    <div class="plc-content">
+                    <div class="card-body">
                         <div class="plc-album"><i class="fa-solid fa-compact-disc"></i> ভোরের পাখি</div>
-                        <h3 class="plc-title">আকাশের ঐ মিটিমিটি তারা</h3>
-                        <p class="plc-excerpt">আকাশের ঐ মিটিমিটি তারা, আমাকে বলে যেন তুমি হারা...</p>
-                        <div class="plc-footer">
+                        <h3 class="card-title">আকাশের ঐ মিটিমিটি তারা</h3>
+                        <p class="card-text">আকাশের ঐ মিটিমিটি তারা, আমাকে বলে যেন তুমি হারা...</p>
+                        <div class="card-footer">
                             <span class="plc-author"><i class="fa-solid fa-pen-nib"></i> কাজী নজরুল</span>
                             <span class="plc-read">পড়ুন <i class="fa-solid fa-arrow-right"></i></span>
                         </div>
@@ -290,16 +376,16 @@
                 </a>
 
                 <!-- Lyric Card 3 -->
-                <a href="lyrics/jago-he.html" class="premium-lyric-card">
-                    <div class="plc-img-box">
-                        <img src="https://picsum.photos/seed/lyric3/600/400" alt="Lyric">
+                <a href="lyrics/jago-he.html" class="card card--lyric">
+                    <div class="card-header card-image-box">
+                        <img src="https://picsum.photos/seed/lyric3/600/400" alt="Lyric" loading="lazy">
                         <div class="plc-badge"><i class="fa-solid fa-eye"></i> ৮৪০</div>
                     </div>
-                    <div class="plc-content">
+                    <div class="card-body">
                         <div class="plc-album"><i class="fa-solid fa-compact-disc"></i> নতুন দিন</div>
-                        <h3 class="plc-title">জাগো হে যুবসমাজ</h3>
-                        <p class="plc-excerpt">জাগো হে যুবসমাজ, নতুন দিনের আলোকে, ভেঙে দাও সব বাধা...</p>
-                        <div class="plc-footer">
+                        <h3 class="card-title">জাগো হে যুবসমাজ</h3>
+                        <p class="card-text">জাগো হে যুবসমাজ, নতুন দিনের আলোকে, ভেঙে দাও সব বাধা...</p>
+                        <div class="card-footer">
                             <span class="plc-author"><i class="fa-solid fa-pen-nib"></i> আব্দুল হাকিম</span>
                             <span class="plc-read">পড়ুন <i class="fa-solid fa-arrow-right"></i></span>
                         </div>
@@ -307,16 +393,16 @@
                 </a>
                 
                 <!-- Lyric Card 4 -->
-                <a href="lyrics/notun-din.html" class="premium-lyric-card">
-                    <div class="plc-img-box">
-                        <img src="https://picsum.photos/seed/lyric4/600/400" alt="Lyric">
+                <a href="lyrics/notun-din.html" class="card card--lyric">
+                    <div class="card-header card-image-box">
+                        <img src="https://picsum.photos/seed/lyric4/600/400" alt="Lyric" loading="lazy">
                         <div class="plc-badge"><i class="fa-solid fa-eye"></i> ৭২০</div>
                     </div>
-                    <div class="plc-content">
+                    <div class="card-body">
                         <div class="plc-album"><i class="fa-solid fa-compact-disc"></i> মুক্তির গান</div>
-                        <h3 class="plc-title">স্বাধীনতার গান</h3>
-                        <p class="plc-excerpt">মুক্তির এই গানে গানে মুখরিত আজ আকাশ বাতাস...</p>
-                        <div class="plc-footer">
+                        <h3 class="card-title">স্বাধীনতার গান</h3>
+                        <p class="card-text">মুক্তির এই গানে গানে মুখরিত আজ আকাশ বাতাস...</p>
+                        <div class="card-footer">
                             <span class="plc-author"><i class="fa-solid fa-pen-nib"></i> সাইফুল্লাহ মানছুর</span>
                             <span class="plc-read">পড়ুন <i class="fa-solid fa-arrow-right"></i></span>
                         </div>
@@ -344,22 +430,22 @@
             <div class="section-header text-center">
                 <span class="section-subtitle">নেতৃত্ব ও দিকনির্দেশনা</span>
                 <h2>আমাদের পরিচালকবৃন্দ</h2>
-                <div class="header-line" style="margin: 15px auto 0;"></div>
+                <div class="header-line"></div>
             </div>
             
             
             <div class="home-director-scroll">
                 <!-- Director 1 -->
-                <a href="directors/motiur-rahman-mallick.html" class="director-card">
-                    <div class="dir-img-box">
-                        <img src="Images/Direcotrs/1.jpg" alt="কবি মতিউর রহমান মল্লিক">
+                <a href="directors/motiur-rahman-mallick.html" class="card card--director">
+                    <div class="card-header card-image-box">
+                        <img src="Images/Direcotrs/1.jpg" alt="কবি মতিউর রহমান মল্লিক" loading="lazy">
                         <div class="dir-badge">১ম পরিচালক</div>
                     </div>
-                    <div class="dir-content">
-                        <h4 class="dir-name">কবি মতিউর রহমান মল্লিক</h4>
+                    <div class="card-body">
+                        <h4 class="card-title">কবি মতিউর রহমান মল্লিক</h4>
                         <div class="dir-tenure"><i class="fa-regular fa-calendar"></i> জানুয়ারি ১৯৭৮ – সেপ্টেম্বর ১৯৮১</div>
-                        <p class="dir-bio">সাইমুম শিল্পীগোষ্ঠীকে এগিয়ে নেওয়ার ক্ষেত্রে তিনি যোগ্য নেতৃত্ব প্রদান করেছেন এবং গুরুত্বপূর্ণ অবদান রেখেছেন।</p>
-                        <div class="dir-footer">
+                        <p class="card-text">সাইমুম শিল্পীগোষ্ঠীকে এগিয়ে নেওয়ার ক্ষেত্রে তিনি যোগ্য নেতৃত্ব প্রদান করেছেন এবং গুরুত্বপূর্ণ অবদান রেখেছেন।</p>
+                        <div class="card-footer">
                             <span class="dir-social" onclick="event.preventDefault();"><i class="fa-brands fa-facebook-f"></i></span>
                             <span class="dir-social" onclick="event.preventDefault();"><i class="fa-solid fa-globe"></i></span>
                         </div>
@@ -367,16 +453,16 @@
                 </a>
                 
                 <!-- Director 2 -->
-                <a href="directors/s-m-rafiq.html" class="director-card">
-                    <div class="dir-img-box">
-                        <img src="Images/Direcotrs/2.jpg" alt="ডা. স. ম. রফিক">
+                <a href="directors/s-m-rafiq.html" class="card card--director">
+                    <div class="card-header card-image-box">
+                        <img src="Images/Direcotrs/2.jpg" alt="ডা. স. ম. রফিক" loading="lazy">
                         <div class="dir-badge">২য় পরিচালক</div>
                     </div>
-                    <div class="dir-content">
-                        <h4 class="dir-name">ডা. স. ম. রফিক</h4>
+                    <div class="card-body">
+                        <h4 class="card-title">ডা. স. ম. রফিক</h4>
                         <div class="dir-tenure"><i class="fa-regular fa-calendar"></i> অক্টোবর ১৯৮১ – সেপ্টেম্বর ১৯৮২</div>
-                        <p class="dir-bio">সাইমুম শিল্পীগোষ্ঠীকে এগিয়ে নেওয়ার ক্ষেত্রে তিনি যোগ্য নেতৃত্ব প্রদান করেছেন এবং গুরুত্বপূর্ণ অবদান রেখেছেন।</p>
-                        <div class="dir-footer">
+                        <p class="card-text">সাইমুম শিল্পীগোষ্ঠীকে এগিয়ে নেওয়ার ক্ষেত্রে তিনি যোগ্য নেতৃত্ব প্রদান করেছেন এবং গুরুত্বপূর্ণ অবদান রেখেছেন।</p>
+                        <div class="card-footer">
                             <span class="dir-social" onclick="event.preventDefault();"><i class="fa-brands fa-facebook-f"></i></span>
                             <span class="dir-social" onclick="event.preventDefault();"><i class="fa-solid fa-globe"></i></span>
                         </div>
@@ -384,16 +470,16 @@
                 </a>
 
                 <!-- Director 3 -->
-                <a href="directors/asad-bin-hafiz.html" class="director-card">
-                    <div class="dir-img-box">
-                        <img src="Images/Direcotrs/3.jpg" alt="কবি আসাদ বিন হাফিজ">
+                <a href="directors/asad-bin-hafiz.html" class="card card--director">
+                    <div class="card-header card-image-box">
+                        <img src="Images/Direcotrs/3.jpg" alt="কবি আসাদ বিন হাফিজ" loading="lazy">
                         <div class="dir-badge">৩য় পরিচালক</div>
                     </div>
-                    <div class="dir-content">
-                        <h4 class="dir-name">কবি আসাদ বিন হাফিজ</h4>
+                    <div class="card-body">
+                        <h4 class="card-title">কবি আসাদ বিন হাফিজ</h4>
                         <div class="dir-tenure"><i class="fa-regular fa-calendar"></i> অক্টোবর ১৯৮২ – সেপ্টেম্বর ১৯৮৩</div>
-                        <p class="dir-bio">সাইমুম শিল্পীগোষ্ঠীকে এগিয়ে নেওয়ার ক্ষেত্রে তিনি যোগ্য নেতৃত্ব প্রদান করেছেন এবং গুরুত্বপূর্ণ অবদান রেখেছেন।</p>
-                        <div class="dir-footer">
+                        <p class="card-text">সাইমুম শিল্পীগোষ্ঠীকে এগিয়ে নেওয়ার ক্ষেত্রে তিনি যোগ্য নেতৃত্ব প্রদান করেছেন এবং গুরুত্বপূর্ণ অবদান রেখেছেন।</p>
+                        <div class="card-footer">
                             <span class="dir-social" onclick="event.preventDefault();"><i class="fa-brands fa-facebook-f"></i></span>
                             <span class="dir-social" onclick="event.preventDefault();"><i class="fa-solid fa-globe"></i></span>
                         </div>
@@ -401,16 +487,16 @@
                 </a>
 
                 <!-- Director 4 -->
-                <a href="directors/noman-azmi.html" class="director-card">
-                    <div class="dir-img-box">
-                        <img src="Images/Direcotrs/4.jpg" alt="নোমান আযমী">
+                <a href="directors/noman-azmi.html" class="card card--director">
+                    <div class="card-header card-image-box">
+                        <img src="Images/Direcotrs/4.jpg" alt="নোমান আযমী" loading="lazy">
                         <div class="dir-badge">৪র্থ পরিচালক</div>
                     </div>
-                    <div class="dir-content">
-                        <h4 class="dir-name">নোমান আযমী</h4>
+                    <div class="card-body">
+                        <h4 class="card-title">নোমান আযমী</h4>
                         <div class="dir-tenure"><i class="fa-regular fa-calendar"></i> অক্টোবর ১৯৮৩ – সেপ্টেম্বর ১৯৮৪</div>
-                        <p class="dir-bio">সাইমুম শিল্পীগোষ্ঠীকে এগিয়ে নেওয়ার ক্ষেত্রে তিনি যোগ্য নেতৃত্ব প্রদান করেছেন এবং গুরুত্বপূর্ণ অবদান রেখেছেন।</p>
-                        <div class="dir-footer">
+                        <p class="card-text">সাইমুম শিল্পীগোষ্ঠীকে এগিয়ে নেওয়ার ক্ষেত্রে তিনি যোগ্য নেতৃত্ব প্রদান করেছেন এবং গুরুত্বপূর্ণ অবদান রেখেছেন।</p>
+                        <div class="card-footer">
                             <span class="dir-social" onclick="event.preventDefault();"><i class="fa-brands fa-facebook-f"></i></span>
                             <span class="dir-social" onclick="event.preventDefault();"><i class="fa-solid fa-globe"></i></span>
                         </div>
@@ -418,16 +504,16 @@
                 </a>
 
                 <!-- Director 9 -->
-                <a href="directors/manjur-moazzam.html" class="director-card">
-                    <div class="dir-img-box">
-                        <img src="Images/Direcotrs/9.jpg" alt="মানজুর মোয়াজ্জাম">
+                <a href="directors/manjur-moazzam.html" class="card card--director">
+                    <div class="card-header card-image-box">
+                        <img src="Images/Direcotrs/9.jpg" alt="মানজুর মোয়াজ্জাম" loading="lazy">
                         <div class="dir-badge">৯ম পরিচালক</div>
                     </div>
-                    <div class="dir-content">
-                        <h4 class="dir-name">মানজুর মোয়াজ্জাম</h4>
+                    <div class="card-body">
+                        <h4 class="card-title">মানজুর মোয়াজ্জাম</h4>
                         <div class="dir-tenure"><i class="fa-regular fa-calendar"></i> জুলাই ১৯৯১ – সেপ্টেম্বর ১৯৯১</div>
-                        <p class="dir-bio">সাইমুম শিল্পীগোষ্ঠীকে এগিয়ে নেওয়ার ক্ষেত্রে তিনি যোগ্য নেতৃত্ব প্রদান করেছেন এবং গুরুত্বপূর্ণ অবদান রেখেছেন।</p>
-                        <div class="dir-footer">
+                        <p class="card-text">সাইমুম শিল্পীগোষ্ঠীকে এগিয়ে নেওয়ার ক্ষেত্রে তিনি যোগ্য নেতৃত্ব প্রদান করেছেন এবং গুরুত্বপূর্ণ অবদান রেখেছেন।</p>
+                        <div class="card-footer">
                             <span class="dir-social" onclick="event.preventDefault();"><i class="fa-brands fa-facebook-f"></i></span>
                             <span class="dir-social" onclick="event.preventDefault();"><i class="fa-solid fa-globe"></i></span>
                         </div>
@@ -435,16 +521,16 @@
                 </a>
 
                 <!-- Director 11 -->
-                <a href="directors/sharif-bayzid-mahmud.html" class="director-card">
-                    <div class="dir-img-box">
-                        <img src="Images/Direcotrs/11.jpg" alt="শরীফ বায়জীদ মাহমুদ">
+                <a href="directors/sharif-bayzid-mahmud.html" class="card card--director">
+                    <div class="card-header card-image-box">
+                        <img src="Images/Direcotrs/11.jpg" alt="শরীফ বায়জীদ মাহমুদ" loading="lazy">
                         <div class="dir-badge">১১তম পরিচালক</div>
                     </div>
-                    <div class="dir-content">
-                        <h4 class="dir-name">শরীফ বায়জীদ মাহমুদ</h4>
+                    <div class="card-body">
+                        <h4 class="card-title">শরীফ বায়জীদ মাহমুদ</h4>
                         <div class="dir-tenure"><i class="fa-regular fa-calendar"></i> অক্টোবর ১৯৯২ – ডিসেম্বর ১৯৯৪</div>
-                        <p class="dir-bio">সাইমুম শিল্পীগোষ্ঠীকে এগিয়ে নেওয়ার ক্ষেত্রে তিনি যোগ্য নেতৃত্ব প্রদান করেছেন এবং গুরুত্বপূর্ণ অবদান রেখেছেন।</p>
-                        <div class="dir-footer">
+                        <p class="card-text">সাইমুম শিল্পীগোষ্ঠীকে এগিয়ে নেওয়ার ক্ষেত্রে তিনি যোগ্য নেতৃত্ব প্রদান করেছেন এবং গুরুত্বপূর্ণ অবদান রেখেছেন।</p>
+                        <div class="card-footer">
                             <span class="dir-social" onclick="event.preventDefault();"><i class="fa-brands fa-facebook-f"></i></span>
                             <span class="dir-social" onclick="event.preventDefault();"><i class="fa-solid fa-globe"></i></span>
                         </div>
@@ -452,16 +538,16 @@
                 </a>
                 
                 <!-- Director 26 -->
-                <a href="directors/mahmudul-hasan.html" class="director-card">
-                    <div class="dir-img-box">
-                        <img src="Images/Direcotrs/26.jpg" alt="মাহমুদুল হাসান">
+                <a href="directors/mahmudul-hasan.html" class="card card--director">
+                    <div class="card-header card-image-box">
+                        <img src="Images/Direcotrs/26.jpg" alt="মাহমুদুল হাসান" loading="lazy">
                         <div class="dir-badge">২৬তম পরিচালক</div>
                     </div>
-                    <div class="dir-content">
-                        <h4 class="dir-name">মাহমুদুল হাসান</h4>
+                    <div class="card-body">
+                        <h4 class="card-title">মাহমুদুল হাসান</h4>
                         <div class="dir-tenure"><i class="fa-regular fa-calendar"></i> আগস্ট ২০১৮ – মার্চ ২০১৯</div>
-                        <p class="dir-bio">সাইমুম শিল্পীগোষ্ঠীকে এগিয়ে নেওয়ার ক্ষেত্রে তিনি যোগ্য নেতৃত্ব প্রদান করেছেন এবং গুরুত্বপূর্ণ অবদান রেখেছেন।</p>
-                        <div class="dir-footer">
+                        <p class="card-text">সাইমুম শিল্পীগোষ্ঠীকে এগিয়ে নেওয়ার ক্ষেত্রে তিনি যোগ্য নেতৃত্ব প্রদান করেছেন এবং গুরুত্বপূর্ণ অবদান রেখেছেন।</p>
+                        <div class="card-footer">
                             <span class="dir-social" onclick="event.preventDefault();"><i class="fa-brands fa-facebook-f"></i></span>
                             <span class="dir-social" onclick="event.preventDefault();"><i class="fa-solid fa-globe"></i></span>
                         </div>
@@ -469,16 +555,16 @@
                 </a>
                 
                 <!-- Director 27 -->
-                <a href="directors/abdullah-al-noman.html" class="director-card">
-                    <div class="dir-img-box">
-                        <img src="Images/Direcotrs/27.jpg" alt="আব্দুল্লাহ আল নোমান">
+                <a href="directors/abdullah-al-noman.html" class="card card--director">
+                    <div class="card-header card-image-box">
+                        <img src="Images/Direcotrs/27.jpg" alt="আব্দুল্লাহ আল নোমান" loading="lazy">
                         <div class="dir-badge">২৭তম পরিচালক</div>
                     </div>
-                    <div class="dir-content">
-                        <h4 class="dir-name">আব্দুল্লাহ আল নোমান</h4>
+                    <div class="card-body">
+                        <h4 class="card-title">আব্দুল্লাহ আল নোমান</h4>
                         <div class="dir-tenure"><i class="fa-regular fa-calendar"></i> এপ্রিল ২০১৯ – জানুয়ারি ২০২২</div>
-                        <p class="dir-bio">সাইমুম শিল্পীগোষ্ঠীকে এগিয়ে নেওয়ার ক্ষেত্রে তিনি যোগ্য নেতৃত্ব প্রদান করেছেন এবং গুরুত্বপূর্ণ অবদান রেখেছেন।</p>
-                        <div class="dir-footer">
+                        <p class="card-text">সাইমুম শিল্পীগোষ্ঠীকে এগিয়ে নেওয়ার ক্ষেত্রে তিনি যোগ্য নেতৃত্ব প্রদান করেছেন এবং গুরুত্বপূর্ণ অবদান রেখেছেন।</p>
+                        <div class="card-footer">
                             <span class="dir-social" onclick="event.preventDefault();"><i class="fa-brands fa-facebook-f"></i></span>
                             <span class="dir-social" onclick="event.preventDefault();"><i class="fa-solid fa-globe"></i></span>
                         </div>
@@ -509,7 +595,7 @@
                     <a href="competitions.html" class="dpb-btn">প্রতিযোগিতায় অংশ নিন <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
                 <div class="dpb-image">
-                    <img src="Images/সাংস্কৃতিক_কর্মশালার_ফলাফল_ও_সার্টিফিকেট_বিতরন_২০২৫_02.webp" alt="Competitions">
+                    <img src="Images/সাংস্কৃতিক_কর্মশালার_ফলাফল_ও_সার্টিফিকেট_বিতরন_২০২৫_02.webp" alt="Competitions" loading="lazy">
                 </div>
             </div>
         </div>
@@ -521,27 +607,27 @@
             <div class="section-header text-center">
                 <span class="section-subtitle">আমাদের নক্ষত্ররা</span>
                 <h2>শিল্পী ও কলাকুশলীবৃন্দ</h2>
-                <div class="header-line" style="margin: 15px auto 0;"></div>
+                <div class="header-line"></div>
             </div>
             
             <div class="home-artist-grid">
                 <a href="artists.html" class="home-artist-card">
-                    <img src="https://ui-avatars.com/api/?name=Motin+Tariq&background=0D8ABC&color=fff&size=200" alt="Artist">
+                    <img src="https://ui-avatars.com/api/?name=Motin+Tariq&background=0D8ABC&color=fff&size=200" alt="Artist" loading="lazy">
                     <h3 class="home-artist-name">মতিন তারিক</h3>
                     <div class="home-artist-role">প্রধান শিল্পী</div>
                 </a>
                 <a href="artists.html" class="home-artist-card">
-                    <img src="https://ui-avatars.com/api/?name=Kamrul+Hasan&background=10b981&color=fff&size=200" alt="Artist">
+                    <img src="https://ui-avatars.com/api/?name=Kamrul+Hasan&background=10b981&color=fff&size=200" alt="Artist" loading="lazy">
                     <h3 class="home-artist-name">কামরুল হাসান</h3>
                     <div class="home-artist-role">সংগীত পরিচালক</div>
                 </a>
                 <a href="artists.html" class="home-artist-card">
-                    <img src="https://ui-avatars.com/api/?name=Rakibul+Islam&background=8b5cf6&color=fff&size=200" alt="Artist">
+                    <img src="https://ui-avatars.com/api/?name=Rakibul+Islam&background=8b5cf6&color=fff&size=200" alt="Artist" loading="lazy">
                     <h3 class="home-artist-name">রাকিবুল ইসলাম</h3>
                     <div class="home-artist-role">গীতিকার</div>
                 </a>
                 <a href="artists.html" class="home-artist-card">
-                    <img src="https://ui-avatars.com/api/?name=Hasan+Mahmud&background=f59e0b&color=fff&size=200" alt="Artist">
+                    <img src="https://ui-avatars.com/api/?name=Hasan+Mahmud&background=f59e0b&color=fff&size=200" alt="Artist" loading="lazy">
                     <h3 class="home-artist-name">হাসান মাহমুদ</h3>
                     <div class="home-artist-role">আবৃত্তিকার</div>
                 </a>
@@ -555,26 +641,26 @@
             <div class="section-header text-center">
                 <span class="section-subtitle">অডিও ও ভিডিও প্রকাশনা</span>
                 <h2>সাম্প্রতিক অ্যালবামসমূহ</h2>
-                <div class="header-line" style="margin: 15px auto 0;"></div>
+                <div class="header-line"></div>
             </div>
             
             <div class="home-albums-grid">
                 <a href="albums.html" class="home-album-item">
-                    <img src="https://picsum.photos/seed/album1/600/600" alt="Album" class="home-album-cover">
+                    <img src="https://picsum.photos/seed/album1/600/600" alt="Album" class="home-album-cover" loading="lazy">
                     <div class="home-album-info">
                         <h3 class="home-album-title">সুরের প্রতিধ্বনি</h3>
                         <div class="home-album-meta">১০টি ট্র্যাক • রিলিজ: ২০২৫</div>
                     </div>
                 </a>
                 <a href="albums.html" class="home-album-item">
-                    <img src="https://picsum.photos/seed/album2/600/600" alt="Album" class="home-album-cover">
+                    <img src="https://picsum.photos/seed/album2/600/600" alt="Album" class="home-album-cover" loading="lazy">
                     <div class="home-album-info">
                         <h3 class="home-album-title">ভোরের পাখি</h3>
                         <div class="home-album-meta">০৮টি ট্র্যাক • রিলিজ: ২০২৪</div>
                     </div>
                 </a>
                 <a href="albums.html" class="home-album-item">
-                    <img src="https://picsum.photos/seed/album3/600/600" alt="Album" class="home-album-cover">
+                    <img src="https://picsum.photos/seed/album3/600/600" alt="Album" class="home-album-cover" loading="lazy">
                     <div class="home-album-info">
                         <h3 class="home-album-title">মুক্তির গান</h3>
                         <div class="home-album-meta">১২টি ট্র্যাক • রিলিজ: ২০২৪</div>
@@ -590,19 +676,19 @@
             <div class="section-header text-center">
                 <span class="section-subtitle">আমাদের রুটিন কাজ</span>
                 <h2>নিয়মিত কার্যক্রম</h2>
-                <div class="header-line" style="margin: 15px auto 0;"></div>
+                <div class="header-line"></div>
             </div>
             
             <div class="home-activities-scroll">
                 <!-- Card 1 -->
                 <div class="activity-card">
                     <div class="activity-image">
-                        <img src="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Activity">
+                        <img src="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Activity" loading="lazy">
                         <span class="activity-category">কনসার্ট</span>
                     </div>
                     <div class="activity-content">
                         <div class="activity-date"><i class="fa-regular fa-calendar"></i> ১৬ ডিসেম্বর, ২০২৪</div>
-                        <h3 class="activity-title-card"><a href="activity-details.html" style="color:inherit; text-decoration:none;">মহান বিজয় দিবস কনসার্ট ২০২৪</a></h3>
+                        <h3 class="activity-title-card"><a href="activity-details.html" class="text-inherit no-underline">মহান বিজয় দিবস কনসার্ট ২০২৪</a></h3>
                         <p class="activity-desc">বিজয় দিবস উপলক্ষ্যে বাংলাদেশ শিল্পকলা একাডেমিতে আয়োজিত বিশেষ সাংস্কৃতিক সন্ধ্যা এবং লাইভ পারফরম্যান্স।</p>
                         <div class="activity-footer">
                             <span class="activity-location"><i class="fa-solid fa-location-dot"></i> ঢাকা, বাংলাদেশ</span>
@@ -614,12 +700,12 @@
                 <!-- Card 2 -->
                 <div class="activity-card">
                     <div class="activity-image">
-                        <img src="https://images.unsplash.com/photo-1544928147-79a2dbc1f389?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Activity">
+                        <img src="https://images.unsplash.com/photo-1544928147-79a2dbc1f389?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Activity" loading="lazy">
                         <span class="activity-category">কর্মশালা</span>
                     </div>
                     <div class="activity-content">
                         <div class="activity-date"><i class="fa-regular fa-calendar"></i> ১২ অক্টোবর, ২০২৪</div>
-                        <h3 class="activity-title-card"><a href="activity-details.html" style="color:inherit; text-decoration:none;">৩ দিনব্যাপী মিউজিক প্রোডাকশন কর্মশালা</a></h3>
+                        <h3 class="activity-title-card"><a href="activity-details.html" class="text-inherit no-underline">৩ দিনব্যাপী মিউজিক প্রোডাকশন কর্মশালা</a></h3>
                         <p class="activity-desc">নতুন প্রজন্মের শিল্পীদের জন্য আধুনিক সাউন্ড ডিজাইন ও স্টুডিও প্রোডাকশনের ওপর প্রফেশনাল ওয়ার্কশপ।</p>
                         <div class="activity-footer">
                             <span class="activity-location"><i class="fa-solid fa-location-dot"></i> সাইমুম স্টুডিও</span>
@@ -631,12 +717,12 @@
                 <!-- Card 3 -->
                 <div class="activity-card">
                     <div class="activity-image">
-                        <img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Activity">
+                        <img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Activity" loading="lazy">
                         <span class="activity-category">আন্তর্জাতিক ট্যুর</span>
                     </div>
                     <div class="activity-content">
                         <div class="activity-date"><i class="fa-regular fa-calendar"></i> ৫ আগস্ট, ২০২৪</div>
-                        <h3 class="activity-title-card"><a href="activity-details.html" style="color:inherit; text-decoration:none;">ইউরোপ ট্যুর: ইসলামিক আর্ট ফেস্টিভ্যাল</a></h3>
+                        <h3 class="activity-title-card"><a href="activity-details.html" class="text-inherit no-underline">ইউরোপ ট্যুর: ইসলামিক আর্ট ফেস্টিভ্যাল</a></h3>
                         <p class="activity-desc">লন্ডনের বিখ্যাত ইসলামিক আর্ট ফেস্টিভ্যালে বাংলাদেশের প্রতিনিধিত্ব এবং মনোমুগ্ধকর পরিবেশনা।</p>
                         <div class="activity-footer">
                             <span class="activity-location"><i class="fa-solid fa-location-dot"></i> লন্ডন, ইউকে</span>
@@ -648,12 +734,12 @@
                 <!-- Card 4 -->
                 <div class="activity-card">
                     <div class="activity-image">
-                        <img src="https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Activity">
+                        <img src="https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Activity" loading="lazy">
                         <span class="activity-category">সামাজিক কাজ</span>
                     </div>
                     <div class="activity-content">
                         <div class="activity-date"><i class="fa-regular fa-calendar"></i> ২০ জুন, ২০২৪</div>
-                        <h3 class="activity-title-card"><a href="activity-details.html" style="color:inherit; text-decoration:none;">বন্যা দুর্গতদের মাঝে ত্রাণ বিতরণ</a></h3>
+                        <h3 class="activity-title-card"><a href="activity-details.html" class="text-inherit no-underline">বন্যা দুর্গতদের মাঝে ত্রাণ বিতরণ</a></h3>
                         <p class="activity-desc">সিলেটের বন্যা কবলিত এলাকায় সাইমুম চ্যারিটি ফান্ডের উদ্যোগে ত্রাণ ও চিকিৎসা সহায়তা প্রদান।</p>
                         <div class="activity-footer">
                             <span class="activity-location"><i class="fa-solid fa-location-dot"></i> সিলেট, বাংলাদেশ</span>
@@ -681,7 +767,7 @@
             <div class="section-header text-center">
                 <span class="section-subtitle">আমাদের আয়োজন</span>
                 <h2>ইভেন্ট ও প্রোগ্রাম</h2>
-                <div class="header-line" style="margin: 15px auto 0;"></div>
+                <div class="header-line"></div>
             </div>
             
             <div class="home-programs-layout">
@@ -689,7 +775,7 @@
                 <a href="programs.html" class="program-featured">
                     <span class="pf-date">২৫ ডিসেম্বর, ২০২৫</span>
                     <h3 class="pf-title">জাতীয় সাংস্কৃতিক উৎসব ও পুরস্কার বিতরণী</h3>
-                    <p style="color: rgba(255,255,255,0.8); font-size: 16px;">দেশের বিভিন্ন প্রান্ত থেকে আগত শিল্পীদের নিয়ে এক মিলনমেলা। এই উৎসবে বিজয়ীদের মাঝে পুরস্কার বিতরণ করা হয়।</p>
+                    <p class="text-light-opacity text-base">দেশের বিভিন্ন প্রান্ত থেকে আগত শিল্পীদের নিয়ে এক মিলনমেলা। এই উৎসবে বিজয়ীদের মাঝে পুরস্কার বিতরণ করা হয়।</p>
                 </a>
                 
                 <!-- Right Vertical List -->
@@ -725,7 +811,7 @@
                         </div>
                     </a>
                     
-                    <a href="programs.html" class="btn btn-outline" style="text-align: center; margin-top: 15px; border-radius: 20px; padding: 15px;">সকল ইভেন্ট দেখুন <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="programs.html" class="btn btn-outline" class="text-center mt-4 btn-pill">সকল ইভেন্ট দেখুন <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>
@@ -737,49 +823,55 @@
             <div class="section-header text-center">
                 <span class="section-subtitle">সাইমুম ব্লগ</span>
                 <h2>সর্বশেষ প্রবন্ধ ও কলাম</h2>
-                <div class="header-line" style="margin: 15px auto 0;"></div>
+                <div class="header-line"></div>
             </div>
             
             <div class="home-blog-grid">
-                <a href="blog.html" class="home-blog-card">
-                    <img src="https://picsum.photos/seed/blog1/600/400" alt="Blog" class="hbc-image">
-                    <div class="hbc-body">
+                <a href="blog.html" class="card card--blog">
+                    <div class="card-header card-image-box">
+                        <img src="https://picsum.photos/seed/blog1/600/400" alt="Blog" loading="lazy">
+                    </div>
+                    <div class="card-body">
                         <span class="hbc-tag">প্রবন্ধ</span>
-                        <h3 class="hbc-title">সুস্থ সংস্কৃতির বিকাশে তরুণদের ভূমিকা</h3>
+                        <h3 class="card-title">সুস্থ সংস্কৃতির বিকাশে তরুণদের ভূমিকা</h3>
                         <p class="hbc-excerpt">আজকের তরুণ সমাজ কীভাবে অপসংস্কৃতির ছোবল থেকে নিজেদের রক্ষা করে একটি সুস্থ সমাজ গড়তে পারে তার বিস্তারিত বিশ্লেষণ...</p>
                         <div class="hbc-meta">
-                            <img src="https://ui-avatars.com/api/?name=A+H&background=random" alt="Author">
+                            <img src="https://ui-avatars.com/api/?name=A+H&background=random" alt="Author" loading="lazy">
                             <span>আব্দুল্লাহ হিল কাফি</span>
                         </div>
                     </div>
                 </a>
-                <a href="blog.html" class="home-blog-card">
-                    <img src="https://picsum.photos/seed/blog2/600/400" alt="Blog" class="hbc-image">
-                    <div class="hbc-body">
+                <a href="blog.html" class="card card--blog">
+                    <div class="card-header card-image-box">
+                        <img src="https://picsum.photos/seed/blog2/600/400" alt="Blog" loading="lazy">
+                    </div>
+                    <div class="card-body">
                         <span class="hbc-tag">সংগীত</span>
-                        <h3 class="hbc-title">ইসলামি সঙ্গীতে সুর ও কথার মেলবন্ধন</h3>
+                        <h3 class="card-title">ইসলামি সঙ্গীতে সুর ও কথার মেলবন্ধন</h3>
                         <p class="hbc-excerpt">একটি সার্থক ইসলামী সঙ্গীতে সুর এবং কথার গুরুত্ব কতটা এবং কীভাবে এটি মানুষের মনে প্রভাব ফেলে...</p>
                         <div class="hbc-meta">
-                            <img src="https://ui-avatars.com/api/?name=M+R&background=random" alt="Author">
+                            <img src="https://ui-avatars.com/api/?name=M+R&background=random" alt="Author" loading="lazy">
                             <span>মতিউর রহমান</span>
                         </div>
                     </div>
                 </a>
-                <a href="blog.html" class="home-blog-card">
-                    <img src="https://picsum.photos/seed/blog3/600/400" alt="Blog" class="hbc-image">
-                    <div class="hbc-body">
+                <a href="blog.html" class="card card--blog">
+                    <div class="card-header card-image-box">
+                        <img src="https://picsum.photos/seed/blog3/600/400" alt="Blog" loading="lazy">
+                    </div>
+                    <div class="card-body">
                         <span class="hbc-tag">ইতিহাস</span>
-                        <h3 class="hbc-title">সাইমুমের পথচলা: এক সোনালী ইতিহাস</h3>
+                        <h3 class="card-title">সাইমুমের পথচলা: এক সোনালী ইতিহাস</h3>
                         <p class="hbc-excerpt">১৯৭৮ সাল থেকে শুরু করে আজ অবধি সাইমুম শিল্পীগোষ্ঠীর চড়াই-উতরাই ও সফলতার গৌরবোজ্জ্বল ইতিহাস...</p>
                         <div class="hbc-meta">
-                            <img src="https://ui-avatars.com/api/?name=S+A&background=random" alt="Author">
+                            <img src="https://ui-avatars.com/api/?name=S+A&background=random" alt="Author" loading="lazy">
                             <span>সাইমুম এডমিন</span>
                         </div>
                     </div>
                 </a>
             </div>
             
-            <div class="text-center" style="margin-top: 50px;">
+            <div class="text-center mt-12">
                 <a href="blog.html" class="btn btn-primary btn-large">ব্লগে যান <i class="fa-solid fa-book-open"></i></a>
             </div>
         </div>
@@ -790,9 +882,9 @@
             <div class="footer-grid">
                 <!-- Brand Section -->
                 <div class="footer-brand">
-                    <a href="index.html" class="logo" style="color: white; margin-bottom: 20px; display: inline-flex;">
+                    <a href="./index.html" class="logo text-white mb-5 inline-flex">
                         <div class="logo-icon"><i class="fa-solid fa-fire-flame-curved"></i></div>
-                <div class="logo-text">সাইমুম<span>.org</span></div>
+                        <div class="logo-text">সাইমুম<span>.org</span></div>
                     </a>
                     <p>সুস্থ সংস্কৃতির বিকাশ এবং মানবতার কল্যাণে ১৯৭৮ সাল থেকে নিরলসভাবে কাজ করে যাচ্ছে সাইমুম শিল্পীগোষ্ঠী।</p>
                     <div class="social-links">
@@ -807,23 +899,23 @@
                 <div class="footer-links">
                     <h3>গুরুত্বপূর্ণ লিংক</h3>
                     <ul>
-                        <li><a href="about.html"><i class="fa-solid fa-angle-right"></i> আমাদের সম্পর্কে</a></li>
+                        <li><a href="./about.html"><i class="fa-solid fa-angle-right"></i> আমাদের সম্পর্কে</a></li>
                         <li><a href="#"><i class="fa-solid fa-angle-right"></i> সাইমুম স্ট্রিম</a></li>
                         <li><a href="#"><i class="fa-solid fa-angle-right"></i> সাইমুম একাডেমি</a></li>
                         <li><a href="#"><i class="fa-solid fa-angle-right"></i> সাইমুম শপ</a></li>
                         <li><a href="#"><i class="fa-solid fa-angle-right"></i> অনুদান / বাইতুল মাল</a></li>
-                    <li><a href="blog/submit.html"><i class="fa-solid fa-angle-right"></i> লেখা জমা দিন</a></li>
-                      </ul>
+                        <li><a href="./blog/submit.html"><i class="fa-solid fa-angle-right"></i> লেখা জমা দিন</a></li>
+                    </ul>
                 </div>
                 
                 <!-- Departments -->
                 <div class="footer-links">
                     <h3>শাখা সমূহ</h3>
                     <ul>
-                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> সংগীত বিভাগ</a></li>
-                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> থিয়েটার ও মঞ্চনাটক</a></li>
-                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> ক্বিরাত বিভাগ</a></li>
-                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> সাহিত্য ও প্রকাশনা</a></li>
+                        <li><a href="./departments/shishu-songit.html"><i class="fa-solid fa-angle-right"></i> সংগীত বিভাগ</a></li>
+                        <li><a href="./departments/theatre.html"><i class="fa-solid fa-angle-right"></i> থিয়েটার ও মঞ্চনাটক</a></li>
+                        <li><a href="./departments/qirat.html"><i class="fa-solid fa-angle-right"></i> ক্বিরাত বিভাগ</a></li>
+                        <li><a href="./albums.html"><i class="fa-solid fa-angle-right"></i> সাহিত্য ও প্রকাশনা</a></li>
                     </ul>
                 </div>
                 
@@ -855,6 +947,9 @@
         </div>
     </footer>
 
+    
+
+
     <!-- Slider Script -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -870,29 +965,47 @@
         });
     </script>
 
-
     <!-- Mobile Menu Script -->
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const mobileToggle = document.querySelector('.mobile-menu-toggle');
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile Menu Toggle
+            const mobileMenuBtn = document.querySelector('.mobile-menu-toggle');
             const mainNav = document.getElementById('mobile-nav');
             
-            if(mobileToggle && mainNav) {
-                mobileToggle.addEventListener('click', () => {
+            if (mobileMenuBtn && mainNav) {
+                mobileMenuBtn.addEventListener('click', function(e) {
+                    e.stopPropagation();
                     mainNav.classList.toggle('active');
-                    const isExpanded = mainNav.classList.contains('active');
-                    mobileToggle.setAttribute('aria-expanded', isExpanded);
+                    const isExpanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
+                    mobileMenuBtn.setAttribute('aria-expanded', !isExpanded);
+                });
+
+                // Close menu when clicking outside
+                document.addEventListener('click', function(e) {
+                    if (!mainNav.contains(e.target) && !mobileMenuBtn.contains(e.target) && mainNav.classList.contains('active')) {
+                        mainNav.classList.remove('active');
+                        mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                    }
                 });
             }
 
-            // Handle dropdowns on mobile
-            const dropdowns = document.querySelectorAll('.has-dropdown');
-            dropdowns.forEach(dropdown => {
-                const link = dropdown.querySelector('a');
-                link.addEventListener('click', (e) => {
+            // Mobile Dropdown Toggle
+            const dropdownLinks = document.querySelectorAll('.has-dropdown > a');
+            dropdownLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
                     if (window.innerWidth <= 992) {
-                        e.preventDefault();
-                        dropdown.classList.toggle('active');
+                        const parent = this.parentElement;
+                        const dropdown = parent.querySelector('.dropdown');
+                        if (dropdown) {
+                            e.preventDefault();
+                            // Close other active dropdowns
+                            document.querySelectorAll('.has-dropdown.active').forEach(activeParent => {
+                                if (activeParent !== parent) {
+                                    activeParent.classList.remove('active');
+                                }
+                            });
+                            parent.classList.toggle('active');
+                        }
                     }
                 });
             });
@@ -900,3 +1013,4 @@
     </script>
 </body>
 </html>
+

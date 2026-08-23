@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>আলোর মিছিল - নাটক | সাইমুম শিল্পীগোষ্ঠী</title>
+    <meta name="description" content="Scripts for 'Notun Provater Dak Eseche' by Saimum Shilpigosthi.">
+    
+    <!-- Google Fonts: Noto Sans Bengali & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../styles.css">
+    
+    <style>
+        /* Script Page Specific Styles */
+        body {
+            background-color: var(--bg-light);
+        }
+
+        .script-hero {
+            background-image: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.95)), url('https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            padding: 80px 0 60px;
+            color: white;
+            text-align: center;
+            border-bottom: 4px solid var(--primary-color);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .script-hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: url('https://www.transparenttextures.com/patterns/cubes.png');
+            opacity: 0.05;
+        }
+
+        .script-title {
+            font-size: 42px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            color: white;
+            position: relative;
+            z-index: 1;
+        }
+
+        .script-meta {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 30px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .script-meta-tag {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-size: 15px;
+            color: rgba(255, 255, 255, 0.9);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            backdrop-filter: blur(5px);
+        }
+
+        .script-meta-tag i {
+            color: var(--primary-color);
+        }
+
+        .stream-actions {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            position: relative;
+            z-index: 1;
+            margin-top: 10px;
+        }
+
+        .btn-stream {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 28px;
+            border-radius: 30px;
+            font-size: 15px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .btn-stream-yt {
+            background: #ef4444; /* YouTube red */
+            color: white;
+            box-shadow: 0 4px 15px rgba(239, 68, 68, 0.3);
+        }
+
+        .btn-stream-yt:hover {
+            background: white;
+            color: #ef4444;
+            transform: translateY(-2px);
+        }
+
+        .btn-stream-outline {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(5px);
+        }
+
+        .btn-stream-outline:hover {
+            background: white;
+            color: var(--text-main);
+            transform: translateY(-2px);
+        }
+
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        /* Scripts Body */
+        .script-content-section {
+            padding: 60px 0 100px;
+        }
+
+        .script-paper {
+            max-width: 1100px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 60px 80px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+            border: 1px solid rgba(0,0,0,0.03);
+            text-align: center;
+            position: relative;
+        }
+        
+        .script-paper::before {
+            content: '\f10d'; /* Quote left icon */
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            top: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 40px;
+            color: rgba(242, 101, 34, 0.1);
+        }
+
+        
+        .script-inline-meta {
+            margin-bottom: 30px;
+            padding-bottom: 25px;
+            border-bottom: 2px solid rgba(242, 101, 34, 0.1);
+            text-align: center;
+            font-size: 18px;
+            line-height: 1.8;
+            color: #64748b;
+        }
+
+        .script-inline-meta strong {
+            color: var(--primary-color);
+            font-weight: 700;
+            margin-right: 5px;
+        }
+
+        .script-inline-meta a {
+            color: #334155;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .script-inline-meta a:hover {
+            color: var(--primary-color);
+            text-decoration: underline;
+        }
+.script-text {
+            font-size: 24px;
+            line-height: 2.4;
+            color: #1e293b;
+            font-weight: 500;
+            margin-top: 30px;
+        }
+
+        .script-stanza {
+            margin-bottom: 45px;
+        }
+
+        .script-actions {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 1px dashed #e2e8f0;
+        }
+
+        .btn-script-action {
+            background: white;
+            border: 1px solid #cbd5e1;
+            color: #64748b;
+            padding: 12px 25px;
+            border-radius: 30px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-script-action:hover {
+            border-color: var(--primary-color);
+            color: var(--primary-color);
+            background: rgba(242, 101, 34, 0.05);
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .script-title {
+                font-size: 26px;
+                line-height: 1.4;
+            }
+            .script-meta {
+                gap: 8px;
+                margin-bottom: 25px;
+            }
+            .script-meta-tag {
+                font-size: 12px;
+                padding: 5px 12px;
+            }
+            .stream-actions {
+                flex-direction: column;
+                align-items: center;
+                gap: 12px;
+                padding: 0 15px;
+            }
+            .btn-stream {
+                width: 100%;
+                max-width: 280px;
+                justify-content: center;
+                font-size: 14px;
+                padding: 10px 20px;
+            }
+            .script-paper {
+                padding: 40px 20px;
+            }
+            .script-text {
+                font-size: 18px;
+                line-height: 2.2;
+            }
+            .script-actions {
+                flex-wrap: wrap;
+                gap: 10px;
+                padding-top: 20px;
+                margin-top: 30px;
+            }
+            .btn-script-action {
+                padding: 10px 15px;
+                font-size: 13px;
+                flex: 1 1 auto;
+                justify-content: center;
+                min-width: 100px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Ecosystem Bar -->
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <div class="ecosystem-links">
+                <a href="#"><i class="fa-solid fa-video"></i> সাইমুম স্ট্রিম</a>
+                <a href="#"><i class="fa-solid fa-graduation-cap"></i> সাইমুম একাডেমি</a>
+                <a href="#"><i class="fa-solid fa-bag-shopping"></i> সাইমুম শপ</a>
+                <a href="#"><i class="fa-solid fa-hand-holding-heart"></i> অনুদান / বাইতুল মাল</a>
+            </div>
+            <div class="top-bar-right">
+                <div class="language-switcher">
+                    <span><img src="https://flagcdn.com/w20/bd.png" alt="BD Flag" class="flag-icon" loading="lazy"> বাংলা</span> <i class="fa-solid fa-chevron-down"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <header class="main-header">
+        <div class="container header-container">
+            <a href="../index.html" class="logo">
+                <div class="logo-icon"><i class="fa-solid fa-fire-flame-curved"></i></div>
+                <div class="logo-text">সাইমুম<span>.org</span></div>
+            </a>
+            <nav class="main-nav" id="mobile-nav">
+                <ul>
+                    <li class="has-dropdown">
+                        <a href="#">পরিচিতি</a>
+                        <ul class="dropdown">
+                            <li><a href="../about.html">আমাদের সম্পর্কে</a></li>
+                            <li><a href="../founders.html">প্রতিষ্ঠাতা সদস্যবৃন্দ</a></li>
+                            <li><a href="../directors.html">পরিচালকবৃন্দ</a></li>
+                            <li><a href="../management.html">পরিচালনা পর্ষদ</a></li>
+                            <li><a href="../past-management.html">বিগত পরিচালনা পর্ষদ</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="#">ব্যক্তিবর্গ</a>
+                        <ul class="dropdown">
+                            <li><a href="../scriptists.html">গীতিকার</a></li>
+                            <li><a href="../composers.html">সুরকার</a></li>
+                            <li><a href="../artists.html">শিল্পী</a></li>
+                            <li><a href="../writer.html">নাট্যকার</a></li>
+                            <li><a href="../writers.html">কবি</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="#">বিভাগ</a>
+                        <ul class="dropdown">
+                            <li><a href="../departments/shishu-songit.html">শিশু সঙ্গীত বিভাগ</a></li>
+                            <li><a href="../departments/kishor-songit.html">কিশোর সঙ্গীত বিভাগ</a></li>
+                            <li><a href="../departments/boro-songit.html">বড় সঙ্গীত বিভাগ</a></li>
+                            <li><a href="../departments/abriti.html">আবৃত্তি ও উপস্থাপনা বিভাগ</a></li>
+                            <li><a href="../departments/qirat.html">কিরাত বিভাগ</a></li>
+                            <li><a href="../departments/theatre.html">থিয়েটার বিভাগ</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="#">প্রকাশনা</a>
+                        <ul class="dropdown">
+                            <li><a href="../albums.html">অ্যালবাম</a></li>
+                            <li><a href="../scripts.html">লিরিক</a></li>
+                            <li><a href="../natok.html">নাটক</a></li>
+                            <li><a href="../poems.html">কবিতা</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="../gallery.html">ছবিঘর</a>
+                    </li>
+                    <li><a href="../blog.html">ব্লগ</a></li>
+                    <li class="has-dropdown">
+                        <a href="#">কার্যক্রম</a>
+                        <ul class="dropdown">
+                            <li><a href="../activities.html">নিয়মিত কার্যক্রম</a></li>
+                            <li><a href="../competitions.html">প্রতিযোগিতা</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="#">ইভেন্ট</a>
+                        <ul class="dropdown">
+                            <li><a href="../programs.html">প্রোগ্রাম</a></li>
+                            <li><a href="../exhibitions.html">প্রদর্শনী</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="#">যোগাযোগ</a>
+                        <ul class="dropdown">
+                            <li><a href="../contact.html">যোগাযোগ করুন</a></li>
+                            <li><a href="../book-program.html">প্রোগ্রাম বুকিং</a></li>
+                            <li><a href="../links.html">সোশ্যাল মিডিয়া</a></li>
+                        </ul>
+                    </li>
+                    <li class="mobile-only-login">
+
+                        <a href="../login.html"><i class="fa-solid fa-user"></i> লগইন</a>
+
+                    </li>
+
+                </ul>
+
+                <div class="mobile-top-bar-links">
+
+                    <a href="#"><i class="fa-solid fa-video"></i> সাইমুম স্ট্রিম</a>
+
+                    <a href="#"><i class="fa-solid fa-graduation-cap"></i> সাইমুম একাডেমি</a>
+
+                    <a href="#"><i class="fa-solid fa-bag-shopping"></i> সাইমুম শপ</a>
+
+                    <a href="#"><i class="fa-solid fa-hand-holding-heart"></i> অনুদান দিন</a>
+
+                    <div class="language-switcher-mobile">
+
+                        <span><img src="https://flagcdn.com/w20/bd.png" alt="BD Flag" class="flag-icon" loading="lazy"> বাংলা</span> <i class="fa-solid fa-chevron-down"></i>
+
+                    </div>
+
+                </div>
+</nav>
+            <div class="header-actions">
+                <a href="../login.html" class="btn btn-primary btn-login"><i class="fa-solid fa-user"></i> লগইন</a>
+                <button class="mobile-menu-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="mobile-nav">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- Script Hero Section -->
+    <section class="script-hero">
+        <div class="container">
+            <h1 class="script-title">আলোর মিছিল</h1>
+            
+            <div class="script-meta">
+                <a href="../albums/album-details.html" class="script-meta-tag" style="text-decoration: none;" title="অ্যালবাম"><i class="fa-solid fa-folder-open"></i> থিয়েটার বিভাগ</a>
+                <div class="script-meta-tag" title="প্রকাশের সাল"><i class="fa-solid fa-calendar"></i> ১৯৯৮</div>
+            
+                <div class="script-meta-tag" style="background: rgba(242, 101, 34, 0.2); border-color: var(--primary-color);" title="ভিউ কাউন্ট"><i class="fa-solid fa-eye" style="color: white;"></i> ১,২৪৫ ভিউ</div>
+            </div>
+
+            <!-- External Stream Links -->
+            <div class="stream-actions">
+                <a href="#" class="btn-stream btn-stream-yt"><i class="fa-solid fa-download"></i> পাণ্ডুলিপি ডাউনলোড</a>
+                <a href="#" class="btn-stream btn-stream-outline"><i class="fa-solid fa-video"></i> মঞ্চায়ন দেখুন</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scripts Content -->
+    <section class="script-content-section">
+        <div class="container">
+            <div class="script-paper">
+                
+
+                
+                <div class="script-text">
+                    <div class="script-inline-meta">
+                        <div><strong>নাট্যকার:</strong> <a href="../writer/writer-details.html">সাঈদ বিন আনোয়ার</a></div>
+                        <div><strong>ধরণ:</strong> <a href="#">সামাজিক ও ইসলামী মূল্যবোধ</a></div>
+                        <div><strong>প্রথম মঞ্চায়ন:</strong> ১৯৯৮, সাইমুম ২০ বছর পূর্তি উৎসব</div>
+                    </div>
+
+                    <div class="script-stanza" style="text-align: left; font-size: 18px; line-height: 1.8;">
+                        <strong>দৃশ্য ১</strong><br><br>
+                        <em>(মঞ্চ অন্ধকার। ধীরে ধীরে আবছা আলো ফুটে ওঠে। মঞ্চের মাঝখানে একটি পুরনো কাঠের চেয়ারে বসে আছে বৃদ্ধ রহিম মিয়া। তার হাতে একটি পুরোনো চিঠির বাক্স। ব্যাকগ্রাউন্ডে করুণ সুর বাজছে।)</em><br><br>
+                        <strong>রহিম মিয়া:</strong> (দীর্ঘশ্বাস ফেলে) কত বছর কেটে গেল! এই বাক্সটা ছাড়া আর কিছুই তো রইলো না আমার। ওরা বলে আমি নাকি পাগল হয়ে গেছি। কিন্তু ওরা কী বুঝবে এই স্মৃতির মূল্য?<br><br>
+                        <em>(হঠাৎ মঞ্চের ডান দিক থেকে প্রবেশ করে যুবক ছেলে, তার নাম তারিক। তারিকের পরনে আধুনিক পোশাক, চোখে-মুখে বিরক্তির ছাপ।)</em><br><br>
+                        <strong>তারিক:</strong> বাবা, তুমি আবার ওই পুরোনো বাক্স নিয়ে বসেছো? তোমাকে না বলেছি এগুলো ফেলে দিতে! এসবের কোনো দাম নেই এখন আর।<br><br>
+                        <strong>রহিম মিয়া:</strong> (শান্ত কণ্ঠে) দাম নেই? তোর কাছে হয়তো দাম নেই। কিন্তু এই বাক্সের ভেতরে তোর দাদার আদর্শ লুকিয়ে আছে। যে আদর্শ নিয়ে সে জীবনভর সংগ্রাম করেছে, তুই কি চাস আমি সেটা ভুলে যাই?<br><br>
+                        <strong>তারিক:</strong> আদর্শ দিয়ে কী পেট ভরে বাবা? বাস্তবতায় আসো। এখন যুগ পাল্টেছে।<br><br>
+                        <strong>রহিম মিয়া:</strong> যুগ পাল্টেছে ঠিকই, কিন্তু সত্য তো আর পাল্টায়নি। আলোর পথ সবসময় একটাই থাকে তারিক।
+                    </div>
+                </div>
+                
+                <div class="script-actions">
+                    <button class="btn-script-action" onclick="alert('লিরিক কপি করা হয়েছে!')"><i class="fa-solid fa-copy"></i> কপি করুন</button>
+                    <button class="btn-script-action" onclick="window.print()"><i class="fa-solid fa-print"></i> প্রিন্ট করুন</button>
+                    <button class="btn-script-action"><i class="fa-solid fa-share-nodes"></i> শেয়ার করুন</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Master Footer -->
+    <footer class="master-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Brand Section -->
+                <div class="footer-brand">
+                    <a href="../index.html" class="logo text-white mb-5 inline-flex">
+                        <div class="logo-icon"><i class="fa-solid fa-fire-flame-curved"></i></div>
+                        <div class="logo-text">সাইমুম<span>.org</span></div>
+                    </a>
+                    <p>সুস্থ সংস্কৃতির বিকাশ এবং মানবতার কল্যাণে ১৯৭৮ সাল থেকে নিরলসভাবে কাজ করে যাচ্ছে সাইমুম শিল্পীগোষ্ঠী।</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-solid fa-download"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div class="footer-links">
+                    <h3>গুরুত্বপূর্ণ লিংক</h3>
+                    <ul>
+                        <li><a href="../about.html"><i class="fa-solid fa-angle-right"></i> আমাদের সম্পর্কে</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> সাইমুম স্ট্রিম</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> সাইমুম একাডেমি</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> সাইমুম শপ</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> অনুদান / বাইতুল মাল</a></li>
+                        <li><a href="../blog/submit.html"><i class="fa-solid fa-angle-right"></i> লেখা জমা দিন</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Departments -->
+                <div class="footer-links">
+                    <h3>শাখা সমূহ</h3>
+                    <ul>
+                        <li><a href="../departments/shishu-songit.html"><i class="fa-solid fa-angle-right"></i> সংগীত বিভাগ</a></li>
+                        <li><a href="../departments/theatre.html"><i class="fa-solid fa-angle-right"></i> থিয়েটার ও মঞ্চনাটক</a></li>
+                        <li><a href="../departments/qirat.html"><i class="fa-solid fa-angle-right"></i> ক্বিরাত বিভাগ</a></li>
+                        <li><a href="../albums.html"><i class="fa-solid fa-angle-right"></i> সাহিত্য ও প্রকাশনা</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Info -->
+                <div class="footer-contact">
+                    <h3>যোগাযোগ</h3>
+                    <ul>
+                        <li>
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>মিজান টাওয়ার, মগবাজার, ঢাকা, বাংলাদেশ</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-phone"></i>
+                            <span>+৮৮০ ১২৩৪-৫৬৭৮৯০</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>info@saimum.org</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container text-center">
+                <p>&copy; ২০২৬ সাইমুম শিল্পীগোষ্ঠী. সর্বস্বত্ব সংরক্ষিত।</p>
+            </div>
+        </div>
+    </footer>
+
+    
+
+
+
+    
+
+    <!-- Mobile Menu Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuBtn = document.querySelector('.mobile-menu-toggle');
+            const mainNav = document.getElementById('mobile-nav');
+            
+            if (mobileMenuBtn && mainNav) {
+                mobileMenuBtn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    mainNav.classList.toggle('active');
+                    const isExpanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
+                    mobileMenuBtn.setAttribute('aria-expanded', !isExpanded);
+                });
+
+                document.addEventListener('click', function(e) {
+                    if (!mainNav.contains(e.target) && !mobileMenuBtn.contains(e.target) && mainNav.classList.contains('active')) {
+                        mainNav.classList.remove('active');
+                        mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                    }
+                });
+            }
+
+            const dropdownLinks = document.querySelectorAll('.has-dropdown > a');
+            dropdownLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    if (window.innerWidth <= 992) {
+                        const parent = this.parentElement;
+                        const dropdown = parent.querySelector('.dropdown');
+                        if (dropdown) {
+                            e.preventDefault();
+                            document.querySelectorAll('.has-dropdown.active').forEach(activeParent => {
+                                if (activeParent !== parent) {
+                                    activeParent.classList.remove('active');
+                                }
+                            });
+                            parent.classList.toggle('active');
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>

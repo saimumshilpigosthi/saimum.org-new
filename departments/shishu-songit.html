@@ -29,7 +29,7 @@
             </div>
             <div class="top-bar-right">
                 <div class="language-switcher">
-                    <span><img src="https://flagcdn.com/w20/bd.png" alt="BD Flag" class="flag-icon"> বাংলা</span> <i class="fa-solid fa-chevron-down"></i>
+                    <span><img src="https://flagcdn.com/w20/bd.png" alt="BD Flag" class="flag-icon" loading="lazy"> বাংলা</span> <i class="fa-solid fa-chevron-down"></i>
                 </div>
             </div>
         </div>
@@ -46,23 +46,21 @@
                 <ul>
                     <li class="has-dropdown">
                         <a href="#">পরিচিতি</a>
-                                                                                                                        <ul class="dropdown">
+                        <ul class="dropdown">
                             <li><a href="../about.html">আমাদের সম্পর্কে</a></li>
                             <li><a href="../founders.html">প্রতিষ্ঠাতা সদস্যবৃন্দ</a></li>
                             <li><a href="../directors.html">পরিচালকবৃন্দ</a></li>
                             <li><a href="../management.html">পরিচালনা পর্ষদ</a></li>
                             <li><a href="../past-management.html">বিগত পরিচালনা পর্ষদ</a></li>
-                            
                         </ul>
                     </li>
-                    
                     <li class="has-dropdown">
                         <a href="#">ব্যক্তিবর্গ</a>
                         <ul class="dropdown">
                             <li><a href="../lyricists.html">গীতিকার</a></li>
                             <li><a href="../composers.html">সুরকার</a></li>
                             <li><a href="../artists.html">শিল্পী</a></li>
-                            <li><a href="../script-writer.html">নাট্যকার</a></li>
+                            <li><a href="../writer.html">নাট্যকার</a></li>
                             <li><a href="../writers.html">কবি</a></li>
                         </ul>
                     </li>
@@ -86,12 +84,16 @@
                             <li><a href="../poems.html">কবিতা</a></li>
                         </ul>
                     </li>
-                    <li class="has-dropdown">
+                    <li>
                         <a href="../gallery.html">ছবিঘর</a>
                     </li>
                     <li><a href="../blog.html">ব্লগ</a></li>
                     <li class="has-dropdown">
-                        <a href="../activities.html">কার্যক্রম</a>
+                        <a href="#">কার্যক্রম</a>
+                        <ul class="dropdown">
+                            <li><a href="../activities.html">নিয়মিত কার্যক্রম</a></li>
+                            <li><a href="../competitions.html">প্রতিযোগিতা</a></li>
+                        </ul>
                     </li>
                     <li class="has-dropdown">
                         <a href="#">ইভেন্ট</a>
@@ -100,7 +102,6 @@
                             <li><a href="../exhibitions.html">প্রদর্শনী</a></li>
                         </ul>
                     </li>
-                                        <li><a href="../competitions.html">প্রতিযোগিতা</a></li>
                     <li class="has-dropdown">
                         <a href="#">যোগাযোগ</a>
                         <ul class="dropdown">
@@ -109,936 +110,43 @@
                             <li><a href="../links.html">সোশ্যাল মিডিয়া</a></li>
                         </ul>
                     </li>
+                    <li class="mobile-only-login">
+
+                        <a href="../login.html"><i class="fa-solid fa-user"></i> লগইন</a>
+
+                    </li>
+
                 </ul>
-            </nav>
+
+                <div class="mobile-top-bar-links">
+
+                    <a href="#"><i class="fa-solid fa-play"></i> সাইমুম স্ট্রিম</a>
+
+                    <a href="#"><i class="fa-solid fa-graduation-cap"></i> সাইমুম একাডেমি</a>
+
+                    <a href="#"><i class="fa-solid fa-bag-shopping"></i> সাইমুম শপ</a>
+
+                    <a href="#"><i class="fa-solid fa-hand-holding-heart"></i> অনুদান দিন</a>
+
+                    <div class="language-switcher-mobile">
+
+                        <span><img src="https://flagcdn.com/w20/bd.png" alt="BD Flag" class="flag-icon" loading="lazy"> বাংলা</span> <i class="fa-solid fa-chevron-down"></i>
+
+                    </div>
+
+                </div>
+</nav>
             <div class="header-actions">
-                <a href="../login.html" class="btn btn-primary"><i class="fa-solid fa-user"></i> লগইন</a>
+                <a href="../login.html" class="btn btn-primary btn-login"><i class="fa-solid fa-user"></i> লগইন</a>
+                <button class="mobile-menu-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="mobile-nav">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
             </div>
         </div>
     </header>
+
     <!-- Custom CSS for Department Page -->
-    <style>
-        :root {
-            --dept-accent: var(--primary-color);
-            --dept-accent-light: var(--primary-light);
-        }
-
-        body {
-            background-color: var(--bg-light);
-        }
-
-        /* Hero Banner */
-        .dept-hero {
-            position: relative;
-            height: 500px;
-            background-image: url('https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            align-items: flex-end; /* Push content to bottom */
-            justify-content: center;
-            color: white;
-            text-align: left;
-            margin-bottom: 80px;
-        }
-
-        /* Gradient that only darkens the bottom so the group photo is clearly visible */
-        .dept-hero::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(to top, rgba(15,23,42,0.95) 0%, rgba(15,23,42,0.4) 40%, rgba(15,23,42,0) 100%);
-            z-index: 1;
-        }
-
-        .dept-hero-content {
-            position: relative;
-            z-index: 2;
-            width: 100%;
-            max-width: 1200px;
-            padding: 0 20px 40px; /* Space from the bottom */
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
-        }
-
-        .dept-title-area {
-            flex: 1;
-        }
-
-        .dept-title {
-            font-size: 56px;
-            font-weight: 800;
-            margin: 0;
-            letter-spacing: -1px;
-            text-shadow: 0 5px 15px rgba(0,0,0,0.5);
-        }
-
-        /* Sleek horizontal glassmorphic bar for stats */
-        .dept-info-bar {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            padding: 15px 30px;
-            border-radius: 16px;
-            display: flex;
-            align-items: center;
-            gap: 40px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-        }
-
-        .info-item {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .info-item i {
-            font-size: 20px;
-            color: var(--dept-accent);
-            background: rgba(255, 255, 255, 0.95);
-            width: 40px;
-            height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-        }
-
-        .info-text {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .info-text .label {
-            font-size: 11px;
-            color: rgba(255, 255, 255, 0.7);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 2px;
-        }
-
-        .info-text .value {
-            font-size: 15px;
-            font-weight: 700;
-            color: white;
-        }
-
-        /* Layout Grid */
-        .dept-container {
-            display: flex;
-            gap: 40px;
-            align-items: flex-start;
-        }
-
-        /* Sticky Sidebar Nav */
-        .dept-sidebar {
-            width: 250px;
-            position: sticky;
-            top: 100px;
-            flex-shrink: 0;
-            background: white;
-            border-radius: 16px;
-            padding: 20px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.03);
-            border: 1px solid rgba(0,0,0,0.05);
-        }
-
-        .dept-nav {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .dept-nav li a {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            padding: 12px 15px;
-            color: var(--text-light);
-            text-decoration: none;
-            font-weight: 600;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-        }
-
-        .dept-nav li a:hover, .dept-nav li a.active {
-            background: var(--dept-accent-light);
-            color: var(--dept-accent);
-        }
-
-        .dept-main {
-            flex: 1;
-            min-width: 0;
-        }
-
-        
-        
-        /* Premium Committee Section */
-        .premium-committee {
-            display: flex;
-            flex-direction: column;
-            gap: 40px;
-        }
-
-        /* Leader Horizontal Card */
-        .leader-card-premium {
-            display: flex;
-            background: linear-gradient(145deg, #ffffff, #f8fafc);
-            border-radius: 24px;
-            overflow: hidden;
-            border: 1px solid rgba(249, 115, 22, 0.15);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.04);
-            transition: all 0.4s ease;
-        }
-
-        .leader-card-premium:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(249, 115, 22, 0.08);
-            border-color: rgba(249, 115, 22, 0.3);
-        }
-
-        .leader-image-wrap {
-            width: 35%;
-            min-width: 250px;
-            position: relative;
-        }
-
-        .leader-image-wrap img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-right: 4px solid var(--primary-light);
-        }
-
-        .leader-glow {
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(to right, transparent, rgba(255,255,255,0.9));
-        }
-
-        .leader-info {
-            padding: 40px;
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .leader-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            background: var(--primary-light);
-            color: var(--primary-color);
-            padding: 6px 14px;
-            border-radius: 20px;
-            font-size: 13px;
-            font-weight: 700;
-            margin-bottom: 15px;
-            width: fit-content;
-        }
-
-        .leader-info h3 {
-            font-size: 28px;
-            font-weight: 800;
-            color: var(--text-main);
-            margin-bottom: 12px;
-        }
-
-        .leader-info p {
-            color: var(--text-light);
-            font-size: 15px;
-            line-height: 1.7;
-            margin-bottom: 25px;
-        }
-
-        
-
-        
-
-        /* Members Sleek Grid */
-        .committee-members-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr); /* Force exactly 3 columns */
-            gap: 25px;
-        }
-
-        .member-card-sleek {
-            background: white;
-            border-radius: 20px;
-            overflow: hidden;
-            border: 1px solid rgba(0,0,0,0.06);
-            box-shadow: 0 5px 20px rgba(0,0,0,0.03);
-            transition: all 0.4s ease;
-            text-align: center;
-            padding-bottom: 25px;
-            position: relative;
-        }
-
-        .member-card-sleek:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.08);
-            border-color: rgba(249, 115, 22, 0.2);
-        }
-
-        .member-header-bg {
-            height: 80px;
-            background: linear-gradient(135deg, #fff3e0, var(--primary-light));
-            transition: all 0.4s;
-        }
-
-        .member-card-sleek:hover .member-header-bg {
-            background: linear-gradient(135deg, var(--primary-light), var(--primary-color));
-        }
-
-        .member-img-wrap {
-            width: 100px;
-            height: 100px;
-            margin: -50px auto 15px;
-            background: white;
-            padding: 4px;
-            border-radius: 50%;
-            position: relative;
-            z-index: 2;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-
-        .member-img-wrap img {
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            object-fit: cover;
-        }
-
-        .member-info {
-            padding: 0 20px;
-        }
-
-        .member-role {
-            font-size: 12px;
-            font-weight: 700;
-            color: var(--primary-color);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            display: block;
-            margin-bottom: 5px;
-        }
-
-        .member-info h4 {
-            font-size: 18px;
-            font-weight: 700;
-            color: var(--text-main);
-            margin-bottom: 15px;
-        }
-
-        
-
-        .member-card-sleek:hover 
-
-        @media (max-width: 768px) {
-            .leader-card-premium {
-                flex-direction: column;
-            }
-            .leader-image-wrap {
-                width: 100%;
-                height: 250px;
-            }
-            .leader-image-wrap img {
-                border-right: none;
-                border-bottom: 4px solid var(--primary-light);
-            }
-            .leader-glow {
-                background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.9));
-            }
-            .leader-info {
-                padding: 25px;
-            }
-        }
-
-        /* Videos */
-        .video-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-        }
-        .video-card {
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            background: var(--bg-light);
-        }
-        .video-thumbnail {
-            position: relative;
-            cursor: pointer;
-        }
-        .video-thumbnail img {
-            width: 100%;
-            height: 180px;
-            object-fit: cover;
-            display: block;
-        }
-        .play-btn {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 50px;
-            height: 50px;
-            background: rgba(249, 115, 22, 0.9);
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 20px;
-            transition: all 0.3s;
-        }
-        .video-thumbnail:hover .play-btn {
-            transform: translate(-50%, -50%) scale(1.1);
-            background: var(--primary-color);
-        }
-        .video-title {
-            padding: 15px;
-            font-size: 16px;
-            font-weight: 700;
-        }
-
-        /* Programs */
-        .program-list {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-        .program-item {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            padding: 15px;
-            background: var(--bg-light);
-            border-radius: 12px;
-            border-left: 4px solid var(--primary-color);
-        }
-        .program-date {
-            text-align: center;
-            background: white;
-            padding: 10px 15px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-        }
-        .program-date .day {
-            display: block;
-            font-size: 24px;
-            font-weight: 800;
-            color: var(--primary-color);
-            line-height: 1;
-        }
-        .program-date .month {
-            font-size: 13px;
-            font-weight: 600;
-            color: var(--text-light);
-        }
-        .program-info h4 {
-            font-size: 18px;
-            margin-bottom: 5px;
-        }
-        .program-info p {
-            color: var(--text-muted);
-            font-size: 14px;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            margin: 0;
-        }
-
-        /* Gallery */
-        .photo-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 15px;
-        }
-        .photo-grid img {
-            width: 100%;
-            height: 150px;
-            object-fit: cover;
-            border-radius: 8px;
-            transition: transform 0.3s;
-            cursor: pointer;
-        }
-        .photo-grid img:hover {
-            transform: scale(1.05);
-        }
-
-        /* Contact */
-        .contact-card {
-            background: linear-gradient(135deg, var(--bg-light), #fff);
-            padding: 30px;
-            border-radius: 12px;
-            border: 1px solid rgba(0,0,0,0.05);
-        }
-        .contact-details {
-            margin-top: 20px;
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-weight: 600;
-            color: var(--text-main);
-        }
-        .contact-item i {
-            color: var(--primary-color);
-            font-size: 18px;
-            width: 25px;
-        }
-
-        
-        
-        /* Premium Admission CTA */
-        .admission-section {
-            padding: 0 !important; /* Reset default section padding */
-            background: transparent !important;
-            border: none !important;
-            box-shadow: none !important;
-        }
-
-        
-        .admission-cta-premium {
-            position: relative;
-            background-image: linear-gradient(135deg, rgba(234, 88, 12, 0.95) 0%, rgba(249, 115, 22, 0.9) 100%), url('https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');
-            background-size: cover;
-            background-position: center;
-            border-radius: 20px;
-            padding: 30px 40px; /* Reduced height */
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 30px;
-            color: white;
-            overflow: hidden;
-            box-shadow: 0 15px 30px rgba(249, 115, 22, 0.15);
-        }
-
-        .watermark-icon {
-            position: absolute;
-            right: -20px;
-            bottom: -40px;
-            font-size: 200px; /* slightly smaller */
-            color: rgba(255, 255, 255, 0.05);
-            transform: rotate(-15deg);
-            z-index: 1;
-            pointer-events: none;
-        }
-
-        .cta-content-premium {
-            position: relative;
-            z-index: 2;
-            flex: 1;
-            max-width: 600px;
-        }
-
-        .cta-tag {
-            display: inline-block;
-            background: rgba(255, 255, 255, 0.2);
-            backdrop-filter: blur(5px);
-            padding: 4px 12px;
-            border-radius: 30px;
-            font-size: 12px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 12px; /* reduced */
-            border: 1px solid rgba(255, 255, 255, 0.3);
-        }
-
-        .cta-content-premium h2 {
-            font-size: 32px; /* reduced */
-            font-weight: 800;
-            margin-bottom: 10px; /* reduced */
-            text-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-
-        .cta-content-premium p {
-            font-size: 15px; /* reduced */
-            opacity: 0.9;
-            line-height: 1.5;
-            margin-bottom: 15px; /* reduced */
-        }
-
-        .cta-features-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-            gap: 8px; /* reduced */
-        }
-
-        .cta-features-list li {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 14px; /* reduced */
-            font-weight: 600;
-        }
-
-        .cta-features-list li i {
-            color: #fef08a;
-            font-size: 16px;
-        }
-
-        .cta-action-premium {
-            position: relative;
-            z-index: 2;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 12px; /* reduced */
-            min-width: 250px;
-        }
-
-        .btn-apply-premium {
-            background: white;
-            color: var(--primary-color);
-            padding: 14px 28px; /* reduced */
-            border-radius: 50px;
-            font-size: 16px; /* reduced */
-            font-weight: 800;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-        }
-.btn-apply-premium:hover {
-            transform: translateY(-5px) scale(1.02);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.25);
-            background: var(--bg-light);
-        }
-
-        .btn-apply-premium i {
-            background: var(--primary-light);
-            width: 35px;
-            height: 35px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: transform 0.3s;
-        }
-
-        .btn-apply-premium:hover i {
-            transform: translateX(5px);
-            background: var(--primary-color);
-            color: white;
-        }
-
-        .cta-note {
-            font-size: 13px;
-            font-weight: 600;
-            opacity: 0.8;
-            background: rgba(0,0,0,0.15);
-            padding: 5px 15px;
-            border-radius: 20px;
-        }
-
-
-        @media (max-width: 900px) {
-            .committee-members-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .admission-cta-premium {
-                flex-direction: column;
-                text-align: center;
-                padding: 40px 30px;
-            }
-            .cta-features-list {
-                align-items: center;
-            }
-        }
-/* FAQ Section */
-        .faq-container {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-        .faq-item {
-            background: var(--bg-light);
-            border: 1px solid rgba(0,0,0,0.05);
-            border-radius: 12px;
-            overflow: hidden;
-        }
-        .faq-question {
-            padding: 20px;
-            font-size: 16px;
-            font-weight: 700;
-            color: var(--text-main);
-            cursor: pointer;
-            list-style: none;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            user-select: none;
-        }
-        .faq-question::-webkit-details-marker {
-            display: none;
-        }
-        .faq-question::after {
-            content: '\f078';
-            font-family: 'Font Awesome 6 Free';
-            font-weight: 900;
-            color: var(--primary-color);
-            transition: transform 0.3s;
-        }
-        details[open] .faq-question::after {
-            transform: rotate(180deg);
-        }
-        details[open] .faq-question {
-            border-bottom: 1px dashed rgba(0,0,0,0.1);
-        }
-        .faq-answer {
-            padding: 20px;
-            color: var(--text-light);
-            font-size: 15px;
-            line-height: 1.6;
-            background: white;
-        }
-
-        @media (max-width: 768px) {
-            .admission-cta {
-                flex-direction: column;
-                text-align: center;
-            }
-            .cta-features {
-                justify-content: center;
-                margin-bottom: 20px;
-            }
-        }
-
-        /* Section Styles */
-        .dept-section {
-            background: white;
-            border-radius: 16px;
-            padding: 40px;
-            margin-bottom: 30px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.02);
-            border: 1px solid rgba(0,0,0,0.04);
-            scroll-margin-top: 120px; /* Prevents sticky header from covering the section on anchor click */
-        }
-
-        .section-header {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 30px;
-            padding-bottom: 15px;
-            border-bottom: 2px dashed rgba(0,0,0,0.08);
-            text-align: left;
-        }
-
-        .section-title {
-            font-size: 24px;
-            font-weight: 700;
-            color: var(--text-main);
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .section-title i {
-            color: var(--dept-accent);
-        }
-
-        .view-all {
-            color: var(--dept-accent);
-            font-weight: 600;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            transition: all 0.3s;
-        }
-
-        .view-all:hover {
-            opacity: 0.8;
-            transform: translateX(3px);
-        }
-
-        /* Head Profile */
-        .head-profile {
-            display: flex;
-            align-items: center;
-            gap: 25px;
-            padding: 20px;
-            background: var(--bg-light);
-            border-radius: 12px;
-            border-left: 5px solid var(--dept-accent);
-        }
-
-        .head-profile img {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid white;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-
-        .head-info h4 {
-            font-size: 22px;
-            font-weight: 700;
-            margin-bottom: 5px;
-        }
-
-        .head-info p {
-            color: var(--dept-accent);
-            font-weight: 600;
-            margin-bottom: 10px;
-        }
-
-        /* Artist Grid */
-        .artist-grid-mini {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
-            gap: 20px;
-        }
-
-        .artist-mini-card {
-            text-align: center;
-        }
-
-        .artist-mini-card img {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 10px;
-            border: 2px solid transparent;
-            transition: all 0.3s;
-        }
-
-        .artist-mini-card:hover img {
-            border-color: var(--dept-accent);
-            transform: scale(1.05);
-        }
-
-        .artist-mini-card h5 {
-            font-size: 15px;
-            font-weight: 600;
-            color: var(--text-main);
-        }
-        
-        .artist-more-card {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100px;
-            width: 100px;
-            margin: 0 auto 10px;
-            border-radius: 50%;
-            background: var(--dept-accent-light);
-            color: var(--dept-accent);
-            text-decoration: none;
-            transition: all 0.3s;
-        }
-        
-        .artist-more-card:hover {
-            background: var(--dept-accent);
-            color: white;
-        }
-
-        /* Album Grid */
-        .album-grid-mini {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 20px;
-        }
-
-        .album-card {
-            background: var(--bg-light);
-            border-radius: 12px;
-            overflow: hidden;
-            transition: all 0.3s;
-        }
-
-        .album-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-        }
-
-        .album-card img {
-            width: 100%;
-            aspect-ratio: 1;
-            object-fit: cover;
-        }
-
-        .album-info {
-            padding: 15px;
-            text-align: center;
-        }
-
-        /* Awards */
-        .awards-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
-
-        .award-card {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            padding: 20px;
-            background: linear-gradient(135deg, #fff, #f8fafc);
-            border: 1px solid #e2e8f0;
-            border-radius: 12px;
-        }
-
-        .award-card i {
-            font-size: 32px;
-            color: #fbbf24;
-        }
-
-
-        @media (max-width: 900px) {
-            .committee-members-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .dept-hero-content {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 20px;
-            }
-            .dept-info-bar {
-                width: 100%;
-                flex-wrap: wrap;
-                gap: 20px;
-            }
-            .dept-container {
-                flex-direction: column;
-            }
-            .dept-sidebar {
-                width: 100%;
-                position: static;
-            }
-        }
-
-        @media (max-width: 600px) {
-            .committee-members-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    
 
     <!-- ① HERO BANNER -->
     <section class="dept-hero">
@@ -1113,7 +221,7 @@
                         <!-- Director: Premium Horizontal Card -->
                         <div class="leader-card-premium">
                             <div class="leader-image-wrap">
-                                <img src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="আহমদ হোসাইন">
+                                <img src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="আহমদ হোসাইন" loading="lazy">
                                 <div class="leader-glow"></div>
                             </div>
                             <div class="leader-info">
@@ -1130,7 +238,7 @@
                             <div class="member-card-sleek">
                                 <div class="member-header-bg"></div>
                                 <div class="member-img-wrap">
-                                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="হাসান মাহমুদ">
+                                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="হাসান মাহমুদ" loading="lazy">
                                 </div>
                                 <div class="member-info">
                                     <span class="member-role">সহকারী পরিচালক</span>
@@ -1143,7 +251,7 @@
                             <div class="member-card-sleek">
                                 <div class="member-header-bg"></div>
                                 <div class="member-img-wrap">
-                                    <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="তারেক মনোয়ার">
+                                    <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="তারেক মনোয়ার" loading="lazy">
                                 </div>
                                 <div class="member-info">
                                     <span class="member-role">সাংগঠনিক সম্পাদক</span>
@@ -1156,7 +264,7 @@
                             <div class="member-card-sleek">
                                 <div class="member-header-bg"></div>
                                 <div class="member-img-wrap">
-                                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="কামরুল ইসলাম">
+                                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="কামরুল ইসলাম" loading="lazy">
                                 </div>
                                 <div class="member-info">
                                     <span class="member-role">সদস্য</span>
@@ -1169,7 +277,7 @@
                             <div class="member-card-sleek">
                                 <div class="member-header-bg"></div>
                                 <div class="member-img-wrap">
-                                    <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="রফিকুল ইসলাম">
+                                    <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="রফিকুল ইসলাম" loading="lazy">
                                 </div>
                                 <div class="member-info">
                                     <span class="member-role">সদস্য</span>
@@ -1181,7 +289,7 @@
                             <div class="member-card-sleek">
                                 <div class="member-header-bg"></div>
                                 <div class="member-img-wrap">
-                                    <img src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="শরীফুল হক">
+                                    <img src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="শরীফুল হক" loading="lazy">
                                 </div>
                                 <div class="member-info">
                                     <span class="member-role">সদস্য</span>
@@ -1193,7 +301,7 @@
                             <div class="member-card-sleek">
                                 <div class="member-header-bg"></div>
                                 <div class="member-img-wrap">
-                                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="আব্দুল্লাহ আল নোমান">
+                                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="আব্দুল্লাহ আল নোমান" loading="lazy">
                                 </div>
                                 <div class="member-info">
                                     <span class="member-role">সদস্য</span>
@@ -1215,21 +323,21 @@
                     </div>
                     <div class="album-grid-mini">
                         <div class="album-card">
-                            <img src="https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Album 1">
+                            <img src="https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Album 1" loading="lazy">
                             <div class="album-info">
                                 <h4 style="margin: 0 0 5px; font-size: 16px;">সাইমুম ভলিউম ১০</h4>
                                 <span style="color: var(--text-muted); font-size: 13px;">২০২৩ • ১২টি গান</span>
                             </div>
                         </div>
                         <div class="album-card">
-                            <img src="https://images.unsplash.com/photo-1619983081563-430f63602796?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Album 2">
+                            <img src="https://images.unsplash.com/photo-1619983081563-430f63602796?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Album 2" loading="lazy">
                             <div class="album-info">
                                 <h4 style="margin: 0 0 5px; font-size: 16px;">জাগ্রত তারুণ্য</h4>
                                 <span style="color: var(--text-muted); font-size: 13px;">২০২১ • ১০টি গান</span>
                             </div>
                         </div>
                         <div class="album-card">
-                            <img src="https://images.unsplash.com/photo-1493225457124-a1a2a5956093?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Album 3">
+                            <img src="https://images.unsplash.com/photo-1493225457124-a1a2a5956093?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Album 3" loading="lazy">
                             <div class="album-info">
                                 <h4 style="margin: 0 0 5px; font-size: 16px;">শেকড়ের সন্ধানে</h4>
                                 <span style="color: var(--text-muted); font-size: 13px;">২০১৯ • ১৪টি গান</span>
@@ -1249,14 +357,14 @@
                     <div class="video-grid">
                         <div class="video-card">
                             <div class="video-thumbnail">
-                                <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Video">
+                                <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Video" loading="lazy">
                                 <div class="play-btn"><i class="fa-solid fa-play"></i></div>
                             </div>
                             <h4 class="video-title">বিজয়ের গান - ৫৩তম স্বাধীনতা দিবস</h4>
                         </div>
                         <div class="video-card">
                             <div class="video-thumbnail">
-                                <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Video">
+                                <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Video" loading="lazy">
                                 <div class="play-btn"><i class="fa-solid fa-play"></i></div>
                             </div>
                             <h4 class="video-title">সাইমুম লাইভ কনসার্ট ২০২৩</h4>
@@ -1305,10 +413,10 @@
                         <a href="#" class="view-all">গ্যালারি <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                     <div class="photo-grid">
-                        <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Gallery">
-                        <img src="https://images.unsplash.com/photo-1520625902100-c515a4b7f940?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Gallery">
-                        <img src="https://images.unsplash.com/photo-1493225457124-a1a2a5956093?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Gallery">
-                        <img src="https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Gallery">
+                        <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Gallery" loading="lazy">
+                        <img src="https://images.unsplash.com/photo-1520625902100-c515a4b7f940?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Gallery" loading="lazy">
+                        <img src="https://images.unsplash.com/photo-1493225457124-a1a2a5956093?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Gallery" loading="lazy">
+                        <img src="https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Gallery" loading="lazy">
                     </div>
                 </section>
 
@@ -1478,32 +586,50 @@
     </script>
 
 
+    
+
     <!-- Mobile Menu Script -->
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const mobileToggle = document.querySelector('.mobile-menu-toggle');
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuBtn = document.querySelector('.mobile-menu-toggle');
             const mainNav = document.getElementById('mobile-nav');
             
-            if(mobileToggle && mainNav) {
-                mobileToggle.addEventListener('click', () => {
+            if (mobileMenuBtn && mainNav) {
+                mobileMenuBtn.addEventListener('click', function(e) {
+                    e.stopPropagation();
                     mainNav.classList.toggle('active');
-                    const isExpanded = mainNav.classList.contains('active');
-                    mobileToggle.setAttribute('aria-expanded', isExpanded);
+                    const isExpanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
+                    mobileMenuBtn.setAttribute('aria-expanded', !isExpanded);
+                });
+
+                document.addEventListener('click', function(e) {
+                    if (!mainNav.contains(e.target) && !mobileMenuBtn.contains(e.target) && mainNav.classList.contains('active')) {
+                        mainNav.classList.remove('active');
+                        mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                    }
                 });
             }
 
-            // Handle dropdowns on mobile
-            const dropdowns = document.querySelectorAll('.has-dropdown');
-            dropdowns.forEach(dropdown => {
-                const link = dropdown.querySelector('a');
-                link.addEventListener('click', (e) => {
+            const dropdownLinks = document.querySelectorAll('.has-dropdown > a');
+            dropdownLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
                     if (window.innerWidth <= 992) {
-                        e.preventDefault();
-                        dropdown.classList.toggle('active');
+                        const parent = this.parentElement;
+                        const dropdown = parent.querySelector('.dropdown');
+                        if (dropdown) {
+                            e.preventDefault();
+                            document.querySelectorAll('.has-dropdown.active').forEach(activeParent => {
+                                if (activeParent !== parent) {
+                                    activeParent.classList.remove('active');
+                                }
+                            });
+                            parent.classList.toggle('active');
+                        }
                     }
                 });
             });
         });
     </script>
+
 </body>
 </html>
