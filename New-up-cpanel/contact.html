@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>যোগাযোগ | সাইমুম শিল্পীগোষ্ঠী</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Bengali:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .contact-hero {
+            background: url('https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+            padding: 100px 20px;
+            text-align: center;
+            color: white;
+            position: relative;
+            border-bottom: 5px solid var(--primary-color);
+        }
+
+        .contact-hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(15, 23, 42, 0.75);
+            z-index: 1;
+        }
+
+        .contact-hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .contact-title {
+            font-size: 42px;
+            font-weight: 800;
+            margin-bottom: 15px;
+        }
+
+        .contact-desc {
+            font-size: 18px;
+            color: rgba(255,255,255,0.9);
+        }
+
+        .contact-section {
+            padding: 80px 0;
+            background: #f8fafc;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .contact-info-cards {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .info-card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+            border: 1px solid #f1f5f9;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .info-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary-color);
+        }
+
+        .info-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(249, 115, 22, 0.1);
+            color: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin: 0 auto 15px;
+        }
+
+        .info-card h3 {
+            font-size: 20px;
+            color: #0f172a;
+            margin-bottom: 10px;
+        }
+
+        .info-card p {
+            color: #64748b;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .contact-form-wrapper {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border: 1px solid #f1f5f9;
+        }
+
+        .contact-form-wrapper h2 {
+            font-size: 28px;
+            color: #0f172a;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #334155;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 15px 20px;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 16px;
+            transition: all 0.3s;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.1);
+        }
+
+        textarea.form-control {
+            height: 150px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            width: 100%;
+            transition: background 0.3s;
+        }
+
+        .submit-btn:hover {
+            background: #ea580c;
+        }
+
+        @media (max-width: 992px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            .info-card {
+                padding: 20px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Ecosystem Bar -->
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <div class="ecosystem-links">
+                <a href="#"><i class="fa-solid fa-play"></i> সাইমুম স্ট্রিম</a>
+                <a href="#"><i class="fa-solid fa-graduation-cap"></i> সাইমুম একাডেমি</a>
+                <a href="#"><i class="fa-solid fa-bag-shopping"></i> সাইমুম শপ</a>
+                <a href="#"><i class="fa-solid fa-hand-holding-heart"></i> অনুদান / বাইতুল মাল</a>
+            </div>
+            <div class="top-bar-right">
+                <div class="language-switcher">
+                    <span><img src="https://flagcdn.com/w20/bd.png" alt="BD Flag" class="flag-icon"> বাংলা</span> <i class="fa-solid fa-chevron-down"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <header class="main-header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon"><i class="fa-solid fa-fire-flame-curved"></i></div>
+                <div class="logo-text">সাইমুম<span>.org</span></div>
+            </a>
+            <nav class="main-nav" id="mobile-nav">
+                <ul>
+                    <li class="has-dropdown">
+                        <a href="#">পরিচিতি</a>
+                        <ul class="dropdown">
+                            <li><a href="about.html">আমাদের সম্পর্কে</a></li>
+                            <li><a href="founders.html">প্রতিষ্ঠাতা সদস্যবৃন্দ</a></li>
+                            <li><a href="directors.html">পরিচালকবৃন্দ</a></li>
+                            <li><a href="management.html">পরিচালনা পর্ষদ</a></li>
+                            <li><a href="past-management.html">বিগত পরিচালনা পর্ষদ</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="#">ব্যক্তিবর্গ</a>
+                        <ul class="dropdown">
+                            <li><a href="lyricists.html">গীতিকার</a></li>
+                            <li><a href="composers.html">সুরকার</a></li>
+                            <li><a href="artists.html">শিল্পী</a></li>
+                            <li><a href="script-writer.html">নাট্যকার</a></li>
+                            <li><a href="writers.html">কবি</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="#">বিভাগ</a>
+                        <ul class="dropdown">
+                            <li><a href="departments/shishu-songit.html">শিশু সঙ্গীত বিভাগ</a></li>
+                            <li><a href="departments/kishor-songit.html">কিশোর সঙ্গীত বিভাগ</a></li>
+                            <li><a href="departments/boro-songit.html">বড় সঙ্গীত বিভাগ</a></li>
+                            <li><a href="departments/abriti.html">আবৃত্তি ও উপস্থাপনা বিভাগ</a></li>
+                            <li><a href="departments/qirat.html">কিরাত বিভাগ</a></li>
+                            <li><a href="departments/theatre.html">থিয়েটার বিভাগ</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="#">প্রকাশনা</a>
+                        <ul class="dropdown">
+                            <li><a href="albums.html">অ্যালবাম</a></li>
+                            <li><a href="lyrics.html">লিরিক</a></li>
+                            <li><a href="natok.html">নাটক</a></li>
+                            <li><a href="poems.html">কবিতা</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown"><a href="gallery.html">ছবিঘর</a></li>
+                    <li><a href="blog.html">ব্লগ</a></li>
+                    <li class="has-dropdown">
+                        <a href="#">কার্যক্রম</a>
+                        <ul class="dropdown">
+                            <li><a href="activities.html">নিয়মিত কার্যক্রম</a></li>
+                            <li><a href="competitions.html">প্রতিযোগিতা</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="#">ইভেন্ট</a>
+                        <ul class="dropdown">
+                            <li><a href="programs.html">প্রোগ্রাম</a></li>
+                            <li><a href="exhibitions.html">প্রদর্শনী</a></li>
+                        </ul>
+                    </li>
+                                        
+                    <li class="has-dropdown">
+                        <a href="#">যোগাযোগ</a>
+                        <ul class="dropdown">
+                            <li><a href="contact.html">যোগাযোগ করুন</a></li>
+                            <li><a href="book-program.html">প্রোগ্রাম বুকিং</a></li>
+                            <li><a href="links.html">সোশ্যাল মিডিয়া</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="login.html" class="btn btn-primary"><i class="fa-solid fa-user"></i> লগইন</a>
+                <button class="mobile-menu-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="mobile-nav">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="contact-hero">
+        <div class="container contact-hero-content">
+            <h1 class="contact-title">যোগাযোগ করুন</h1>
+            <p class="contact-desc">যেকোনো প্রশ্ন, মতামত বা প্রয়োজনে আমাদের সাথে যোগাযোগ করুন। আমরা দ্রুততম সময়ের মধ্যে আপনার সাথে যোগাযোগ করবো ইনশাআল্লাহ।</p>
+        </div>
+    </div>
+
+    <!-- Contact Content -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                
+                <!-- Contact Info -->
+                <div class="contact-info-cards">
+                    <div class="info-card">
+                        <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
+                        <h3>আমাদের ঠিকানা</h3>
+                        <p>মিজান টাওয়ার, মগবাজার<br>ঢাকা, বাংলাদেশ</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-icon"><i class="fa-solid fa-phone"></i></div>
+                        <h3>ফোন নম্বর</h3>
+                        <p>+৮৮০ ১২৩৪-৫৬৭৮৯০<br>+৮৮০ ৯৮৭৬-৫৪My210</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-icon"><i class="fa-solid fa-envelope"></i></div>
+                        <h3>ইমেইল</h3>
+                        <p>info@saimum.org<br>contact@saimum.org</p>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form-wrapper">
+                    <h2>আমাদেরকে মেসেজ পাঠান</h2>
+                    <form action="#" method="POST">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">আপনার নাম</label>
+                                <input type="text" id="name" class="form-control" placeholder="পূর্ণ নাম লিখুন" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">ইমেইল ঠিকানা</label>
+                                <input type="email" id="email" class="form-control" placeholder="ইমেইল এড্রেস লিখুন" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">বিষয়</label>
+                            <input type="text" id="subject" class="form-control" placeholder="কী বিষয়ে যোগাযোগ করতে চান?" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">আপনার বার্তা</label>
+                            <textarea id="message" class="form-control" placeholder="বিস্তারিত লিখুন..." required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn"><i class="fa-regular fa-paper-plane"></i> বার্তা পাঠান</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section (Optional but looks good) -->
+    <section style="height: 400px; width: 100%; background: #e2e8f0;">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1m3!1d3652.016335198402!2d90.4046424153628!3d23.746797894833215!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8888b50e3cb%3A0xc6ed7697ddcf68e8!2sMoghbazar%2C%20Dhaka!5e0!3m2!1sen!2sbd!4v1655389658742!5m2!1sen!2sbd" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+
+    <!-- Master Footer -->
+    <footer class="master-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Brand Section -->
+                <div class="footer-brand">
+                    <a href="index.html" class="logo" style="color: white; margin-bottom: 20px; display: inline-flex;">
+                        <div class="logo-icon"><i class="fa-solid fa-fire-flame-curved"></i></div>
+                <div class="logo-text">সাইমুম<span>.org</span></div>
+                    </a>
+                    <p>সুস্থ সংস্কৃতির বিকাশ এবং মানবতার কল্যাণে ১৯৭৮ সাল থেকে নিরলসভাবে কাজ করে যাচ্ছে সাইমুম শিল্পীগোষ্ঠী।</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div class="footer-links">
+                    <h3>গুরুত্বপূর্ণ লিংক</h3>
+                    <ul>
+                        <li><a href="about.html"><i class="fa-solid fa-angle-right"></i> আমাদের সম্পর্কে</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> সাইমুম স্ট্রিম</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> সাইমুম একাডেমি</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> সাইমুম শপ</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> অনুদান / বাইতুল মাল</a></li>
+                    <li><a href="blog/submit.html"><i class="fa-solid fa-angle-right"></i> লেখা জমা দিন</a></li>
+                      </ul>
+                </div>
+                
+                <!-- Departments -->
+                <div class="footer-links">
+                    <h3>শাখা সমূহ</h3>
+                    <ul>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> সংগীত বিভাগ</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> থিয়েটার ও মঞ্চনাটক</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> ক্বিরাত বিভাগ</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> সাহিত্য ও প্রকাশনা</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Info -->
+                <div class="footer-contact">
+                    <h3>যোগাযোগ</h3>
+                    <ul>
+                        <li>
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>মিজান টাওয়ার, মগবাজার, ঢাকা, বাংলাদেশ</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-phone"></i>
+                            <span>+৮৮০ ১২৩৪-৫৬৭৮৯০</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>info@saimum.org</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container text-center">
+                <p>&copy; ২০২৬ সাইমুম শিল্পীগোষ্ঠী. সর্বস্বত্ব সংরক্ষিত।</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileToggle = document.querySelector('.mobile-menu-toggle');
+            const mainNav = document.getElementById('mobile-nav');
+            
+            if(mobileToggle && mainNav) {
+                mobileToggle.addEventListener('click', () => {
+                    mainNav.classList.toggle('active');
+                    const isExpanded = mainNav.classList.contains('active');
+                    mobileToggle.setAttribute('aria-expanded', isExpanded);
+                });
+            }
+
+            // Handle dropdowns on mobile
+            const dropdowns = document.querySelectorAll('.has-dropdown');
+            dropdowns.forEach(dropdown => {
+                const link = dropdown.querySelector('a');
+                link.addEventListener('click', (e) => {
+                    if (window.innerWidth <= 992) {
+                        e.preventDefault();
+                        dropdown.classList.toggle('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
